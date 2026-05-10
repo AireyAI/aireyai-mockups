@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Bobby's Beauty Salon · Stoke-on-Trent</title>
+<meta name="description" content="Award-winning skin, laser & beauty studio on Stone Road, Stoke-on-Trent. Laser hair removal, facials, waxing, hair, nails. Open 8am–9pm." />
+<meta name="theme-color" content="#2E1A2E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#1F1216',
+        aubergine: '#2E1A2E',
+        plum: '#6B3F5C',
+        mauve: '#A47086',
+        champagne: '#D4A574',
+        cream: '#F5EBE0',
+        blush: '#E8C5C0',
+        sand: '#FFFBF6',
+        line: '#E7D9D2',
+      },
+      fontFamily: {
+        display: ['Fraunces', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        soft: '0 1px 2px rgba(46,26,46,.06), 0 8px 24px -8px rgba(46,26,46,.18)',
+        card: '0 1px 1px rgba(46,26,46,.04), 0 18px 40px -16px rgba(107,63,92,.22)',
+        glow: '0 30px 80px -20px rgba(212,165,116,.45)',
+      },
+    },
+  },
+};
+</script>
+<style>
+  html, body { background: #FFFBF6; color: #1F1216; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; letter-spacing: -0.02em; }
+  .display-tight { letter-spacing: -0.035em; }
+  .body-relaxed { line-height: 1.7; }
+  .grain { position: relative; }
+  .grain::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.10 0 0 0 0 0.18 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+  }
+  .hero-gradient {
+    background:
+      radial-gradient(80% 60% at 80% 20%, rgba(212,165,116,.35), transparent 60%),
+      radial-gradient(60% 50% at 10% 90%, rgba(232,197,192,.55), transparent 65%),
+      linear-gradient(180deg, #FFFBF6 0%, #F5EBE0 100%);
+  }
+  .ink-gradient {
+    background:
+      radial-gradient(60% 60% at 20% 0%, rgba(212,165,116,.20), transparent 70%),
+      radial-gradient(60% 60% at 100% 100%, rgba(164,112,134,.25), transparent 70%),
+      #2E1A2E;
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #D4A574; outline-offset: 3px; border-radius: 6px;
+  }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .pill { display: inline-flex; align-items: center; gap: .45rem; padding: .35rem .75rem; border-radius: 999px; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, #E7D9D2 30%, #E7D9D2 70%, transparent); }
+  /* Booking modal */
+  .modal-bg { background: rgba(31,18,22,.55); backdrop-filter: blur(6px); }
+  .price-row { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 12px 0; border-bottom: 1px dashed #E7D9D2; align-items: baseline; }
+  .price-row:last-child { border-bottom: 0; }
+  .price-row .price { font-variant-numeric: tabular-nums; font-weight: 600; color: #6B3F5C; }
+</style>
+</head>
+<body class="font-body antialiased">
+
+<!-- ─── Top bar ─────────────────────────────────────────── -->
+<header class="absolute top-0 inset-x-0 z-30">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <span class="w-9 h-9 rounded-full bg-aubergine text-cream grid place-items-center font-display text-[18px] font-semibold shadow-soft">B</span>
+      <span class="font-display text-[19px] font-semibold tracking-tight text-aubergine">Bobby's <span class="text-plum/80">Beauty Salon</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-[14px] text-ink/75">
+      <a href="#services" class="hover:text-plum transition">Treatments</a>
+      <a href="#prices" class="hover:text-plum transition">Price list</a>
+      <a href="#visit" class="hover:text-plum transition">Visit</a>
+      <a href="#book" class="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-aubergine text-cream text-[13px] font-medium shadow-soft hover:bg-plum transition">Book online</a>
+    </nav>
+    <a href="tel:+447415197998" class="md:hidden inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-aubergine text-cream text-[13px] font-medium shadow-soft">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+      Call
+    </a>
+  </div>
+</header>
+
+<!-- ─── Hero ────────────────────────────────────────────── -->
+<section id="top" class="hero-gradient grain pt-28 pb-20 sm:pt-36 sm:pb-28 relative overflow-hidden">
+  <!-- ornament -->
+  <svg aria-hidden="true" class="absolute -right-20 -top-10 w-[460px] h-[460px] opacity-40" viewBox="0 0 200 200">
+    <defs><radialGradient id="g1" cx="50%" cy="50%"><stop offset="0%" stop-color="#D4A574" stop-opacity=".55"/><stop offset="100%" stop-color="#D4A574" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="100" cy="100" r="100" fill="url(#g1)"/>
+  </svg>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-12 relative">
+    <div class="md:col-span-7 reveal">
+      <span class="pill bg-cream/70 ring-1 ring-line text-plum">
+        <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+        Stoke-on-Trent · ST4 6SW
+      </span>
+      <h1 class="display-tight font-display text-[44px] sm:text-[64px] md:text-[76px] leading-[1.02] mt-6 text-aubergine">
+        High-end skin,<br/>
+        laser <span class="italic font-medium text-plum">&amp;</span> beauty<br/>
+        on Stone Road.
+      </h1>
+      <p class="body-relaxed mt-7 text-[17px] text-ink/75 max-w-xl">
+        Bobby's is a warm, award-winning solo studio in Stoke-on-Trent. Laser hair removal, advanced facials, hair, nails, waxing &amp; threading — quiet rooms, honest prices, real consultations.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-3">
+        <a href="#book" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-aubergine text-cream font-medium shadow-glow hover:bg-plum transition">
+          Book your slot
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+447415197998" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-cream/80 ring-1 ring-line text-aubergine font-medium hover:bg-cream transition">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+          07415 197998
+        </a>
+      </div>
+      <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-ink/70">
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-champagne"></span>Award-winning</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-champagne"></span>Open 6 days · 8am–9pm</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-champagne"></span>Parking on-site</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-champagne"></span>By appointment only</li>
+      </ul>
+    </div>
+
+    <!-- Hero card stack -->
+    <div class="md:col-span-5 relative reveal">
+      <div class="relative aspect-[4/5] w-full">
+        <!-- back card: hours -->
+        <div class="absolute -left-2 top-6 w-[78%] rounded-3xl bg-aubergine text-cream p-6 shadow-card rotate-[-3deg]">
+          <p class="text-[11px] uppercase tracking-[.18em] text-champagne/90">Open today</p>
+          <p class="font-display text-[40px] leading-none mt-2">8 — 9</p>
+          <p class="text-[12px] text-cream/70 mt-1">am ······ pm</p>
+          <div class="divider my-4 opacity-30"></div>
+          <ul class="text-[13px] space-y-1.5 text-cream/80">
+            <li class="flex justify-between"><span>Mon – Sat</span><span>8am · 9pm</span></li>
+            <li class="flex justify-between"><span>Sunday</span><span class="text-cream/50">Closed</span></li>
+          </ul>
+        </div>
+        <!-- front card: photo placeholder -->
+        <div class="absolute right-0 bottom-0 w-[78%] aspect-[4/5] rounded-3xl overflow-hidden shadow-card ring-1 ring-line bg-cream">
+          <div class="w-full h-full grid place-items-center" style="background:
+            radial-gradient(60% 60% at 50% 30%, rgba(212,165,116,.65), transparent 70%),
+            radial-gradient(60% 60% at 50% 90%, rgba(232,197,192,.85), transparent 70%),
+            linear-gradient(160deg, #F5EBE0 0%, #E8C5C0 100%);">
+            <div class="text-center px-6">
+              <svg class="mx-auto" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2E1A2E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".55"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+              <p class="font-display text-[22px] text-aubergine mt-4">Quiet rooms.<br/>Real consultations.</p>
+              <p class="text-[12px] text-ink/55 mt-2 italic">Drop in for a chat — no pressure.</p>
+            </div>
+          </div>
+        </div>
+        <!-- floating chip: laser -->
+        <div class="absolute right-3 -top-2 bg-cream rounded-2xl px-4 py-3 shadow-card ring-1 ring-line rotate-[3deg]">
+          <p class="text-[11px] uppercase tracking-[.18em] text-plum/80">Specialist</p>
+          <p class="font-display text-[18px] text-aubergine leading-tight">Laser hair removal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Trust strip ─────────────────────────────────────── -->
+<section class="bg-sand border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-7 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+    <div class="reveal">
+      <p class="font-display text-[26px] text-aubergine">6 days</p>
+      <p class="text-[12px] uppercase tracking-[.16em] text-ink/55 mt-1">Open a week</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display text-[26px] text-aubergine">13 hrs</p>
+      <p class="text-[12px] uppercase tracking-[.16em] text-ink/55 mt-1">Late till 9pm</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display text-[26px] text-aubergine">£5+</p>
+      <p class="text-[12px] uppercase tracking-[.16em] text-ink/55 mt-1">Treatments from</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display text-[26px] text-aubergine">1:1</p>
+      <p class="text-[12px] uppercase tracking-[.16em] text-ink/55 mt-1">Solo beautician</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Services overview ───────────────────────────────── -->
+<section id="services" class="py-24 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex items-end justify-between flex-wrap gap-6 reveal">
+      <div class="max-w-xl">
+        <span class="pill bg-blush/40 text-plum ring-1 ring-line">Treatments</span>
+        <h2 class="font-display display-tight text-[36px] sm:text-[48px] text-aubergine mt-4 leading-[1.05]">Six things I do, and I do them properly.</h2>
+        <p class="body-relaxed mt-4 text-[16px] text-ink/70">From a five-pound upper-lip thread to full-body laser, every appointment starts with a real consultation. No upselling, no rush.</p>
+      </div>
+      <a href="#prices" class="text-[14px] text-plum font-medium hover:text-aubergine transition inline-flex items-center gap-1.5">
+        See full price list
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Card template -->
+      <article class="group bg-sand rounded-3xl p-7 ring-1 ring-line hover:shadow-card transition reveal">
+        <div class="w-11 h-11 rounded-2xl bg-aubergine text-champagne grid place-items-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3"/><path d="m4.5 6.5 2.1 2.1"/><path d="M2 14h3"/><path d="m4.5 21.5 2.1-2.1"/><path d="M12 22v-3"/><path d="m19.5 21.5-2.1-2.1"/><path d="M22 14h-3"/><path d="m19.5 6.5-2.1 2.1"/><circle cx="12" cy="14" r="5"/></svg>
+        </div>
+        <h3 class="font-display text-[22px] text-aubergine">Laser hair removal</h3>
+        <p class="text-[14px] text-ink/65 mt-2 body-relaxed">Full body, legs, arms, Hollywood, face. Patch-tested first session, follow-ups paced to your cycle.</p>
+        <p class="mt-5 text-[13px] text-plum font-medium">From £20 · upper lip</p>
+      </article>
+
+      <article class="group bg-sand rounded-3xl p-7 ring-1 ring-line hover:shadow-card transition reveal">
+        <div class="w-11 h-11 rounded-2xl bg-aubergine text-champagne grid place-items-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3 class="font-display text-[22px] text-aubergine">Advanced facials</h3>
+        <p class="text-[14px] text-ink/65 mt-2 body-relaxed">Microdermabrasion, hydro-facial, microneedling, carbon peel — and an honest "you don't need this today" if you don't.</p>
+        <p class="mt-5 text-[13px] text-plum font-medium">From £25 · classic facial</p>
+      </article>
+
+      <article class="group bg-sand rounded-3xl p-7 ring-1 ring-line hover:shadow-card transition reveal">
+        <div class="w-11 h-11 rounded-2xl bg-aubergine text-champagne grid place-items-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 1 18 0"/><path d="M3 12a9 9 0 1 0 18 0"/><path d="M12 3v18"/></svg>
+        </div>
+        <h3 class="font-display text-[22px] text-aubergine">Waxing &amp; threading</h3>
+        <p class="text-[14px] text-ink/65 mt-2 body-relaxed">Brows from £5, full leg £20, Brazilian £20, Hollywood £25. Quick, clean, kind.</p>
+        <p class="mt-5 text-[13px] text-plum font-medium">From £2 · upper lip</p>
+      </article>
+
+      <article class="group bg-sand rounded-3xl p-7 ring-1 ring-line hover:shadow-card transition reveal">
+        <div class="w-11 h-11 rounded-2xl bg-aubergine text-champagne grid place-items-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M5 8a7 7 0 0 1 14 0c0 4-3 7-7 14C8 15 5 12 5 8z"/></svg>
+        </div>
+        <h3 class="font-display text-[22px] text-aubergine">Hair</h3>
+        <p class="text-[14px] text-ink/65 mt-2 body-relaxed">Wash &amp; blow-dry, layered cuts, hair spa, scalp detox — solo chair, no double-booking.</p>
+        <p class="mt-5 text-[13px] text-plum font-medium">From £20 · wash &amp; blow</p>
+      </article>
+
+      <article class="group bg-sand rounded-3xl p-7 ring-1 ring-line hover:shadow-card transition reveal">
+        <div class="w-11 h-11 rounded-2xl bg-aubergine text-champagne grid place-items-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a3 3 0 0 1 6 0v5"/><path d="M5 11h14l-1.5 9h-11Z"/></svg>
+        </div>
+        <h3 class="font-display text-[22px] text-aubergine">Nails</h3>
+        <p class="text-[14px] text-ink/65 mt-2 body-relaxed">Manicure done properly. File, cuticle, base, colour, top — all in.</p>
+        <p class="mt-5 text-[13px] text-plum font-medium">From £20 · manicure</p>
+      </article>
+
+      <article class="group bg-sand rounded-3xl p-7 ring-1 ring-line hover:shadow-card transition reveal">
+        <div class="w-11 h-11 rounded-2xl bg-aubergine text-champagne grid place-items-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/></svg>
+        </div>
+        <h3 class="font-display text-[22px] text-aubergine">Tinting</h3>
+        <p class="text-[14px] text-ink/65 mt-2 body-relaxed">Eyelash tint £10, eyebrow tint £8. Quick lunch-break refresh.</p>
+        <p class="mt-5 text-[13px] text-plum font-medium">From £8 · brow tint</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Price list (real prices from current site) ──────── -->
+<section id="prices" class="bg-cream/60 grain py-24 sm:py-28">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-2xl">
+      <span class="pill bg-aubergine/10 text-aubergine ring-1 ring-aubergine/20">Honest prices</span>
+      <h2 class="font-display display-tight text-[36px] sm:text-[44px] text-aubergine mt-4 leading-[1.05]">No "from £xx" trickery. The full list.</h2>
+      <p class="body-relaxed mt-4 text-[16px] text-ink/70">Same prices you'd be quoted in the chair. If you don't see what you need, ring me — I'll work it out with you.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-5 lg:gap-6">
+
+      <!-- Laser -->
+      <div class="bg-sand rounded-3xl p-7 sm:p-8 shadow-soft ring-1 ring-line reveal">
+        <div class="flex items-baseline justify-between">
+          <h3 class="font-display text-[24px] text-aubergine">Laser hair removal</h3>
+          <span class="text-[12px] uppercase tracking-[.14em] text-plum/70">Per session</span>
+        </div>
+        <div class="mt-5 text-[14.5px]">
+          <div class="price-row"><span>Full body</span><span class="price">£180</span></div>
+          <div class="price-row"><span>Full leg</span><span class="price">£70</span></div>
+          <div class="price-row"><span>Full arm</span><span class="price">£50</span></div>
+          <div class="price-row"><span>Hollywood</span><span class="price">£45</span></div>
+          <div class="price-row"><span>Back · Stomach</span><span class="price">£40</span></div>
+          <div class="price-row"><span>Full face</span><span class="price">£35</span></div>
+          <div class="price-row"><span>Underarm</span><span class="price">£30</span></div>
+          <div class="price-row"><span>Upper lip</span><span class="price">£20</span></div>
+        </div>
+      </div>
+
+      <!-- Facials -->
+      <div class="bg-sand rounded-3xl p-7 sm:p-8 shadow-soft ring-1 ring-line reveal">
+        <div class="flex items-baseline justify-between">
+          <h3 class="font-display text-[24px] text-aubergine">Facials</h3>
+          <span class="text-[12px] uppercase tracking-[.14em] text-plum/70">Single treatment</span>
+        </div>
+        <div class="mt-5 text-[14.5px]">
+          <div class="price-row"><span>Classic facial</span><span class="price">£25</span></div>
+          <div class="price-row"><span>Microdermabrasion</span><span class="price">£30</span></div>
+          <div class="price-row"><span>Hydro-facial</span><span class="price">£70</span></div>
+          <div class="price-row"><span>Microneedling</span><span class="price">£70</span></div>
+          <div class="price-row"><span>Carbon peel</span><span class="price">£70</span></div>
+        </div>
+      </div>
+
+      <!-- Waxing -->
+      <div class="bg-sand rounded-3xl p-7 sm:p-8 shadow-soft ring-1 ring-line reveal">
+        <div class="flex items-baseline justify-between">
+          <h3 class="font-display text-[24px] text-aubergine">Waxing</h3>
+          <span class="text-[12px] uppercase tracking-[.14em] text-plum/70">By area</span>
+        </div>
+        <div class="mt-5 text-[14.5px]">
+          <div class="price-row"><span>Full body</span><span class="price">£70</span></div>
+          <div class="price-row"><span>Hollywood</span><span class="price">£25</span></div>
+          <div class="price-row"><span>Brazilian</span><span class="price">£20</span></div>
+          <div class="price-row"><span>Full leg</span><span class="price">£20</span></div>
+          <div class="price-row"><span>Full arm</span><span class="price">£15</span></div>
+          <div class="price-row"><span>Half leg · Full face</span><span class="price">£12</span></div>
+          <div class="price-row"><span>Half arm · Back</span><span class="price">£10</span></div>
+          <div class="price-row"><span>Stomach</span><span class="price">£8</span></div>
+          <div class="price-row"><span>Eyebrows · Underarm</span><span class="price">£5</span></div>
+          <div class="price-row"><span>Upper lip</span><span class="price">£2</span></div>
+        </div>
+      </div>
+
+      <!-- Hair -->
+      <div class="bg-sand rounded-3xl p-7 sm:p-8 shadow-soft ring-1 ring-line reveal">
+        <div class="flex items-baseline justify-between">
+          <h3 class="font-display text-[24px] text-aubergine">Hair</h3>
+          <span class="text-[12px] uppercase tracking-[.14em] text-plum/70">From</span>
+        </div>
+        <div class="mt-5 text-[14.5px]">
+          <div class="price-row"><span>Wash &amp; blow-dry</span><span class="price">£20</span></div>
+          <div class="price-row"><span>One-length cut &amp; blow-dry</span><span class="price">£25</span></div>
+          <div class="price-row"><span>Layer cut &amp; blow-dry</span><span class="price">from £30</span></div>
+          <div class="price-row"><span>Hair styles</span><span class="price">from £20</span></div>
+          <div class="price-row"><span>Hair spa</span><span class="price">from £45</span></div>
+          <div class="price-row"><span>Scalp detox</span><span class="price">£75</span></div>
+        </div>
+      </div>
+
+      <!-- Nails + Tinting (combined) -->
+      <div class="md:col-span-2 grid sm:grid-cols-2 gap-5 lg:gap-6">
+        <div class="bg-sand rounded-3xl p-7 sm:p-8 shadow-soft ring-1 ring-line reveal">
+          <div class="flex items-baseline justify-between">
+            <h3 class="font-display text-[24px] text-aubergine">Nails</h3>
+            <span class="text-[12px] uppercase tracking-[.14em] text-plum/70">Per set</span>
+          </div>
+          <div class="mt-5 text-[14.5px]">
+            <div class="price-row"><span>Manicure</span><span class="price">£20</span></div>
+          </div>
+          <p class="text-[13px] text-ink/55 mt-4 italic">Pedicure, gel &amp; extension prices on request — ring or DM @bobbysskinandlaserclinic.</p>
+        </div>
+        <div class="bg-sand rounded-3xl p-7 sm:p-8 shadow-soft ring-1 ring-line reveal">
+          <div class="flex items-baseline justify-between">
+            <h3 class="font-display text-[24px] text-aubergine">Threading &amp; tinting</h3>
+            <span class="text-[12px] uppercase tracking-[.14em] text-plum/70">Quick visit</span>
+          </div>
+          <div class="mt-5 text-[14.5px]">
+            <div class="price-row"><span>Threading · full face</span><span class="price">£15</span></div>
+            <div class="price-row"><span>Eyelash tint</span><span class="price">£10</span></div>
+            <div class="price-row"><span>Eyebrow tint</span><span class="price">£8</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Booking demo + visit ────────────────────────────── -->
+<section id="book" class="ink-gradient grain text-cream py-24 sm:py-28 relative overflow-hidden">
+  <svg aria-hidden="true" class="absolute -left-32 -bottom-16 w-[460px] h-[460px] opacity-30" viewBox="0 0 200 200">
+    <defs><radialGradient id="g2" cx="50%" cy="50%"><stop offset="0%" stop-color="#D4A574" stop-opacity=".7"/><stop offset="100%" stop-color="#D4A574" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="100" cy="100" r="100" fill="url(#g2)"/>
+  </svg>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-12 relative">
+
+    <div id="visit" class="md:col-span-6 reveal">
+      <span class="pill bg-cream/10 ring-1 ring-cream/20 text-champagne">Visit</span>
+      <h2 class="font-display display-tight text-[38px] sm:text-[52px] mt-5 leading-[1.05]">54A Stone Road,<br/>Stoke-on-Trent.</h2>
+      <p class="body-relaxed mt-5 text-cream/75 text-[16px] max-w-md">Free parking on the road and in the small lot at the back. Buzz the door — I'll come down. Door's locked between clients to keep things calm.</p>
+
+      <ul class="mt-9 space-y-4 text-[15px]">
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-champagne shrink-0"></span>
+          <div>
+            <p class="text-cream/95">Mon — Sat · 8am to 9pm</p>
+            <p class="text-cream/55 text-[13px]">Late slots free most weekdays after 6pm.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-champagne shrink-0"></span>
+          <div>
+            <p class="text-cream/95">Sundays — closed</p>
+            <p class="text-cream/55 text-[13px]">My one day. Back fresh on Monday.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-champagne shrink-0"></span>
+          <div>
+            <p class="text-cream/95">By appointment only</p>
+            <p class="text-cream/55 text-[13px]">No drop-ins — I'm one pair of hands. Booking takes a minute.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="tel:+447415197998" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-champagne text-aubergine font-medium hover:bg-cream transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+          07415 197998
+        </a>
+        <a href="https://maps.google.com/?q=54A%20Stone%20Road%2C%20Stoke-on-Trent%2C%20ST4%206SW" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full ring-1 ring-cream/30 text-cream hover:bg-cream/10 transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Open in Maps
+        </a>
+        <a href="https://www.instagram.com/bobbysskinandlaserclinic" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full ring-1 ring-cream/30 text-cream hover:bg-cream/10 transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Booking demo card -->
+    <div class="md:col-span-6 reveal">
+      <div class="bg-sand text-ink rounded-3xl p-7 sm:p-9 shadow-glow ring-1 ring-cream/10">
+        <div class="flex items-center justify-between">
+          <p class="text-[12px] uppercase tracking-[.18em] text-plum/80">Book online · 2-min</p>
+          <span class="text-[11px] px-2 py-1 rounded-full bg-blush/40 text-plum">Live demo</span>
+        </div>
+        <h3 class="font-display text-[28px] sm:text-[32px] text-aubergine mt-3 leading-tight">What would you like booked in?</h3>
+
+        <form id="bookForm" class="mt-6 space-y-5" onsubmit="return openConfirm(event)">
+          <div>
+            <label class="text-[12px] uppercase tracking-[.14em] text-ink/55">Treatment</label>
+            <select required class="mt-2 w-full rounded-2xl bg-cream/60 ring-1 ring-line px-4 py-3.5 text-[15px] text-ink focus:ring-champagne focus:bg-cream transition">
+              <option value="">Pick a treatment…</option>
+              <option>Laser hair removal · Hollywood — £45</option>
+              <option>Laser hair removal · Underarm — £30</option>
+              <option>Laser hair removal · Upper lip — £20</option>
+              <option>Hydro-facial — £70</option>
+              <option>Microneedling — £70</option>
+              <option>Classic facial — £25</option>
+              <option>Hollywood wax — £25</option>
+              <option>Brazilian wax — £20</option>
+              <option>Brow shape &amp; tint — £13</option>
+              <option>Wash &amp; blow-dry — £20</option>
+              <option>Manicure — £20</option>
+              <option>Something else — I'll explain in notes</option>
+            </select>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-[12px] uppercase tracking-[.14em] text-ink/55">Date</label>
+              <input required type="date" class="mt-2 w-full rounded-2xl bg-cream/60 ring-1 ring-line px-4 py-3.5 text-[15px] text-ink focus:ring-champagne focus:bg-cream transition" />
+            </div>
+            <div>
+              <label class="text-[12px] uppercase tracking-[.14em] text-ink/55">Time</label>
+              <select required class="mt-2 w-full rounded-2xl bg-cream/60 ring-1 ring-line px-4 py-3.5 text-[15px] text-ink focus:ring-champagne focus:bg-cream transition">
+                <option value="">Pick a slot…</option>
+                <option>09:00</option><option>10:30</option><option>12:00</option>
+                <option>14:00</option><option>16:00</option><option>17:30</option>
+                <option>18:30</option><option>19:30</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-[12px] uppercase tracking-[.14em] text-ink/55">Your name</label>
+              <input required type="text" placeholder="First name" class="mt-2 w-full rounded-2xl bg-cream/60 ring-1 ring-line px-4 py-3.5 text-[15px] text-ink focus:ring-champagne focus:bg-cream transition" />
+            </div>
+            <div>
+              <label class="text-[12px] uppercase tracking-[.14em] text-ink/55">Mobile</label>
+              <input required type="tel" placeholder="07…" class="mt-2 w-full rounded-2xl bg-cream/60 ring-1 ring-line px-4 py-3.5 text-[15px] text-ink focus:ring-champagne focus:bg-cream transition" />
+            </div>
+          </div>
+
+          <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-aubergine text-cream font-medium hover:bg-plum transition shadow-soft">
+            Request slot
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <p class="text-[12px] text-ink/55 text-center">I confirm by SMS within 30 minutes during opening hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── About Bobby ─────────────────────────────────────── -->
+<section class="py-24 sm:py-28 bg-sand">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+    <span class="pill bg-blush/40 text-plum ring-1 ring-line">In my own words</span>
+    <h2 class="font-display display-tight text-[36px] sm:text-[48px] text-aubergine mt-5 leading-[1.05]">A warm, friendly salon — and some of the best consultations in town.</h2>
+    <p class="body-relaxed mt-6 text-[17px] text-ink/70 max-w-2xl mx-auto">
+      "Bobby's Beauty Salon provides high-end treatments in my flagship Stoke-on-Trent salon. I'm a beautician — I pride myself on excellent technical skills and great customer care. You'll leave my award-winning salon feeling satisfied and reinvigorated. Why not drop by today and see for yourself?"
+    </p>
+    <div class="divider mt-12 mb-12 max-w-xs mx-auto"></div>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="pill bg-cream ring-1 ring-line text-plum">Award-winning</span>
+      <span class="pill bg-cream ring-1 ring-line text-plum">Solo beautician</span>
+      <span class="pill bg-cream ring-1 ring-line text-plum">Skin &amp; laser specialist</span>
+      <span class="pill bg-cream ring-1 ring-line text-plum">By appointment</span>
+      <span class="pill bg-cream ring-1 ring-line text-plum">Good for children</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ──────────────────────────────────────────── -->
+<footer class="bg-aubergine text-cream/85 pt-16 pb-8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-2.5">
+        <span class="w-9 h-9 rounded-full bg-champagne text-aubergine grid place-items-center font-display text-[18px] font-semibold">B</span>
+        <span class="font-display text-[19px] font-semibold tracking-tight text-cream">Bobby's Beauty Salon</span>
+      </div>
+      <p class="mt-4 text-[14px] text-cream/65 max-w-xs body-relaxed">High-end skin, laser &amp; beauty in Stoke-on-Trent. By appointment only.</p>
+    </div>
+    <div>
+      <p class="text-[12px] uppercase tracking-[.18em] text-champagne/80">Find me</p>
+      <ul class="mt-4 space-y-2 text-[14px]">
+        <li><a class="hover:text-cream" href="https://maps.google.com/?q=54A%20Stone%20Road%2C%20Stoke-on-Trent%2C%20ST4%206SW" target="_blank" rel="noopener">54A Stone Road, ST4 6SW</a></li>
+        <li><a class="hover:text-cream" href="tel:+447415197998">07415 197998</a></li>
+        <li><a class="hover:text-cream" href="https://www.instagram.com/bobbysskinandlaserclinic" target="_blank" rel="noopener">@bobbysskinandlaserclinic</a></li>
+        <li><a class="hover:text-cream" href="https://www.facebook.com/Bobbysskinandlaserclinic" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-[12px] uppercase tracking-[.18em] text-champagne/80">Hours</p>
+      <ul class="mt-4 space-y-1.5 text-[14px]">
+        <li class="flex justify-between"><span>Mon – Sat</span><span class="text-cream/65">8am — 9pm</span></li>
+        <li class="flex justify-between"><span>Sunday</span><span class="text-cream/55">Closed</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-14 pt-6 border-t border-cream/10 flex flex-wrap items-center justify-between gap-3">
+    <p class="text-[12px] text-cream/45">© 2026 Bobby's Beauty Salon · Stoke-on-Trent</p>
+    <p class="text-[11px] text-cream/35">Preview by <a class="underline decoration-cream/30 hover:text-cream/70" href="mailto:kyle.airey@hotmail.com">AireyAI</a></p>
+  </div>
+</footer>
+
+<!-- ─── Booking confirm modal (demo) ────────────────────── -->
+<div id="confirmModal" class="hidden fixed inset-0 z-50 modal-bg items-center justify-center p-4">
+  <div class="bg-sand rounded-3xl max-w-md w-full p-7 shadow-glow ring-1 ring-line text-center">
+    <div class="w-12 h-12 rounded-full bg-champagne/30 mx-auto grid place-items-center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B3F5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3 class="font-display text-[26px] text-aubergine mt-4">Slot requested.</h3>
+    <p class="text-[14px] text-ink/65 mt-3 body-relaxed">Bobby will text you back to confirm — usually within 30 minutes during opening hours. (This is a preview, no booking has been made.)</p>
+    <button onclick="document.getElementById('confirmModal').classList.add('hidden'); document.getElementById('confirmModal').classList.remove('flex');" class="mt-6 inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-aubergine text-cream font-medium hover:bg-plum transition">Got it</button>
+  </div>
+</div>
+
+<script>
+  function openConfirm(e) {
+    e.preventDefault();
+    const m = document.getElementById('confirmModal');
+    m.classList.remove('hidden');
+    m.classList.add('flex');
+    return false;
+  }
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
