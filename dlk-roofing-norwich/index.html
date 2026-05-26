@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DLK Roofing Norwich | Norfolk's Trusted Roofing Specialists</title>
+<meta name="description" content="20+ years roofing Norwich and Norfolk. Pitched and flat roofs, EPDM rubber, lead work, chimney repairs. TrustMark and CORC accredited. Free survey. Call 01603 339191.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --slate-900: #14202B;
+  --slate-800: #1F2A33;
+  --slate-700: #2D3B47;
+  --slate-500: #5A6B78;
+  --copper-600: #B8451A;
+  --copper-500: #C7501C;
+  --copper-400: #E07A3F;
+  --cream: #F4EEE5;
+  --bone: #FAF6EF;
+  --warm-white: #FFFCF7;
+}
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bone);
+  color: var(--slate-800);
+  line-height: 1.7;
+  font-size: 16px;
+}
+.display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.03em; line-height: 1.05; font-weight: 600; }
+.eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 11px; font-weight: 600; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(199, 80, 28, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 80%, rgba(20, 32, 43, 0.95) 0%, transparent 60%),
+    linear-gradient(135deg, #1F2A33 0%, #14202B 60%, #0D1820 100%);
+}
+.hero-img {
+  position: absolute; inset: 0;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.55;
+  mix-blend-mode: luminosity;
+}
+.hero-veil {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(20,32,43,0.55) 0%, rgba(20,32,43,0.20) 40%, rgba(20,32,43,0.85) 100%),
+    radial-gradient(ellipse at 30% 50%, rgba(199, 80, 28, 0.15) 0%, transparent 60%);
+}
+.noise {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  opacity: 0.18;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 28px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: transform 280ms cubic-bezier(.2,.7,.2,1), box-shadow 280ms cubic-bezier(.2,.7,.2,1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--copper-500);
+  color: #fff;
+  box-shadow: 0 12px 28px -10px rgba(199, 80, 28, 0.6), inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -10px rgba(199, 80, 28, 0.7), inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.btn-ghost {
+  background: rgba(255,255,255,0.08);
+  color: var(--warm-white);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}
+.btn-dark {
+  background: var(--slate-800);
+  color: var(--warm-white);
+  box-shadow: 0 10px 24px -10px rgba(20,32,43,0.5);
+}
+.btn-dark:hover { transform: translateY(-2px); }
+
+/* ===== CARDS ===== */
+.svc-card {
+  position: relative;
+  background: var(--warm-white);
+  border-radius: 20px;
+  padding: 36px 32px 32px;
+  border: 1px solid rgba(20,32,43,0.06);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 18px 38px -28px rgba(20,32,43,0.18);
+  transition: transform 380ms cubic-bezier(.2,.7,.2,1), box-shadow 380ms ease, border-color 380ms ease;
+}
+.svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 52px -22px rgba(20,32,43,0.28);
+  border-color: rgba(199,80,28,0.30);
+}
+.svc-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(140deg, #C7501C 0%, #B8451A 100%);
+  display: grid; place-items: center;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 22px -10px rgba(199, 80, 28, 0.55);
+}
+.svc-icon svg { width: 26px; height: 26px; stroke: #fff; }
+
+/* ===== TRUST STRIP ===== */
+.trust-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+/* ===== STATS ===== */
+.stat-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: clamp(56px, 8vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(160deg, #1F2A33 0%, #C7501C 120%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 50;
+  transition: background 300ms ease, backdrop-filter 300ms ease, box-shadow 300ms ease;
+}
+.nav.scrolled {
+  background: rgba(250, 246, 239, 0.88);
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(20,32,43,0.06);
+}
+.nav-link {
+  color: var(--slate-800);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding: 6px 2px;
+}
+.nav-link::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -2px;
+  height: 2px; background: var(--copper-500);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 280ms cubic-bezier(.2,.7,.2,1);
+}
+.nav-link:hover::after { transform: scaleX(1); }
+.nav-light .nav-link { color: rgba(255,255,255,0.92); }
+
+/* ===== TESTIMONIALS ===== */
+.quote-card {
+  background: var(--warm-white);
+  border-radius: 22px;
+  padding: 38px 36px;
+  border: 1px solid rgba(20,32,43,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.quote-card::before {
+  content: '“';
+  position: absolute;
+  top: -28px; left: 18px;
+  font-family: 'Fraunces', serif;
+  font-size: 180px;
+  color: var(--copper-500);
+  opacity: 0.10;
+  line-height: 1;
+}
+
+/* ===== CONTACT ===== */
+.contact-panel {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(199, 80, 28, 0.32) 0%, transparent 60%),
+    linear-gradient(140deg, #1F2A33 0%, #14202B 100%);
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+}
+.contact-link {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  color: var(--warm-white);
+  transition: color 200ms ease, transform 200ms ease;
+}
+.contact-link:hover { color: var(--copper-400); transform: translateX(4px); }
+.contact-link svg { width: 22px; height: 22px; stroke: var(--copper-400); flex-shrink: 0; }
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa-float {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: grid; place-items: center;
+  box-shadow: 0 14px 30px -8px rgba(37, 211, 102, 0.55);
+  z-index: 60;
+  transition: transform 220ms ease;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+/* ===== UTILITIES ===== */
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 800ms cubic-bezier(.2,.7,.2,1), transform 800ms cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(20,32,43,0.14), transparent); }
+
+@media (max-width: 768px) {
+  .hero { min-height: 88dvh; }
+  .nav-link.mobile-hide { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav nav-light" id="nav">
+  <div class="wrap flex items-center justify-between py-5">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl" style="background: linear-gradient(140deg, #C7501C, #B8451A); display: grid; place-items: center; box-shadow: 0 10px 24px -10px rgba(199,80,28,0.6);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 4l9 8"/><path d="M5 10v10h14V10"/></svg>
+      </div>
+      <span class="display text-lg" style="color: var(--warm-white); font-weight: 700;">DLK Roofing</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#approach" class="nav-link">Our work</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="tel:01603339191" class="btn btn-ghost" style="padding: 11px 20px; font-size: 14px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      01603 339191
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="hero flex items-center">
+  <div class="hero-img"></div>
+  <div class="hero-veil"></div>
+  <div class="noise"></div>
+
+  <div class="wrap relative z-10 pt-32 pb-24">
+    <div class="max-w-3xl">
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="trust-pill"><span style="width:8px;height:8px;border-radius:50%;background:#25D366;display:inline-block;"></span> Free surveys this week</span>
+        <span class="trust-pill">Norwich · Norfolk</span>
+      </div>
+
+      <h1 class="display reveal" style="color: var(--warm-white); font-size: clamp(44px, 7.2vw, 84px); margin-bottom: 28px;">
+        Norfolk's roofs,<br>done <em style="color: var(--copper-400); font-style: italic; font-weight: 400;">properly.</em>
+      </h1>
+
+      <p class="reveal" style="color: rgba(255,255,255,0.82); font-size: clamp(17px, 1.4vw, 20px); max-width: 620px; margin-bottom: 40px;">
+        Twenty years on Norwich roofs. TrustMark and CORC accredited. Pitched, flat, EPDM, lead and chimney work — backed by a 10–20 year workmanship warranty.
+      </p>
+
+      <div class="flex flex-wrap gap-4 reveal">
+        <a href="#contact" class="btn btn-primary">
+          Book a free survey
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:01603339191" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call the team
+        </a>
+      </div>
+
+      <div class="mt-20 reveal flex items-center gap-10 flex-wrap" style="color: rgba(255,255,255,0.55); font-size: 13px;">
+        <div>
+          <div class="eyebrow" style="color: rgba(255,255,255,0.40); margin-bottom: 6px;">Accreditations</div>
+          <div class="flex items-center gap-5 flex-wrap" style="color: rgba(255,255,255,0.85); font-weight: 500;">
+            <span>TrustMark</span>
+            <span style="opacity:0.4;">·</span>
+            <span>CORC</span>
+            <span style="opacity:0.4;">·</span>
+            <span>HomePro</span>
+            <span style="opacity:0.4;">·</span>
+            <span>Norfolk Trading Standards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="py-20" style="background: var(--bone);">
+  <div class="wrap grid grid-cols-2 md:grid-cols-4 gap-10">
+    <div class="reveal">
+      <div class="stat-num">20+</div>
+      <div class="eyebrow mt-2" style="color: var(--slate-500);">Years on Norfolk roofs</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">10–20</div>
+      <div class="eyebrow mt-2" style="color: var(--slate-500);">Year workmanship warranty</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">4</div>
+      <div class="eyebrow mt-2" style="color: var(--slate-500);">Industry accreditations</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">24h</div>
+      <div class="eyebrow mt-2" style="color: var(--slate-500);">Quote turnaround</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT / APPROACH -->
+<section id="approach" class="py-28">
+  <div class="wrap grid md:grid-cols-2 gap-20 items-center">
+    <div class="reveal">
+      <div class="eyebrow" style="color: var(--copper-500);">The Norwich roofing company</div>
+      <h2 class="display mt-4" style="font-size: clamp(36px, 4.5vw, 56px); color: var(--slate-800);">
+        Twenty years. One postcode. <em style="color: var(--copper-500); font-weight: 500;">No shortcuts.</em>
+      </h2>
+      <p class="mt-6" style="color: var(--slate-700); font-size: 17px;">
+        DLK started as a one-van outfit in Costessey. Two decades later we still answer the phone ourselves, still survey every roof before we quote, and still won't take a job we can't stand behind.
+      </p>
+      <p class="mt-4" style="color: var(--slate-700); font-size: 17px;">
+        Every complete roof carries a 10–20 year workmanship warranty. Insurance-backed guarantees are available on request — the same paperwork your mortgage advisor wants to see.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#services" class="btn btn-dark">See our services</a>
+        <a href="#contact" class="btn" style="background: transparent; color: var(--slate-800); border: 1px solid rgba(20,32,43,0.18);">Get a free quote</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="grid grid-cols-2 gap-4">
+        <div style="background: var(--slate-800); border-radius: 18px; padding: 28px; color: var(--warm-white); position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 100% 0%, rgba(199,80,28,0.30), transparent 60%);"></div>
+          <div class="relative">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--copper-400)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-8 9 8"/><path d="M5 10v11h14V10"/><path d="M9 21v-6h6v6"/></svg>
+            <div class="display mt-6" style="font-size: 28px;">Residential</div>
+            <p class="mt-2 text-sm" style="color: rgba(255,255,255,0.65);">Domestic re-roofs, repairs and flat-roof replacement across NR postcodes.</p>
+          </div>
+        </div>
+        <div style="background: var(--copper-500); border-radius: 18px; padding: 28px; color: #fff; position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 0% 100%, rgba(255,255,255,0.18), transparent 60%);"></div>
+          <div class="relative">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M7 8V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg>
+            <div class="display mt-6" style="font-size: 28px;">Commercial</div>
+            <p class="mt-2 text-sm" style="opacity: 0.85;">Industrial flat-roof projects, schools, retail units and managed-property contracts.</p>
+          </div>
+        </div>
+        <div style="background: var(--warm-white); border-radius: 18px; padding: 28px; border: 1px solid rgba(20,32,43,0.08); grid-column: span 2;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--copper-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <div class="display mt-6" style="font-size: 24px; color: var(--slate-800);">Insurance-backed work</div>
+          <p class="mt-2 text-sm" style="color: var(--slate-500);">Every quote optional with IWA cover. Paperwork your insurer, surveyor and mortgage broker will accept.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-28" style="background: linear-gradient(180deg, var(--bone) 0%, var(--cream) 100%);">
+  <div class="wrap">
+    <div class="text-center mb-20 reveal max-w-2xl mx-auto">
+      <div class="eyebrow" style="color: var(--copper-500);">What we do</div>
+      <h2 class="display mt-4" style="font-size: clamp(36px, 4.5vw, 56px);">
+        Every roof, <em style="color: var(--copper-500); font-weight: 500;">every detail.</em>
+      </h2>
+      <p class="mt-6" style="color: var(--slate-500); font-size: 17px;">
+        Six specialist services. One Norwich team. No subcontracted ladders.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l10-9 10 9"/><path d="M4 10v10h16V10"/></svg>
+        </div>
+        <h3 class="display" style="font-size: 24px;">Pitched roofs</h3>
+        <p class="mt-3" style="color: var(--slate-500); font-size: 15px;">Slate, plain tile, concrete interlock. New roofs, re-roofs and storm damage repairs across Norfolk.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M3 14h18"/></svg>
+        </div>
+        <h3 class="display" style="font-size: 24px;">Flat roofs</h3>
+        <p class="mt-3" style="color: var(--slate-500); font-size: 15px;">Felt, GRP fibreglass, single-ply membranes. Garage roofs, dormers, extensions and dead flats.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        </div>
+        <h3 class="display" style="font-size: 24px;">EPDM rubber</h3>
+        <p class="mt-3" style="color: var(--slate-500); font-size: 15px;">Firestone EPDM installers. 50-year design life on the right substrate — fitted by people who know it.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21V9l3-6 3 6v12"/><path d="M9 21h6"/><path d="M7 21h10"/></svg>
+        </div>
+        <h3 class="display" style="font-size: 24px;">Lead &amp; chimney</h3>
+        <p class="mt-3" style="color: var(--slate-500); font-size: 15px;">Lead flashing, valleys, chimney rebuilds, pointing and pots. The work most generalists won't touch.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M5 6l-2 6 2 6"/><path d="M19 6l2 6-2 6"/></svg>
+        </div>
+        <h3 class="display" style="font-size: 24px;">Roofline &amp; UPVC</h3>
+        <p class="mt-3" style="color: var(--slate-500); font-size: 15px;">Fascias, soffits, guttering, downpipes. Replaced as a clean set — not patched.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3 class="display" style="font-size: 24px;">Emergency repairs</h3>
+        <p class="mt-3" style="color: var(--slate-500); font-size: 15px;">Storm leaks, missing tiles, lifted ridge. Same-day call back in NR1–NR8.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews" class="py-28">
+  <div class="wrap">
+    <div class="text-center mb-16 reveal max-w-2xl mx-auto">
+      <div class="eyebrow" style="color: var(--copper-500);">What Norwich says</div>
+      <h2 class="display mt-4" style="font-size: clamp(36px, 4.5vw, 56px);">
+        Twenty years of <em style="color: var(--copper-500); font-weight: 500;">word-of-mouth.</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="quote-card reveal">
+        <div class="relative">
+          <p style="font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.55; color: var(--slate-800);">DLK re-roofed our 1930s semi in Eaton — quoted Monday, scaffolded Thursday, finished by the following Friday. No mess, no fuss, no surprise invoices.</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(140deg, #C7501C, #B8451A); display:grid; place-items:center; color: #fff; font-weight: 600;">SM</div>
+            <div>
+              <div style="font-weight: 600; color: var(--slate-800);">Sarah M.</div>
+              <div class="text-sm" style="color: var(--slate-500);">Eaton, Norwich</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-card reveal">
+        <div class="relative">
+          <p style="font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.55; color: var(--slate-800);">Storm took half the ridge off — DLK had a tarp on the roof within hours and the full repair done inside a week. Insurer accepted the paperwork without a single question.</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(140deg, #2D3B47, #14202B); display:grid; place-items:center; color: #fff; font-weight: 600;">JH</div>
+            <div>
+              <div style="font-weight: 600; color: var(--slate-800);">James H.</div>
+              <div class="text-sm" style="color: var(--slate-500);">Hellesdon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-card reveal">
+        <div class="relative">
+          <p style="font-family: 'Fraunces', serif; font-size: 19px; line-height: 1.55; color: var(--slate-800);">We had three quotes for the EPDM flat. Two cowboys and DLK. Daniel walked us through the spec like he wanted us to understand it, not just sign. Five years on, still bone dry.</p>
+          <div class="mt-6 flex items-center gap-3">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(140deg, #E07A3F, #C7501C); display:grid; place-items:center; color: #fff; font-weight: 600;">PT</div>
+            <div>
+              <div style="font-weight: 600; color: var(--slate-800);">Paul T.</div>
+              <div class="text-sm" style="color: var(--slate-500);">Costessey</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center mt-10 reveal text-sm" style="color: var(--slate-500);">Real customer feedback verified on Trustpilot, Google, Yell and CORC.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28" style="background: var(--bone);">
+  <div class="wrap">
+    <div class="contact-panel grid md:grid-cols-2 gap-0">
+      <div class="p-14 relative z-10">
+        <div class="eyebrow" style="color: var(--copper-400);">Book a free survey</div>
+        <h2 class="display mt-4" style="font-size: clamp(36px, 4.2vw, 52px); color: var(--warm-white);">
+          One call.<br>One survey.<br><em style="color: var(--copper-400); font-weight: 500;">One honest quote.</em>
+        </h2>
+        <p class="mt-6" style="color: rgba(255,255,255,0.72); max-width: 420px;">
+          We're up the ladder within 48 hours of your call. No sales tactics, no pressure, no upselling. Just an honest look at your roof and a written quote you can compare with anyone else.
+        </p>
+
+        <div class="mt-10">
+          <a href="tel:01603339191" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.55);">Office</div>
+              <div style="font-size: 18px; font-weight: 600;">01603 339191</div>
+            </div>
+          </a>
+          <a href="https://wa.me/447568601964" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.55);">WhatsApp (photos welcome)</div>
+              <div style="font-size: 18px; font-weight: 600;">+44 7568 601964</div>
+            </div>
+          </a>
+          <a href="mailto:Dlkroofing@hotmail.co.uk" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.55);">Email</div>
+              <div style="font-size: 18px; font-weight: 600;">Dlkroofing@hotmail.co.uk</div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/TDwtK1RfYTzeMX3CA" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.55);">Office address</div>
+              <div style="font-size: 16px; font-weight: 500;">32 Upper Stafford Avenue<br>Norwich, NR5 0AB</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="p-14 relative z-10" style="background: rgba(0,0,0,0.18);">
+        <form>
+          <div class="eyebrow" style="color: var(--copper-400);">Request a quote</div>
+          <h3 class="display mt-4" style="font-size: 32px; color: var(--warm-white); margin-bottom: 24px;">Tell us about the roof.</h3>
+
+          <label style="display: block; margin-bottom: 16px;">
+            <span style="display:block; font-size:13px; color: rgba(255,255,255,0.65); margin-bottom: 6px;">Your name</span>
+            <input type="text" required style="width:100%; padding: 14px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; color: var(--warm-white); outline:none;">
+          </label>
+
+          <label style="display: block; margin-bottom: 16px;">
+            <span style="display:block; font-size:13px; color: rgba(255,255,255,0.65); margin-bottom: 6px;">Phone or email</span>
+            <input type="text" required style="width:100%; padding: 14px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; color: var(--warm-white); outline:none;">
+          </label>
+
+          <label style="display: block; margin-bottom: 16px;">
+            <span style="display:block; font-size:13px; color: rgba(255,255,255,0.65); margin-bottom: 6px;">Postcode</span>
+            <input type="text" placeholder="NR..." style="width:100%; padding: 14px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; color: var(--warm-white); outline:none;">
+          </label>
+
+          <label style="display: block; margin-bottom: 24px;">
+            <span style="display:block; font-size:13px; color: rgba(255,255,255,0.65); margin-bottom: 6px;">What's the job?</span>
+            <textarea rows="3" placeholder="A few lines about the roof — leak, full re-roof, EPDM, chimney, etc." style="width:100%; padding: 14px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; color: var(--warm-white); outline:none; resize: vertical; font-family: inherit;"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content: center;">
+            Send and we'll be in touch
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-14" style="background: var(--slate-900); color: rgba(255,255,255,0.55);">
+  <div class="wrap">
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl" style="background: linear-gradient(140deg, #C7501C, #B8451A); display: grid; place-items: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 4l9 8"/><path d="M5 10v10h14V10"/></svg>
+          </div>
+          <span class="display text-lg" style="color: var(--warm-white); font-weight: 700;">DLK Roofing Norwich Ltd</span>
+        </div>
+        <p class="text-sm">Norfolk-based, family-run roofing contractor. Twenty years on the ladder. Company reg 12722432.</p>
+      </div>
+      <div>
+        <div class="eyebrow mb-4" style="color: var(--copper-400);">Coverage</div>
+        <p class="text-sm">Norwich NR1–NR8 · Wymondham · Dereham · Hellesdon · Costessey · Cringleford · Eaton · Old Catton · Sprowston · Thorpe St Andrew</p>
+      </div>
+      <div>
+        <div class="eyebrow mb-4" style="color: var(--copper-400);">Get in touch</div>
+        <a href="tel:01603339191" class="block text-sm hover:text-white">01603 339191</a>
+        <a href="tel:01603339188" class="block text-sm hover:text-white">01603 339188</a>
+        <a href="mailto:Dlkroofing@hotmail.co.uk" class="block text-sm hover:text-white">Dlkroofing@hotmail.co.uk</a>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-wrap items-center justify-between gap-4" style="border-top: 1px solid rgba(255,255,255,0.08);">
+      <div class="text-xs">© 2026 DLK Roofing Norwich Ltd · All rights reserved</div>
+      <div class="flex items-center gap-4 text-xs">
+        <span>TrustMark</span><span>·</span><span>CORC</span><span>·</span><span>HomePro</span><span>·</span><span>Norfolk Trading Standards</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/447568601964" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2 7.7L.4 31.6l8.1-2.1c2.2 1.2 4.7 1.9 7.5 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.4c-2.5 0-4.8-.7-6.8-1.9l-.5-.3-5 1.3 1.3-4.9-.3-.5C3.4 20.5 2.7 18.3 2.7 16 2.7 8.6 8.6 2.7 16 2.7s13.3 5.9 13.3 13.3-5.9 13.3-13.3 13.3zm7.3-9.9c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7H10c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.3 6.8 6 1 .4 1.8.7 2.4.9.9.3 1.7.2 2.4.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.4z"/></svg>
+</a>
+
+<script>
+// Nav scroll state
+const nav = document.getElementById('nav');
+function onScroll() {
+  if (window.scrollY > 80) {
+    nav.classList.add('scrolled');
+    nav.classList.remove('nav-light');
+  } else {
+    nav.classList.remove('scrolled');
+    nav.classList.add('nav-light');
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Intersection-based reveals (lightweight, no animations.js dependency)
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 80);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// GSAP hero entrance + subtle parallax
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.gsap) {
+    gsap.from('.hero .reveal', {
+      y: 32, opacity: 0, duration: 1.1, ease: 'power3.out', stagger: 0.12,
+      onComplete: () => document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'))
+    });
+    if (window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('.hero-img', {
+        yPercent: 12, ease: 'none',
+        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+      });
+    }
+  }
+});
+
+// Magnetic CTA
+document.querySelectorAll('.btn-primary').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px) translateY(-2px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+</script>
+
+</body>
+</html>
