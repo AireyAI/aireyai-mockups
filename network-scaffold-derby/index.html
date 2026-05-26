@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Network Scaffold Services | Derbyshire & Midlands Scaffolders</title>
+  <meta name="description" content="Family-run scaffolding contractor covering Derby, Derbyshire and the surrounding Midlands. Access scaffolding, edge protection, alloy towers and design. CISRS-trained, fully insured." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <style>
+    :root{
+      --steel-900:#0E1F33;
+      --steel-700:#1E3A5F;
+      --steel-500:#2E5A8F;
+      --steel-100:#E6ECF2;
+      --hiviz:#F2B441;
+      --hiviz-dark:#C48A1E;
+      --cream:#F7F4EE;
+      --paper:#FFFFFF;
+      --ink:#10202F;
+      --muted:#5A6B7A;
+    }
+    html,body{font-family:'Manrope',ui-sans-serif,system-ui,sans-serif;color:var(--ink);background:var(--cream);}
+    .serif{font-family:'Source Serif 4',Georgia,serif;font-feature-settings:"ss01" on,"liga" on;}
+    h1,h2,h3,h4{letter-spacing:-0.025em;}
+    .h-display{font-family:'Source Serif 4',Georgia,serif;font-weight:600;letter-spacing:-0.035em;line-height:1.02;}
+    body{line-height:1.7;}
+    .grain{position:absolute;inset:0;pointer-events:none;opacity:0.06;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.9'/></svg>");}
+    .hiviz-tape{background:repeating-linear-gradient(135deg,var(--hiviz) 0 14px,#1B1B1B 14px 28px);}
+    .btn-primary{background:var(--hiviz);color:var(--steel-900);font-weight:700;letter-spacing:0.01em;
+      box-shadow:0 1px 0 rgba(0,0,0,.06),0 12px 24px -10px rgba(242,180,65,.55);}
+    .btn-primary:hover{background:#FFC757;}
+    .btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(8px);}
+    .btn-ghost:hover{background:rgba(255,255,255,.08);}
+    .card{background:var(--paper);border:1px solid rgba(14,31,51,.08);border-radius:16px;
+      box-shadow:0 1px 0 rgba(14,31,51,.04),0 24px 40px -28px rgba(14,31,51,.18);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;}
+    .card:hover{transform:translateY(-4px);border-color:rgba(30,58,95,.18);box-shadow:0 1px 0 rgba(14,31,51,.04),0 30px 50px -28px rgba(14,31,51,.28);}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .8rem;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;}
+    .label{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel-500);font-weight:700;}
+    .hero{position:relative;overflow:hidden;color:#fff;}
+    .hero-bg{position:absolute;inset:0;background-image:linear-gradient(135deg,rgba(14,31,51,.78) 0%,rgba(14,31,51,.55) 55%,rgba(14,31,51,.78) 100%),url('hero.jpg');background-size:cover;background-position:center;}
+    .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 18% 30%,rgba(242,180,65,.18),transparent 70%),radial-gradient(60% 50% at 92% 78%,rgba(30,58,95,.55),transparent 70%);}
+    .ring-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);}
+    .num{font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-variant-numeric:tabular-nums;}
+    .anchor-link{position:relative;}
+    .anchor-link::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--hiviz);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
+    .anchor-link:hover::after{transform:scaleX(1);}
+    .call-pill{display:inline-flex;align-items:center;gap:.65rem;padding:.6rem .9rem;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);}
+    .call-pill .dot{width:8px;height:8px;border-radius:999px;background:var(--hiviz);box-shadow:0 0 0 4px rgba(242,180,65,.22);}
+    .feature-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--steel-700),var(--steel-500));color:#fff;}
+    .stat-card{padding:1.25rem 1.4rem;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);}
+    .float-call{position:fixed;right:20px;bottom:20px;z-index:9998;background:var(--steel-700);color:#fff;border-radius:999px;padding:14px 20px;font-weight:700;display:inline-flex;gap:.6rem;align-items:center;box-shadow:0 14px 30px -10px rgba(14,31,51,.45);}
+    .float-call:hover{background:var(--steel-900);}
+    @media (max-width:640px){
+      .h-display{letter-spacing:-0.03em;}
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ========================= NAV ========================= -->
+<header class="absolute top-0 left-0 right-0 z-30">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-md hiviz-tape" aria-hidden="true"></div>
+      <div class="text-white">
+        <div class="font-extrabold tracking-tight leading-none">NETWORK SCAFFOLD</div>
+        <div class="text-[10px] tracking-[0.22em] uppercase text-white/70">Services UK Ltd · Est. 2002</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-white/85 text-sm">
+      <a href="#services" class="anchor-link">Services</a>
+      <a href="#why" class="anchor-link">Why us</a>
+      <a href="#sectors" class="anchor-link">Sectors</a>
+      <a href="#contact" class="anchor-link">Contact</a>
+    </nav>
+    <a href="tel:08009995884" data-magnetic class="hidden md:inline-flex items-center gap-2 btn-primary rounded-full px-5 py-2.5 text-sm">
+      <span>Free quote · 0800 999 5884</span>
+    </a>
+  </div>
+</header>
+
+<!-- ========================= HERO ========================= -->
+<section id="top" class="hero min-h-[100svh] flex flex-col justify-end pb-20 md:pb-24 pt-32">
+  <div class="hero-bg"></div>
+  <div class="grain"></div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10 w-full">
+    <div data-appear data-appear-delay="0" class="badge mb-6">
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--hiviz)"></span>
+      Derbyshire · Nottinghamshire · Staffordshire · Leicestershire
+    </div>
+
+    <h1 class="h-display text-white text-[clamp(2.6rem,7vw,5.4rem)] max-w-5xl">
+      <span data-split="words">Scaffolding the Midlands trusts to stand up on day one — and every day after.</span>
+    </h1>
+
+    <p data-appear data-appear-delay="0.25" class="mt-7 max-w-2xl text-lg md:text-xl text-white/85">
+      Family-run since 2002. CISRS-trained operatives, NASC-aligned safety, and the kind of straight talk you only get when the same people who quoted your job are still on site at handover.
+    </p>
+
+    <div data-appear data-appear-delay="0.45" class="mt-9 flex flex-wrap items-center gap-4">
+      <a href="#contact" data-magnetic class="btn-primary rounded-full px-7 py-4 text-sm md:text-base">
+        Get a no-obligation quote
+      </a>
+      <a href="tel:01332510095" class="btn-ghost rounded-full px-7 py-4 text-sm md:text-base">
+        Call our Derby office · 01332 510095
+      </a>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4" data-stagger-parent>
+      <div class="stat-card" data-stagger-child>
+        <div class="num text-white text-3xl md:text-4xl"><span data-counter="22" data-counter-suffix="+">22+</span></div>
+        <div class="text-white/70 text-xs uppercase tracking-widest mt-1">Years on-site</div>
+      </div>
+      <div class="stat-card" data-stagger-child>
+        <div class="num text-white text-3xl md:text-4xl"><span data-counter="48" data-counter-suffix="h">48h</span></div>
+        <div class="text-white/70 text-xs uppercase tracking-widest mt-1">Quote turnaround</div>
+      </div>
+      <div class="stat-card" data-stagger-child>
+        <div class="num text-white text-3xl md:text-4xl"><span data-counter="100" data-counter-suffix="%">100%</span></div>
+        <div class="text-white/70 text-xs uppercase tracking-widest mt-1">CISRS operatives</div>
+      </div>
+      <div class="stat-card" data-stagger-child>
+        <div class="num text-white text-3xl md:text-4xl">£10m</div>
+        <div class="text-white/70 text-xs uppercase tracking-widest mt-1">Public liability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ring-divider"></div>
+
+<!-- ========================= TRUSTED BY / SECTORS ========================= -->
+<section id="sectors" class="bg-[var(--steel-900)] text-white py-14 md:py-20" data-parallax="-30">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-4" data-reveal="fade-up">
+        <div class="label" style="color:var(--hiviz)">Sectors we cover</div>
+        <h2 class="h-display text-3xl md:text-5xl mt-3">Domestic, commercial, industrial — and the awkward in-between.</h2>
+      </div>
+      <div class="md:col-span-8 grid sm:grid-cols-2 gap-4" data-stagger-parent>
+        <div class="stat-card" data-stagger-child>
+          <div class="text-sm uppercase tracking-widest text-white/60">Domestic</div>
+          <p class="mt-2 text-white/90">Re-roofs, chimney works, rendering, extensions and side-return access on Victorian terraces across Derby and Nottingham.</p>
+        </div>
+        <div class="stat-card" data-stagger-child>
+          <div class="text-sm uppercase tracking-widest text-white/60">Commercial</div>
+          <p class="mt-2 text-white/90">Cladding, façade refurbishment, retail unit fit-outs, and long-term site contracts for principal contractors.</p>
+        </div>
+        <div class="stat-card" data-stagger-child>
+          <div class="text-sm uppercase tracking-widest text-white/60">Industrial</div>
+          <p class="mt-2 text-white/90">Tank access, plant maintenance shutdowns, structural strengthening and design-led temporary works.</p>
+        </div>
+        <div class="stat-card" data-stagger-child>
+          <div class="text-sm uppercase tracking-widest text-white/60">Heritage & Listed</div>
+          <p class="mt-2 text-white/90">Stone repointing, lead works and conservation projects requiring protective cladding and zero-mark fixings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= SERVICES (3 CARDS) ========================= -->
+<section id="services" class="py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-3xl" data-reveal="fade-up">
+      <div class="label">What we do</div>
+      <h2 class="h-display text-4xl md:text-6xl mt-3">Three things, done properly.</h2>
+      <p class="mt-5 text-lg text-[var(--muted)]">No subbed-out labour, no surprise scope changes once the wagon arrives. Every job is designed, planned and signed off by the same team in our Derby yard.</p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-6" data-stagger-parent>
+      <!-- card 1 -->
+      <article class="card p-8" data-stagger-child data-tilt>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 21V3M9 21V3M15 21V3M21 21V3M3 7h18M3 13h18M3 19h18"/></svg>
+        </div>
+        <h3 class="h-display text-2xl md:text-3xl mt-6">Access Scaffolding</h3>
+        <p class="mt-3 text-[var(--muted)]">Tube-and-clip, system scaffold and bespoke configurations for any elevation — from a 2-storey terrace to a 12-lift industrial gable.</p>
+        <ul class="mt-5 space-y-2 text-sm text-[var(--ink)]">
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> CISRS-carded operatives only</li>
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> Weekly statutory inspections</li>
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> Photo-tagged handover pack</li>
+        </ul>
+      </article>
+
+      <!-- card 2 -->
+      <article class="card p-8" data-stagger-child data-tilt>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l9 4v6c0 5-3.8 9.4-9 10-5.2-.6-9-5-9-10V6l9-4z"/></svg>
+        </div>
+        <h3 class="h-display text-2xl md:text-3xl mt-6">Edge Protection</h3>
+        <p class="mt-3 text-[var(--muted)]">Roof-edge, leading-edge and temporary fall-prevention systems compliant with the Edge Protection Federation guidance and current Work at Height regs.</p>
+        <ul class="mt-5 space-y-2 text-sm text-[var(--ink)]">
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> Class A, B & C systems in stock</li>
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> Same-week deployment</li>
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> Sign-off paperwork included</li>
+        </ul>
+      </article>
+
+      <!-- card 3 -->
+      <article class="card p-8" data-stagger-child data-tilt>
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+        </div>
+        <h3 class="h-display text-2xl md:text-3xl mt-6">Design & Temporary Works</h3>
+        <p class="mt-3 text-[var(--muted)]">Loaded gantries, cantilevered drops, complex façade access and TG20:21-compliant design certification for principal contractors.</p>
+        <ul class="mt-5 space-y-2 text-sm text-[var(--ink)]">
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> In-house designer</li>
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> TG20:21 / TG30 compliant</li>
+          <li class="flex gap-2"><span style="color:var(--hiviz)">✓</span> Method statements with every quote</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WHY US ========================= -->
+<section id="why" class="bg-[var(--cream)] border-y border-[rgba(14,31,51,.08)] py-24">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-12 items-center">
+    <div class="md:col-span-5" data-reveal="fade-right">
+      <div class="label">Why Network</div>
+      <h2 class="h-display text-4xl md:text-5xl mt-3">The same people who quote your job are on site at handover.</h2>
+      <p class="mt-5 text-[var(--muted)] text-lg">No middlemen, no day-rate subcontractors fronting up at 7am with the wrong gear. We've been scaffolding the same patch of the Midlands for two decades because we keep showing up the way we said we would.</p>
+      <a href="#contact" data-magnetic class="mt-8 inline-flex items-center gap-2 btn-primary rounded-full px-6 py-3 text-sm">Speak to our Derby team</a>
+    </div>
+
+    <div class="md:col-span-7 grid sm:grid-cols-2 gap-4" data-stagger-parent>
+      <div class="card p-6" data-stagger-child>
+        <div class="num text-4xl text-[var(--steel-700)]"><span data-counter="2002">2002</span></div>
+        <div class="mt-2 font-bold">Family-run, year on year</div>
+        <p class="text-sm text-[var(--muted)] mt-1">Started in a single yard off the A52. Same family, same values, bigger fleet.</p>
+      </div>
+      <div class="card p-6" data-stagger-child>
+        <div class="num text-4xl text-[var(--steel-700)]">£10m</div>
+        <div class="mt-2 font-bold">Public liability cover</div>
+        <p class="text-sm text-[var(--muted)] mt-1">Full employer's and public liability — paperwork on every quote.</p>
+      </div>
+      <div class="card p-6" data-stagger-child>
+        <div class="num text-4xl text-[var(--steel-700)]">NASC</div>
+        <div class="mt-2 font-bold">Industry-aligned</div>
+        <p class="text-sm text-[var(--muted)] mt-1">Built to NASC TG20:21 and the Edge Protection Federation's current guidance.</p>
+      </div>
+      <div class="card p-6" data-stagger-child>
+        <div class="num text-4xl text-[var(--steel-700)]">A52</div>
+        <div class="mt-2 font-bold">Local to Derby</div>
+        <p class="text-sm text-[var(--muted)] mt-1">Wagons leave the yard at 6am. On site before your trades show up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PROCESS ========================= -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="max-w-2xl" data-reveal="fade-up">
+      <div class="label">How it works</div>
+      <h2 class="h-display text-3xl md:text-5xl mt-3">From first call to last clip.</h2>
+    </div>
+
+    <ol class="mt-14 grid md:grid-cols-4 gap-6" data-stagger-parent>
+      <li class="relative pl-0" data-stagger-child>
+        <div class="num text-5xl" style="color:var(--hiviz)">01</div>
+        <h3 class="mt-2 font-bold text-xl">Call or message</h3>
+        <p class="text-[var(--muted)] text-sm mt-2">Quick chat about the job. We'll tell you straight away if it's something we can help with.</p>
+      </li>
+      <li class="relative pl-0" data-stagger-child>
+        <div class="num text-5xl" style="color:var(--hiviz)">02</div>
+        <h3 class="mt-2 font-bold text-xl">Site visit & quote</h3>
+        <p class="text-[var(--muted)] text-sm mt-2">Free, no-obligation. Written quote inside 48 hours with method statement and RAMS.</p>
+      </li>
+      <li class="relative pl-0" data-stagger-child>
+        <div class="num text-5xl" style="color:var(--hiviz)">03</div>
+        <h3 class="mt-2 font-bold text-xl">Erect & sign off</h3>
+        <p class="text-[var(--muted)] text-sm mt-2">CISRS team on site, photo-tagged handover pack, scaff-tag inspection record.</p>
+      </li>
+      <li class="relative pl-0" data-stagger-child>
+        <div class="num text-5xl" style="color:var(--hiviz)">04</div>
+        <h3 class="mt-2 font-bold text-xl">Strike & clear</h3>
+        <p class="text-[var(--muted)] text-sm mt-2">Booked-in dismantle. Yard collects, site swept, gone before tea.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========================= CONTACT ========================= -->
+<section id="contact" class="bg-[var(--steel-900)] text-white py-24 relative overflow-hidden">
+  <div class="grain"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-10 relative">
+    <div class="grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-7" data-reveal="fade-up">
+        <div class="label" style="color:var(--hiviz)">Get a quote</div>
+        <h2 class="h-display text-4xl md:text-6xl mt-3">Tell us the job. We'll tell you the price.</h2>
+        <p class="mt-5 text-white/80 text-lg max-w-2xl">Call the office, drop us an email, or fill in the form. Quotes back inside 48 hours with full RAMS, public liability paperwork and a clear price — no padding, no surprises.</p>
+
+        <div class="mt-10 grid sm:grid-cols-2 gap-5">
+          <a href="tel:08009995884" class="call-pill" data-tilt>
+            <span class="dot"></span>
+            <div>
+              <div class="text-xs uppercase tracking-widest text-white/60">Free phone</div>
+              <div class="font-extrabold tracking-tight text-lg">0800 999 5884</div>
+            </div>
+          </a>
+          <a href="tel:01332510095" class="call-pill" data-tilt>
+            <span class="dot"></span>
+            <div>
+              <div class="text-xs uppercase tracking-widest text-white/60">Derby office</div>
+              <div class="font-extrabold tracking-tight text-lg">01332 510095</div>
+            </div>
+          </a>
+          <a href="mailto:office@networkscaffold.co.uk" class="call-pill sm:col-span-2" data-tilt>
+            <span class="dot"></span>
+            <div>
+              <div class="text-xs uppercase tracking-widest text-white/60">Email</div>
+              <div class="font-extrabold tracking-tight text-lg">office@networkscaffold.co.uk</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="mt-10 text-sm text-white/60">
+          <div class="font-bold text-white/80 uppercase tracking-widest text-xs mb-2">Office hours</div>
+          Mon–Fri · 07:30 – 17:30 &nbsp;·&nbsp; Sat · 08:00 – 12:00 &nbsp;·&nbsp; Out-of-hours emergencies covered.
+        </div>
+      </div>
+
+      <form class="md:col-span-5 bg-white text-[var(--ink)] rounded-2xl p-7 md:p-9" data-reveal="fade-up" data-reveal-delay="0.15" onsubmit="event.preventDefault();this.querySelector('.thanks').classList.remove('hidden');this.querySelector('.formfields').classList.add('hidden');">
+        <div class="formfields">
+          <div class="label">Quick quote</div>
+          <h3 class="h-display text-2xl mt-2">Drop your details. We'll call you back today.</h3>
+          <div class="mt-6 space-y-4">
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-[var(--muted)]">Your name</span>
+              <input type="text" required class="mt-1 w-full px-4 py-3 border border-[rgba(14,31,51,.15)] rounded-lg focus:outline-none focus:border-[var(--steel-500)] focus:ring-2 focus:ring-[var(--steel-100)]">
+            </label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="block">
+                <span class="text-xs uppercase tracking-widest text-[var(--muted)]">Phone</span>
+                <input type="tel" required class="mt-1 w-full px-4 py-3 border border-[rgba(14,31,51,.15)] rounded-lg focus:outline-none focus:border-[var(--steel-500)]">
+              </label>
+              <label class="block">
+                <span class="text-xs uppercase tracking-widest text-[var(--muted)]">Postcode</span>
+                <input type="text" required class="mt-1 w-full px-4 py-3 border border-[rgba(14,31,51,.15)] rounded-lg focus:outline-none focus:border-[var(--steel-500)]">
+              </label>
+            </div>
+            <label class="block">
+              <span class="text-xs uppercase tracking-widest text-[var(--muted)]">The job in a sentence</span>
+              <textarea rows="3" class="mt-1 w-full px-4 py-3 border border-[rgba(14,31,51,.15)] rounded-lg focus:outline-none focus:border-[var(--steel-500)]" placeholder="e.g. re-roof on a 2-storey semi in Mickleover, 4 weeks duration"></textarea>
+            </label>
+            <button type="submit" data-magnetic class="btn-primary w-full rounded-lg py-3.5 mt-2">Request callback</button>
+            <p class="text-xs text-[var(--muted)] mt-3">By submitting you agree to be contacted by Network Scaffold Services UK Ltd about your enquiry. We never sell on details.</p>
+          </div>
+        </div>
+        <div class="thanks hidden text-center py-8">
+          <div class="h-display text-3xl">Thanks — we've got it.</div>
+          <p class="text-[var(--muted)] mt-2">Someone from the Derby office will be on the phone before the day's out.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="bg-[var(--steel-900)] text-white/70 py-12 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-md hiviz-tape" aria-hidden="true"></div>
+        <div class="font-extrabold text-white tracking-tight">NETWORK SCAFFOLD</div>
+      </div>
+      <p class="mt-4">Network Scaffold Services UK Ltd. Family-run scaffolding contractor covering Derbyshire and the surrounding Midlands since 2002.</p>
+    </div>
+    <div>
+      <div class="label" style="color:var(--hiviz)">Reach us</div>
+      <ul class="mt-3 space-y-1.5">
+        <li><a href="tel:08009995884" class="hover:text-white">Freephone · 0800 999 5884</a></li>
+        <li><a href="tel:01332510095" class="hover:text-white">Derby office · 01332 510095</a></li>
+        <li><a href="mailto:office@networkscaffold.co.uk" class="hover:text-white">office@networkscaffold.co.uk</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="label" style="color:var(--hiviz)">Standards</div>
+      <ul class="mt-3 space-y-1.5">
+        <li>NASC TG20:21 compliant builds</li>
+        <li>CISRS-carded operatives</li>
+        <li>£10m public liability cover</li>
+        <li>Edge Protection Federation-aligned</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 md:px-10 mt-10 pt-6 border-t border-white/10 text-xs text-white/50 flex flex-wrap justify-between gap-3">
+    <div>© <span class="num">2026</span> Network Scaffold Services UK Ltd. Registered in England.</div>
+    <div>Derby · Nottingham · Burton · Mansfield · Chesterfield · Stoke</div>
+  </div>
+</footer>
+
+<a href="tel:01332510095" class="float-call md:hidden">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.79a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.29-1.29a2 2 0 0 1 2.11-.45c.89.35 1.83.59 2.79.72A2 2 0 0 1 22 16.92z"/></svg>
+  Call Derby
+</a>
+
+<script src="animations.js"></script>
+</body>
+</html>
