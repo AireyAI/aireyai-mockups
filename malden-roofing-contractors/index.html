@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Malden Roofing Contractors | Sheffield Roofers — Slate, Tile & Flat Roof</title>
+<meta name="description" content="Sheffield roofing contractors. Slate, tile, flat roofs and emergency repairs across S1–S20. Family run, fully insured, fixed quotes within 24 hours. Call 0114 272 5399." />
+<meta name="theme-color" content="#1A2B3A" />
+<link rel="canonical" href="https://www.malden-roofing.co.uk/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Malden Roofing Contractors · Sheffield" />
+<meta property="og:description" content="Slate, tile, flat roofs and storm repairs across Sheffield. Fixed quotes within 24 hours." />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Malden Roofing Contractors",
+  "url": "https://www.malden-roofing.co.uk/",
+  "telephone": "+44 114 272 5399",
+  "email": "admin@malden-roofing.co.uk",
+  "areaServed": ["Sheffield", "Rotherham", "Chesterfield", "South Yorkshire"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Sheffield", "addressRegion": "South Yorkshire", "addressCountry": "GB" },
+  "priceRange": "££",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:30", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "08:00", "closes": "13:00" }
+  ]
+}
+</script>
+
+<!-- Fonts: Fraunces (display serif, weighty) + Inter (body) + JetBrains Mono (data) -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        slate0: '#0E1822',
+        slate1: '#1A2B3A',
+        slate2: '#243A4D',
+        rust:   '#C24A1E',
+        rust2:  '#E26B36',
+        cream:  '#F4EDE2',
+        bone:   '#EDEDED',
+        mute:   '#8A95A1'
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  :root {
+    --slate0: #0E1822;
+    --slate1: #1A2B3A;
+    --slate2: #243A4D;
+    --rust:   #C24A1E;
+    --rust2:  #E26B36;
+    --cream:  #F4EDE2;
+    --bone:   #EDEDED;
+    --mute:   #8A95A1;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--slate0);
+    color: var(--bone);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 0.96; letter-spacing: -0.02em; font-weight: 800; }
+  h1 { letter-spacing: -0.035em; }
+  ::selection { background: var(--rust); color: var(--cream); }
+
+  /* SVG grain */
+  .noise::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.25;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 1;
+  }
+
+  /* Hero gradient: storm-sky breaking into rust sunlight, no image required */
+  .hero-bg {
+    background:
+      radial-gradient(1100px 700px at 88% 12%, rgba(226,107,54,0.55), transparent 60%),
+      radial-gradient(900px 600px at 8% 90%, rgba(36,58,77,0.85), transparent 65%),
+      linear-gradient(160deg, #0E1822 0%, #1A2B3A 45%, #2A2017 80%, #3A1F10 100%);
+  }
+  /* Stylised slate-roof silhouette band */
+  .roofline {
+    background-image:
+      linear-gradient(135deg, transparent 49.5%, rgba(255,255,255,0.04) 50%, transparent 50.5%),
+      linear-gradient(45deg,  transparent 49.5%, rgba(255,255,255,0.04) 50%, transparent 50.5%);
+    background-size: 60px 60px;
+  }
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%);
+    border: 1px solid rgba(244,237,226,0.08);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.04) inset,
+      0 30px 60px -30px rgba(0,0,0,0.6),
+      0 18px 36px -24px rgba(194,74,30,0.18);
+    backdrop-filter: blur(6px);
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, #D6582B 0%, #B8421A 100%);
+    color: #FFF7EE;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.25) inset,
+      0 -1px 0 rgba(0,0,0,0.25) inset,
+      0 12px 24px -10px rgba(194,74,30,0.55);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset, 0 -1px 0 rgba(0,0,0,0.25) inset, 0 18px 36px -10px rgba(194,74,30,0.7); }
+  .btn-ghost {
+    color: var(--cream);
+    border: 1px solid rgba(244,237,226,0.18);
+    background: rgba(255,255,255,0.03);
+  }
+  .btn-ghost:hover { border-color: rgba(244,237,226,0.45); background: rgba(255,255,255,0.06); }
+  .hairline { background: linear-gradient(90deg, transparent, rgba(244,237,226,0.18), transparent); height: 1px; }
+  .tag {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rust2);
+    padding: 6px 12px;
+    border: 1px solid rgba(226,107,54,0.35);
+    border-radius: 999px;
+    background: rgba(194,74,30,0.06);
+  }
+  .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--rust2); box-shadow: 0 0 12px var(--rust); }
+  .num { font-family: 'JetBrains Mono', monospace; color: var(--cream); }
+  .link-underline { background-image: linear-gradient(90deg, var(--rust2), var(--rust2)); background-position: 0 100%; background-size: 100% 1px; background-repeat: no-repeat; padding-bottom: 2px; }
+
+  /* phone float */
+  .phone-float {
+    position: fixed; right: 18px; bottom: 18px; z-index: 60;
+    background: linear-gradient(180deg, #D6582B, #B8421A);
+    color: #FFF7EE;
+    padding: 14px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 18px 36px -10px rgba(194,74,30,0.55), 0 1px 0 rgba(255,255,255,0.2) inset;
+    display: inline-flex; align-items: center; gap: 10px;
+    text-decoration: none;
+    transition: transform .25s ease;
+  }
+  .phone-float:hover { transform: translateY(-2px); }
+  @media (max-width: 640px) { .phone-float span.label { display: none; } .phone-float { padding: 14px; } }
+</style>
+</head>
+<body class="bg-slate0 text-bone">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[rgba(14,24,34,0.65)] border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group">
+      <span class="block w-7 h-7 rounded-md" style="background: conic-gradient(from 215deg, #C24A1E, #1A2B3A 50%, #C24A1E); box-shadow: 0 6px 12px -4px rgba(194,74,30,0.55);"></span>
+      <span class="font-display text-xl tracking-tight">Malden Roofing</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-bone/80">
+      <a href="#services" class="hover:text-rust2 transition">Services</a>
+      <a href="#about" class="hover:text-rust2 transition">About</a>
+      <a href="#patch" class="hover:text-rust2 transition">Where we work</a>
+      <a href="#contact" class="hover:text-rust2 transition">Contact</a>
+    </nav>
+    <a href="tel:01142725399" data-magnetic class="btn-primary inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      0114 272 5399
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative hero-bg noise overflow-hidden pt-32 pb-28 md:pt-44 md:pb-40">
+  <div class="absolute inset-0 roofline opacity-40 pointer-events-none"></div>
+  <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-slate0 pointer-events-none"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-4xl">
+      <div class="flex items-center gap-3 mb-6" data-appear>
+        <span class="tag"><span class="dot"></span> Sheffield · est. roofing trade</span>
+      </div>
+      <h1 data-split="words" class="text-5xl md:text-7xl lg:text-[88px] leading-[0.95]">
+        Sheffield roofs <span class="text-rust2 italic">held tight</span> through every south-Yorkshire winter.
+      </h1>
+      <p class="mt-8 max-w-2xl text-lg md:text-xl text-bone/75" data-appear data-appear-delay="0.15">
+        Slate, tile, flat roof and storm repair across S1 to S20. Family-run, fully insured, quote in your inbox within 24&nbsp;hours — and a price that doesn't move once the scaffold's up.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-4" data-appear data-appear-delay="0.3">
+        <a href="#contact" data-magnetic class="btn-primary inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold">
+          Get a free quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:01142725399" class="btn-ghost inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 0114 272 5399
+        </a>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl" data-stagger-parent>
+        <div data-stagger-child>
+          <div class="num text-3xl md:text-4xl" data-counter="35" data-counter-suffix="+">35+</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-mute mt-2">years on Sheffield roofs</div>
+        </div>
+        <div data-stagger-child>
+          <div class="num text-3xl md:text-4xl" data-counter="24" data-counter-suffix="h">24h</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-mute mt-2">fixed-price quotes</div>
+        </div>
+        <div data-stagger-child>
+          <div class="num text-3xl md:text-4xl" data-counter="2" data-counter-suffix="m">£2m</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-mute mt-2">public liability cover</div>
+        </div>
+        <div data-stagger-child>
+          <div class="num text-3xl md:text-4xl" data-counter="10" data-counter-suffix="-yr">10-yr</div>
+          <div class="text-xs uppercase tracking-[0.18em] text-mute mt-2">workmanship guarantee</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="relative py-24 md:py-32 bg-slate0">
+  <div class="absolute inset-0 noise opacity-60 pointer-events-none"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-16" data-reveal="fade-up">
+      <div class="max-w-2xl">
+        <span class="tag mb-5"><span class="dot"></span> What we do</span>
+        <h2 class="text-4xl md:text-6xl mt-5">Roofs that don't need a second visit.</h2>
+      </div>
+      <p class="max-w-md text-bone/65">Three things we've been doing on Sheffield rooftops for three decades. No subbed-out work, no surprise invoices.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6" data-stagger-parent>
+      <!-- Service 1 -->
+      <article class="card rounded-2xl p-8 group" data-stagger-child data-tilt>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, rgba(194,74,30,0.18), rgba(194,74,30,0.04)); border: 1px solid rgba(194,74,30,0.35);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M3 12l9-8 9 8M5 10v10h14V10"/></svg>
+        </div>
+        <h3 class="text-2xl mb-3">Slate &amp; tile re-roofs</h3>
+        <p class="text-bone/70 text-[15px] leading-relaxed">
+          Full strips and re-roofs in Welsh slate, Yorkshire-stone tile and concrete. Battens, breathable membrane, lead flashing — done properly so it sees out another sixty winters.
+        </p>
+        <div class="hairline my-6"></div>
+        <div class="text-xs uppercase tracking-[0.18em] text-mute">Terraces · semis · Victorian gables</div>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="card rounded-2xl p-8 group" data-stagger-child data-tilt>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, rgba(194,74,30,0.18), rgba(194,74,30,0.04)); border: 1px solid rgba(194,74,30,0.35);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M2 12h20M4 8h16M6 16h12M8 20h8"/></svg>
+        </div>
+        <h3 class="text-2xl mb-3">Flat roofs &amp; EPDM</h3>
+        <p class="text-bone/70 text-[15px] leading-relaxed">
+          Single-ply EPDM rubber, GRP fibreglass and warm-roof builds for extensions, dormers and garages. 20-year materials guarantee on every flat roof we install.
+        </p>
+        <div class="hairline my-6"></div>
+        <div class="text-xs uppercase tracking-[0.18em] text-mute">Extensions · dormers · garages · porches</div>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="card rounded-2xl p-8 group" data-stagger-child data-tilt>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, rgba(194,74,30,0.18), rgba(194,74,30,0.04)); border: 1px solid rgba(194,74,30,0.35);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <h3 class="text-2xl mb-3">Storm &amp; leak repairs</h3>
+        <p class="text-bone/70 text-[15px] leading-relaxed">
+          Slipped slates, ridge tiles, valley flashing, chimney leadwork and emergency tarp-ups after a south-Yorkshire gale. Out the same day, fixed the next.
+        </p>
+        <div class="hairline my-6"></div>
+        <div class="text-xs uppercase tracking-[0.18em] text-mute">Same-day call-out · insurance reports</div>
+      </article>
+    </div>
+
+    <!-- Also -->
+    <div class="mt-16 grid md:grid-cols-2 gap-6" data-reveal="fade-up">
+      <div class="card rounded-2xl p-7 flex items-start gap-5">
+        <div class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center" style="background: rgba(194,74,30,0.12); border: 1px solid rgba(194,74,30,0.3);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <div>
+          <h4 class="font-display text-xl mb-1">Fascias, soffits &amp; guttering</h4>
+          <p class="text-bone/65 text-sm">UPVC and aluminium replacements, sealed and bracketed to last.</p>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-7 flex items-start gap-5">
+        <div class="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center" style="background: rgba(194,74,30,0.12); border: 1px solid rgba(194,74,30,0.3);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <div>
+          <h4 class="font-display text-xl mb-1">Chimney work &amp; leadwork</h4>
+          <p class="text-bone/65 text-sm">Repoint, rebuild, removal, plus full lead flashing renewals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="relative py-24 md:py-32 overflow-hidden" style="background: linear-gradient(180deg, #0E1822 0%, #141F2C 100%);">
+  <div class="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full" style="background: radial-gradient(closest-side, rgba(226,107,54,0.18), transparent 70%); filter: blur(20px);" data-parallax="-120"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-12 items-center">
+    <div class="md:col-span-5" data-reveal="fade-right">
+      <span class="tag mb-5"><span class="dot"></span> About</span>
+      <h2 class="text-4xl md:text-6xl mt-5">Three generations. <br/><span class="text-rust2 italic">One pitch.</span></h2>
+      <p class="mt-8 text-bone/75">
+        Malden's been climbing Sheffield ladders since the 1980s. We're the team you see on the scaffold, not a call-centre that subs the job out to whoever's free. Every quote is fixed before we start. Every roof's signed off in person.
+      </p>
+      <ul class="mt-8 space-y-3 text-bone/80 text-[15px]">
+        <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-rust2 shrink-0"></span>Family-run since the 80s, still on the tools</li>
+        <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-rust2 shrink-0"></span>Fully insured: £2m public liability, £10m employer's</li>
+        <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-rust2 shrink-0"></span>NFRC-aligned working standards, CSCS-carded crew</li>
+        <li class="flex items-start gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-rust2 shrink-0"></span>10-year written workmanship guarantee</li>
+      </ul>
+    </div>
+    <div class="md:col-span-7" data-reveal="fade-left">
+      <!-- Photo placeholder card -->
+      <div class="card rounded-3xl p-1 overflow-hidden" data-tilt>
+        <div class="rounded-[22px] overflow-hidden relative" style="aspect-ratio: 4/3; background:
+          radial-gradient(800px 500px at 75% 20%, rgba(226,107,54,0.5), transparent 60%),
+          radial-gradient(600px 400px at 20% 90%, rgba(36,58,77,0.9), transparent 65%),
+          linear-gradient(160deg, #1A2B3A 0%, #0E1822 70%, #2A1810 100%);">
+          <div class="absolute inset-0 roofline opacity-60"></div>
+          <div class="absolute inset-x-0 bottom-0 p-8">
+            <div class="flex items-end justify-between flex-wrap gap-4">
+              <div>
+                <div class="text-xs uppercase tracking-[0.2em] text-bone/60 mb-2">Recently completed</div>
+                <div class="font-display text-2xl">Victorian terrace re-roof · Crookes, S10</div>
+              </div>
+              <div class="text-right">
+                <div class="num text-2xl">12 days</div>
+                <div class="text-xs uppercase tracking-[0.18em] text-mute">on / off site</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="card rounded-xl p-5">
+          <div class="num text-2xl">500+</div>
+          <div class="text-[11px] uppercase tracking-[0.18em] text-mute mt-1">re-roofs since 2010</div>
+        </div>
+        <div class="card rounded-xl p-5">
+          <div class="num text-2xl">98%</div>
+          <div class="text-[11px] uppercase tracking-[0.18em] text-mute mt-1">repeat &amp; referral</div>
+        </div>
+        <div class="card rounded-xl p-5">
+          <div class="num text-2xl">S1–S20</div>
+          <div class="text-[11px] uppercase tracking-[0.18em] text-mute mt-1">working radius</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE WE WORK -->
+<section id="patch" class="relative py-24 md:py-28 bg-slate0">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-12" data-reveal="fade-up">
+      <div>
+        <span class="tag mb-5"><span class="dot"></span> Patch</span>
+        <h2 class="text-4xl md:text-5xl mt-5">Where we work.</h2>
+      </div>
+      <p class="max-w-md text-bone/65">Sheffield postcodes plus the towns we know like the back of a hammer-stamp.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3" data-stagger-parent>
+      <!-- pills -->
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Crookes</div><div class="text-xs text-mute">S10</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Hillsborough</div><div class="text-xs text-mute">S6</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Ecclesall</div><div class="text-xs text-mute">S11</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Dore &amp; Totley</div><div class="text-xs text-mute">S17</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Nether Edge</div><div class="text-xs text-mute">S7</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Walkley</div><div class="text-xs text-mute">S6</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Meadowhead</div><div class="text-xs text-mute">S8</div></div>
+      <div class="card rounded-xl p-4 text-center" data-stagger-child><div class="font-display text-lg">Chesterfield</div><div class="text-xs text-mute">S40</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="relative py-24 md:py-28 overflow-hidden" style="background: linear-gradient(180deg, #0E1822 0%, #141F2C 100%);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16" data-reveal="fade-up">
+      <span class="tag mb-5"><span class="dot"></span> How it works</span>
+      <h2 class="text-4xl md:text-5xl mt-5">Four steps, no jargon.</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6" data-stagger-parent>
+      <div class="card rounded-2xl p-7" data-stagger-child>
+        <div class="num text-rust2 text-sm mb-4">01 · same day</div>
+        <h3 class="text-xl mb-2">You ring or message.</h3>
+        <p class="text-bone/65 text-sm">Tell us what's leaking, slipping or sagging. We'll book a free survey usually inside 48 hours.</p>
+      </div>
+      <div class="card rounded-2xl p-7" data-stagger-child>
+        <div class="num text-rust2 text-sm mb-4">02 · 24 hours</div>
+        <h3 class="text-xl mb-2">Fixed quote, in writing.</h3>
+        <p class="text-bone/65 text-sm">Itemised on paper. What we'll do, what we won't, and the price that doesn't move once we start.</p>
+      </div>
+      <div class="card rounded-2xl p-7" data-stagger-child>
+        <div class="num text-rust2 text-sm mb-4">03 · on site</div>
+        <h3 class="text-xl mb-2">We do the work.</h3>
+        <p class="text-bone/65 text-sm">Same crew start to finish, scaffold up to skip away. Daily clean-down so your drive isn't a tip.</p>
+      </div>
+      <div class="card rounded-2xl p-7" data-stagger-child>
+        <div class="num text-rust2 text-sm mb-4">04 · sign-off</div>
+        <h3 class="text-xl mb-2">Walked through with you.</h3>
+        <p class="text-bone/65 text-sm">Final inspection in person. Written guarantee in your hand. Photos for your records and insurer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="relative py-24 md:py-28 bg-slate0">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center" data-reveal="fade-up">
+    <svg class="mx-auto mb-8 opacity-30" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M3 21c0-6 4-9 8-9V8H7l4-5V3a8 8 0 0 0-8 8v10z"/><path d="M13 21c0-6 4-9 8-9V8h-4l4-5V3a8 8 0 0 0-8 8v10z"/></svg>
+    <p class="font-display text-3xl md:text-4xl leading-tight">
+      &ldquo;Storm took half our ridge tiles. Malden were back on the roof within the day, scaffolded up by Thursday, signed off the next week. Price didn't budge from the original quote.&rdquo;
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-4 text-bone/70 text-sm">
+      <span class="w-10 h-10 rounded-full" style="background: linear-gradient(135deg, #C24A1E, #1A2B3A);"></span>
+      <div class="text-left">
+        <div class="font-semibold text-bone">M. Whittaker</div>
+        <div class="text-xs uppercase tracking-[0.18em] text-mute">homeowner · S11 · re-roof &amp; flashing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact" class="relative py-24 md:py-32 overflow-hidden" style="background:
+  radial-gradient(900px 600px at 90% 0%, rgba(226,107,54,0.35), transparent 60%),
+  radial-gradient(700px 500px at 0% 100%, rgba(36,58,77,0.7), transparent 60%),
+  linear-gradient(160deg, #1A2B3A 0%, #0E1822 60%, #2A1810 100%);">
+  <div class="absolute inset-0 noise opacity-50 pointer-events-none"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-6" data-reveal="fade-right">
+      <span class="tag mb-5"><span class="dot"></span> Get in touch</span>
+      <h2 class="text-4xl md:text-6xl mt-5">Free quote in <span class="text-rust2 italic">24 hours.</span></h2>
+      <p class="mt-6 text-bone/75 max-w-lg">Drop your details. We'll come and look at the roof, write the quote, and email it across by the same time tomorrow. No deposits, no pressure.</p>
+      <div class="mt-10 space-y-5">
+        <a href="tel:01142725399" class="flex items-center gap-4 group">
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(194,74,30,0.15); border: 1px solid rgba(194,74,30,0.4);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-mute">Office</div>
+            <div class="font-display text-2xl group-hover:text-rust2 transition">0114 272 5399</div>
+          </div>
+        </a>
+        <a href="mailto:admin@malden-roofing.co.uk" class="flex items-center gap-4 group">
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(194,74,30,0.15); border: 1px solid rgba(194,74,30,0.4);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </span>
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-mute">Email</div>
+            <div class="font-display text-2xl group-hover:text-rust2 transition">admin@malden-roofing.co.uk</div>
+          </div>
+        </a>
+        <div class="flex items-center gap-4">
+          <span class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(194,74,30,0.15); border: 1px solid rgba(194,74,30,0.4);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E26B36" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <div class="text-xs uppercase tracking-[0.18em] text-mute">Patch</div>
+            <div class="font-display text-2xl">Sheffield · S1 – S20</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form card -->
+    <div class="md:col-span-6" data-reveal="fade-left">
+      <form class="card rounded-3xl p-8 md:p-10 space-y-5" onsubmit="event.preventDefault(); this.querySelector('button').innerText='Thanks — we\\'ll be in touch'; this.querySelector('button').classList.add('opacity-70');">
+        <div>
+          <label class="block text-xs uppercase tracking-[0.18em] text-mute mb-2">Your name</label>
+          <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bone placeholder-mute focus:border-rust2 focus:outline-none focus:ring-2 focus:ring-rust/20 transition" placeholder="First &amp; last name"/>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-[0.18em] text-mute mb-2">Phone</label>
+            <input type="tel" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bone placeholder-mute focus:border-rust2 focus:outline-none focus:ring-2 focus:ring-rust/20 transition" placeholder="0114 …"/>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-[0.18em] text-mute mb-2">Postcode</label>
+            <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bone placeholder-mute focus:border-rust2 focus:outline-none focus:ring-2 focus:ring-rust/20 transition" placeholder="S10 …"/>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-[0.18em] text-mute mb-2">What's the job?</label>
+          <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bone placeholder-mute focus:border-rust2 focus:outline-none focus:ring-2 focus:ring-rust/20 transition" placeholder="Slipped tiles, full re-roof, leak, flat roof on the extension — anything you've spotted."></textarea>
+        </div>
+        <button type="submit" data-magnetic class="btn-primary w-full inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold">
+          Send the details
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="text-xs text-mute text-center">No spam, no pushy follow-ups. One reply with the quote.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative py-12 bg-slate0 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-between gap-6 text-sm text-mute">
+    <div class="flex items-center gap-3">
+      <span class="block w-6 h-6 rounded-md" style="background: conic-gradient(from 215deg, #C24A1E, #1A2B3A 50%, #C24A1E);"></span>
+      <span class="font-display text-lg text-bone">Malden Roofing Contractors</span>
+    </div>
+    <div>Sheffield · South Yorkshire · est. 1980s</div>
+    <div>&copy; <span id="yr"></span> Malden Roofing Contractors. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Floating call button -->
+<a href="tel:01142725399" class="phone-float" aria-label="Call Malden Roofing">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  <span class="label">0114 272 5399</span>
+</a>
+
+<!-- GSAP + ScrollTrigger + animation toolkit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="animations.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
