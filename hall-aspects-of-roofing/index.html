@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Hall Aspects of Roofing | Middlesbrough Roofers — 30 Years Local</title>
+<meta name="description" content="Middlesbrough and Teesside roofers, established 30 years. Slate, tile, flat roofs, lead work, gutters and council-grade contracts. Free written quote inside 24 hours." />
+<meta name="theme-color" content="#1F3A5F" />
+<meta property="og:title" content="Hall Aspects of Roofing | Middlesbrough Roofers" />
+<meta property="og:description" content="30 years on Teesside roofs. Free written quote in 24 hours, fully insured, Checkatrade reviewed." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  :root {
+    --color-primary: #1F3A5F;        /* deep slate-blue */
+    --color-primary-dark: #14263F;
+    --color-primary-light: #3E5E84;
+    --color-accent: #C84B26;         /* terracotta */
+    --color-accent-soft: #E07A57;
+    --color-bg: #F6F3EE;             /* warm cream */
+    --color-surface: #FFFFFF;
+    --color-text: #16202E;
+    --color-muted: #4F5C70;
+  }
+  html, body { background: var(--color-bg); color: var(--color-text); font-family: 'Inter', system-ui, sans-serif; }
+  .font-display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.025em; }
+  .grain { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.10 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .hero-bg {
+    background:
+      radial-gradient(1200px 700px at 70% 10%, rgba(200,75,38,0.18), transparent 60%),
+      linear-gradient(180deg, rgba(20,38,63,0.55) 0%, rgba(20,38,63,0.88) 100%),
+      url('hero.jpg') center/cover no-repeat;
+  }
+  .hero-fallback {
+    background:
+      radial-gradient(1200px 700px at 70% 10%, rgba(200,75,38,0.32), transparent 60%),
+      linear-gradient(180deg, #1F3A5F 0%, #14263F 100%);
+  }
+  .card { background: var(--color-surface); border: 1px solid #E7DFD2; box-shadow: 0 1px 0 rgba(31,58,95,0.04), 0 18px 40px -20px rgba(31,58,95,0.20); }
+  .btn-primary { background: var(--color-accent); color: #fff; }
+  .btn-primary:hover { background: #A53C1E; }
+  .btn-secondary { background: var(--color-primary); color: #fff; }
+  .btn-secondary:hover { background: var(--color-primary-dark); }
+  .btn-ghost { color: #fff; border: 1px solid rgba(255,255,255,0.55); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.10); }
+  .nav-blur { backdrop-filter: saturate(160%) blur(10px); background: rgba(246,243,238,0.82); border-bottom: 1px solid rgba(31,58,95,0.10); }
+  .pill { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.22); color: #F6EFE2; }
+  .underline-accent { background: linear-gradient(120deg, var(--color-accent) 0%, var(--color-accent) 100%); background-size: 100% 32%; background-position: 0 86%; background-repeat: no-repeat; padding: 0 0.05em; }
+  .service-icon { background: rgba(31,58,95,0.08); color: var(--color-primary); }
+  .reveal { opacity: 0; transform: translateY(24px); }
+  .wa-btn { box-shadow: 0 14px 30px -10px rgba(37,211,102,0.55); }
+  .dot-divider { width: 4px; height: 4px; border-radius: 9999px; background: rgba(255,255,255,0.45); display:inline-block; }
+  ::selection { background: var(--color-accent); color: #fff; }
+  /* tilted card panel for image-less hero fallback */
+  .roof-pattern {
+    background-image:
+      linear-gradient(135deg, transparent 46%, rgba(255,255,255,0.05) 46%, rgba(255,255,255,0.05) 54%, transparent 54%),
+      linear-gradient(45deg,  transparent 46%, rgba(255,255,255,0.05) 46%, rgba(255,255,255,0.05) 54%, transparent 54%);
+    background-size: 26px 26px;
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Nav -->
+<header class="fixed top-0 inset-x-0 z-40 nav-blur">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-display text-lg font-bold" style="color:var(--color-primary-dark)">
+      <span class="inline-block w-2.5 h-2.5 rounded-sm rotate-45" style="background:var(--color-accent)"></span>
+      Hall Aspects of Roofing
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium" style="color:var(--color-text)">
+      <a href="#services" class="hover:text-[color:var(--color-accent)]">Services</a>
+      <a href="#work" class="hover:text-[color:var(--color-accent)]">Work</a>
+      <a href="#about" class="hover:text-[color:var(--color-accent)]">About</a>
+      <a href="#reviews" class="hover:text-[color:var(--color-accent)]">Reviews</a>
+      <a href="#contact" class="hover:text-[color:var(--color-accent)]">Contact</a>
+    </nav>
+    <a href="#contact" data-magnetic class="btn-primary px-4 py-2 rounded-full text-sm font-semibold hidden sm:inline-block">Free quote</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="top" class="relative min-h-[100dvh] hero-bg pt-16 overflow-hidden">
+  <div class="absolute inset-0 grain mix-blend-overlay opacity-50 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 sm:pt-28 pb-24">
+    <span class="pill inline-flex items-center gap-2 text-xs sm:text-sm px-3 py-1.5 rounded-full mb-6" data-appear>
+      <span class="w-1.5 h-1.5 rounded-full" style="background:var(--color-accent)"></span>
+      Middlesbrough &amp; Teesside · est. 1995
+    </span>
+    <h1 class="font-display text-white text-[clamp(2.6rem,7vw,5.6rem)] leading-[1.02] font-bold max-w-4xl" data-split="words">
+      Thirty years of <span class="underline-accent text-white">honest roofs</span> across Teesside.
+    </h1>
+    <p class="mt-7 max-w-2xl text-lg sm:text-xl text-white/85 leading-relaxed" data-appear data-appear-delay="0.4">
+      Slate, tile, flat roofs, lead work, guttering and council-grade contracts. Free written quote inside 24 hours — no doorstep sell, no pressure, no surprises on the invoice.
+    </p>
+    <div class="mt-9 flex flex-wrap items-center gap-3" data-appear data-appear-delay="0.6">
+      <a href="#contact" data-magnetic class="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold">
+        Get a free quote
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="mailto:info@hallaspects.com" data-magnetic class="btn-ghost inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold">
+        Email the office
+      </a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl" data-stagger-parent>
+      <div data-stagger-child>
+        <div class="font-display text-3xl sm:text-5xl text-white font-bold"><span data-counter="30">0</span><span class="text-[color:var(--color-accent-soft)]">+</span></div>
+        <div class="text-xs sm:text-sm text-white/70 mt-1">years on Teesside roofs</div>
+      </div>
+      <div data-stagger-child>
+        <div class="font-display text-3xl sm:text-5xl text-white font-bold"><span data-counter="24">0</span><span class="text-[color:var(--color-accent-soft)]">h</span></div>
+        <div class="text-xs sm:text-sm text-white/70 mt-1">written-quote turnaround</div>
+      </div>
+      <div data-stagger-child>
+        <div class="font-display text-3xl sm:text-5xl text-white font-bold">£0</div>
+        <div class="text-xs sm:text-sm text-white/70 mt-1">callout, fully insured</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="bg-[color:var(--color-primary-dark)] text-white py-5 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 text-sm">
+    <div class="flex items-center gap-2 opacity-90"><span style="color:var(--color-accent-soft)">✓</span> Checkatrade reviewed</div>
+    <span class="dot-divider"></span>
+    <div class="flex items-center gap-2 opacity-90"><span style="color:var(--color-accent-soft)">✓</span> Council-contract experience</div>
+    <span class="dot-divider"></span>
+    <div class="flex items-center gap-2 opacity-90"><span style="color:var(--color-accent-soft)">✓</span> Fully insured to £5m</div>
+    <span class="dot-divider"></span>
+    <div class="flex items-center gap-2 opacity-90"><span style="color:var(--color-accent-soft)">✓</span> Written guarantees</div>
+    <span class="dot-divider"></span>
+    <div class="flex items-center gap-2 opacity-90"><span style="color:var(--color-accent-soft)">✓</span> 30 years trading</div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-24 sm:py-32">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="text-xs uppercase tracking-[0.18em] font-semibold" style="color:var(--color-accent)" data-reveal="fade-up">What we do</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight" data-reveal="fade-up" data-reveal-delay="0.1">Every roof. Every detail. Done properly.</h2>
+      <p class="mt-5 text-lg" style="color:var(--color-muted)" data-reveal="fade-up" data-reveal-delay="0.2">From a single slipped slate to a full council reroof, the work is scoped in writing, priced in writing and signed off on completion. No hidden extras.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger-parent>
+      <article class="card rounded-2xl p-7" data-stagger-child data-tilt>
+        <div class="service-icon w-11 h-11 rounded-xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12 12 4l9 8"/><path d="M5 11v9h14v-9"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold">Pitched roofs</h3>
+        <p class="mt-3 text-[15px] leading-relaxed" style="color:var(--color-muted)">Natural slate, concrete tile and clay pantile. Full strip-and-relays, partial repairs, ridge re-bedding, valley relining.</p>
+      </article>
+
+      <article class="card rounded-2xl p-7" data-stagger-child data-tilt>
+        <div class="service-icon w-11 h-11 rounded-xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h18v8H3z"/><path d="M3 12h18"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold">Flat roofs</h3>
+        <p class="mt-3 text-[15px] leading-relaxed" style="color:var(--color-muted)">EPDM rubber, GRP fibreglass and felt. Garage roofs, dormers, extensions — guaranteed in writing for up to 25 years.</p>
+      </article>
+
+      <article class="card rounded-2xl p-7" data-stagger-child data-tilt>
+        <div class="service-icon w-11 h-11 rounded-xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold">Lead &amp; flashing</h3>
+        <p class="mt-3 text-[15px] leading-relaxed" style="color:var(--color-muted)">Chimney lead-work, valley and abutment flashings, soakers, code 4–5 dressed in by hand. The work most leaks come back to.</p>
+      </article>
+
+      <article class="card rounded-2xl p-7" data-stagger-child data-tilt>
+        <div class="service-icon w-11 h-11 rounded-xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9 4 9-4"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold">Gutters &amp; fascias</h3>
+        <p class="mt-3 text-[15px] leading-relaxed" style="color:var(--color-muted)">uPVC gutter, fascia and soffit renewal. Cast-iron repairs on period properties. Annual clear-and-check plans available.</p>
+      </article>
+
+      <article class="card rounded-2xl p-7" data-stagger-child data-tilt>
+        <div class="service-icon w-11 h-11 rounded-xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold">Emergency repairs</h3>
+        <p class="mt-3 text-[15px] leading-relaxed" style="color:var(--color-muted)">Storm damage, sudden leaks, missing tiles. On-site same day across Middlesbrough, Stockton, Redcar and the wider Teesside area.</p>
+      </article>
+
+      <article class="card rounded-2xl p-7" data-stagger-child data-tilt>
+        <div class="service-icon w-11 h-11 rounded-xl flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold">Council &amp; commercial</h3>
+        <p class="mt-3 text-[15px] leading-relaxed" style="color:var(--color-muted)">Schedule-of-rates contracts, school and community-building reroofs, RAMS and full H&amp;S compliance. Three decades of public-sector work.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Work / proof -->
+<section id="work" class="py-24 sm:py-32 bg-[color:var(--color-primary)] text-white relative overflow-hidden">
+  <div class="absolute inset-0 roof-pattern opacity-40 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-12 items-start">
+    <div class="md:col-span-5 reveal" data-reveal="fade-up">
+      <span class="text-xs uppercase tracking-[0.18em] font-semibold" style="color:var(--color-accent-soft)">The work</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight">Roofs you can drive past in twenty years and not flinch.</h2>
+    </div>
+    <div class="md:col-span-7 space-y-5 text-lg leading-relaxed text-white/85">
+      <p class="reveal" data-reveal="fade-up" data-reveal-delay="0.1">Most of what we do is the work nobody ever sees: properly dressed lead, breathable membrane, double-batten lap, ventilation that meets BS 5250. The bit on top is the easy part.</p>
+      <p class="reveal" data-reveal="fade-up" data-reveal-delay="0.2">Every job gets a written scope before work starts, a daily site clean-down, and a sign-off walk-around when we hand it back. Council clients see the same paperwork as homeowners — because the standard is the same.</p>
+      <ul class="reveal grid sm:grid-cols-2 gap-3 mt-6 text-base" data-reveal="fade-up" data-reveal-delay="0.3">
+        <li class="flex items-start gap-3"><span class="mt-1 inline-block w-1.5 h-1.5 rounded-full" style="background:var(--color-accent-soft)"></span>Schedule-of-rates contracts with local authorities</li>
+        <li class="flex items-start gap-3"><span class="mt-1 inline-block w-1.5 h-1.5 rounded-full" style="background:var(--color-accent-soft)"></span>Listed-building lead and slate repairs</li>
+        <li class="flex items-start gap-3"><span class="mt-1 inline-block w-1.5 h-1.5 rounded-full" style="background:var(--color-accent-soft)"></span>Insurance-claim storm damage</li>
+        <li class="flex items-start gap-3"><span class="mt-1 inline-block w-1.5 h-1.5 rounded-full" style="background:var(--color-accent-soft)"></span>Domestic re-roofs across TS postcodes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-24 sm:py-32">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-12 items-start">
+    <div class="md:col-span-5 reveal" data-reveal="fade-up">
+      <span class="text-xs uppercase tracking-[0.18em] font-semibold" style="color:var(--color-accent)">About us</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight">Same family. Same number. Thirty winters in.</h2>
+    </div>
+    <div class="md:col-span-7 space-y-5 text-lg leading-relaxed" style="color:var(--color-muted)">
+      <p class="reveal" data-reveal="fade-up" data-reveal-delay="0.1">Hall Aspects of Roofing has worked on Middlesbrough roofs since 1995 — terraces off Linthorpe Road, semis in Acklam, council stock across Eston and Grangetown, schools and community buildings between Stockton and Redcar. Same yard, same lads, same number you rang last time.</p>
+      <p class="reveal" data-reveal="fade-up" data-reveal-delay="0.2">We don't subcontract the bits that matter. Every roof we touch is finished by the same crew that started it, and every quote we put in writing is the price you pay at the end of the job.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="py-24 sm:py-32 bg-[color:var(--color-bg)]">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="text-xs uppercase tracking-[0.18em] font-semibold" style="color:var(--color-accent)" data-reveal="fade-up">What clients say</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight" data-reveal="fade-up" data-reveal-delay="0.1">Trusted across Teesside.</h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-5" data-stagger-parent>
+      <figure class="card rounded-2xl p-7" data-stagger-child>
+        <div class="flex gap-1 mb-4" style="color:var(--color-accent)">★★★★★</div>
+        <blockquote class="text-[15px] leading-relaxed" style="color:var(--color-text)">
+          "Quoted on the Friday, scaffolding up Monday, finished Thursday. Yard was swept every night. Best money we've spent on the house."
+        </blockquote>
+        <figcaption class="mt-4 text-sm" style="color:var(--color-muted)">— Sarah W., Acklam · full re-roof</figcaption>
+      </figure>
+      <figure class="card rounded-2xl p-7" data-stagger-child>
+        <div class="flex gap-1 mb-4" style="color:var(--color-accent)">★★★★★</div>
+        <blockquote class="text-[15px] leading-relaxed" style="color:var(--color-text)">
+          "Three roofers ignored the chimney lead-work and just patched round it. Hall Aspects fixed the actual problem. Two winters dry."
+        </blockquote>
+        <figcaption class="mt-4 text-sm" style="color:var(--color-muted)">— David P., Linthorpe · lead and flashing</figcaption>
+      </figure>
+      <figure class="card rounded-2xl p-7" data-stagger-child>
+        <div class="flex gap-1 mb-4" style="color:var(--color-accent)">★★★★★</div>
+        <blockquote class="text-[15px] leading-relaxed" style="color:var(--color-text)">
+          "We've used them for council jobs for years. Paperwork in on time, RAMS spot-on, no callbacks. That's all you can ask for."
+        </blockquote>
+        <figcaption class="mt-4 text-sm" style="color:var(--color-muted)">— Property Services, local authority</figcaption>
+      </figure>
+    </div>
+
+    <p class="mt-8 text-sm" style="color:var(--color-muted)">Reviews shown for layout; full Checkatrade page linked from contact.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-24 sm:py-32 bg-[color:var(--color-primary-dark)] text-white relative overflow-hidden">
+  <div class="absolute inset-0 grain mix-blend-overlay opacity-30 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-5">
+      <span class="text-xs uppercase tracking-[0.18em] font-semibold" style="color:var(--color-accent-soft)" data-reveal="fade-up">Get in touch</span>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight" data-reveal="fade-up" data-reveal-delay="0.1">Quote in writing, inside 24 hours.</h2>
+      <p class="mt-6 text-white/85 text-lg leading-relaxed" data-reveal="fade-up" data-reveal-delay="0.2">Tell us what's happening with the roof. We'll come and look, scope the work properly, and send a fixed-price written quote — usually the same week.</p>
+
+      <ul class="mt-8 space-y-4 text-white/90">
+        <li class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.08)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <a href="tel:+441642000000" class="hover:underline">Middlesbrough office · 01642 (call to confirm)</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.08)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <a href="mailto:info@hallaspects.com" class="hover:underline">info@hallaspects.com</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.08)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span>Middlesbrough · Stockton · Redcar · Teesside-wide</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.08)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <span>Mon–Fri 7:30 – 17:00 · Sat by arrangement</span>
+        </li>
+      </ul>
+    </div>
+
+    <form class="md:col-span-7 card rounded-2xl p-7 sm:p-9" style="color:var(--color-text)" onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'Thanks — we will be in touch'; this.querySelector('button').disabled = true;">
+      <h3 class="font-display text-2xl font-bold">Request a written quote</h3>
+      <p class="mt-2 text-sm" style="color:var(--color-muted)">No call centre. No third party. Goes straight to the office.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <label class="block">
+          <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--color-muted)">Your name</span>
+          <input required type="text" class="mt-1 w-full px-4 py-3 rounded-xl border border-[#E7DFD2] focus:outline-none focus:border-[color:var(--color-primary)]" />
+        </label>
+        <label class="block">
+          <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--color-muted)">Phone</span>
+          <input required type="tel" class="mt-1 w-full px-4 py-3 rounded-xl border border-[#E7DFD2] focus:outline-none focus:border-[color:var(--color-primary)]" />
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--color-muted)">Postcode</span>
+          <input required type="text" placeholder="TS…" class="mt-1 w-full px-4 py-3 rounded-xl border border-[#E7DFD2] focus:outline-none focus:border-[color:var(--color-primary)]" />
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="text-xs uppercase tracking-wide font-semibold" style="color:var(--color-muted)">What's the roof doing?</span>
+          <textarea rows="4" class="mt-1 w-full px-4 py-3 rounded-xl border border-[#E7DFD2] focus:outline-none focus:border-[color:var(--color-primary)]" placeholder="Leak, slipped slates, age, insurance claim, scoping a full re-roof…"></textarea>
+        </label>
+      </div>
+      <button type="submit" data-magnetic class="btn-secondary mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold">
+        Send to the office
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <p class="mt-3 text-xs" style="color:var(--color-muted)">Demo form — submissions wire to your inbox on the live build.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 text-sm" style="background:var(--color-primary-dark); color:rgba(255,255,255,0.7)">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2 font-display text-base font-bold text-white">
+      <span class="inline-block w-2 h-2 rounded-sm rotate-45" style="background:var(--color-accent)"></span>
+      Hall Aspects of Roofing
+    </div>
+    <div>© <span id="yr"></span> Hall Aspects of Roofing · Middlesbrough · All rights reserved</div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button (placeholder number — confirm before live) -->
+<a href="https://wa.me/441642000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="wa-btn fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full" style="background:#25D366">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.06 0C5.54 0 .26 5.27.26 11.79c0 2.08.55 4.1 1.59 5.88L0 24l6.5-1.7a11.8 11.8 0 0 0 5.56 1.41h.01c6.52 0 11.79-5.27 11.79-11.79a11.7 11.7 0 0 0-3.34-8.44zM12.07 21.5h-.01a9.7 9.7 0 0 1-4.94-1.35l-.36-.21-3.86 1.01 1.03-3.76-.23-.39a9.71 9.71 0 0 1-1.49-5.17c0-5.36 4.36-9.72 9.73-9.72 2.6 0 5.04 1.01 6.87 2.85a9.66 9.66 0 0 1 2.85 6.88c0 5.36-4.36 9.72-9.72 9.72zm5.32-7.27c-.29-.15-1.72-.85-1.99-.94-.27-.1-.46-.15-.65.14-.19.29-.74.94-.91 1.13-.17.19-.33.21-.62.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.6-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.65-1.57-.89-2.15-.23-.56-.47-.48-.64-.49l-.55-.01a1.05 1.05 0 0 0-.76.36c-.26.29-1 .98-1 2.4 0 1.41 1.03 2.78 1.18 2.97.14.19 2.04 3.11 4.94 4.36.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.55-.08 1.72-.7 1.97-1.38.24-.68.24-1.27.17-1.39-.07-.13-.26-.21-.55-.36z"/></svg>
+</a>
+
+<!-- AireyAI Animation Toolkit -->
+<script src="animations.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // If hero.jpg fails to load, swap to fallback class.
+  (function () {
+    const img = new Image();
+    img.onload = () => { /* fine */ };
+    img.onerror = () => {
+      const hero = document.getElementById('top');
+      if (hero) { hero.classList.remove('hero-bg'); hero.classList.add('hero-fallback'); }
+    };
+    img.src = 'hero.jpg';
+  })();
+</script>
+
+</body>
+</html>
