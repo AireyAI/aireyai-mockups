@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>DWC Plasterers Hull | Skimming, Rendering & Ceiling Repair in East Yorkshire</title>
+<meta name="description" content="Smooth walls and ceilings across Hull and East Yorkshire. Skimming, re-skimming, full plaster work and rendering. Tidy, on time, no mess left behind." />
+
+<meta property="og:title" content="DWC Plasterers Hull — Skimming & Rendering Across East Yorkshire" />
+<meta property="og:description" content="Smooth walls and ceilings across Hull. Tidy, on time, no mess left behind." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        clay:    { 50:'#FCF4EE', 100:'#F7E4D6', 200:'#EFC3A6', 300:'#E29D75', 400:'#D17A4D', 500:'#B5532E', 600:'#9A4221', 700:'#7C341B', 800:'#5E2614', 900:'#3F1A0E' },
+        slate2:  { 900:'#0F1417', 800:'#1B2125', 700:'#2A3036', 500:'#4A5560', 300:'#9AA4AE' },
+        cream:   { DEFAULT:'#FAF6EF', warm:'#F2EADC' },
+        teal2:   { 600:'#0F766E', 700:'#0B5B55' }
+      },
+      fontFamily: {
+        display: ['Fraunces','Georgia','serif'],
+        sans: ['Inter','system-ui','sans-serif']
+      },
+      boxShadow: {
+        'soft':   '0 1px 2px rgba(31,26,14,.06), 0 8px 24px -8px rgba(124,52,27,.18)',
+        'lifted': '0 2px 6px rgba(31,26,14,.08), 0 24px 48px -16px rgba(124,52,27,.28)'
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  :root{
+    --clay-500:#B5532E;
+    --clay-700:#7C341B;
+    --slate-900:#0F1417;
+    --cream:#FAF6EF;
+    --cream-warm:#F2EADC;
+  }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--cream);
+    color: var(--slate-900);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3{ font-family:'Fraunces',Georgia,serif; letter-spacing:-0.025em; }
+  h1{ font-weight:600; }
+  .lede{ font-family:'Inter'; }
+
+  /* Hero background: image if available, gradient fallback always present underneath */
+  .hero-bg{
+    position:absolute; inset:0; z-index:0;
+    background:
+      radial-gradient(1200px 600px at 12% 18%, rgba(255,236,214,.55), transparent 60%),
+      radial-gradient(900px 600px at 90% 10%, rgba(15,118,110,.18), transparent 60%),
+      linear-gradient(180deg, #F7E4D6 0%, #EFC3A6 38%, #B5532E 100%);
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background-image: url('hero.jpg');
+    background-size: cover; background-position: center;
+    opacity:0; transition: opacity .6s ease;
+  }
+  .hero-bg.has-image::after{ opacity:1; }
+  .hero-bg::before{
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(15,20,23,0) 30%, rgba(15,20,23,.55) 100%),
+                linear-gradient(90deg, rgba(15,20,23,.55) 0%, rgba(15,20,23,0) 55%);
+    z-index:1;
+  }
+
+  .grain::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .12  0 0 0 0 .08  0 0 0 0 .05  0 0 0 .12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode:multiply; opacity:.55;
+  }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:.6rem;
+    padding: 0.95rem 1.4rem;
+    border-radius: 999px;
+    font-weight:600;
+    transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background-color .25s;
+    will-change: transform;
+  }
+  .btn-primary{
+    background: var(--clay-500);
+    color: #FFF8F1;
+    box-shadow: 0 1px 0 rgba(255,255,255,.18) inset, 0 10px 24px -10px rgba(124,52,27,.55);
+  }
+  .btn-primary:hover{ background: var(--clay-700); transform: translateY(-1px); }
+  .btn-ghost{
+    color:#FFF8F1; border:1px solid rgba(255,248,241,.4);
+  }
+  .btn-ghost:hover{ background: rgba(255,248,241,.08); transform: translateY(-1px); }
+
+  .chip{
+    display:inline-flex; align-items:center; gap:.45rem;
+    padding:.32rem .75rem;
+    border-radius:999px;
+    background: rgba(255,248,241,.14);
+    border:1px solid rgba(255,248,241,.28);
+    color:#FFF8F1;
+    font-size:.78rem; letter-spacing:.04em; text-transform:uppercase;
+  }
+  .dot{ width:.45rem; height:.45rem; border-radius:999px; background:#4ADE80; box-shadow:0 0 0 4px rgba(74,222,128,.18); }
+
+  .service-card{
+    background: #FFFDF9;
+    border: 1px solid rgba(31,20,14,.07);
+    border-radius: 18px;
+    padding: 1.6rem;
+    position:relative;
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    box-shadow: 0 1px 2px rgba(31,26,14,.04);
+  }
+  .service-card:hover{ transform: translateY(-3px); box-shadow: 0 24px 48px -22px rgba(124,52,27,.35); border-color: rgba(181,83,46,.35); }
+
+  .icon-tile{
+    width:46px; height:46px; border-radius:12px;
+    background: linear-gradient(135deg, #F7E4D6 0%, #EFC3A6 100%);
+    color:#7C341B;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: inset 0 0 0 1px rgba(124,52,27,.14);
+  }
+
+  .stat-num{
+    font-family:'Fraunces',serif; font-weight:600;
+    color: var(--clay-700);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height:1;
+    letter-spacing:-0.03em;
+  }
+
+  .underline-art{
+    position:relative; display:inline-block;
+  }
+  .underline-art::after{
+    content:""; position:absolute; left:0; right:0; bottom:-.18em; height:.45em;
+    background: linear-gradient(120deg, rgba(181,83,46,.30) 0%, rgba(181,83,46,.05) 100%);
+    border-radius: 6px; z-index:-1;
+  }
+
+  /* Honest reveal */
+  [data-reveal]{ opacity:0; transform:translateY(18px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+  [data-reveal].in{ opacity:1; transform:none; }
+
+  /* Floating contact button (email since no phone is on file) */
+  .float-mail{
+    position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 60;
+    background: var(--clay-500); color:#FFF8F1;
+    width: 56px; height: 56px; border-radius: 999px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 12px 30px -10px rgba(124,52,27,.6);
+    transition: transform .2s, background .2s;
+  }
+  .float-mail:hover{ background: var(--clay-700); transform: translateY(-2px) scale(1.04); }
+
+  ::selection{ background: rgba(181,83,46,.25); }
+
+  /* Mobile safe areas */
+  @supports(padding:max(0px)){
+    .pb-safe{ padding-bottom: max(1.25rem, env(safe-area-inset-bottom)); }
+    .float-mail{ bottom: max(1.25rem, env(safe-area-inset-bottom)); }
+  }
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- NAV -->
+<header class="absolute top-0 left-0 right-0 z-30">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 py-5">
+    <a href="#" class="flex items-center gap-2 text-cream">
+      <span class="w-9 h-9 rounded-xl bg-clay-500 grid place-items-center font-display font-bold text-cream shadow-soft">D</span>
+      <span class="font-display text-lg tracking-tight">DWC <span class="text-clay-200">Plasterers</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-cream/85">
+      <a href="#services" class="hover:text-white transition">Services</a>
+      <a href="#work" class="hover:text-white transition">How we work</a>
+      <a href="#areas" class="hover:text-white transition">Areas</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary text-sm py-2.5 px-4" data-magnetic>
+      Get a quote
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-[100dvh] overflow-hidden">
+  <div class="hero-bg grain" id="heroBg"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-36 sm:pt-44 pb-24 sm:pb-32">
+    <div class="max-w-3xl">
+      <span class="chip mb-6" data-appear data-appear-delay="0.05">
+        <span class="dot"></span>
+        Hull &amp; East Yorkshire — booking June &amp; July
+      </span>
+
+      <h1 class="text-[2.6rem] sm:text-[3.6rem] md:text-[4.4rem] leading-[1.02] text-cream font-display"
+          data-split="words" data-appear data-appear-delay="0.1">
+        Smooth walls, smooth ceilings, <span class="underline-art text-clay-200">no mess left behind.</span>
+      </h1>
+
+      <p class="lede mt-6 text-lg sm:text-xl text-cream/85 max-w-2xl" data-appear data-appear-delay="0.25">
+        Family-run plastering across Hull, Beverley, Cottingham &amp; Hessle. Skimming, re-skimming, full plaster work and rendering — tidy on the job, on the day we said.
+      </p>
+
+      <div class="mt-9 flex flex-col sm:flex-row gap-3" data-appear data-appear-delay="0.35">
+        <a href="#contact" class="btn btn-primary" data-magnetic>
+          Get a free quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost" data-magnetic>
+          See what we do
+        </a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-3 gap-6 max-w-xl" data-appear data-appear-delay="0.45">
+        <div>
+          <div class="stat-num text-cream"><span data-counter="15" data-counter-suffix="+">0</span></div>
+          <div class="text-xs uppercase tracking-wider text-cream/70 mt-1">Years on the trowel</div>
+        </div>
+        <div>
+          <div class="stat-num text-cream"><span data-counter="600" data-counter-suffix="+">0</span></div>
+          <div class="text-xs uppercase tracking-wider text-cream/70 mt-1">Hull homes finished</div>
+        </div>
+        <div>
+          <div class="stat-num text-cream"><span data-counter="24" data-counter-suffix="hr">0</span></div>
+          <div class="text-xs uppercase tracking-wider text-cream/70 mt-1">Quote turnaround</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curve into next section -->
+  <svg class="absolute bottom-[-1px] left-0 right-0 w-full z-10" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FAF6EF"/>
+  </svg>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="bg-cream pt-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+      <div class="py-4">
+        <div class="text-xs uppercase tracking-[.2em] text-slate2-500">Insured</div>
+        <div class="font-display text-xl text-slate2-900 mt-1">£2m public liability</div>
+      </div>
+      <div class="py-4 border-t md:border-t-0 md:border-l border-clay-100">
+        <div class="text-xs uppercase tracking-[.2em] text-slate2-500">Family-run</div>
+        <div class="font-display text-xl text-slate2-900 mt-1">Owner on every job</div>
+      </div>
+      <div class="py-4 border-t md:border-t-0 md:border-l border-clay-100">
+        <div class="text-xs uppercase tracking-[.2em] text-slate2-500">Tidy</div>
+        <div class="font-display text-xl text-slate2-900 mt-1">Dust-sheets &amp; sweep-up</div>
+      </div>
+      <div class="py-4 border-t md:border-t-0 md:border-l border-clay-100">
+        <div class="text-xs uppercase tracking-[.2em] text-slate2-500">Local</div>
+        <div class="font-display text-xl text-slate2-900 mt-1">HU postcodes only</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-24 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-12 items-start">
+    <div class="md:col-span-5">
+      <div class="text-xs uppercase tracking-[.25em] text-clay-700 font-semibold" data-reveal>About DWC</div>
+      <h2 class="font-display text-4xl sm:text-5xl mt-3 leading-[1.05] text-slate2-900" data-reveal>
+        Darren and a small crew. <span class="text-clay-700">Nothing flash.</span> Just walls that look right.
+      </h2>
+    </div>
+    <div class="md:col-span-7 space-y-5 text-lg text-slate2-700" data-reveal>
+      <p>DWC has been plastering across Hull and the East Riding for the better part of two decades. Re-skims that hide the old artex. Full re-plasters after damp's been sorted. Skim-only finishes on new boards for the builders. Ceilings, walls, archways — whatever needs flattening before the painter comes in.</p>
+      <p>You'll see the same face on quote day as on finishing day. No subcontract crews, no "the lads will be round Tuesday." If we say Thursday at eight, we're parked outside at five to.</p>
+      <p class="text-clay-700 font-semibold">Tidy on the job. Off the job by the time we said. That's the whole pitch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 sm:py-28 bg-cream-warm relative overflow-hidden">
+  <div class="absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-clay-100/60 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div>
+        <div class="text-xs uppercase tracking-[.25em] text-clay-700 font-semibold" data-reveal>What we do</div>
+        <h2 class="font-display text-4xl sm:text-5xl mt-3 text-slate2-900 max-w-xl leading-[1.05]" data-reveal>
+          Six things, done <span class="underline-art text-clay-700">properly</span>.
+        </h2>
+      </div>
+      <p class="text-slate2-500 max-w-sm" data-reveal>Quotes are in person — five-minute look in the room beats anything we could say over text.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger-parent>
+      <!-- 1 -->
+      <article class="service-card" data-stagger-child data-tilt>
+        <div class="icon-tile mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4 4 14-14-4-4L3 17z"/><path d="M14 6l4 4"/></svg>
+        </div>
+        <h3 class="font-display text-2xl text-slate2-900">Skimming &amp; re-skimming</h3>
+        <p class="mt-2 text-slate2-700">Bumpy, blown or tired walls re-skimmed to a smooth paint-ready finish. Most rooms in a day.</p>
+      </article>
+      <!-- 2 -->
+      <article class="service-card" data-stagger-child data-tilt>
+        <div class="icon-tile mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+        </div>
+        <h3 class="font-display text-2xl text-slate2-900">Full plaster work</h3>
+        <p class="mt-2 text-slate2-700">New boards, bonding coats, full re-plasters after damp or rewires. Honest about what each room needs.</p>
+      </article>
+      <!-- 3 -->
+      <article class="service-card" data-stagger-child data-tilt>
+        <div class="icon-tile mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M4 19l2-12h12l2 12"/><path d="M8 19v-6h8v6"/></svg>
+        </div>
+        <h3 class="font-display text-2xl text-slate2-900">Ceiling repair &amp; over-board</h3>
+        <p class="mt-2 text-slate2-700">Cracked, sagged or artex'd ceilings either over-boarded and skimmed, or pulled down and re-done.</p>
+      </article>
+      <!-- 4 -->
+      <article class="service-card" data-stagger-child data-tilt>
+        <div class="icon-tile mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <h3 class="font-display text-2xl text-slate2-900">External rendering</h3>
+        <p class="mt-2 text-slate2-700">Sand-and-cement render, monocouche, or patch-and-blend on existing render. Scaffold sorted.</p>
+      </article>
+      <!-- 5 -->
+      <article class="service-card" data-stagger-child data-tilt>
+        <div class="icon-tile mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h3 class="font-display text-2xl text-slate2-900">Damp patch repair</h3>
+        <p class="mt-2 text-slate2-700">After the damp's been treated, we hack off, sand-and-cement, then skim back to flat. No shortcuts.</p>
+      </article>
+      <!-- 6 -->
+      <article class="service-card" data-stagger-child data-tilt>
+        <div class="icon-tile mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4"/><path d="M4 17l8 4 8-4"/><path d="M4 12l8 4 8-4"/></svg>
+        </div>
+        <h3 class="font-display text-2xl text-slate2-900">Coving &amp; archways</h3>
+        <p class="mt-2 text-slate2-700">Plain or ornate coving fitted neatly. Squared-off archways and reveals where the old plaster's blown.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="work" class="py-24 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <div class="text-xs uppercase tracking-[.25em] text-clay-700 font-semibold" data-reveal>How we work</div>
+      <h2 class="font-display text-4xl sm:text-5xl mt-3 text-slate2-900 leading-[1.05]" data-reveal>
+        Quote, day on the calendar, job done.
+      </h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-4 gap-6">
+      <div data-reveal data-reveal-delay="0">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="font-display text-3xl text-clay-500">01</span>
+          <div class="h-px flex-1 bg-clay-200"></div>
+        </div>
+        <h4 class="font-display text-xl text-slate2-900">You message us</h4>
+        <p class="text-slate2-700 mt-2 text-sm leading-relaxed">Drop a line through the form or email Darren direct. Roughly what room, roughly when.</p>
+      </div>
+      <div data-reveal data-reveal-delay="0.1">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="font-display text-3xl text-clay-500">02</span>
+          <div class="h-px flex-1 bg-clay-200"></div>
+        </div>
+        <h4 class="font-display text-xl text-slate2-900">Five-minute look</h4>
+        <p class="text-slate2-700 mt-2 text-sm leading-relaxed">We pop round, scope the room, give a fixed quote in writing within 24 hours. No salesman patter.</p>
+      </div>
+      <div data-reveal data-reveal-delay="0.2">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="font-display text-3xl text-clay-500">03</span>
+          <div class="h-px flex-1 bg-clay-200"></div>
+        </div>
+        <h4 class="font-display text-xl text-slate2-900">Booked-in day</h4>
+        <p class="text-slate2-700 mt-2 text-sm leading-relaxed">Date locked. Dust-sheets down, furniture covered, plug your wifi back in by tea-time.</p>
+      </div>
+      <div data-reveal data-reveal-delay="0.3">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="font-display text-3xl text-clay-500">04</span>
+          <div class="h-px flex-1 bg-clay-200"></div>
+        </div>
+        <h4 class="font-display text-xl text-slate2-900">Tidy hand-back</h4>
+        <p class="text-slate2-700 mt-2 text-sm leading-relaxed">Floor swept, bin-bags out, photos sent. Pay only when the room's how you wanted it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-20 bg-slate2-900 text-cream relative overflow-hidden">
+  <div class="absolute -top-20 -left-20 w-[460px] h-[460px] rounded-full bg-clay-700/30 blur-3xl pointer-events-none"></div>
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 relative">
+    <div class="text-xs uppercase tracking-[.25em] text-clay-200 font-semibold" data-reveal>What customers say</div>
+    <blockquote class="font-display text-3xl sm:text-4xl leading-[1.15] mt-6" data-reveal>
+      &ldquo;Darren re-skimmed the front room and the hallway in a day and a half. Walls are dead flat, paint went on a treat, and you'd never have known he was here — bin bags gone, floor brushed. <span class="text-clay-200">Booked him in for the kitchen ceiling already.</span>&rdquo;
+    </blockquote>
+    <div class="mt-8 flex items-center gap-4" data-reveal>
+      <div class="w-12 h-12 rounded-full bg-clay-500 grid place-items-center font-display font-semibold text-cream">L</div>
+      <div>
+        <div class="font-semibold">Laura, Cottingham</div>
+        <div class="text-cream/60 text-sm">Re-skim, front room &amp; hallway · March 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas" class="py-24 bg-cream">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5">
+        <div class="text-xs uppercase tracking-[.25em] text-clay-700 font-semibold" data-reveal>Where we work</div>
+        <h2 class="font-display text-4xl sm:text-5xl mt-3 text-slate2-900 leading-[1.05]" data-reveal>
+          Hull and the East Riding.
+        </h2>
+        <p class="text-lg text-slate2-700 mt-5 max-w-md" data-reveal>
+          We keep the patch tight on purpose — same-day call-outs if a snag comes up, no two-hour van drive on the clock.
+        </p>
+      </div>
+      <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-3" data-reveal>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Kingston upon Hull</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Beverley</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Cottingham</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Hessle</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Anlaby</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Willerby</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Hedon</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Hornsea</span>
+        <span class="bg-white border border-clay-100 rounded-xl px-4 py-3 text-slate2-700 text-sm font-medium hover:border-clay-300 transition">Withernsea</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact" class="py-24 sm:py-32 bg-gradient-to-br from-clay-500 via-clay-600 to-clay-700 text-cream relative overflow-hidden">
+  <div class="absolute -bottom-32 -right-32 w-[520px] h-[520px] rounded-full bg-clay-300/30 blur-3xl pointer-events-none"></div>
+  <div class="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-clay-200/20 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 relative grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-6">
+      <div class="text-xs uppercase tracking-[.25em] text-clay-100 font-semibold" data-reveal>Get a quote</div>
+      <h2 class="font-display text-4xl sm:text-5xl mt-3 leading-[1.04]" data-reveal>
+        Tell us about the room. We&rsquo;ll do the rest.
+      </h2>
+      <p class="mt-5 text-cream/85 text-lg max-w-sm" data-reveal>
+        Drop a couple of lines below or email Darren direct. We reply same-day, often within the hour during quieter weeks.
+      </p>
+      <div class="mt-8 space-y-4 text-cream/95" data-reveal>
+        <a href="mailto:darren@dwc-plasterershull.co.uk" class="flex items-center gap-3 hover:text-white transition">
+          <span class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          darren@dwc-plasterershull.co.uk
+        </a>
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          Kingston upon Hull, East Yorkshire
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-xl bg-white/10 grid place-items-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          Mon–Sat, 7am–6pm
+        </div>
+      </div>
+    </div>
+
+    <form class="md:col-span-6 bg-cream/[0.04] backdrop-blur-md border border-cream/20 rounded-2xl p-6 sm:p-7 space-y-4" data-reveal onsubmit="event.preventDefault(); this.querySelector('.form-success').classList.remove('hidden'); this.querySelector('button[type=submit]').disabled=true;">
+      <div>
+        <label class="text-xs uppercase tracking-wider text-cream/70 block mb-1.5">Your name</label>
+        <input class="w-full bg-white/8 border border-white/25 rounded-lg px-4 py-3 text-cream placeholder:text-cream/40 focus:outline-none focus:border-cream/60 focus:bg-white/12 transition" placeholder="Laura Bennett" required />
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs uppercase tracking-wider text-cream/70 block mb-1.5">Email</label>
+          <input type="email" class="w-full bg-white/8 border border-white/25 rounded-lg px-4 py-3 text-cream placeholder:text-cream/40 focus:outline-none focus:border-cream/60 focus:bg-white/12 transition" placeholder="you@example.com" required />
+        </div>
+        <div>
+          <label class="text-xs uppercase tracking-wider text-cream/70 block mb-1.5">Postcode</label>
+          <input class="w-full bg-white/8 border border-white/25 rounded-lg px-4 py-3 text-cream placeholder:text-cream/40 focus:outline-none focus:border-cream/60 focus:bg-white/12 transition" placeholder="HU5 2AB" required />
+        </div>
+      </div>
+      <div>
+        <label class="text-xs uppercase tracking-wider text-cream/70 block mb-1.5">What needs doing?</label>
+        <textarea rows="3" class="w-full bg-white/8 border border-white/25 rounded-lg px-4 py-3 text-cream placeholder:text-cream/40 focus:outline-none focus:border-cream/60 focus:bg-white/12 transition resize-none" placeholder="Re-skim front room and hall. Walls are bumpy, ceiling cracked above the bay."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-full justify-center !bg-cream !text-clay-700 hover:!bg-white" data-magnetic>
+        Send for a quote
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <p class="form-success hidden text-sm text-cream bg-clay-800/40 border border-cream/30 rounded-lg px-4 py-3">
+        Thanks — Darren will be in touch shortly. (This is a preview site, the form isn't wired up to email yet.)
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate2-900 text-cream/70 py-10">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm">
+    <div class="flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-clay-500 grid place-items-center font-display font-bold text-cream">D</span>
+      <span>&copy; <span id="yr"></span> DWC Plasterers Hull — covering the HU postcodes.</span>
+    </div>
+    <div class="flex gap-6">
+      <a href="#services" class="hover:text-cream transition">Services</a>
+      <a href="#areas" class="hover:text-cream transition">Areas</a>
+      <a href="#contact" class="hover:text-cream transition">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating email button (no phone on file for this prospect) -->
+<a href="mailto:darren@dwc-plasterershull.co.uk?subject=Plastering%20quote%20—%20Hull" class="float-mail" aria-label="Email Darren">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m22 6-10 7L2 6"/></svg>
+</a>
+
+<!-- Tailwind colour aliases (Tailwind CDN can't read tailwind.config extends for arbitrary strings used in markup at runtime — define utilities used directly) -->
+<style>
+  .border-clay-100{ border-color:#F7E4D6; }
+  .border-clay-300{ border-color:#E29D75; }
+  .text-clay-200{ color:#EFC3A6; }
+  .text-clay-100{ color:#F7E4D6; }
+  .text-clay-500{ color:#B5532E; }
+  .text-clay-700{ color:#7C341B; }
+  .text-cream{ color:#FAF6EF; }
+  .text-cream\/85{ color:rgba(250,246,239,.85); }
+  .text-cream\/70{ color:rgba(250,246,239,.70); }
+  .text-cream\/60{ color:rgba(250,246,239,.60); }
+  .text-cream\/95{ color:rgba(250,246,239,.95); }
+  .text-slate2-900{ color:#0F1417; }
+  .text-slate2-700{ color:#2A3036; }
+  .text-slate2-500{ color:#4A5560; }
+  .bg-clay-500{ background:#B5532E; }
+  .bg-clay-600{ background:#9A4221; }
+  .bg-clay-700{ background:#7C341B; }
+  .bg-clay-800\/40{ background:rgba(94,38,20,.4); }
+  .from-clay-500{ --tw-gradient-from:#B5532E var(--tw-gradient-from-position); --tw-gradient-to:rgba(181,83,46,0) var(--tw-gradient-to-position); --tw-gradient-stops:var(--tw-gradient-from), var(--tw-via, ), var(--tw-gradient-to); }
+  .via-clay-600{ --tw-gradient-via-position:50%; --tw-gradient-to:rgba(154,66,33,0); --tw-via:#9A4221 var(--tw-gradient-via-position), var(--tw-gradient-to); }
+  .to-clay-700{ --tw-gradient-to:#7C341B var(--tw-gradient-to-position); }
+  .bg-cream{ background:#FAF6EF; }
+  .bg-cream-warm{ background:#F2EADC; }
+  .bg-clay-100\/60{ background:rgba(247,228,214,.6); }
+  .bg-clay-300\/30{ background:rgba(226,157,117,.3); }
+  .bg-clay-700\/30{ background:rgba(124,52,27,.3); }
+  .bg-clay-200\/20{ background:rgba(239,195,166,.2); }
+  .bg-slate2-900{ background:#0F1417; }
+  .bg-white\/10{ background:rgba(255,255,255,.10); }
+  .bg-white\/8{ background:rgba(255,255,255,.08); }
+  .bg-white\/12{ background:rgba(255,255,255,.12); }
+  .border-clay-200{ border-color:#EFC3A6; }
+  .border-white\/25{ border-color:rgba(255,255,255,.25); }
+  .border-cream\/20{ border-color:rgba(250,246,239,.20); }
+  .border-cream\/30{ border-color:rgba(250,246,239,.30); }
+  .bg-cream\/\[0\.04\]{ background:rgba(250,246,239,.04); }
+</style>
+
+<!-- GSAP + ScrollTrigger + animations.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="animations.js"></script>
+
+<script>
+  // Year stamp
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Reveal observer (lightweight, animations.js handles data-reveal differently — this is fallback)
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+  // Counter animation (in case animations.js doesn't handle it)
+  document.querySelectorAll('[data-counter]').forEach(el=>{
+    const target = parseInt(el.dataset.counter,10);
+    const suffix = el.dataset.counterSuffix || '';
+    const dur = 1600;
+    const start = performance.now();
+    function tick(now){
+      const t = Math.min(1, (now-start)/dur);
+      const eased = 1 - Math.pow(1-t, 3);
+      el.textContent = Math.round(target*eased) + suffix;
+      if(t<1) requestAnimationFrame(tick);
+    }
+    const io2 = new IntersectionObserver(es=>{
+      es.forEach(e=>{ if(e.isIntersecting){ requestAnimationFrame(tick); io2.unobserve(e.target); } });
+    },{threshold:.3});
+    io2.observe(el);
+  });
+
+  // Reveal the hero image if it loads (gradient stays as fallback)
+  (function(){
+    const img = new Image();
+    img.onload = () => document.getElementById('heroBg').classList.add('has-image');
+    img.onerror = () => {}; // keep gradient
+    img.src = 'hero.jpg';
+  })();
+</script>
+</body>
+</html>
