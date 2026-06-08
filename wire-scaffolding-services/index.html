@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Wire Scaffolding Services — Warrington &amp; Cheshire</title>
+  <meta name="description" content="Family-run scaffolding in Warrington — commercial, domestic and events. Zero accident record. Free quotes. Call 01925 321 567." />
+  <meta property="og:title" content="Wire Scaffolding Services — Warrington &amp; Cheshire" />
+  <meta property="og:description" content="Family-run scaffolding. Zero accidents. Free quotes. Call 01925 321 567." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--carbon);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .display { font-family: var(--font-display); letter-spacing: -0.03em; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-5); }
+    @media (min-width: 768px) { .wrap { padding: 0 var(--space-6); } }
+
+    /* Header */
+    .top {
+      background: var(--black);
+      color: var(--white);
+      padding: 14px var(--space-5);
+    }
+    .top-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+    .brand { text-decoration: none; color: inherit; }
+    .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.02em; }
+    .brand-sub { font-size: 11px; color: rgba(255,255,255,.55); margin-top: 2px; }
+    .pill-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--black);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background var(--duration) var(--ease), transform var(--duration);
+    }
+    .pill-call:hover { background: var(--ash); transform: scale(1.02); }
+    .nav-row {
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 0 var(--space-5);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-row a {
+      color: var(--graphite);
+      text-decoration: none;
+      padding: 14px 0;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color var(--duration), border-color var(--duration);
+    }
+    .nav-row a:hover { color: var(--black); border-bottom-color: var(--black); }
+    @media (min-width: 768px) {
+      .nav-row { gap: 36px; font-size: 14px; }
+      .nav-row a { padding: 16px 0; }
+    }
+    @media (max-width: 380px) {
+      .brand-name { font-size: 14px; }
+      .pill-call { font-size: 13px; padding: 9px 14px; }
+    }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 1fr; }
+    @media (min-width: 960px) { .hero { grid-template-columns: 1fr 1.05fr; min-height: 88vh; } }
+    .hero-left {
+      padding: var(--space-7) var(--space-5) var(--space-8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--space-5);
+    }
+    @media (min-width: 960px) { .hero-left { padding: var(--space-8) var(--space-7) var(--space-9) 64px; } }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+    .eyebrow::before {
+      content: "";
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+    .hero h1 {
+      font-size: var(--fs-display);
+      font-weight: 700;
+      line-height: var(--leading-tight);
+      max-width: 13ch;
+    }
+    .hero-lede {
+      font-size: var(--fs-body);
+      line-height: var(--leading-body);
+      color: var(--pewter);
+      max-width: 44ch;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      max-width: 420px;
+    }
+    .stat { background: var(--white); padding: 16px 12px; text-align: center; }
+    .stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      color: var(--pewter);
+      line-height: 1.35;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--black);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background var(--duration), transform var(--duration);
+    }
+    .btn-dark:hover { background: var(--graphite); transform: translateY(-1px); }
+    .link-quiet {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--graphite);
+      text-decoration: none;
+      border-bottom: 1px solid #d0d0d0;
+      padding-bottom: 2px;
+    }
+    .link-quiet:hover { color: var(--black); border-color: var(--black); }
+    .hero-right {
+      position: relative;
+      min-height: 340px;
+      background: var(--carbon);
+      overflow: hidden;
+    }
+    @media (min-width: 960px) { .hero-right { min-height: auto; } }
+    .hero-right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.5) 100%);
+      z-index: 1;
+    }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; min-height: 340px; }
+    @media (min-width: 960px) { .hero-right img { min-height: 100%; } }
+    .float-card {
+      position: absolute;
+      z-index: 2;
+      left: var(--space-5);
+      right: var(--space-5);
+      bottom: 28px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    @media (min-width: 960px) {
+      .float-card { left: 40px; right: auto; bottom: 48px; width: min(320px, calc(100% - 80px)); }
+    }
+    .float-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--orange-soft);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: var(--orange);
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .float-card h2 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .float-card p { font-size: 13px; color: var(--pewter); line-height: 1.5; }
+
+    /* Sections */
+    .section { padding: var(--space-8) 0; }
+    .section--ash { background: var(--ash); }
+    .section-head { max-width: 36rem; margin-bottom: var(--space-7); }
+    .section-kicker {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: var(--space-3);
+    }
+    .section h2 {
+      font-size: var(--fs-h2);
+      font-weight: 700;
+      line-height: 1.12;
+      margin-bottom: var(--space-4);
+    }
+    .section-intro { font-size: var(--fs-body); color: var(--pewter); line-height: var(--leading-body); }
+
+    .sector-grid {
+      display: grid;
+      gap: var(--space-4);
+    }
+    @media (min-width: 768px) { .sector-grid { grid-template-columns: repeat(3, 1fr); } }
+    .sector-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--line);
+      transition: box-shadow var(--duration), transform var(--duration);
+    }
+    .section--ash .sector-card { border-color: transparent; }
+    .sector-card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
+    .sector-num {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: var(--space-3);
+    }
+    .sector-card h3 {
+      font-family: var(--font-display);
+      font-size: var(--fs-h3);
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+    .sector-card p { font-size: var(--fs-small); color: var(--pewter); line-height: 1.6; }
+
+    .pillar-grid {
+      display: grid;
+      gap: var(--space-5);
+    }
+    @media (min-width: 768px) { .pillar-grid { grid-template-columns: repeat(3, 1fr); } }
+    .pillar {
+      padding-top: var(--space-5);
+      border-top: 2px solid var(--black);
+    }
+    .pillar-index {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--line);
+      line-height: 1;
+      margin-bottom: var(--space-3);
+    }
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: var(--fs-h3);
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+    .pillar p { font-size: var(--fs-small); color: var(--pewter); line-height: 1.65; }
+
+    .areas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: var(--space-5);
+    }
+    .area-pill {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+    .section--ash .area-pill { background: var(--ash); }
+
+    .cta-band {
+      background: var(--black);
+      color: var(--white);
+      padding: var(--space-8) 0;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-size: var(--fs-h2);
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+    }
+    .cta-band p {
+      color: rgba(255,255,255,.65);
+      font-size: var(--fs-body);
+      max-width: 40ch;
+      margin: 0 auto var(--space-6);
+      line-height: var(--leading-body);
+    }
+    .cta-band .btn-dark { background: var(--white); color: var(--black); }
+    .cta-band .btn-dark:hover { background: var(--ash); }
+
+    .footer {
+      background: var(--carbon);
+      color: rgba(255,255,255,.7);
+      padding: var(--space-7) 0 var(--space-6);
+      font-size: var(--fs-small);
+    }
+    .footer-grid {
+      display: grid;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+    }
+    .footer h3 {
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+    }
+    .footer a { color: rgba(255,255,255,.85); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .footer ul { list-style: none; display: grid; gap: 8px; }
+    .footer-base {
+      margin-top: var(--space-6);
+      padding-top: var(--space-5);
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: var(--fs-micro);
+      color: rgba(255,255,255,.45);
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="top-inner">
+        <a class="brand" href="#top">
+          <div class="brand-name">Wire Scaffolding Services</div>
+          <div class="brand-sub">Warrington · Cheshire · WA1 3DL</div>
+        </a>
+        <a class="pill-call" href="tel:01925321567" aria-label="Call 01925 321 567">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+          01925 321 567
+        </a>
+      </div>
+    </div>
+    <nav class="nav-row" aria-label="Primary">
+      <a href="#sectors">Sectors</a>
+      <a href="#approach">Safety</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-left">
+        <p class="eyebrow">Family-run since day one</p>
+        <h1 class="display">Build access without cutting corners</h1>
+        <p class="hero-lede">Commercial, domestic and event scaffolding across Warrington and Cheshire — trained crews, clean sites, and a zero accident record we're proud of.</p>
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><strong>0</strong><span>Accidents on record</span></div>
+          <div class="stat" role="listitem"><strong>3</strong><span>Sectors served</span></div>
+          <div class="stat" role="listitem"><strong>24h</strong><span>Quote turnaround</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-dark" href="tel:01925321567">Request a free quote</a>
+          <a class="link-quiet" href="mailto:info@wirescaffolding.co.uk">info@wirescaffolding.co.uk</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80"
+          alt="Professional scaffolding on a construction site in Cheshire"
+          width="1600" height="1067" fetchpriority="high"
+        />
+        <div class="float-card">
+          <div class="float-icon" aria-hidden="true">✓</div>
+          <div>
+            <h2>Safety &amp; accreditations</h2>
+            <p>Up-to-date training. Honest communication. Respect on every job — domestic or commercial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectors" class="section section--ash">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">What we do</p>
+          <h2 class="display">Scaffolding for sites, homes and events</h2>
+          <p class="section-intro">We help build companies, homes and events that thrive — with access structures designed for your timeline and your safety standards.</p>
+        </div>
+        <div class="sector-grid">
+          <article class="sector-card">
+            <p class="sector-num">01</p>
+            <h3>Commercial</h3>
+            <p>Contractor-ready access for builds, refurbs and maintenance. Clear handover, tidy yards, crews that turn up when they say they will.</p>
+          </article>
+          <article class="sector-card">
+            <p class="sector-num">02</p>
+            <h3>Domestic</h3>
+            <p>Roof work, extensions and repairs — respectful of your property and neighbours. We explain the plan before a tube goes up.</p>
+          </article>
+          <article class="sector-card">
+            <p class="sector-num">03</p>
+            <h3>Events</h3>
+            <p>Stages, structures and temporary access for events across the North West. Installed safely, struck cleanly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Our approach</p>
+          <h2 class="display">Safety first. Always.</h2>
+          <p class="section-intro">Our approach is all about safety and what is best for our customers. We pride ourselves on a clean zero accident history and keep up to date with training and accreditations within our industry.</p>
+        </div>
+        <div class="pillar-grid">
+          <div class="pillar">
+            <p class="pillar-index">01</p>
+            <h3>What we do</h3>
+            <p>Family-run scaffolding in Warrington for commercial, domestic and events — one team, one standard of care.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-index">02</p>
+            <h3>How we work</h3>
+            <p>Safety-led planning, tidy sites, and crews trained to current industry standards. No shortcuts on access or PPE.</p>
+          </div>
+          <div class="pillar">
+            <p class="pillar-index">03</p>
+            <h3>Our promise</h3>
+            <p>Honesty and integrity on every job. Reliable, friendly people — respect and dignity in how we treat your site and your time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="section section--ash">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Coverage</p>
+          <h2 class="display">Warrington and surrounding Cheshire</h2>
+          <p class="section-intro">Based at WA1 3DL — we cover Warrington, Cheshire and the wider North West for projects that need dependable access.</p>
+        </div>
+        <div class="areas">
+          <span class="area-pill">Warrington</span>
+          <span class="area-pill">Cheshire</span>
+          <span class="area-pill">Widnes</span>
+          <span class="area-pill">Runcorn</span>
+          <span class="area-pill">St Helens</span>
+          <span class="area-pill">North West</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta-band">
+      <div class="wrap">
+        <h2 class="display">Need scaffolding? Speak to us today.</h2>
+        <p>Free, no-pressure quotes. Tell us about your site and we'll come back with a clear plan and price.</p>
+        <a class="btn-dark" href="tel:01925321567">Call 01925 321 567</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Wire Scaffolding Services</h3>
+        <p>Family-run scaffolding — commercial, domestic and events across Warrington and Cheshire.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:01925321567">01925 321 567</a></li>
+          <li><a href="mailto:info@wirescaffolding.co.uk">info@wirescaffolding.co.uk</a></li>
+          <li>WA1 3DL, Warrington</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Office hours</h3>
+        <ul>
+          <li>Mon–Thu: 9am – 5pm</li>
+          <li>Friday: 9am – 4pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© Wire Scaffolding Services. Concept mockup by AireyAI — not affiliated until client approves.</p>
+    </div>
+  </footer>
+</body>
+</html>

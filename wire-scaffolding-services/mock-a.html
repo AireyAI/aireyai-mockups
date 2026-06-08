@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Wire Scaffolding · Mock A — Hi-vis brutalist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --hi-vis: #FFD400;
+      --hi-vis-hover: #E6BE00;
+      --warm: #F4F1EA;
+      --white: #FFFFFF;
+      --muted: #555555;
+      --orange: #FF6B00;
+      --shadow: 4px 4px 0 var(--ink);
+      --shadow-lg: 8px 8px 0 var(--ink);
+      --border: 2px solid var(--ink);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--warm);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+    }
+    .display { font-family: "Space Grotesk", Inter, sans-serif; letter-spacing: -0.02em; line-height: 1.05; }
+    .mock-banner {
+      background: var(--ink);
+      color: var(--hi-vis);
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      border-bottom: var(--border);
+      background: var(--white);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo-mark {
+      width: 40px; height: 40px;
+      background: var(--hi-vis);
+      border: var(--border);
+      box-shadow: 2px 2px 0 var(--ink);
+      display: grid;
+      place-items: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .logo-text { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 15px; line-height: 1.2; }
+    .logo-text span { display: block; font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .nav { display: none; gap: 28px; font-size: 14px; font-weight: 500; }
+    .nav a { color: var(--ink); text-decoration: none; }
+    .nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .phone-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ink);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 18px;
+      border: var(--border);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .phone-cta:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+    .phone-cta svg { flex-shrink: 0; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: calc(100dvh - 97px);
+    }
+    @media (min-width: 900px) {
+      .nav { display: flex; }
+      .hero { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .hero-copy {
+      padding: 40px 20px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+    @media (min-width: 900px) { .hero-copy { padding: 64px 48px 72px 56px; } }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .kicker::before {
+      content: "";
+      width: 32px; height: 3px;
+      background: var(--hi-vis);
+      border: 1px solid var(--ink);
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 4.25rem);
+      font-weight: 700;
+      max-width: 11ch;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: var(--hi-vis);
+      padding: 0 .12em;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .lede {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 42ch;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      background: var(--white);
+      border: var(--border);
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+    .chip--accent { background: var(--hi-vis); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--hi-vis);
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      padding: 16px 28px;
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s;
+    }
+    .btn-primary:hover {
+      background: var(--hi-vis-hover);
+      transform: translate(-3px,-3px);
+      box-shadow: 11px 11px 0 var(--ink);
+    }
+    .btn-ghost {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+    .hero-visual {
+      position: relative;
+      min-height: 320px;
+      border-top: var(--border);
+      background: var(--ink);
+    }
+    @media (min-width: 900px) {
+      .hero-visual { border-top: none; border-left: var(--border); min-height: auto; }
+    }
+    .stripe {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 12px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--hi-vis),
+        var(--hi-vis) 12px,
+        var(--ink) 12px,
+        var(--ink) 24px
+      );
+      z-index: 2;
+      border-bottom: var(--border);
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: .92;
+    }
+    .visual-card {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 24px;
+      background: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 18px 20px;
+      display: grid;
+      gap: 6px;
+      z-index: 3;
+    }
+    @media (min-width: 900px) {
+      .visual-card { left: auto; right: 32px; bottom: 40px; width: min(280px, 90%); }
+    }
+    .visual-card strong { font-family: "Space Grotesk", sans-serif; font-size: 28px; font-weight: 700; }
+    .visual-card span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,212,0,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,212,0,.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-banner">Mock A · Hi-vis brutalist · Design phase only — do not build until approved</div>
+
+  <header class="topbar">
+    <a class="logo" href="#">
+      <span class="logo-mark">W</span>
+      <span class="logo-text">Wire Scaffolding<span>Warrington · Cheshire</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#">Services</a>
+      <a href="#">Safety</a>
+      <a href="#">Areas</a>
+      <a href="#">About</a>
+    </nav>
+    <a class="phone-cta" href="tel:01925321567">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+      01925 321 567
+    </a>
+  </header>
+
+  <section class="hero" aria-label="Hero">
+    <div class="hero-copy">
+      <p class="kicker display">Family-run · Commercial &amp; domestic</p>
+      <h1 class="display">Scaffolding in <em>Warrington</em> you can trust</h1>
+      <p class="lede">Safety-first crews for homes, sites and events across Cheshire. Zero accident history. Honest quotes. Respect on every job.</p>
+      <div class="chips">
+        <span class="chip chip--accent">Zero accidents</span>
+        <span class="chip">NASC-minded</span>
+        <span class="chip">Free quotes</span>
+      </div>
+      <div class="actions">
+        <a class="btn-primary" href="tel:01925321567">Call for a quote →</a>
+        <a class="btn-ghost" href="#">See our work</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stripe" aria-hidden="true"></div>
+      <div class="grid-bg" aria-hidden="true"></div>
+      <img
+        src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80"
+        alt="Scaffolding on a building site — professional access structures"
+        width="1400" height="933" fetchpriority="high"
+      />
+      <div class="visual-card">
+        <strong>WA1 3DL</strong>
+        <span>Based in Warrington. Covering Cheshire and the North West.</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

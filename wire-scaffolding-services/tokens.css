@@ -1,0 +1,50 @@
+/* wire-scaffolding-services — Mock B: confident monochrome + safety orange */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --carbon: #171a20;
+  --graphite: #393c41;
+  --pewter: #5c5e62;
+  --silver: #8e8e8e;
+  --ash: #f4f4f4;
+  --line: #e8e8e8;
+  --orange: #ff5a1f;
+  --orange-hover: #e84f18;
+  --orange-soft: rgba(255, 90, 31, 0.12);
+
+  --font-display: "DM Sans", Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+
+  --fs-display: clamp(2.5rem, 6.5vw, 3.75rem);
+  --fs-h2: clamp(1.75rem, 4vw, 2.5rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
+
+  --leading-tight: 1.08;
+  --leading-body: 1.65;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.06), 0 12px 40px -12px rgba(0, 0, 0, 0.18);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  --max-width: 72rem;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 0.2s;
+}
