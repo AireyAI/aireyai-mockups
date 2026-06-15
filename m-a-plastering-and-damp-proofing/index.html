@@ -6,66 +6,112 @@
 <title>M A plastering and damp proofing | Plastering in Lancaster</title>
 <meta name="description" content="Trusted plastering specialists in Lancaster. Fast response, clear quotes, work you can rely on." />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
-  :root { --primary:#B5532E; --accent:#7C341B; --warm:#F7E4D6; }
-  body { background: var(--warm); color: #0f172a; font-family: Inter, system-ui, sans-serif; }
-  h1,h2 { letter-spacing: -0.02em; }
-  .hero-gradient {
-    background: linear-gradient(135deg, var(--warm) 0%, #fff 40%, color-mix(in srgb, var(--primary) 18%, white) 100%);
+  :root { --primary:#B5532E; --accent:#7C341B; --warm:#F7E4D6; --ink:#13131a; }
+  * { -webkit-font-smoothing:antialiased; }
+  body { background:var(--warm); color:var(--ink); font-family:'Plus Jakarta Sans',system-ui,sans-serif; overflow-x:hidden; }
+  .font-display { font-family:'Fraunces',Georgia,serif; letter-spacing:-0.02em; font-weight:600; }
+  .text-ink { color:var(--ink); }
+  /* grain overlay for depth */
+  body::before {
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .shadow-soft { box-shadow: 0 8px 30px -12px color-mix(in srgb, var(--accent) 35%, transparent); }
-  .btn-primary {
-    background: var(--primary); color: white;
-  }
-  .btn-primary:hover { filter: brightness(1.05); }
+  .mesh { position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+  .mesh::before, .mesh::after { content:""; position:absolute; border-radius:9999px; filter:blur(70px); opacity:.5; }
+  .mesh::before { width:46rem; height:46rem; top:-16rem; right:-12rem; background:radial-gradient(circle,var(--primary),transparent 62%); }
+  .mesh::after  { width:38rem; height:38rem; bottom:-18rem; left:-12rem; background:radial-gradient(circle,var(--accent),transparent 62%); opacity:.4; }
+  .btn-primary { background:linear-gradient(135deg,var(--primary),var(--accent)); box-shadow:0 14px 34px -10px color-mix(in srgb,var(--primary) 60%,transparent); position:relative; overflow:hidden; }
+  .btn-primary::after { content:""; position:absolute; top:0; left:-120%; width:60%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent); transition:left .6s; }
+  .btn-primary:hover::after { left:140%; }
+  .shadow-card { box-shadow:0 10px 40px -18px color-mix(in srgb,var(--ink) 30%,transparent); }
+  .hover\:shadow-cardhover:hover { box-shadow:0 26px 60px -22px color-mix(in srgb,var(--primary) 45%,transparent); }
+  [data-reveal] { opacity:0; transform:translateY(26px); }
+  .reveal-on { opacity:1 !important; transform:none !important; transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+  .stars { color:#f5a623; letter-spacing:2px; }
 </style>
 </head>
 <body class="antialiased">
-  <header class="hero-gradient border-b border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 ">
-      <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">Plastering in Lancaster</p>
-      <h1 class="mt-3 text-4xl md:text-6xl font-bold text-slate-900 max-w-3xl">M A plastering and damp proofing</h1>
-      <p class="mt-5 max-w-2xl text-lg text-slate-700 leading-relaxed">Trusted plastering specialists in Lancaster. Fast response, clear quotes, work you can rely on.</p>
+  <!-- HERO -->
+  <header class="relative">
+    <div class="mesh"></div>
+    <div class="relative z-10 mx-auto max-w-5xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
+      <p data-hero class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Plastering in Lancaster</p>
+      <h1 data-hero class="font-display mt-5 text-5xl leading-[1.02] text-ink md:text-7xl">M A plastering and damp proofing</h1>
+      <p data-hero class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/60 md:text-xl">Trusted plastering specialists in Lancaster. Fast response, clear quotes, work you can rely on.</p>
       
-      <div class="mt-8 flex flex-wrap gap-4 ">
-        <a href="tel:07808844079" class="btn-primary inline-flex rounded-full px-6 py-3 font-semibold shadow-soft">Call 07808844079</a>
-        <a href="#contact" class="inline-flex rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 shadow-sm">Get a quote</a>
-      </div>
+      <div data-hero class="mt-9 flex flex-wrap justify-center gap-4"><a href="tel:07808844079" data-magnetic class="btn-primary inline-flex items-center justify-center rounded-full px-7 py-4 font-semibold text-white">Call 07808844079</a><a href="#contact" class="inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/60 px-7 py-4 font-semibold text-ink backdrop-blur-sm transition hover:border-ink/35">Get a free quote</a></div>
     </div>
   </header>
 
-  <section class="mx-auto max-w-6xl px-6 py-16">
-    <h2 class="text-3xl font-bold text-slate-900">Services</h2>
-    <p class="mt-2 max-w-2xl text-slate-600">Everything you need from a local plastering team — straightforward pricing and reliable turnaround.</p>
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Skimming & re-skimming</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional plastering — free quotes, tidy work, and clear communication from start to finish.</p>
+  <!-- TRUST STRIP -->
+  <section class="relative z-10 mx-auto -mt-6 max-w-5xl px-6">
+    <div class="grid grid-cols-2 gap-6 rounded-3xl border border-black/5 bg-white/80 px-8 py-9 shadow-card backdrop-blur md:grid-cols-4">
+        <div data-reveal class="text-center">
+          <div class="font-display text-4xl md:text-5xl text-ink">Lancaster</div>
+          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">service area</div>
+        </div>
+        <div data-reveal class="text-center">
+          <div class="font-display text-4xl md:text-5xl text-ink">Fast</div>
+          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">free quotes</div>
+        </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">What we do</p>
+    <h2 data-reveal class="font-display mt-3 max-w-2xl text-4xl text-ink md:text-5xl">Everything you need, done properly.</h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
+          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 class="font-display text-xl text-ink">Skimming & re-skimming</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional plastering in Lancaster — clear quotes, tidy work, and proper communication start to finish.</p>
         </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Rendering</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional plastering — free quotes, tidy work, and clear communication from start to finish.</p>
+        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
+          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 class="font-display text-xl text-ink">Rendering</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional plastering in Lancaster — clear quotes, tidy work, and proper communication start to finish.</p>
         </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Ceiling repairs</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional plastering — free quotes, tidy work, and clear communication from start to finish.</p>
+        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
+          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 class="font-display text-xl text-ink">Ceiling repairs</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional plastering in Lancaster — clear quotes, tidy work, and proper communication start to finish.</p>
         </article>
     </div>
   </section>
 
-  <section id="contact" class="bg-white border-y border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">Contact</h2>
-      <p class="mt-2 text-slate-600">Request a quote — we'll come back quickly with availability and next steps.</p>
-      <ul class="mt-8 space-y-3 text-lg text-slate-800">
-        <li><strong>Phone:</strong> <a href='tel:07808844079' class='text-[var(--primary)] font-semibold'>07808844079</a></li>
-        
-        <li><strong>Area:</strong> Lancaster and surrounding areas</li>
-      </ul>
+  <!-- PROOF BAND -->
+  <section class="relative z-10 overflow-hidden">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="relative overflow-hidden rounded-[2rem] px-8 py-16 text-center md:py-20" style="background:linear-gradient(135deg,var(--primary),var(--accent))">
+        <p data-reveal class="font-display mx-auto max-w-3xl text-2xl leading-snug text-white md:text-4xl">"Looked twice as professional overnight — the calls started the same week."</p>
+        <p data-reveal class="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">what a tidy website does for a local business</p>
+      </div>
     </div>
   </section>
 
-  <footer class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-500">
+  <!-- CONTACT -->
+  <section id="contact" class="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Get in touch</p>
+        <h2 data-reveal class="font-display mt-3 text-4xl text-ink md:text-5xl">Ready when you are.</h2>
+        <p data-reveal class="mt-4 max-w-md text-lg leading-relaxed text-ink/60">Tell us what you need and we'll come back fast with availability and a clear, no-obligation quote.</p>
+      </div>
+      <div data-reveal class="rounded-3xl border border-black/5 bg-white/80 p-8 shadow-card backdrop-blur">
+        <div class="space-y-5"><a href="tel:07808844079" class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Phone</span><span class="font-display text-2xl text-[var(--primary)]">07808844079</span></a><p class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Area</span><span>Lancaster &amp; surrounding areas</span></p></div>
+        <a href="tel:07808844079" data-magnetic class="btn-primary mt-8 inline-flex w-full items-center justify-center rounded-full px-7 py-4 font-semibold text-white">Call 07808844079</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="relative z-10 border-t border-black/5 py-10 text-center text-sm text-ink/40">
     © 2026 M A plastering and damp proofing. All rights reserved.
   </footer>
 
@@ -73,5 +119,27 @@
        class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg hover:scale-105 transition">
       WhatsApp
     </a>
+
+<script>
+  // reveal on scroll
+  const _rev = document.querySelectorAll('[data-reveal]');
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.batch('[data-reveal]', { start:'top 88%', onEnter: b => gsap.to(b, {opacity:1, y:0, duration:.8, stagger:.12, ease:'power3.out'}) });
+    // hero entrance
+    gsap.from('[data-hero]', {opacity:0, y:30, duration:1, stagger:.12, ease:'power3.out', delay:.1});
+    // count-up
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = parseFloat(el.dataset.count); const dec = (el.dataset.count.indexOf('.')>-1)?1:0;
+      const o = {v:0};
+      ScrollTrigger.create({ trigger:el, start:'top 90%', once:true, onEnter:()=>gsap.to(o,{v:target, duration:1.4, ease:'power2.out', onUpdate:()=>el.textContent=o.v.toFixed(dec)}) });
+    });
+    // magnetic buttons
+    document.querySelectorAll('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', e => { const r=el.getBoundingClientRect(); gsap.to(el,{x:(e.clientX-r.left-r.width/2)*.25, y:(e.clientY-r.top-r.height/2)*.4, duration:.4}); });
+      el.addEventListener('mouseleave', ()=>gsap.to(el,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));
+    });
+  } else { _rev.forEach(e=>e.classList.add('reveal-on')); }
+</script>
 </body>
 </html>
