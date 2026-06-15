@@ -3,624 +3,139 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KPM Scaffolding Ltd | Scaffolders in Loughborough &amp; Leicestershire</title>
-<meta name="description" content="Family-run scaffolders covering Loughborough, Leicester, Melton Mowbray and across Leicestershire. CISRS, CITB, SSIP, Safecontractor and IPAF approved. Free quote in 24 hours — call Kelly today." />
-<meta name="theme-color" content="#F47B20" />
-
-<meta property="og:title" content="KPM Scaffolding Ltd | Loughborough &amp; Leicestershire" />
-<meta property="og:description" content="30+ years on the tubes. CISRS, CITB, SSIP, Safecontractor, IPAF approved. Free quote in 24 hours." />
-<meta property="og:type" content="website" />
-
+<title>KPM Scaffolding Ltd | Scaffolding in Loughborough</title>
+<meta name="description" content="Trade businesses usually value quote requests, service-area proof, and local trust signals." />
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: {
-            DEFAULT: '#F47B20',
-            dark: '#C25A0F',
-            light: '#FFB37A',
-            accent: '#FFD23F',
-          },
-          ink: {
-            900: '#0E141B',
-            800: '#1F2937',
-            700: '#2A3340',
-            500: '#5C6776',
-            300: '#B8C0CC',
-            100: '#F2F4F7',
-          },
-        },
-        fontFamily: {
-          display: ['"Bebas Neue"', 'system-ui', 'sans-serif'],
-          sans: ['Inter', 'system-ui', 'sans-serif'],
-        },
-        boxShadow: {
-          'brand-glow': '0 18px 50px -18px rgba(244, 123, 32, 0.55)',
-          'card': '0 24px 60px -28px rgba(14, 20, 27, 0.55)',
-        },
-      }
-    }
-  }
-</script>
-
-<style>
-  :root {
-    --brand: #F47B20;
-    --brand-dark: #C25A0F;
-    --ink-900: #0E141B;
-    --ink-800: #1F2937;
-  }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    color: #0E141B;
-    background: #FBF8F5;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.6;
-  }
-  .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.9; }
-  .hero-bg {
-    background:
-      radial-gradient(120% 90% at 80% 0%, rgba(244,123,32,0.55) 0%, transparent 55%),
-      radial-gradient(80% 100% at 0% 100%, rgba(255,210,63,0.18) 0%, transparent 60%),
-      linear-gradient(135deg, #0E141B 0%, #1F2937 55%, #2A3340 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-bg::before {
-    content: "";
-    position: absolute; inset: 0;
-    background-image:
-      repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px),
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>");
-    mix-blend-mode: overlay;
-    pointer-events: none;
-  }
-  .hero-bg::after {
-    content: "";
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(14,20,27,0.78) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  .scaffold-svg {
-    position: absolute; right: -8%; bottom: -8%;
-    width: 70%; max-width: 720px; opacity: 0.35;
-    color: #F47B20;
-    pointer-events: none;
-  }
-  .btn-magnetic {
-    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease, background 0.25s ease;
-    will-change: transform;
-  }
-  .btn-magnetic:hover {
-    box-shadow: 0 18px 40px -12px rgba(244,123,32,0.55);
-  }
-  .surface-card {
-    background: #FFFFFF;
-    border: 1px solid rgba(14, 20, 27, 0.06);
-    border-radius: 18px;
-    transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.4s ease, border-color 0.3s ease;
-  }
-  .surface-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 30px 60px -30px rgba(14, 20, 27, 0.4);
-    border-color: rgba(244, 123, 32, 0.25);
-  }
-  .pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 12px; border-radius: 999px;
-    font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-  .accred-chip {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 10px 16px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    color: #F2F4F7;
-    border-radius: 999px;
-    font-weight: 600; letter-spacing: 0.06em; font-size: 12px;
-    text-transform: uppercase;
-  }
-  .accred-light {
-    background: #FFFFFF;
-    border: 1px solid rgba(14, 20, 27, 0.08);
-    color: #1F2937;
-    box-shadow: 0 6px 20px -10px rgba(14, 20, 27, 0.18);
-  }
-  .underline-brand {
-    background-image: linear-gradient(90deg, #F47B20, #F47B20);
-    background-size: 100% 6px; background-position: 0 92%;
-    background-repeat: no-repeat;
-    padding-bottom: 2px;
-  }
-  /* WhatsApp floating */
-  .wa-float {
-    position: fixed; right: 20px; bottom: 20px; z-index: 9998;
-    width: 60px; height: 60px; border-radius: 999px;
-    background: #25D366; color: white;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 16px 36px -10px rgba(37, 211, 102, 0.6);
-    transition: transform 0.2s ease;
-  }
-  .wa-float:hover { transform: scale(1.08); }
-  @media (max-width: 640px) {
-    .display-xl { font-size: clamp(48px, 12vw, 80px); }
-  }
-  .stat-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(56px, 8vw, 96px);
-    line-height: 1;
-    background: linear-gradient(180deg, #F47B20 0%, #C25A0F 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .grid-bg {
-    background-image:
-      linear-gradient(rgba(14,20,27,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(14,20,27,0.04) 1px, transparent 1px);
-    background-size: 56px 56px;
-  }
-  .section-divider {
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(244,123,32,0.3), transparent);
-  }
-</style>
-</head>
-<body class="text-ink-900">
-
-<!-- Nav -->
-<header class="absolute top-0 left-0 right-0 z-40">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-3" data-appear>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand text-ink-900 font-display text-xl">KPM</span>
-      <span class="text-white font-semibold tracking-tight hidden sm:inline">KPM Scaffolding Ltd</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm text-white/85" data-appear data-appear-delay="0.1">
-      <a href="#services" class="hover:text-white">Services</a>
-      <a href="#why" class="hover:text-white">Why us</a>
-      <a href="#areas" class="hover:text-white">Coverage</a>
-      <a href="#reviews" class="hover:text-white">Reviews</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
-    </nav>
-    <a href="tel:01509412271" class="btn-magnetic inline-flex items-center gap-2 rounded-full bg-brand text-ink-900 px-5 py-2.5 font-semibold text-sm shadow-brand-glow" data-magnetic data-appear data-appear-delay="0.2">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.25 11.36 11.36 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.55 1 1 0 0 1-.25 1z"/></svg>
-      01509 412271
-    </a>
-  </div>
-</header>
-
-<!-- Hero -->
-<section id="top" class="hero-bg pt-32 lg:pt-40 pb-24 lg:pb-36 relative">
-  <!-- Decorative scaffold SVG -->
-  <svg class="scaffold-svg" viewBox="0 0 800 600" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-    <g opacity="0.9">
-      <!-- Verticals -->
-      <line x1="120" y1="40" x2="120" y2="580"/>
-      <line x1="280" y1="40" x2="280" y2="580"/>
-      <line x1="440" y1="40" x2="440" y2="580"/>
-      <line x1="600" y1="40" x2="600" y2="580"/>
-      <!-- Horizontal lifts -->
-      <line x1="80" y1="120" x2="640" y2="120"/>
-      <line x1="80" y1="240" x2="640" y2="240"/>
-      <line x1="80" y1="360" x2="640" y2="360"/>
-      <line x1="80" y1="480" x2="640" y2="480"/>
-      <!-- Bracing -->
-      <line x1="120" y1="120" x2="280" y2="240" stroke-dasharray="4 6"/>
-      <line x1="280" y1="120" x2="440" y2="240" stroke-dasharray="4 6"/>
-      <line x1="440" y1="120" x2="600" y2="240" stroke-dasharray="4 6"/>
-      <line x1="120" y1="360" x2="280" y2="480" stroke-dasharray="4 6"/>
-      <line x1="280" y1="360" x2="440" y2="480" stroke-dasharray="4 6"/>
-      <line x1="440" y1="360" x2="600" y2="480" stroke-dasharray="4 6"/>
-      <!-- Couplers (small circles) -->
-      <circle cx="120" cy="120" r="6" fill="currentColor"/>
-      <circle cx="280" cy="120" r="6" fill="currentColor"/>
-      <circle cx="440" cy="120" r="6" fill="currentColor"/>
-      <circle cx="600" cy="120" r="6" fill="currentColor"/>
-      <circle cx="120" cy="240" r="6" fill="currentColor"/>
-      <circle cx="280" cy="240" r="6" fill="currentColor"/>
-      <circle cx="440" cy="240" r="6" fill="currentColor"/>
-      <circle cx="600" cy="240" r="6" fill="currentColor"/>
-      <circle cx="120" cy="360" r="6" fill="currentColor"/>
-      <circle cx="280" cy="360" r="6" fill="currentColor"/>
-      <circle cx="440" cy="360" r="6" fill="currentColor"/>
-      <circle cx="600" cy="360" r="6" fill="currentColor"/>
-      <circle cx="120" cy="480" r="6" fill="currentColor"/>
-      <circle cx="280" cy="480" r="6" fill="currentColor"/>
-      <circle cx="440" cy="480" r="6" fill="currentColor"/>
-      <circle cx="600" cy="480" r="6" fill="currentColor"/>
-    </g>
-  </svg>
-
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 text-white">
-    <span class="pill bg-white/10 text-brand-light border border-white/15" data-appear data-appear-delay="0.0">
-      <span class="w-2 h-2 rounded-full bg-brand"></span>
-      Loughborough · Leicester · Melton Mowbray
-    </span>
-
-    <h1 class="display display-xl mt-6 font-display text-white" style="font-size: clamp(64px, 9vw, 128px); max-width: 14ch;" data-split="words">
-      Scaffold up <span class="text-brand">by Friday.</span> Quote back <span class="underline-brand">today.</span>
-    </h1>
-
-    <p class="mt-8 text-lg lg:text-xl text-ink-300 max-w-2xl" data-appear data-appear-delay="0.2">
-      30 years on the tubes across Leicestershire. CISRS-trained, SSIP-approved, fully insured.
-      Domestic extensions, commercial sites and access scaffolds — erected, hired, and signed off properly.
-    </p>
-
-    <div class="mt-10 flex flex-wrap gap-4" data-appear data-appear-delay="0.3">
-      <a href="#contact" class="btn-magnetic inline-flex items-center gap-2 rounded-full bg-brand text-ink-900 px-7 py-4 font-bold shadow-brand-glow" data-magnetic>
-        Get a free quote
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="tel:07739464520" class="btn-magnetic inline-flex items-center gap-2 rounded-full bg-white/10 text-white px-7 py-4 font-semibold border border-white/20 backdrop-blur-sm" data-magnetic>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.25 11.36 11.36 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.55 1 1 0 0 1-.25 1z"/></svg>
-        Call Kelly · 07739 464520
-      </a>
-    </div>
-
-    <!-- Stats row -->
-    <div class="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10" data-stagger-parent>
-      <div data-stagger-child>
-        <div class="stat-num"><span data-counter="30" data-counter-suffix="+">0</span></div>
-        <div class="text-ink-300 text-sm tracking-wide uppercase mt-2">Years on the tubes</div>
-      </div>
-      <div data-stagger-child>
-        <div class="stat-num"><span data-counter="24" data-counter-suffix="hr">0</span></div>
-        <div class="text-ink-300 text-sm tracking-wide uppercase mt-2">Quote turnaround</div>
-      </div>
-      <div data-stagger-child>
-        <div class="stat-num"><span data-counter="15" data-counter-suffix="+">0</span></div>
-        <div class="text-ink-300 text-sm tracking-wide uppercase mt-2">Towns covered</div>
-      </div>
-      <div data-stagger-child>
-        <div class="stat-num"><span data-counter="5" data-counter-suffix="★">0</span></div>
-        <div class="text-ink-300 text-sm tracking-wide uppercase mt-2">Google &amp; Facebook</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Accreditations strip -->
-<section class="bg-ink-900 py-10 border-y border-white/5">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <p class="text-xs tracking-[0.3em] text-ink-300 uppercase mb-6 text-center" data-reveal="fade-up">Fully accredited &amp; insured</p>
-    <div class="flex flex-wrap items-center justify-center gap-3" data-stagger-parent>
-      <span class="accred-chip" data-stagger-child>CISRS Registered</span>
-      <span class="accred-chip" data-stagger-child>CITB Certified</span>
-      <span class="accred-chip" data-stagger-child>SSIP Approved</span>
-      <span class="accred-chip" data-stagger-child>Safecontractor</span>
-      <span class="accred-chip" data-stagger-child>IPAF Operators</span>
-      <span class="accred-chip" data-stagger-child>Public Liability Insured</span>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section id="about" class="py-24 lg:py-32 grid-bg">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-16">
-    <div class="lg:col-span-5" data-reveal="fade-right">
-      <span class="pill bg-brand/10 text-brand-dark">About KPM</span>
-      <h2 class="display mt-4 text-5xl lg:text-6xl text-ink-900" data-split="words">
-        Local scaffolders, properly trained, in &amp; out clean.
-      </h2>
-    </div>
-    <div class="lg:col-span-7 space-y-6 text-lg text-ink-700" data-reveal="fade-up">
-      <p>
-        KPM Scaffolding Ltd is a family-run firm based in Loughborough, working across the whole of Leicestershire.
-        Kelly and the team have been erecting scaffolds for over 30 years — extensions, new builds, renovations, refurbs,
-        re-roofing, plastering, rendering — domestic or commercial, we put them up the same way: properly.
-      </p>
-      <p>
-        We're CISRS-trained, CITB certified, SSIP &amp; Safecontractor approved, IPAF operators, and fully covered
-        by Public Liability Insurance. Every job is signed off, every lift handed over with a tag, every site swept on
-        the way out. The phone is answered by someone who's been up the ladder, not a call centre.
-      </p>
-      <div class="flex flex-wrap gap-3 pt-2">
-        <span class="accred-chip accred-light">Domestic &amp; Commercial</span>
-        <span class="accred-chip accred-light">Free Site Visits</span>
-        <span class="accred-chip accred-light">Tagged Handover</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- Services -->
-<section id="services" class="py-24 lg:py-32 bg-ink-100/40">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="max-w-3xl">
-      <span class="pill bg-brand/10 text-brand-dark" data-reveal="fade-up">What we do</span>
-      <h2 class="display mt-4 text-5xl lg:text-6xl text-ink-900" data-split="words" data-reveal="fade-up">
-        Scaffolding that goes up safe and earns the sign-off.
-      </h2>
-      <p class="mt-6 text-lg text-ink-700" data-reveal="fade-up" data-reveal-delay="0.1">
-        Three services, one standard. Tell us the job, we'll come and price it.
-      </p>
-    </div>
-
-    <div class="mt-14 grid md:grid-cols-3 gap-6" data-stagger-parent>
-      <!-- Service 1 -->
-      <article class="surface-card p-8" data-stagger-child data-tilt>
-        <div class="w-14 h-14 rounded-2xl bg-brand/10 text-brand-dark flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M3 11h18"/><path d="M3 16h18"/><path d="M8 21V7"/><path d="M16 21V7"/></svg>
-        </div>
-        <h3 class="display text-3xl text-ink-900">Scaffold erecting</h3>
-        <p class="mt-3 text-ink-700">
-          Domestic extensions, two-storey rears, gable ends, chimney access, full-perimeter wraps. Built tight,
-          signed off, and handed over with a scaff tag.
-        </p>
-        <ul class="mt-6 space-y-2 text-sm text-ink-700">
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Extensions &amp; new builds</li>
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Roofing, rendering, painting</li>
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Hand rails &amp; edge protection</li>
-        </ul>
-      </article>
-
-      <!-- Service 2 -->
-      <article class="surface-card p-8 ring-1 ring-brand/20" data-stagger-child data-tilt>
-        <div class="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center mb-6 shadow-brand-glow">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
-        </div>
-        <h3 class="display text-3xl text-ink-900">Access &amp; Haki staircases</h3>
-        <p class="mt-3 text-ink-700">
-          Public-access scaffolds, temporary staircase towers, raised walkways. Built to keep the public, your staff
-          and the site safe — and let trades move quickly.
-        </p>
-        <ul class="mt-6 space-y-2 text-sm text-ink-700">
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Haki staircase systems</li>
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Public-access walkways</li>
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Loading bays &amp; gantries</li>
-        </ul>
-      </article>
-
-      <!-- Service 3 -->
-      <article class="surface-card p-8" data-stagger-child data-tilt>
-        <div class="w-14 h-14 rounded-2xl bg-brand/10 text-brand-dark flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M8 4v14"/></svg>
-        </div>
-        <h3 class="display text-3xl text-ink-900">Scaffold hire &amp; rental</h3>
-        <p class="mt-3 text-ink-700">
-          Short or long-term hire for builders, roofers and plasterers across Leicestershire. Weekly rates,
-          flexible extensions, prompt strike-downs.
-        </p>
-        <ul class="mt-6 space-y-2 text-sm text-ink-700">
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Trade &amp; main contractor hire</li>
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Weekly &amp; long-term rates</li>
-          <li class="flex items-start gap-2"><span class="text-brand mt-1">▸</span>Same-week erect &amp; strike</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Why us -->
-<section id="why" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
-    <div class="lg:col-span-4" data-reveal="fade-right">
-      <span class="pill bg-brand/10 text-brand-dark">Why KPM</span>
-      <h2 class="display mt-4 text-5xl lg:text-6xl text-ink-900" data-split="words">
-        Three things every job gets.
-      </h2>
-      <p class="mt-6 text-ink-700">
-        Same standard whether it's a two-week domestic or a twelve-week commercial wrap.
-      </p>
-    </div>
-    <div class="lg:col-span-8 grid sm:grid-cols-2 gap-6" data-stagger-parent>
-      <div class="p-6 rounded-2xl bg-ink-100/60 border border-ink-900/5" data-stagger-child>
-        <div class="text-brand-dark font-display text-4xl">01</div>
-        <h4 class="font-semibold text-ink-900 mt-2">A real person on the phone</h4>
-        <p class="text-ink-700 text-sm mt-2">Ring 01509 412271 or Kelly direct on 07739 464520. We pick up, we price, we book.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-ink-100/60 border border-ink-900/5" data-stagger-child>
-        <div class="text-brand-dark font-display text-4xl">02</div>
-        <h4 class="font-semibold text-ink-900 mt-2">Quote inside 24 hours</h4>
-        <p class="text-ink-700 text-sm mt-2">Free site visit, free consultation, written quote with a price you can plan around.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-ink-100/60 border border-ink-900/5" data-stagger-child>
-        <div class="text-brand-dark font-display text-4xl">03</div>
-        <h4 class="font-semibold text-ink-900 mt-2">Signed-off, tagged, swept</h4>
-        <p class="text-ink-700 text-sm mt-2">Every lift gets a scaff tag. Every job ends with the site swept and the offcuts gone.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-gradient-to-br from-brand to-brand-dark text-white" data-stagger-child>
-        <div class="font-display text-4xl">★ 5.0</div>
-        <h4 class="font-semibold mt-2">Google &amp; Facebook average</h4>
-        <p class="text-white/85 text-sm mt-2">"Friendly local firm. Professional, reliable and competitive." — verified reviews.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Coverage -->
-<section id="areas" class="py-20 lg:py-28 bg-ink-900 text-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="max-w-3xl">
-      <span class="pill bg-white/10 text-brand-light border border-white/15" data-reveal="fade-up">Coverage</span>
-      <h2 class="display mt-4 text-5xl lg:text-6xl" data-split="words" data-reveal="fade-up">
-        Across <span class="text-brand">Leicestershire</span> and the towns around it.
-      </h2>
-    </div>
-    <div class="mt-12 flex flex-wrap gap-2" data-stagger-parent>
-      <!-- Towns served -->
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Loughborough</span>
-      <span class="px-4 py-2 rounded-full bg-brand text-ink-900 font-semibold text-sm shadow-brand-glow" data-stagger-child>HQ · Loughborough</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Leicester</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Melton Mowbray</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Kegworth</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Coalville</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Whitwick</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Measham</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Quorn</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Syston</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Ibstock</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Thurmaston</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Hinckley</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Market Bosworth</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>Billesdon</span>
-      <span class="px-4 py-2 rounded-full bg-white/8 border border-white/12 text-sm" data-stagger-child>+ surrounding villages</span>
-    </div>
-    <p class="text-ink-300 mt-10 max-w-2xl" data-reveal="fade-up">
-      Slightly further afield? Give Kelly a ring on <a href="tel:07739464520" class="text-brand-light underline-brand">07739 464520</a> — most of Leicestershire is on the books.
-    </p>
-  </div>
-</section>
-
-<!-- Reviews -->
-<section id="reviews" class="py-24 lg:py-32">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="max-w-3xl mb-14">
-      <span class="pill bg-brand/10 text-brand-dark" data-reveal="fade-up">What clients say</span>
-      <h2 class="display mt-4 text-5xl lg:text-6xl text-ink-900" data-split="words" data-reveal="fade-up">
-        Verified 5-star reviews. Across Google &amp; Facebook.
-      </h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6" data-stagger-parent>
-      <figure class="surface-card p-8" data-stagger-child>
-        <div class="flex gap-1 text-brand mb-4">★★★★★</div>
-        <blockquote class="text-ink-800 text-lg leading-relaxed">
-          "Kelly at KPM helped erect scaffolding on our double-storey extension. Fair price, and one of the only
-          companies who actually walked us through the process. Great company — would recommend."
-        </blockquote>
-        <figcaption class="mt-5 text-sm text-ink-500">
-          <span class="text-ink-900 font-semibold">Jack Wiggins</span> · Google Review
-        </figcaption>
-      </figure>
-      <figure class="surface-card p-8" data-stagger-child>
-        <div class="flex gap-1 text-brand mb-4">★★★★★</div>
-        <blockquote class="text-ink-800 text-lg leading-relaxed">
-          "A friendly local firm. Professional, reliable, competitive prices. Highly recommend their services for
-          anyone looking for scaffolding of any kind."
-        </blockquote>
-        <figcaption class="mt-5 text-sm text-ink-500">
-          <span class="text-ink-900 font-semibold">Andrew Lee</span> · Google Review
-        </figcaption>
-      </figure>
-      <figure class="surface-card p-8" data-stagger-child>
-        <div class="flex gap-1 text-brand mb-4">★★★★★</div>
-        <blockquote class="text-ink-800 text-lg leading-relaxed">
-          "I use KPM for all my jobs where scaffold is required. If you need to go up in the world and want a
-          reliable service, give Kelly a ring."
-        </blockquote>
-        <figcaption class="mt-5 text-sm text-ink-500">
-          <span class="text-ink-900 font-semibold">Mick Cox</span> · Michael Cox Construction · Facebook Review
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- CTA / Contact -->
-<section id="contact" class="py-24 lg:py-32 bg-gradient-to-br from-ink-900 via-ink-800 to-ink-900 text-white relative overflow-hidden">
-  <div class="absolute inset-0 opacity-30" style="background: radial-gradient(60% 80% at 20% 20%, rgba(244,123,32,0.5), transparent 60%);"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
-    <div class="lg:col-span-6" data-reveal="fade-right">
-      <span class="pill bg-white/10 text-brand-light border border-white/15">Get a quote</span>
-      <h2 class="display mt-4 text-5xl lg:text-7xl" data-split="words">
-        Tell us the job. <span class="text-brand">We'll come and price it.</span>
-      </h2>
-      <p class="mt-6 text-ink-300 text-lg max-w-xl">
-        Free site visit. Free quote in 24 hours. No pressure, no chasing.
-        We'll tell you straight whether we're the right firm for the job.
-      </p>
-
-      <div class="mt-10 space-y-4">
-        <a href="tel:01509412271" class="btn-magnetic flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/60" data-magnetic>
-          <div class="w-12 h-12 rounded-xl bg-brand/15 text-brand flex items-center justify-center">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.25 11.36 11.36 0 0 0 3.55.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.55 1 1 0 0 1-.25 1z"/></svg>
-          </div>
-          <div>
-            <div class="text-xs tracking-[0.25em] text-ink-300 uppercase">Office line</div>
-            <div class="font-semibold text-xl">01509 412271</div>
-          </div>
-        </a>
-        <a href="tel:07739464520" class="btn-magnetic flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/60" data-magnetic>
-          <div class="w-12 h-12 rounded-xl bg-brand/15 text-brand flex items-center justify-center">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 22a10 10 0 1 0-10-10 9.96 9.96 0 0 0 1.55 5.34L2 22l4.66-1.55A9.96 9.96 0 0 0 12 22z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          </div>
-          <div>
-            <div class="text-xs tracking-[0.25em] text-ink-300 uppercase">Kelly's mobile · WhatsApp</div>
-            <div class="font-semibold text-xl">07739 464520</div>
-          </div>
-        </a>
-        <a href="mailto:info@kpmscaffoldingltd.co.uk" class="btn-magnetic flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/60" data-magnetic>
-          <div class="w-12 h-12 rounded-xl bg-brand/15 text-brand flex items-center justify-center">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          </div>
-          <div>
-            <div class="text-xs tracking-[0.25em] text-ink-300 uppercase">Email</div>
-            <div class="font-semibold text-xl">info@kpmscaffoldingltd.co.uk</div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- Quote form -->
-    <form class="lg:col-span-6 surface-card p-8 lg:p-10 text-ink-900" onsubmit="event.preventDefault(); alert('Thanks — we\'ll be in touch within 24 hours.');" data-reveal="fade-left">
-      <h3 class="display text-3xl mb-2">Request a free quote</h3>
-      <p class="text-ink-500 text-sm mb-6">Takes under a minute. We'll reply within 24 hours.</p>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <label class="block">
-          <span class="text-sm font-medium text-ink-700">Your name</span>
-          <input type="text" required class="mt-1 w-full px-4 py-3 rounded-xl border border-ink-300 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition" />
-        </label>
-        <label class="block">
-          <span class="text-sm font-medium text-ink-700">Phone</span>
-          <input type="tel" required class="mt-1 w-full px-4 py-3 rounded-xl border border-ink-300 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition" />
-        </label>
-      </div>
-      <label class="block mt-4">
-        <span class="text-sm font-medium text-ink-700">Town / postcode</span>
-        <input type="text" required placeholder="e.g. Loughborough LE11" class="mt-1 w-full px-4 py-3 rounded-xl border border-ink-300 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition" />
-      </label>
-      <label class="block mt-4">
-        <span class="text-sm font-medium text-ink-700">What's the job?</span>
-        <textarea rows="4" required placeholder="e.g. Two-storey rear extension, gable end access, around 3 weeks of hire." class="mt-1 w-full px-4 py-3 rounded-xl border border-ink-300 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition"></textarea>
-      </label>
-      <button type="submit" class="btn-magnetic mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-brand text-ink-900 px-7 py-4 font-bold shadow-brand-glow" data-magnetic>
-        Send quote request
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </button>
-      <p class="text-xs text-ink-500 mt-3 text-center">No spam. Your details are only used to quote your job.</p>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-ink-900 text-ink-300 py-10 border-t border-white/5">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-    <div class="flex items-center gap-3">
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand text-ink-900 font-display text-xl">KPM</span>
-      <div>
-        <div class="text-white font-semibold">KPM Scaffolding Ltd</div>
-        <div class="text-xs text-ink-500">Loughborough · Leicestershire · England</div>
-      </div>
-    </div>
-    <div class="text-xs text-ink-500">
-      © <span id="year"></span> KPM Scaffolding Ltd. CISRS · CITB · SSIP · Safecontractor · IPAF.
-    </div>
-  </div>
-</footer>
-
-<!-- WhatsApp floating -->
-<a href="https://wa.me/447739464520?text=Hi%20Kelly%2C%20I%27m%20after%20a%20scaffolding%20quote." class="wa-float" aria-label="WhatsApp Kelly">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.04 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.49-8.413z"/></svg>
-</a>
-
-<!-- GSAP + ScrollTrigger -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="animations.js"></script>
+<style>
+  :root { --primary:#475569; --accent:#1E293B; --warm:#F1F5F9; --ink:#13131a; }
+  * { -webkit-font-smoothing:antialiased; }
+  body { background:var(--warm); color:var(--ink); font-family:'Plus Jakarta Sans',system-ui,sans-serif; overflow-x:hidden; }
+  .font-display { font-family:'Fraunces',Georgia,serif; letter-spacing:-0.02em; font-weight:600; }
+  .text-ink { color:var(--ink); }
+  /* grain overlay for depth */
+  body::before {
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .mesh { position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+  .mesh::before, .mesh::after { content:""; position:absolute; border-radius:9999px; filter:blur(70px); opacity:.5; }
+  .mesh::before { width:46rem; height:46rem; top:-16rem; right:-12rem; background:radial-gradient(circle,var(--primary),transparent 62%); }
+  .mesh::after  { width:38rem; height:38rem; bottom:-18rem; left:-12rem; background:radial-gradient(circle,var(--accent),transparent 62%); opacity:.4; }
+  .btn-primary { background:linear-gradient(135deg,var(--primary),var(--accent)); box-shadow:0 14px 34px -10px color-mix(in srgb,var(--primary) 60%,transparent); position:relative; overflow:hidden; }
+  .btn-primary::after { content:""; position:absolute; top:0; left:-120%; width:60%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent); transition:left .6s; }
+  .btn-primary:hover::after { left:140%; }
+  .shadow-card { box-shadow:0 10px 40px -18px color-mix(in srgb,var(--ink) 30%,transparent); }
+  .hover\:shadow-cardhover:hover { box-shadow:0 26px 60px -22px color-mix(in srgb,var(--primary) 45%,transparent); }
+  [data-reveal] { opacity:0; transform:translateY(26px); }
+  .reveal-on { opacity:1 !important; transform:none !important; transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+  .stars { color:#f5a623; letter-spacing:2px; }
+</style>
+</head>
+<body class="antialiased">
+  <!-- HERO -->
+  <header class="relative">
+    <div class="mesh"></div>
+    <div class="relative z-10 mx-auto max-w-5xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
+      <p data-hero class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Scaffolding in Loughborough</p>
+      <h1 data-hero class="font-display mt-5 text-5xl leading-[1.02] text-ink md:text-7xl">KPM Scaffolding Ltd</h1>
+      <p data-hero class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/60 md:text-xl">Trade businesses usually value quote requests, service-area proof, and local trust signals.</p>
+      
+      <div data-hero class="mt-9 flex flex-wrap justify-center gap-4"></div>
+    </div>
+  </header>
+
+  <!-- TRUST STRIP -->
+  <section class="relative z-10 mx-auto -mt-6 max-w-5xl px-6">
+    <div class="grid grid-cols-2 gap-6 rounded-3xl border border-black/5 bg-white/80 px-8 py-9 shadow-card backdrop-blur md:grid-cols-4">
+        <div data-reveal class="text-center">
+          <div class="font-display text-4xl md:text-5xl text-ink">Loughborough</div>
+          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">service area</div>
+        </div>
+        <div data-reveal class="text-center">
+          <div class="font-display text-4xl md:text-5xl text-ink">Fast</div>
+          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">free quotes</div>
+        </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">What we do</p>
+    <h2 data-reveal class="font-display mt-3 max-w-2xl text-4xl text-ink md:text-5xl">Everything you need, done properly.</h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
+          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 class="font-display text-xl text-ink">Domestic scaffold</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional scaffolding in Loughborough — clear quotes, tidy work, and proper communication start to finish.</p>
+        </article>
+        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
+          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 class="font-display text-xl text-ink">Commercial access</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional scaffolding in Loughborough — clear quotes, tidy work, and proper communication start to finish.</p>
+        </article>
+        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
+          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 class="font-display text-xl text-ink">Temporary roofing</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional scaffolding in Loughborough — clear quotes, tidy work, and proper communication start to finish.</p>
+        </article>
+    </div>
+  </section>
+
+  <!-- PROOF BAND -->
+  <section class="relative z-10 overflow-hidden">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="relative overflow-hidden rounded-[2rem] px-8 py-16 text-center md:py-20" style="background:linear-gradient(135deg,var(--primary),var(--accent))">
+        <p data-reveal class="font-display mx-auto max-w-3xl text-2xl leading-snug text-white md:text-4xl">"Looked twice as professional overnight — the calls started the same week."</p>
+        <p data-reveal class="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">what a tidy website does for a local business</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="relative z-10 mx-auto max-w-6xl px-6 py-24">
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Get in touch</p>
+        <h2 data-reveal class="font-display mt-3 text-4xl text-ink md:text-5xl">Ready when you are.</h2>
+        <p data-reveal class="mt-4 max-w-md text-lg leading-relaxed text-ink/60">Tell us what you need and we'll come back fast with availability and a clear, no-obligation quote.</p>
+      </div>
+      <div data-reveal class="rounded-3xl border border-black/5 bg-white/80 p-8 shadow-card backdrop-blur">
+        <div class="space-y-5"><p class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Email</span><a href="mailto:info@kpmscaffoldingltd.co.uk" class="underline underline-offset-4">info@kpmscaffoldingltd.co.uk</a></p><p class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Area</span><span>Loughborough &amp; surrounding areas</span></p></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="relative z-10 border-t border-black/5 py-10 text-center text-sm text-ink/40">
+    © 2026 KPM Scaffolding Ltd. All rights reserved.
+  </footer>
+
+
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // reveal on scroll
+  const _rev = document.querySelectorAll('[data-reveal]');
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.batch('[data-reveal]', { start:'top 88%', onEnter: b => gsap.to(b, {opacity:1, y:0, duration:.8, stagger:.12, ease:'power3.out'}) });
+    // hero entrance
+    gsap.from('[data-hero]', {opacity:0, y:30, duration:1, stagger:.12, ease:'power3.out', delay:.1});
+    // count-up
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = parseFloat(el.dataset.count); const dec = (el.dataset.count.indexOf('.')>-1)?1:0;
+      const o = {v:0};
+      ScrollTrigger.create({ trigger:el, start:'top 90%', once:true, onEnter:()=>gsap.to(o,{v:target, duration:1.4, ease:'power2.out', onUpdate:()=>el.textContent=o.v.toFixed(dec)}) });
+    });
+    // magnetic buttons
+    document.querySelectorAll('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', e => { const r=el.getBoundingClientRect(); gsap.to(el,{x:(e.clientX-r.left-r.width/2)*.25, y:(e.clientY-r.top-r.height/2)*.4, duration:.4}); });
+      el.addEventListener('mouseleave', ()=>gsap.to(el,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));
+    });
+  } else { _rev.forEach(e=>e.classList.add('reveal-on')); }
 </script>
 </body>
 </html>
