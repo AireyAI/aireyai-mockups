@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website preview</title>
+<meta property="og:type" content="website"><meta property="og:title" content="Barbershop — your new website">
+<meta property="og:description" content="Cuts, fades, beards and hot towels. Walk in, relax, and walk out looking sharp."><meta property="og:image" content="https://aireyai.github.io/aireyai-mockups/barber/hero.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://aireyai.github.io/aireyai-mockups/barber/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0a1922;--accent:#8a6a4a;--cream:#f4f1ea;--muted:#aebfc4}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:700px;overflow:hidden;-webkit-font-smoothing:antialiased;background:var(--ink)}
+  .chrome{display:flex;align-items:center;gap:13px;height:42px;padding:0 16px;background:#0c1a22;border-bottom:1px solid rgba(255,255,255,.06)}
+  .chrome .dots{display:flex;gap:7px}.chrome .dots i{width:11px;height:11px;border-radius:50%;display:block}
+  .chrome .dots i:nth-child(1){background:#ff5f57}.chrome .dots i:nth-child(2){background:#febc2e}.chrome .dots i:nth-child(3){background:#28c840}
+  .chrome .url{flex:1;max-width:520px;margin:0 auto;background:rgba(255,255,255,.07);border-radius:7px;height:24px;display:flex;align-items:center;justify-content:center;gap:7px;font:500 12.5px/1 'Inter',sans-serif;color:#9fb0b6}
+  .hero{position:relative;height:658px;overflow:hidden;color:var(--cream);font-family:'Inter',sans-serif}
+  .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,18,24,.94) 0%,rgba(8,18,24,.82) 30%,rgba(8,18,24,.35) 60%,rgba(8,18,24,.05) 100%),linear-gradient(0deg,rgba(8,18,24,.55),rgba(8,18,24,0) 40%)}
+  .grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  nav{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:28px 56px;z-index:3}
+  .brand{display:flex;align-items:center;gap:13px}
+  .mono{width:44px;height:44px;border:1.5px solid var(--accent);border-radius:11px;display:flex;align-items:center;justify-content:center;font:600 17px/1 'Fraunces',serif;color:var(--accent);background:rgba(255,255,255,.06)}
+  .bname{font:600 17px/1 'Inter';letter-spacing:.02em}
+  .navcta{font:600 13px/1 'Inter';color:var(--cream);border:1px solid rgba(255,255,255,.28);background:rgba(0,0,0,.25);padding:11px 18px;border-radius:9px}
+  .wrap{position:absolute;z-index:2;left:56px;top:50%;transform:translateY(-46%);max-width:600px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font:600 12px/1 'Inter';letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent)}
+  h1{font:500 56px/1.05 'Fraunces',serif;letter-spacing:-.02em;margin-bottom:20px}h1 em{font-style:italic;color:var(--accent)}
+  .sub{font:400 18px/1.6 'Inter';color:#d7e0e2;max-width:480px;margin-bottom:34px}
+  .cta{display:flex;align-items:center;gap:18px}
+  .btn{background:var(--accent);color:#06140f;font:700 15px/1 'Inter';padding:16px 26px;border-radius:11px;box-shadow:0 12px 30px -8px rgba(0,0,0,.5)}
+  .phone{font:600 15px/1 'Inter';color:var(--cream)}.phone span{color:var(--muted);font-weight:500}
+  .trust{position:absolute;z-index:2;left:56px;bottom:34px;display:flex;align-items:center;gap:22px;font:500 13px/1 'Inter';color:#c2ced1}
+  .trust b{color:var(--cream)}.trust .dot{width:4px;height:4px;border-radius:50%;background:var(--accent)}
+</style></head><body>
+  <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="url">&#128274; <span id="urlbar">yourbusiness.co.uk</span></div></div>
+  <div class="hero"><img class="bg" src="hero.jpg" alt=""><div class="scrim"></div><div class="grain"></div>
+    <nav><div class="brand"><div class="mono" id="mono">A</div><div class="bname" id="bname">Your Business</div></div><div class="navcta">Get a quote</div></nav>
+    <div class="wrap"><div class="eyebrow" id="eyebrow">Barbershop</div><h1>A sharp cut, <em>every time</em>.</h1><div class="sub">Cuts, fades, beards and hot towels. Walk in, relax, and walk out looking sharp.</div>
+      <div class="cta"><div class="btn">Get a free quote</div><div class="phone"><span>Call</span> <span id="phone">01234 567 890</span></div></div></div>
+    <div class="trust"><b>&#9733;&#9733;&#9733;&#9733;&#9733;</b> Rated by local customers <span class="dot"></span> Fully insured <span class="dot"></span> Fast response</div>
+  </div>
+<script>
+  var q=new URLSearchParams(location.search),name=(q.get('n')||'').trim();
+  if(name){document.getElementById('bname').textContent=name;var w=name.replace(/[^A-Za-z ]/g,'').trim().split(/\s+/).filter(Boolean);document.getElementById('mono').textContent=((w[0]||'A')[0]+(w.length>1?w[1][0]:'')).toUpperCase().slice(0,2)||'A';document.title=name+' \u2014 website preview';}
+  var t=(q.get('t')||'').trim();if(t)document.getElementById('eyebrow').textContent='Barbershop \u00b7 '+t;
+  var p=(q.get('p')||'').trim();if(p)document.getElementById('phone').textContent=p;
+  var d=(q.get('d')||'').trim();if(d)document.getElementById('urlbar').textContent=d;else if(name)document.getElementById('urlbar').textContent=name.toLowerCase().replace(/[^a-z0-9]+/g,'')+'.co.uk';
+</script></body></html>
