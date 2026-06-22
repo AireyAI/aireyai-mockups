@@ -9,7 +9,10 @@
 <style>
   :root{--ink:#0a1922;--accent:#4a9a7a;--cream:#f4f1ea;--muted:#aebfc4}
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{width:1200px;height:700px;overflow:hidden;-webkit-font-smoothing:antialiased;background:var(--ink)}
+  html,body{margin:0;background:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
+  .fit{max-width:1200px;margin:0 auto;width:100%;overflow:hidden;position:relative}
+  .stage{width:1200px;height:700px;transform-origin:top left;position:relative}
   .chrome{display:flex;align-items:center;gap:13px;height:42px;padding:0 16px;background:#0c1a22;border-bottom:1px solid rgba(255,255,255,.06)}
   .chrome .dots{display:flex;gap:7px}.chrome .dots i{width:11px;height:11px;border-radius:50%;display:block}
   .chrome .dots i:nth-child(1){background:#ff5f57}.chrome .dots i:nth-child(2){background:#febc2e}.chrome .dots i:nth-child(3){background:#28c840}
@@ -34,6 +37,7 @@
   .trust{position:absolute;z-index:2;left:56px;bottom:34px;display:flex;align-items:center;gap:22px;font:500 13px/1 'Inter';color:#c2ced1}
   .trust b{color:var(--cream)}.trust .dot{width:4px;height:4px;border-radius:50%;background:var(--accent)}
 </style></head><body>
+ <div class="fit"><div class="stage">
   <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="url">&#128274; <span id="urlbar">yourbusiness.co.uk</span></div></div>
   <div class="hero"><img class="bg" src="hero.jpg" alt=""><div class="scrim"></div><div class="grain"></div>
     <nav><div class="brand"><div class="mono" id="mono">A</div><div class="bname" id="bname">Your Business</div></div><div class="navcta">Get a quote</div></nav>
@@ -41,10 +45,13 @@
       <div class="cta"><div class="btn">Get a free quote</div><div class="phone"><span>Call</span> <span id="phone">01234 567 890</span></div></div></div>
     <div class="trust"><b>&#9733;&#9733;&#9733;&#9733;&#9733;</b> Rated by local customers <span class="dot"></span> Fully insured <span class="dot"></span> Fast response</div>
   </div>
+ </div></div>
 <script>
   var q=new URLSearchParams(location.search),name=(q.get('n')||'').trim();
   if(name){document.getElementById('bname').textContent=name;var w=name.replace(/[^A-Za-z ]/g,'').trim().split(/\s+/).filter(Boolean);document.getElementById('mono').textContent=((w[0]||'A')[0]+(w.length>1?w[1][0]:'')).toUpperCase().slice(0,2)||'A';document.title=name+' \u2014 website preview';}
   var t=(q.get('t')||'').trim();if(t)document.getElementById('eyebrow').textContent='Veterinary care \u00b7 '+t;
   var p=(q.get('p')||'').trim();if(p)document.getElementById('phone').textContent=p;
   var d=(q.get('d')||'').trim();if(d)document.getElementById('urlbar').textContent=d;else if(name)document.getElementById('urlbar').textContent=name.toLowerCase().replace(/[^a-z0-9]+/g,'')+'.co.uk';
+  function _fit(){var f=document.querySelector('.fit'),s=document.querySelector('.stage');if(!f||!s)return;var w=f.clientWidth,k=w<1200?w/1200:1;s.style.transform='scale('+k+')';f.style.height=(700*k)+'px';}
+  _fit();window.addEventListener('resize',_fit);
 </script></body></html>

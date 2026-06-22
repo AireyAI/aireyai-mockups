@@ -9,7 +9,10 @@
 <style>
   :root{--accent:#9a8d7a;--ink:#0d0d0f}
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{width:1200px;height:700px;overflow:hidden;-webkit-font-smoothing:antialiased;background:var(--ink);font-family:'Inter',sans-serif}
+  html,body{margin:0;background:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{min-height:100dvh;display:flex;flex-direction:column;justify-content:center}
+  .fit{max-width:1200px;margin:0 auto;width:100%;overflow:hidden;position:relative}
+  .stage{width:1200px;height:700px;transform-origin:top left;position:relative}
   .hero{position:relative;width:1200px;height:700px;overflow:hidden;color:#fff}
   .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,.86) 0%,rgba(10,10,12,.55) 42%,rgba(10,10,12,.06) 78%,rgba(10,10,12,.25) 100%),linear-gradient(0deg,rgba(10,10,12,.8) 2%,rgba(10,10,12,0) 38%)}
@@ -30,6 +33,7 @@
   .strip{position:absolute;z-index:2;left:56px;bottom:46px;display:flex;align-items:center;gap:26px;font:600 13px/1 'Inter';letter-spacing:.02em;color:#d6d6db}
   .strip .star{color:var(--accent);letter-spacing:2px}.strip .sep{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.4)}
 </style></head><body>
+ <div class="fit"><div class="stage">
   <div class="hero"><img class="bg" src="hero.jpg" alt=""><div class="scrim"></div><div class="grain"></div>
     <nav><div class="bname" id="bname">YOUR BUSINESS</div>
       <div class="navlinks"><span>Services</span><span>Gallery</span><span>About</span><span class="pill">Get a quote</span></div></nav>
@@ -37,9 +41,12 @@
       <div class="cta"><div class="btn">Get a free quote</div><div class="phone"><span>Call</span> <span id="phone">01234 567890</span></div></div></div>
     <div class="strip"><span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Rated by local customers <span class="sep"></span> Fully insured <span class="sep"></span> Free quotes</div>
   </div>
+ </div></div>
 <script>
   var q=new URLSearchParams(location.search),name=(q.get('n')||'').trim();
   if(name){document.getElementById('bname').textContent=name.toUpperCase();document.title=name+' \u2014 website preview';}
   var t=(q.get('t')||'').trim();if(t)document.getElementById('eyebrow').textContent='Plastering specialists \u00b7 '+t;
   var p=(q.get('p')||'').trim();if(p)document.getElementById('phone').textContent=p;
+  function _fit(){var f=document.querySelector('.fit'),s=document.querySelector('.stage');if(!f||!s)return;var w=f.clientWidth,k=w<1200?w/1200:1;s.style.transform='scale('+k+')';f.style.height=(700*k)+'px';}
+  _fit();window.addEventListener('resize',_fit);
 </script></body></html>
