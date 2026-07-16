@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Manchester Roofing Experts",
+  "hero_title": "K.H. Roofing Contractors",
+  "hero_sub": "Repairs, maintenance, and installations for roofs in the North West",
+  "services": [
+    {
+      "title": "Roof Repairs",
+      "body": "Leak fixes and storm damage"
+    },
+    {
+      "title": "Flat Roof Installation",
+      "body": "New flat roofs fitted"
+    },
+    {
+      "title": "Fascia/Guttering",
+      "body": "Replacement and maintenance"
+    }
+  ],
+  "proof_quote": "Trusted roofers in Manchester",
+  "proof_label": "Local client",
+  "about": "K.H. Roofing Contractors is a family-run business serving the North West with roofing services including repairs, maintenance, and installations. We offer flat roof installation, slating, tiling, roof replacement, and fascia/guttering services",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "What areas do K.H. Roofing Contractors cover?",
+      "a": "K.H. Roofing serves the North West, with a base in Manchester"
+    },
+    {
+      "q": "How can I book a roofing service with K.H. Roofing?",
+      "a": "To book, you can call 0161 825 7408 or email Enquiries@khroofs.co.uk"
+    },
+    {
+      "q": "What services can I expect from K.H. Roofing Contractors?",
+      "a": "K.H. Roofing offers repairs, maintenance, flat roof installation, slating, tiling, roof replacement, and fascia/guttering services"
+    }
+  ]
+}
