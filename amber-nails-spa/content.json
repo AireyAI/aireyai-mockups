@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Durham beauty experts",
+  "hero_title": "Amber nails & spa",
+  "hero_sub": "Top-rated nail and spa services in Durham",
+  "services": [
+    {
+      "title": "Manicure",
+      "body": "Nail shaping and polish"
+    },
+    {
+      "title": "Pedicure",
+      "body": "Foot and nail care"
+    },
+    {
+      "title": "Gel Extensions",
+      "body": "Long-lasting nail enhancements"
+    }
+  ],
+  "proof_quote": "5★ from 45 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Amber nails & spa offers nail and spa treatments in Durham. Contact them at ambernailspa2268@gmail.com",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Amber Nails & Spa serve?",
+      "a": "Amber Nails & Spa is based in Durham and welcomes clients from Durham and the surrounding local area"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "To book, email ambernailspa2268@gmail.com with your preferred date and service. The team will reply with available slots"
+    },
+    {
+      "q": "What can I expect when I visit?",
+      "a": "You can expect a clean, professional environment offering nail and spa treatments. The salon holds a 5‑star rating on Google from 45 reviews, reflecting consistent client satisfaction"
+    }
+  ]
+}

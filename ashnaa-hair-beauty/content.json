@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Croydon Beauty Experts",
+  "hero_title": "Ashnaa Hair & Beauty",
+  "hero_sub": "Trusted by 321+ Google reviewers",
+  "services": [
+    {
+      "title": "Hair Cutting",
+      "body": "Stylists cut and shape hair"
+    },
+    {
+      "title": "Nail Care",
+      "body": "Manicures and pedicures available"
+    },
+    {
+      "title": "Facial Treatments",
+      "body": "Customised facials for skin types"
+    }
+  ],
+  "proof_quote": "4.1★ from 321 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Ashnaa Hair & Beauty in Croydon offers a range of beauty services. With a 4.1-star Google rating from 321 reviews, we're a popular choice in the local area",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Ashnaa Hair & Beauty cover?",
+      "a": "Ashnaa Hair & Beauty is located in Croydon"
+    },
+    {
+      "q": "How do I book an appointment at Ashnaa Hair & Beauty?",
+      "a": "To book an appointment, please email us at info@ashnaabeauty.co.uk"
+    },
+    {
+      "q": "What can I expect when I visit Ashnaa Hair & Beauty?",
+      "a": "You can expect a warm welcome and a range of hair and beauty treatments. Check our Google reviews to see what our customers say about us - we have a 4.1 rating from 321 reviews"
+    }
+  ]
+}

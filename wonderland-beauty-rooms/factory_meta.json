@@ -1,0 +1,33 @@
+{
+  "ts": "2026-07-16T15:34:37Z",
+  "slug": "wonderland-beauty-rooms",
+  "name": "Wonderland Beauty Rooms",
+  "town": "Wakefield",
+  "niche": "beauty",
+  "family": "premium-dark",
+  "template": "luxury-premium-dark.html",
+  "exemplar": "Apple",
+  "design_md_line": 359,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": true,
+  "composer": "beauty_aaa",
+  "facts": {
+    "phone": true,
+    "email": true,
+    "rating": null,
+    "review_count": null,
+    "owner": "Hannah Whipp",
+    "services_from_intel": 3,
+    "has_online_booking": true,
+    "maps_url": false
+  },
+  "exemplar_hexes": [],
+  "hero_image": "hero.jpg",
+  "prospect_index": 19,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/wonderland-beauty-rooms",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/wonderland-beauty-rooms/",
+  "quality_score": 100,
+  "quality_passed": true,
+  "quality_issues": []
+}

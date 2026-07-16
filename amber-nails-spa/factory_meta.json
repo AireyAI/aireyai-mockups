@@ -1,0 +1,35 @@
+{
+  "ts": "2026-07-16T15:34:06Z",
+  "slug": "amber-nails-spa",
+  "name": "Amber nails & spa",
+  "town": "Durham",
+  "niche": "beauty",
+  "family": "premium-dark",
+  "template": "luxury-premium-dark.html",
+  "exemplar": "Apple",
+  "design_md_line": 359,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": true,
+  "composer": "beauty_aaa",
+  "facts": {
+    "phone": false,
+    "email": true,
+    "rating": 5,
+    "review_count": 45,
+    "owner": "",
+    "services_from_intel": 0,
+    "has_online_booking": false,
+    "maps_url": true
+  },
+  "exemplar_hexes": [],
+  "hero_image": "hero.jpg",
+  "prospect_index": 668,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/amber-nails-spa",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/amber-nails-spa/",
+  "quality_score": 92,
+  "quality_passed": true,
+  "quality_issues": [
+    "no_intel_services"
+  ]
+}

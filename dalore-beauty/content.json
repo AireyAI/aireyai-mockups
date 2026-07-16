@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Beauty in Doncaster",
+  "hero_title": "Dalore Beauty",
+  "hero_sub": "Facials, waxing and finishing touches in Doncaster — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Skin treatments tailored in-studio for clients around Doncaster"
+    },
+    {
+      "title": "Waxing",
+      "body": "Quick, careful waxing with a clear aftercare chat"
+    },
+    {
+      "title": "Lashes & brows",
+      "body": "Lash and brow finishing — tidy work, natural or full"
+    }
+  ],
+  "proof_quote": "4.8★ from 20 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Dalore Beauty looks after clients across Doncaster with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Dalore Beauty cover?",
+      "a": "Dalore Beauty is based in Doncaster"
+    },
+    {
+      "q": "How do I book an appointment at Dalore Beauty?",
+      "a": "You can email dalorebeauty@gmail.com to book an appointment"
+    },
+    {
+      "q": "What can I expect from Dalore Beauty?",
+      "a": "You can check our Google reviews to see what others have to say about us. We have a 4.8 rating from 20 reviews"
+    }
+  ]
+}

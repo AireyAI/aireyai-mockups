@@ -1,0 +1,17 @@
+{
+  "slug": "bare-beauty-exeter",
+  "score": 84,
+  "passed": true,
+  "issues": [
+    {
+      "severity": "warn",
+      "code": "thin_hero",
+      "detail": "Hero sub too thin"
+    },
+    {
+      "severity": "warn",
+      "code": "no_intel_services",
+      "detail": "No site_intel treatments \u2014 using fallbacks"
+    }
+  ]
+}

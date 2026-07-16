@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Hull Beauty Studio",
+  "hero_title": "Beauty Mafia By Elizabete Kustova",
+  "hero_sub": "Expert hair, colour, makeup, and lash extensions tailored for Hull's vibrant community – book your transformation today",
+  "services": [
+    {
+      "title": "Waxing",
+      "body": "Quick and precise hair removal"
+    },
+    {
+      "title": "Manicure",
+      "body": "Nail shaping and polishing"
+    },
+    {
+      "title": "Facial",
+      "body": "Customised skincare treatment"
+    }
+  ],
+  "proof_quote": "5★ from 44 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Beauty Mafia By Elizabete Kustova looks after clients across Hull with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Beauty Mafia By Elizabete Kustova cover?",
+      "a": "Beauty Mafia By Elizabete Kustova is based in Hull"
+    },
+    {
+      "q": "How do I book an appointment at Beauty Mafia By Elizabete Kustova?",
+      "a": "You can email elizabete.kustova@gmail.com to book an appointment"
+    },
+    {
+      "q": "What can I expect from my visit to Beauty Mafia By Elizabete Kustova?",
+      "a": "With a 5-star Google rating and 44 reviews, you can expect a high-quality experience at Beauty Mafia By Elizabete Kustova"
+    }
+  ]
+}

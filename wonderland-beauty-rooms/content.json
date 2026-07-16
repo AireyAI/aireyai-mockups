@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Beauty in Wakefield",
+  "hero_title": "Wonderland Beauty Rooms",
+  "hero_sub": "Wonderland Beauty Rooms is a beauty salon in Wakefield run by Hannah offering waxing, facials, eyelash extensions, massages, and semi-perman",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Facials available in-studio — ask what’s right for you"
+    },
+    {
+      "title": "Waxing",
+      "body": "Waxing available in-studio — ask what’s right for you"
+    },
+    {
+      "title": "Lash extensions",
+      "body": "Lash extensions available in-studio — ask what’s right for you"
+    }
+  ],
+  "proof_quote": "A calm, local beauty studio for people around Wakefield",
+  "proof_label": "local beauty",
+  "about": "Wonderland Beauty Rooms is run by Hannah Whipp in Wakefield — straightforward beauty care, easy to book",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Do you take clients from Wakefield?",
+      "a": "Yes — Wonderland Beauty Rooms welcomes clients across Wakefield and nearby"
+    },
+    {
+      "q": "Do I need to book?",
+      "a": "Appointments are best — message or call and we'll find a slot"
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Just yourself — and any reference photos if you have a look in mind"
+    }
+  ]
+}

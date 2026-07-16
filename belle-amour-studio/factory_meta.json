@@ -1,0 +1,35 @@
+{
+  "ts": "2026-07-16T15:34:19Z",
+  "slug": "belle-amour-studio",
+  "name": "Belle Amour Studio",
+  "town": "Huddersfield",
+  "niche": "beauty",
+  "family": "premium-dark",
+  "template": "luxury-premium-dark.html",
+  "exemplar": "Apple",
+  "design_md_line": 359,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": true,
+  "composer": "beauty_aaa",
+  "facts": {
+    "phone": false,
+    "email": true,
+    "rating": 4.7,
+    "review_count": 69,
+    "owner": "",
+    "services_from_intel": 0,
+    "has_online_booking": false,
+    "maps_url": true
+  },
+  "exemplar_hexes": [],
+  "hero_image": "hero.jpg",
+  "prospect_index": 767,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/belle-amour-studio",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/belle-amour-studio/",
+  "quality_score": 92,
+  "quality_passed": true,
+  "quality_issues": [
+    "no_intel_services"
+  ]
+}

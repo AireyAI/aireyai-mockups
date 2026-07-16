@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Leicester Beauty Salon",
+  "hero_title": "Roop Ki Rani Unisex Hair & Beauty Salon",
+  "hero_sub": "Hairdressing, beauty treatments and henna services",
+  "services": [
+    {
+      "title": "Hairdressing",
+      "body": "Cuts, colours, and styling"
+    },
+    {
+      "title": "Beauty Treatments",
+      "body": "Facials, waxing, and threading"
+    },
+    {
+      "title": "Henna Services",
+      "body": "Traditional henna designs"
+    }
+  ],
+  "proof_quote": "Lovely hair and beauty treatments",
+  "proof_label": "Local client",
+  "about": "Roop Ki Rani Unisex Hair & Beauty Salon in Leicester offers hairdressing, beauty treatments, henna services, and makeup. You can book online or contact us on 0116 261 0202 or gayatribabhania@yahoo.com",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Roop Ki Rani Unisex Hair & Beauty Salon cover?",
+      "a": "Roop Ki Rani Unisex Hair & Beauty Salon is based in Leicester"
+    },
+    {
+      "q": "How can I book an appointment at Roop Ki Rani Unisex Hair & Beauty Salon?",
+      "a": "You can book an appointment online or call the salon on 0116 261 0202"
+    },
+    {
+      "q": "What services can I expect from Roop Ki Rani Unisex Hair & Beauty Salon?",
+      "a": "Roop Ki Rani Unisex Hair & Beauty Salon offers hairdressing, beauty treatments, henna services, and makeup"
+    }
+  ]
+}
