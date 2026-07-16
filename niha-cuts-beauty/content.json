@@ -1,0 +1,44 @@
+{
+  "hero_eyebrow": "Beauty and Hair in Croydon",
+  "hero_title": "Niha Cuts & Beauty",
+  "hero_sub": "A professional salon in Croydon with a 4.4 star rating from 424 Google reviews",
+  "services": [
+    {
+      "title": "Precision Haircutting",
+      "body": "Tailored cuts and styling designed to complement your natural features and hair texture"
+    },
+    {
+      "title": "Colour Artistry",
+      "body": "Professional tinting and highlighting services for a seamless, vibrant finish"
+    },
+    {
+      "title": "Beauty Treatments",
+      "body": "Refined facial and skin care services focused on a clean, polished aesthetic"
+    }
+  ],
+  "proof_quote": "4.4★ from 424 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Niha Cuts & Beauty is a beauty salon located in Croydon. The business maintains a 4.4 rating from 424 Google reviews",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What areas do you cover?",
+      "a": "Please contact the salon for more information on their coverage area"
+    },
+    {
+      "q": "How do I book an appointment?",
+      "a": "You can book an appointment by contacting the salon via email at info@nihacutsandbeauty.co.uk"
+    },
+    {
+      "q": "What can I expect during my visit?",
+      "a": "Please call the salon for more information on what to expect during your visit"
+    }
+  ],
+  "_aaa_llm_hits": 4,
+  "_glm": {
+    "provider": "cerebras",
+    "model": "zai-glm-4.7",
+    "ms": 7070,
+    "raw_chars": 9925
+  }
+}

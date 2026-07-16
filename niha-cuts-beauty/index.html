@@ -1,70 +1,365 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Niha Cuts & Beauty | Beauty in Croydon</title>
-<meta name="description" content="Trusted beauty specialists in Croydon. Fast response, clear quotes, work you can rely on." />
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  :root { --primary:#BE185D; --accent:#831843; --warm:#FCE7F3; }
-  body { background: var(--warm); color: #0f172a; font-family: Inter, system-ui, sans-serif; }
-  h1,h2 { letter-spacing: -0.02em; }
-  .hero-gradient {
-    background: linear-gradient(135deg, var(--warm) 0%, #fff 40%, color-mix(in srgb, var(--primary) 18%, white) 100%);
-  }
-  .shadow-soft { box-shadow: 0 8px 30px -12px color-mix(in srgb, var(--accent) 35%, transparent); }
-  .btn-primary {
-    background: var(--primary); color: white;
-  }
-  .btn-primary:hover { filter: brightness(1.05); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niha Cuts & Beauty | Croydon Salon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --base: #fdf8f5;
+            --surface: #fff8f6;
+            --blush: #fce8f0;
+            --rose: #c2688e;
+            --rose-light: #f0c5d8;
+            --plum: #130a10;
+            --ink: #2d1423;
+            --muted: #8a6272;
+            --gold: #c9956a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--base);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .italic {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(253, 248, 245, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--blush);
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--plum);
+        }
+
+        .nav-cta {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--rose);
+            border: 1px solid var(--rose);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--rose);
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            min-height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(19, 10, 16, 0.2), rgba(19, 10, 16, 0.5));
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: white;
+            max-width: 800px;
+            padding: 0 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--rose);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--plum);
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--plum);
+            margin-bottom: 3rem;
+        }
+
+        /* Services */
+        .services {
+            background-color: var(--surface);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--base);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--blush);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(194, 104, 142, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--rose);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* About */
+        .about {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: var(--ink);
+            line-height: 1.8;
+        }
+
+        /* Visit */
+        .visit {
+            background-color: var(--plum);
+            color: var(--base);
+            text-align: center;
+            padding: 6rem 5%;
+        }
+
+        .visit h2 {
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .visit-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+        }
+
+        .visit-details a {
+            border-bottom: 1px solid var(--rose-light);
+            padding-bottom: 2px;
+        }
+
+        .visit-details a:hover {
+            color: var(--rose-light);
+            border-color: var(--rose-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--ink);
+            color: var(--muted);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Sticky Bottom CTA */
+        .mobile-sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--surface);
+            padding: 1rem;
+            border-top: 1px solid var(--blush);
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+
+        .mobile-sticky-cta .btn-primary {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-sticky-cta {
+                display: block;
+            }
+            body {
+                padding-bottom: 70px; /* Space for sticky CTA */
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
 </head>
-<body class="antialiased">
-  <header class="hero-gradient border-b border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
-      <span class="inline-block rounded-full bg-white/80 px-4 py-1 text-sm font-medium text-slate-600">Beauty in Croydon</span>
-      <h1 class="mt-3 text-4xl md:text-5xl font-bold text-slate-900 text-center max-w-3xl mx-auto">Niha Cuts & Beauty</h1>
-      <p class="mt-5 max-w-2xl mx-auto text-lg text-slate-700 leading-relaxed text-center">Trusted beauty specialists in Croydon. Fast response, clear quotes, work you can rely on.</p>
-      
-      
-    </div>
-  </header>
+<body>
 
-  <section class="mx-auto max-w-6xl px-6 py-16">
-    <h2 class="text-3xl font-bold text-slate-900">Services</h2>
-    <p class="mt-2 max-w-2xl text-slate-600">Everything you need from a local beauty team — straightforward pricing and reliable turnaround.</p>
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Cut & colour</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional beauty — free quotes, tidy work, and clear communication from start to finish.</p>
-        </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Nails & lashes</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional beauty — free quotes, tidy work, and clear communication from start to finish.</p>
-        </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Bridal & occasion</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional beauty — free quotes, tidy work, and clear communication from start to finish.</p>
-        </article>
-    </div>
-  </section>
+    <!-- aireyai beauty-glm -->
+    
+    <nav>
+        <div class="nav-brand">Niha Cuts & Beauty</div>
+        <a href="#visit" class="nav-cta">Book</a>
+    </nav>
 
-  <section id="contact" class="bg-white border-y border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">Contact</h2>
-      <p class="mt-2 text-slate-600">Request a quote — we'll come back quickly with availability and next steps.</p>
-      <ul class="mt-8 space-y-3 text-lg text-slate-800">
-        
-        <li><strong>Email:</strong> <a href="mailto:info@nihacutsandbeauty.co.uk" class="underline underline-offset-4">info@nihacutsandbeauty.co.uk</a></li>
-        <li><strong>Area:</strong> Croydon and surrounding areas</li>
-      </ul>
-    </div>
-  </section>
+    <header class="hero">
+        <img src="hero.jpg" alt="Niha Cuts & Beauty Salon Interior">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Niha Cuts & <span class="italic">Beauty</span></h1>
+            <p>A professional salon in Croydon with a 4.4 star rating from 424 Google reviews</p>
+            <a href="#visit" class="btn-primary">Book a visit</a>
+        </div>
+    </header>
 
-  <footer class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-500">
-    © 2026 Niha Cuts & Beauty. All rights reserved.
-  </footer>
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <article class="service-card">
+                <h3>Precision Haircutting</h3>
+                <p>Tailored cuts and styling designed to complement your natural features and hair texture</p>
+            </article>
+            <article class="service-card">
+                <h3>Colour Artistry</h3>
+                <p>Professional tinting and highlighting services for a seamless, vibrant finish</p>
+            </article>
+            <article class="service-card">
+                <h3>Beauty Treatments</h3>
+                <p>Refined facial and skin care services focused on a clean, polished aesthetic</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2 class="section-title">About Us</h2>
+        <p>Niha Cuts & Beauty is a beauty salon located in Croydon. The business maintains a 4.4 rating from 424 Google reviews.</p>
+    </section>
+
+    <section id="visit" class="visit">
+        <h2>Visit Us</h2>
+        <div class="visit-details">
+            <span>Croydon</span>
+            <a href="mailto:info@nihacutsandbeauty.co.uk">info@nihacutsandbeauty.co.uk</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Niha Cuts & Beauty. All rights reserved.
+    </footer>
+
+    <div class="mobile-sticky-cta">
+        <a href="#visit" class="btn-primary">Book a visit</a>
+    </div>
 
 </body>
 </html>
