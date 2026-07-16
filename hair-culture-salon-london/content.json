@@ -1,0 +1,44 @@
+{
+  "hero_eyebrow": "Beauty and Hair in Croydon",
+  "hero_title": "Hair Culture Salon London",
+  "hero_sub": "A professional Croydon salon with a 4.6 star rating from 202 Google reviews",
+  "services": [
+    {
+      "title": "Precision Haircutting",
+      "body": "Tailored cuts and styling designed to complement your natural features and hair texture"
+    },
+    {
+      "title": "Colour Artistry",
+      "body": "From subtle balayage to bold transformations, delivered with technical precision and depth"
+    },
+    {
+      "title": "Advanced Hair Treatments",
+      "body": "Deep conditioning and restorative therapies to improve hair health and lasting shine"
+    }
+  ],
+  "proof_quote": "4.6★ from 202 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Hair Culture Salon London is a beauty destination based in Croydon. The salon maintains a 4.6 rating from 202 reviews",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Where is Hair Culture Salon located?",
+      "a": "Hair Culture Salon is a beauty salon located in Croydon, London"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "You can contact the salon via email at info@hairculturesalon.co.uk to make a booking"
+    },
+    {
+      "q": "What is the salon's reputation?",
+      "a": "The salon has a 4.6 google_rating based on 202 google_reviews"
+    }
+  ],
+  "_aaa_llm_hits": 4,
+  "_glm": {
+    "provider": "cerebras",
+    "model": "zai-glm-4.7",
+    "ms": 7455,
+    "raw_chars": 9701
+  }
+}
