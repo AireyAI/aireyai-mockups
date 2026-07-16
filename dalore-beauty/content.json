@@ -1,37 +1,37 @@
 {
-  "hero_eyebrow": "Beauty in Doncaster",
+  "hero_eyebrow": "Doncaster Beauty Experts",
   "hero_title": "Dalore Beauty",
-  "hero_sub": "Facials, waxing and finishing touches in Doncaster — calm studio, clear booking",
+  "hero_sub": "Trusted beauty services in Doncaster",
   "services": [
     {
       "title": "Facials",
-      "body": "Skin treatments tailored in-studio for clients around Doncaster"
+      "body": "Customised treatments for all skin types"
     },
     {
       "title": "Waxing",
-      "body": "Quick, careful waxing with a clear aftercare chat"
+      "body": "Leg, arm, and intimate area hair removal"
     },
     {
-      "title": "Lashes & brows",
-      "body": "Lash and brow finishing — tidy work, natural or full"
+      "title": "Manicures",
+      "body": "Nail shaping and polish application"
     }
   ],
   "proof_quote": "4.8★ from 20 Google reviews",
   "proof_label": "Google reviews",
-  "about": "Dalore Beauty looks after clients across Doncaster with straightforward beauty care",
+  "about": "Dalore Beauty in Doncaster offers a range of beauty services. With a 4.8 Google rating from 20 reviews, Dalore Beauty has established itself as a trusted local beauty destination",
   "cta": "Book a visit",
   "faq": [
     {
-      "q": "What area does Dalore Beauty cover?",
-      "a": "Dalore Beauty is based in Doncaster"
+      "q": "What area does Dalore Beauty serve?",
+      "a": "Dalore Beauty is based in Doncaster and welcomes clients from Doncaster and the surrounding South Yorkshire area"
     },
     {
-      "q": "How do I book an appointment at Dalore Beauty?",
-      "a": "You can email dalorebeauty@gmail.com to book an appointment"
+      "q": "How can I book an appointment?",
+      "a": "Appointments can be booked by emailing dalorebeauty@gmail.com or by calling the salon directly"
     },
     {
-      "q": "What can I expect from Dalore Beauty?",
-      "a": "You can check our Google reviews to see what others have to say about us. We have a 4.8 rating from 20 reviews"
+      "q": "What should I expect during my first visit?",
+      "a": "When you arrive you’ll be greeted, consulted about your beauty needs, and provided with a personalised treatment in a clean, comfortable setting. The salon’s 4.8‑star rating from 20 Google reviews reflects the consistent satisfaction of its clients"
     }
   ]
 }

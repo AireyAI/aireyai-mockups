@@ -1,24 +1,24 @@
 {
-  "hero_eyebrow": "Beauty in Derby",
+  "hero_eyebrow": "Derby Beauty Experts",
   "hero_title": "Bijou Hair & Beauty",
-  "hero_sub": "Facials, waxing and finishing touches in Derby — calm studio, clear booking",
+  "hero_sub": "Trusted by 99+ clients with 4.7 star rating",
   "services": [
     {
-      "title": "Facials",
-      "body": "Skin treatments tailored in-studio for clients around Derby"
+      "title": "Hair Cutting",
+      "body": "Stylists cut and shape hair"
     },
     {
-      "title": "Waxing",
-      "body": "Quick, careful waxing with a clear aftercare chat"
+      "title": "Nail Care",
+      "body": "Manicures and pedicures available"
     },
     {
-      "title": "Lashes & brows",
-      "body": "Lash and brow finishing — tidy work, natural or full"
+      "title": "Facial Treatments",
+      "body": "Customised facials for skin types"
     }
   ],
   "proof_quote": "4.7★ from 99 Google reviews",
   "proof_label": "Google reviews",
-  "about": "Bijou Hair & Beauty looks after clients across Derby with straightforward beauty care",
+  "about": "Bijou Hair & Beauty in Derby offers a range of beauty services. With a 4.7 Google rating from 99 reviews, we pride ourselves on our high standards",
   "cta": "Book a visit",
   "faq": [
     {

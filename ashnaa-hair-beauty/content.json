@@ -5,15 +5,15 @@
   "services": [
     {
       "title": "Hair Cutting",
-      "body": "Stylists cut and shape hair"
+      "body": "Precision cuts for men and women"
+    },
+    {
+      "title": "Facial Treatments",
+      "body": "Customised facials for all skin types"
     },
     {
       "title": "Nail Care",
       "body": "Manicures and pedicures available"
-    },
-    {
-      "title": "Facial Treatments",
-      "body": "Customised facials for skin types"
     }
   ],
   "proof_quote": "4.1★ from 321 Google reviews",
@@ -31,7 +31,7 @@
     },
     {
       "q": "What can I expect when I visit Ashnaa Hair & Beauty?",
-      "a": "You can expect a warm welcome and a range of hair and beauty treatments. Check our Google reviews to see what our customers say about us - we have a 4.1 rating from 321 reviews"
+      "a": "You can expect a range of hair and beauty services from our experienced team. For more information or to read reviews from previous customers, you can check our Google reviews, where we have an average rating of 4.1 from 321 reviews"
     }
   ]
 }

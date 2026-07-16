@@ -1,12 +1,17 @@
 {
   "slug": "roop-ki-rani-unisex-hair-beauty-salon",
-  "score": 92,
+  "score": 84,
   "passed": true,
   "issues": [
     {
       "severity": "warn",
       "code": "no_intel_services",
       "detail": "No site_intel treatments \u2014 using fallbacks"
+    },
+    {
+      "severity": "warn",
+      "code": "pack_hero_scrubbed",
+      "detail": "hero_sub scrubbed by beauty composer (brand still present)"
     }
   ]
 }

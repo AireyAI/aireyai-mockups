@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-16T15:34:26Z",
+  "ts": "2026-07-16T15:39:02Z",
   "slug": "dalore-beauty",
   "name": "Dalore Beauty",
   "town": "Doncaster",
@@ -27,9 +27,10 @@
   "prospect_index": 640,
   "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/dalore-beauty",
   "public_url_guess": "https://aireyai.github.io/aireyai-mockups/dalore-beauty/",
-  "quality_score": 92,
+  "quality_score": 84,
   "quality_passed": true,
   "quality_issues": [
+    "thin_hero",
     "no_intel_services"
   ]
 }

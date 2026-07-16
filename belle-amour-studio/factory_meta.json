@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-16T15:34:19Z",
+  "ts": "2026-07-16T15:38:55Z",
   "slug": "belle-amour-studio",
   "name": "Belle Amour Studio",
   "town": "Huddersfield",
@@ -27,9 +27,10 @@
   "prospect_index": 767,
   "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/belle-amour-studio",
   "public_url_guess": "https://aireyai.github.io/aireyai-mockups/belle-amour-studio/",
-  "quality_score": 92,
+  "quality_score": 84,
   "quality_passed": true,
   "quality_issues": [
+    "thin_hero",
     "no_intel_services"
   ]
 }

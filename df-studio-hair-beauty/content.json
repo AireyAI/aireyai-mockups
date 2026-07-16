@@ -1,7 +1,7 @@
 {
-  "hero_eyebrow": "Beauty in Lancaster",
+  "hero_eyebrow": "Lancaster Beauty Experts",
   "hero_title": "DF Studio Hair & Beauty",
-  "hero_sub": "Facials, waxing and finishing touches in Lancaster — calm studio, clear booking",
+  "hero_sub": "Trusted hair and beauty services in Lancaster",
   "services": [
     {
       "title": "Facials",
@@ -22,16 +22,16 @@
   "cta": "Book a visit",
   "faq": [
     {
-      "q": "What area does DF Studio Hair & Beauty cover?",
-      "a": "DF Studio Hair & Beauty is based in Lancaster"
+      "q": "Do you take clients from Lancaster?",
+      "a": "Yes — DF Studio Hair & Beauty welcomes clients across Lancaster and nearby"
     },
     {
-      "q": "How do I book an appointment at DF Studio Hair & Beauty?",
-      "a": "To book an appointment, you can email dfstudio1@outlook.com"
+      "q": "Do I need to book?",
+      "a": "Appointments are best — message or call and we'll find a slot"
     },
     {
-      "q": "What can I expect from my visit to DF Studio Hair & Beauty?",
-      "a": "You can expect a hair and beauty experience from a salon with a Google rating of 4.3 from 64 reviews"
+      "q": "What should I bring?",
+      "a": "Just yourself — and any reference photos if you have a look in mind"
     }
   ]
 }

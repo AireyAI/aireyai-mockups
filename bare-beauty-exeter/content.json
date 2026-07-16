@@ -1,7 +1,7 @@
 {
-  "hero_eyebrow": "Exeter Beauty Clinic",
+  "hero_eyebrow": "Exeter Beauty Experts",
   "hero_title": "Bare Beauty Exeter",
-  "hero_sub": "Expert beauty treatments in Exeter",
+  "hero_sub": "Trusted by 56 Google reviewers",
   "services": [
     {
       "title": "Facials",
@@ -13,25 +13,25 @@
     },
     {
       "title": "Massage",
-      "body": "Relaxing therapy for body and mind"
+      "body": "Relaxing therapy for mind and body"
     }
   ],
   "proof_quote": "5★ from 56 Google reviews",
   "proof_label": "Google reviews",
-  "about": "Bare Beauty Exeter offers a range of beauty services. With a 5-star Google rating from 56 reviews, we're a trusted choice in Exeter",
+  "about": "Bare Beauty Exeter offers top-notch beauty services. With a 5-star Google rating from 56 reviews, we're a trusted choice in Exeter",
   "cta": "Book a visit",
   "faq": [
     {
       "q": "What area does Bare Beauty Exeter cover?",
-      "a": "Bare Beauty Exeter is based in Exeter, but for specific coverage details, please email team@exeterbeautyclinic.co.uk"
+      "a": "Bare Beauty Exeter is based in Exeter, providing beauty services to the local area"
     },
     {
       "q": "How do I book an appointment at Bare Beauty Exeter?",
       "a": "To book an appointment, please email team@exeterbeautyclinic.co.uk"
     },
     {
-      "q": "What can I expect from my visit to Bare Beauty Exeter?",
-      "a": "For information on what to expect, please email team@exeterbeautyclinic.co.uk. You can also view reviews from 56 Google reviewers who have given us a 5-star rating"
+      "q": "What can I expect from a visit to Bare Beauty Exeter?",
+      "a": "You can expect a high standard of service from a salon with a 5-star Google rating and 56 reviews"
     }
   ]
 }

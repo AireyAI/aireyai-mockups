@@ -1,24 +1,24 @@
 {
-  "hero_eyebrow": "Beauty in Huddersfield",
+  "hero_eyebrow": "Huddersfield Beauty Studio",
   "hero_title": "Belle Amour Studio",
-  "hero_sub": "Facials, waxing and finishing touches in Huddersfield — calm studio, clear booking",
+  "hero_sub": "Expert beauty treatments in Huddersfield",
   "services": [
     {
-      "title": "Facials",
-      "body": "Skin treatments tailored in-studio for clients around Huddersfield"
+      "title": "Hair Cutting",
+      "body": "Precision cuts for men and women"
     },
     {
-      "title": "Waxing",
-      "body": "Quick, careful waxing with a clear aftercare chat"
+      "title": "Nail Care",
+      "body": "Manicures and pedicures available"
     },
     {
-      "title": "Lashes & brows",
-      "body": "Lash and brow finishing — tidy work, natural or full"
+      "title": "Facial Treatments",
+      "body": "Customised facials for all skin types"
     }
   ],
   "proof_quote": "4.7★ from 69 Google reviews",
   "proof_label": "Google reviews",
-  "about": "Belle Amour Studio looks after clients across Huddersfield with straightforward beauty care",
+  "about": "Belle Amour Studio in Huddersfield offers beauty services. With a 4.7 Google rating from 69 reviews, we're a trusted local choice",
   "cta": "Book a visit",
   "faq": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "q": "What can I expect from my visit to Belle Amour Studio?",
-      "a": "You can check our Google reviews to get an idea of what to expect from your visit, with an average rating of 4.7 from 69 reviews"
+      "a": "You can check our Google reviews to see what other customers have to say about their experience at Belle Amour Studio, with an average rating of 4.7 from 69 reviews"
     }
   ]
 }

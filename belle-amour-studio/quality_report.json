@@ -1,8 +1,13 @@
 {
   "slug": "belle-amour-studio",
-  "score": 92,
+  "score": 84,
   "passed": true,
   "issues": [
+    {
+      "severity": "warn",
+      "code": "thin_hero",
+      "detail": "Hero sub too thin"
+    },
     {
       "severity": "warn",
       "code": "no_intel_services",

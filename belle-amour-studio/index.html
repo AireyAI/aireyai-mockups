@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Belle Amour Studio — Beauty in Huddersfield</title>
-<meta name="description" content="Facials, waxing and finishing touches in Huddersfield — calm studio, clear booking">
+<meta name="description" content="Expert beauty treatments in Huddersfield">
 <meta name="theme-color" content="#130a10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +38,9 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
+  /* Kill browser-default blue links (wordmark was rendering as #00e) */
+  a { color: inherit; text-decoration: none; }
+  a:visited { color: inherit; }
   body::after {
     content: "";
     position: fixed; inset: 0; z-index: 9999; pointer-events: none;
@@ -70,19 +73,39 @@
     padding: 1.35rem 0; color: #fce8f0;
   }
   .nav-brand {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    color: #fce8f0 !important; text-decoration: none;
+  }
+  .nav-brand:visited { color: #fce8f0 !important; }
+  .nav-mark {
+    width: 2.1rem; height: 2.1rem; border-radius: 50%;
+    border: 1px solid rgba(240,197,216,0.55);
+    display: grid; place-items: center;
     font-family: var(--display); font-style: italic; font-weight: 500;
-    font-size: 1.15rem; text-decoration: none; letter-spacing: 0.01em;
+    font-size: 0.95rem; color: var(--rose-light); line-height: 1;
+    background: rgba(194,104,142,0.12);
+  }
+  .nav-brand-text {
+    display: flex; flex-direction: column; gap: 0.1rem; line-height: 1.1;
+  }
+  .nav-brand-name {
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: 1.05rem; letter-spacing: 0.01em; color: #fce8f0;
+  }
+  .nav-brand-sub {
+    font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--rose-light); opacity: 0.85;
   }
   .nav-links { display: flex; gap: 1.6rem; list-style: none; }
   .nav-links a {
     font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
-    text-decoration: none; color: rgba(252,232,240,0.7);
+    text-decoration: none; color: rgba(252,232,240,0.7) !important;
   }
-  .nav-links a:hover { color: #fce8f0; }
+  .nav-links a:hover { color: #fce8f0 !important; }
   .nav-cta {
     display: inline-flex; align-items: center;
     padding: 0.7rem 1.15rem; border-radius: 3px;
-    background: var(--rose); color: #fdf8f5;
+    background: var(--rose); color: #fdf8f5 !important;
     font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
     text-transform: uppercase; text-decoration: none;
     box-shadow: 0 4px 20px rgba(194,104,142,0.35);
@@ -146,14 +169,15 @@
   }
   .btn:hover { transform: translateY(-2px); }
   .btn-rose {
-    background: var(--rose); color: #fdf8f5;
+    background: var(--rose); color: #fdf8f5 !important;
     box-shadow: 0 6px 28px rgba(194,104,142,0.45);
   }
+  .btn-rose:visited { color: #fdf8f5 !important; }
   .btn-ghost {
-    background: rgba(252,232,240,0.04); color: rgba(252,232,240,0.8);
+    background: rgba(252,232,240,0.04); color: rgba(252,232,240,0.8) !important;
     border: 1.5px solid rgba(252,232,240,0.18);
   }
-  .btn-ghost:hover { border-color: var(--rose); color: #fce8f0; }
+  .btn-ghost:hover { border-color: var(--rose); color: #fce8f0 !important; }
   .hero-meta {
     display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
     font-size: 0.8rem; color: rgba(252,232,240,0.7);
@@ -299,7 +323,13 @@
   <header class="hero" id="top">
     <div class="wrap">
       <nav class="nav" aria-label="Primary">
-        <a class="nav-brand" href="#top">Belle Amour Studio</a>
+        <a class="nav-brand" href="#top">
+          <span class="nav-mark" aria-hidden="true">BA</span>
+          <span class="nav-brand-text">
+            <span class="nav-brand-name">Belle Amour Studio</span>
+            <span class="nav-brand-sub">Beauty · Huddersfield</span>
+          </span>
+        </a>
         <ul class="nav-links">
           <li><a href="#services">Treatments</a></li>
           <li><a href="#about">Studio</a></li>
@@ -309,11 +339,11 @@
         <a class="nav-cta" href="#book">Book a visit</a>
       </nav>
       <div class="hero-inner">
-        <p class="hero-eyebrow">Beauty in Huddersfield</p>
+        <p class="hero-eyebrow">Huddersfield Beauty Studio</p>
         <h1>Belle Amour <em>Studio</em></h1>
         <div class="hero-rule">
           <span aria-hidden="true"></span>
-          <p class="hero-sub">Facials, waxing and finishing touches in Huddersfield — calm studio, clear booking</p>
+          <p class="hero-sub">Expert beauty treatments in Huddersfield</p>
         </div>
         <div class="hero-ctas">
           <a class="btn btn-rose" href="#book">Book a visit</a>
@@ -344,22 +374,22 @@
         <article class="svc reveal">
           <span class="svc-num" aria-hidden="true">01</span>
           <div class="svc-copy">
-            <h3>Facials</h3>
-            <p>Skin treatments tailored in-studio for clients around Huddersfield</p>
+            <h3>Hair Cutting</h3>
+            <p>Precision cuts for men and women</p>
           </div>
         </article>
         <article class="svc reveal">
           <span class="svc-num" aria-hidden="true">02</span>
           <div class="svc-copy">
-            <h3>Waxing</h3>
-            <p>Quick, careful waxing with a clear aftercare chat</p>
+            <h3>Nail Care</h3>
+            <p>Manicures and pedicures available</p>
           </div>
         </article>
         <article class="svc reveal">
           <span class="svc-num" aria-hidden="true">03</span>
           <div class="svc-copy">
-            <h3>Lashes &amp; brows</h3>
-            <p>Lash and brow finishing — tidy work, natural or full</p>
+            <h3>Facial Treatments</h3>
+            <p>Customised facials for all skin types</p>
           </div>
         </article>
         </div>
@@ -378,7 +408,7 @@
         <div class="about reveal">
           <p class="kicker">The studio</p>
           <h2>Belle Amour Studio</h2>
-          <p>Belle Amour Studio looks after clients across Huddersfield with straightforward beauty care</p>
+          <p>Belle Amour Studio in Huddersfield offers beauty services. With a 4.7 Google rating from 69 reviews, we&#x27;re a trusted local choice</p>
         </div>
         <div>
           <p class="kicker">Questions</p>
@@ -393,7 +423,7 @@
         </details>
         <details class="faq reveal">
           <summary>What can I expect from my visit to Belle Amour Studio?</summary>
-          <p>You can check our Google reviews to get an idea of what to expect from your visit, with an average rating of 4.7 from 69 reviews</p>
+          <p>You can check our Google reviews to see what other customers have to say about their experience at Belle Amour Studio, with an average rating of 4.7 from 69 reviews</p>
         </details>
         </div>
       </div>
