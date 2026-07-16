@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-16T15:38:47Z",
+  "ts": "2026-07-16T16:52:01Z",
   "slug": "bare-beauty-exeter",
   "name": "Bare Beauty Exeter",
   "town": "Exeter",
@@ -12,6 +12,7 @@
   "with_llm": false,
   "aaa": true,
   "composer": "beauty_aaa",
+  "photo_source": "prospect_existing",
   "facts": {
     "phone": false,
     "email": true,

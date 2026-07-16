@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beauty Mafia By Elizabete Kustova — Beauty in Hull</title>
-<meta name="description" content="Trusted beauty services in Hull">
+<meta name="description" content="Trusted beauty treatments in Hull">
 <meta name="theme-color" content="#130a10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
-<!-- aireyai beauty-composer v2 · dolled quality bar · exemplar note=Apple -->
+<!-- aireyai beauty-composer v3 · dolled quality bar · premium-dark · photo=prospect_existing · exemplar=Apple -->
 <style>
   :root {
     --base: #fdf8f5;
@@ -317,6 +317,21 @@
   footer strong {
     font-family: var(--display); font-style: italic; color: var(--ink); font-weight: 500;
   }
+
+  /* Mobile sticky book CTA */
+  .sticky-book {
+    position: fixed; inset: auto 0 0 0; z-index: 60;
+    display: none; justify-content: center; align-items: center;
+    padding: 0.85rem 1rem;
+    background: var(--rose); color: #fdf8f5;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    box-shadow: 0 -8px 28px rgba(194,104,142,0.35);
+  }
+  .sticky-book a { color: #fdf8f5 !important; width: 100%; text-align: center; }
+  @media (max-width: 720px) {
+    .sticky-book { display: flex; }
+    body { padding-bottom: 4.25rem; }
+  }
 </style>
 </head>
 <body>
@@ -343,7 +358,7 @@
         <h1>Beauty Mafia By Elizabete <em>Kustova</em></h1>
         <div class="hero-rule">
           <span aria-hidden="true"></span>
-          <p class="hero-sub">Trusted beauty services in Hull</p>
+          <p class="hero-sub">Trusted beauty treatments in Hull</p>
         </div>
         <div class="hero-ctas">
           <a class="btn btn-rose" href="#book">Book a visit</a>
@@ -408,7 +423,7 @@
         <div class="about reveal">
           <p class="kicker">The studio</p>
           <h2>Beauty Mafia By Elizabete Kustova</h2>
-          <p>Beauty Mafia By Elizabete Kustova in Hull offers beauty services. Email elizabete.kustova@gmail.com for more information</p>
+          <p>Beauty Mafia By Elizabete Kustova offers beauty services in Hull. With a 5-star Google rating from 44 reviews, Elizabete Kustova&#x27;s business has built a strong reputation</p>
         </div>
         <div>
           <p class="kicker">Questions</p>
@@ -422,8 +437,8 @@
           <p>You can email elizabete.kustova@gmail.com to book an appointment</p>
         </details>
         <details class="faq reveal">
-          <summary>What can I expect from my visit to Beauty Mafia By Elizabete Kustova?</summary>
-          <p>With a 5-star Google rating and 44 reviews, you can expect a high-quality experience at Beauty Mafia By Elizabete Kustova</p>
+          <summary>What can I expect from Beauty Mafia By Elizabete Kustova?</summary>
+          <p>With a 5-star Google rating and 44 reviews, you can expect a high standard of beauty treatments from Beauty Mafia By Elizabete Kustova</p>
         </details>
         </div>
       </div>
@@ -461,6 +476,9 @@
       <div><strong>Beauty Mafia By Elizabete Kustova</strong> · Hull</div>
       <div>AireyAI preview · beauty composer</div>
     </footer>
+  </div>
+  <div class="sticky-book" role="region" aria-label="Book">
+    <a href="#book">Book a visit</a>
   </div>
   <script>
     (function () {

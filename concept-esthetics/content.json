@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Beauty in Huddersfield",
+  "hero_title": "Concept Esthetics",
+  "hero_sub": "Facials, waxing and finishing touches in Huddersfield — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Skin treatments tailored in-studio for clients around Huddersfield"
+    },
+    {
+      "title": "Waxing",
+      "body": "Quick, careful waxing with a clear aftercare chat"
+    },
+    {
+      "title": "Lashes & brows",
+      "body": "Lash and brow finishing — tidy work, natural or full"
+    }
+  ],
+  "proof_quote": "4.8★ from 90 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Concept Esthetics looks after clients across Huddersfield with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Concept Esthetics beauty cover?",
+      "a": "Concept Esthetics beauty is based in Huddersfield"
+    },
+    {
+      "q": "How do I book an appointment at Concept Esthetics beauty?",
+      "a": "For booking enquiries, please email info@conceptbeauty.uk"
+    },
+    {
+      "q": "What can I expect from a visit to Concept Esthetics beauty?",
+      "a": "To find out more about what to expect, please email info@conceptbeauty.uk"
+    }
+  ]
+}

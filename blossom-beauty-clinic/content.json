@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Beauty in Huddersfield",
+  "hero_title": "Blossom Beauty Clinic",
+  "hero_sub": "Facials, waxing and finishing touches in Huddersfield — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Customised treatments for all skin types"
+    },
+    {
+      "title": "Massage Therapy",
+      "body": "Relaxing massages for body and mind"
+    },
+    {
+      "title": "Waxing and Tinting",
+      "body": "Expert hair removal and brow shaping"
+    }
+  ],
+  "proof_quote": "5★ from 30 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Blossom Beauty Clinic looks after clients across Huddersfield with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Blossom Beauty Clinic serve?",
+      "a": "Blossom Beauty Clinic provides its services to clients in Huddersfield and the surrounding local area"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "Appointments can be booked by emailing info@blossombeautyclinic.co.uk or by calling the salon directly"
+    },
+    {
+      "q": "What can I expect when I visit the clinic?",
+      "a": "You can expect a professional, friendly environment where the team focuses on delivering quality beauty treatments. The clinic holds a 5‑star rating on Google from 30 reviews, reflecting a high level of client satisfaction"
+    }
+  ]
+}

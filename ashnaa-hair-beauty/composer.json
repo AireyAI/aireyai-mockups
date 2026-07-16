@@ -1,7 +1,15 @@
 {
   "composer": "beauty_aaa",
-  "version": 2,
+  "version": 3,
   "ref": "dolled_by_louise",
   "palette": "blush-plum-rose",
+  "family": "premium-dark",
+  "patterns": [
+    "nav-minimal",
+    "hero-statement",
+    "faq-accordion",
+    "cta-banner"
+  ],
+  "photo_source": "prospect_existing",
   "exemplar_note": "Apple"
 }

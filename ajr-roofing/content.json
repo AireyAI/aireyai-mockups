@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Roofing in Sheffield",
+  "hero_title": "AJR Roofing",
+  "hero_sub": "Clear quotes and tidy roofing across Sheffield. You know the plan before any work starts",
+  "services": [
+    {
+      "title": "Roofing done properly",
+      "body": "Reliable roofing across Sheffield — fixed-scope quotes before we start"
+    },
+    {
+      "title": "Clear quotes",
+      "body": "No waffle. You know the price and the plan before any work begins"
+    },
+    {
+      "title": "Local & accountable",
+      "body": "Based around Sheffield. Easy to reach, easy to trust"
+    }
+  ],
+  "proof_quote": "Straightforward roofing for people around Sheffield",
+  "proof_label": "local work, clear quotes",
+  "about": "AJR Roofing serves customers across Sheffield with straightforward roofing service",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "What areas do AJR Roofing cover?",
+      "a": "AJR Roofing covers Sheffield and the surrounding areas"
+    },
+    {
+      "q": "How do I book a roofing service with AJR Roofing?",
+      "a": "To book a service, you can call 07852 940 350 or email ajrroofing17@gmail.com"
+    },
+    {
+      "q": "What can I expect from AJR Roofing?",
+      "a": "When you contact AJR Roofing, they will discuss your roofing needs and provide a solution tailored to your requirements"
+    }
+  ]
+}

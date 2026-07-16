@@ -1,13 +1,8 @@
 {
   "slug": "ashnaa-hair-beauty",
-  "score": 84,
+  "score": 92,
   "passed": true,
   "issues": [
-    {
-      "severity": "warn",
-      "code": "thin_hero",
-      "detail": "Hero sub too thin"
-    },
     {
       "severity": "warn",
       "code": "no_intel_services",

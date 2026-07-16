@@ -1,37 +1,37 @@
 {
-  "hero_eyebrow": "Croydon Beauty Experts",
+  "hero_eyebrow": "Croydon Hair & Beauty",
   "hero_title": "Ashnaa Hair & Beauty",
-  "hero_sub": "Trusted by 321+ Google reviewers",
+  "hero_sub": "Expert haircuts, colour, extensions and beauty treatments for Croydon clients",
   "services": [
     {
-      "title": "Hair Cutting",
-      "body": "Precision cuts for men and women"
+      "title": "Hair Cutting & Styling",
+      "body": "Precision cuts, blow‑dry, and personalised styling for any occasion"
     },
     {
-      "title": "Facial Treatments",
-      "body": "Customised facials for all skin types"
+      "title": "Colour & Highlights",
+      "body": "Professional dyeing, balayage, and root touch‑ups using premium pigments"
     },
     {
-      "title": "Nail Care",
-      "body": "Manicures and pedicures available"
+      "title": "Facial & Skincare Treatments",
+      "body": "Deep cleansing, micro‑needling, and tailored facial therapies for radiant skin"
     }
   ],
   "proof_quote": "4.1★ from 321 Google reviews",
   "proof_label": "Google reviews",
-  "about": "Ashnaa Hair & Beauty in Croydon offers a range of beauty services. With a 4.1-star Google rating from 321 reviews, we're a popular choice in the local area",
+  "about": "Ashnaa Hair & Beauty offers hair styling, colour, and beauty treatments in Croydon. Clients appreciate the friendly staff and convenient location, and you can reach them at info@ashnaabeauty.co.uk",
   "cta": "Book a visit",
   "faq": [
     {
       "q": "What area does Ashnaa Hair & Beauty cover?",
-      "a": "Ashnaa Hair & Beauty is located in Croydon"
+      "a": "Ashnaa Hair & Beauty is based in Croydon and welcomes clients from the surrounding Croydon neighbourhoods"
     },
     {
-      "q": "How do I book an appointment at Ashnaa Hair & Beauty?",
-      "a": "To book an appointment, please email us at info@ashnaabeauty.co.uk"
+      "q": "How can I book an appointment?",
+      "a": "Appointments can be booked by emailing info@ashnaabeauty.co.uk or by calling the salon directly"
     },
     {
-      "q": "What can I expect when I visit Ashnaa Hair & Beauty?",
-      "a": "You can expect a range of hair and beauty services from our experienced team. For more information or to read reviews from previous customers, you can check our Google reviews, where we have an average rating of 4.1 from 321 reviews"
+      "q": "What should I expect on my first visit?",
+      "a": "On your first visit you will be greeted, offered a brief consultation about the service you want, and then the treatment will be carried out. The salon holds a 4.1‑star rating on Google from 321 reviews, reflecting consistent client satisfaction"
     }
   ]
 }

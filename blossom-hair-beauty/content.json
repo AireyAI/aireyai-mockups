@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Beauty in Hull",
+  "hero_title": "Blossom Hair & Beauty",
+  "hero_sub": "Facials, waxing and finishing touches in Hull — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Skin treatments tailored in-studio for clients around Hull"
+    },
+    {
+      "title": "Waxing",
+      "body": "Quick, careful waxing with a clear aftercare chat"
+    },
+    {
+      "title": "Lashes & brows",
+      "body": "Lash and brow finishing — tidy work, natural or full"
+    }
+  ],
+  "proof_quote": "4.9★ from 18 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Blossom Hair & Beauty looks after clients across Hull with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Blossom Hair & Beauty cover?",
+      "a": "Blossom Hair & Beauty is based in Hull"
+    },
+    {
+      "q": "How do I book an appointment at Blossom Hair & Beauty?",
+      "a": "You can email us at blossom.hbstudio@gmail.com to book an appointment"
+    },
+    {
+      "q": "What can I expect from my visit to Blossom Hair & Beauty?",
+      "a": "You can check our Google reviews to see what other customers have to say about their experience, with an average rating of 4.9 from 18 reviews"
+    }
+  ]
+}

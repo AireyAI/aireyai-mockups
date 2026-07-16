@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Beauty in Exeter",
+  "hero_title": "Carol Beauty Salon",
+  "hero_sub": "Facials, waxing and finishing touches in Exeter — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Skin treatments tailored in-studio for clients around Exeter"
+    },
+    {
+      "title": "Waxing",
+      "body": "Quick, careful waxing with a clear aftercare chat"
+    },
+    {
+      "title": "Lashes & brows",
+      "body": "Lash and brow finishing — tidy work, natural or full"
+    }
+  ],
+  "proof_quote": "5★ from 22 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Carol Beauty Salon offers beauty treatments in Exeter. With a 5-star Google rating from 22 reviews, you can trust us for your beauty needs",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Do you take clients from Exeter?",
+      "a": "Yes — Carol Beauty Salon welcomes clients across Exeter and nearby"
+    },
+    {
+      "q": "Do I need to book?",
+      "a": "Appointments are best — message or call and we'll find a slot"
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Just yourself — and any reference photos if you have a look in mind"
+    }
+  ]
+}

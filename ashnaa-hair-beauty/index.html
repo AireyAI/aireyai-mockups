@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ashnaa Hair &amp; Beauty — Beauty in Croydon</title>
-<meta name="description" content="Trusted by 321+ Google reviewers">
+<meta name="description" content="Expert haircuts, colour, extensions and beauty treatments for Croydon clients">
 <meta name="theme-color" content="#130a10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
-<!-- aireyai beauty-composer v2 · dolled quality bar · exemplar note=Apple -->
+<!-- aireyai beauty-composer v3 · dolled quality bar · premium-dark · photo=prospect_existing · exemplar=Apple -->
 <style>
   :root {
     --base: #fdf8f5;
@@ -317,6 +317,21 @@
   footer strong {
     font-family: var(--display); font-style: italic; color: var(--ink); font-weight: 500;
   }
+
+  /* Mobile sticky book CTA */
+  .sticky-book {
+    position: fixed; inset: auto 0 0 0; z-index: 60;
+    display: none; justify-content: center; align-items: center;
+    padding: 0.85rem 1rem;
+    background: var(--rose); color: #fdf8f5;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    box-shadow: 0 -8px 28px rgba(194,104,142,0.35);
+  }
+  .sticky-book a { color: #fdf8f5 !important; width: 100%; text-align: center; }
+  @media (max-width: 720px) {
+    .sticky-book { display: flex; }
+    body { padding-bottom: 4.25rem; }
+  }
 </style>
 </head>
 <body>
@@ -339,11 +354,11 @@
         <a class="nav-cta" href="#book">Book a visit</a>
       </nav>
       <div class="hero-inner">
-        <p class="hero-eyebrow">Croydon Beauty Experts</p>
+        <p class="hero-eyebrow">Croydon Hair &amp; Beauty</p>
         <h1>Ashnaa Hair &amp; <em>Beauty</em></h1>
         <div class="hero-rule">
           <span aria-hidden="true"></span>
-          <p class="hero-sub">Trusted by 321+ Google reviewers</p>
+          <p class="hero-sub">Expert haircuts, colour, extensions and beauty treatments for Croydon clients</p>
         </div>
         <div class="hero-ctas">
           <a class="btn btn-rose" href="#book">Book a visit</a>
@@ -374,22 +389,22 @@
         <article class="svc reveal">
           <span class="svc-num" aria-hidden="true">01</span>
           <div class="svc-copy">
-            <h3>Hair Cutting</h3>
-            <p>Precision cuts for men and women</p>
+            <h3>Hair Cutting &amp; Styling</h3>
+            <p>Precision cuts, blow‑dry, and personalised styling for any occasion</p>
           </div>
         </article>
         <article class="svc reveal">
           <span class="svc-num" aria-hidden="true">02</span>
           <div class="svc-copy">
-            <h3>Facial Treatments</h3>
-            <p>Customised facials for all skin types</p>
+            <h3>Colour &amp; Highlights</h3>
+            <p>Professional dyeing, balayage, and root touch‑ups using premium pigments</p>
           </div>
         </article>
         <article class="svc reveal">
           <span class="svc-num" aria-hidden="true">03</span>
           <div class="svc-copy">
-            <h3>Nail Care</h3>
-            <p>Manicures and pedicures available</p>
+            <h3>Facial &amp; Skincare Treatments</h3>
+            <p>Deep cleansing, micro‑needling, and tailored facial therapies for radiant skin</p>
           </div>
         </article>
         </div>
@@ -408,22 +423,22 @@
         <div class="about reveal">
           <p class="kicker">The studio</p>
           <h2>Ashnaa Hair &amp; Beauty</h2>
-          <p>Ashnaa Hair &amp; Beauty in Croydon offers a range of beauty services. With a 4.1-star Google rating from 321 reviews, we&#x27;re a popular choice in the local area</p>
+          <p>Ashnaa Hair &amp; Beauty offers hair styling, colour, and beauty treatments in Croydon. Clients appreciate the friendly staff and convenient location, and you can reach them at info@ashnaabeauty.co.uk</p>
         </div>
         <div>
           <p class="kicker">Questions</p>
           
         <details class="faq reveal">
           <summary>What area does Ashnaa Hair &amp; Beauty cover?</summary>
-          <p>Ashnaa Hair &amp; Beauty is located in Croydon</p>
+          <p>Ashnaa Hair &amp; Beauty is based in Croydon and welcomes clients from the surrounding Croydon neighbourhoods</p>
         </details>
         <details class="faq reveal">
-          <summary>How do I book an appointment at Ashnaa Hair &amp; Beauty?</summary>
-          <p>To book an appointment, please email us at info@ashnaabeauty.co.uk</p>
+          <summary>How can I book an appointment?</summary>
+          <p>Appointments can be booked by emailing info@ashnaabeauty.co.uk or by calling the salon directly</p>
         </details>
         <details class="faq reveal">
-          <summary>What can I expect when I visit Ashnaa Hair &amp; Beauty?</summary>
-          <p>You can expect a range of hair and beauty services from our experienced team. For more information or to read reviews from previous customers, you can check our Google reviews, where we have an average rating of 4.1 from 321 reviews</p>
+          <summary>What should I expect on my first visit?</summary>
+          <p>On your first visit you will be greeted, offered a brief consultation about the service you want, and then the treatment will be carried out. The salon holds a 4.1‑star rating on Google from 321 reviews, reflecting consistent client satisfaction</p>
         </details>
         </div>
       </div>
@@ -461,6 +476,9 @@
       <div><strong>Ashnaa Hair &amp; Beauty</strong> · Croydon</div>
       <div>AireyAI preview · beauty composer</div>
     </footer>
+  </div>
+  <div class="sticky-book" role="region" aria-label="Book">
+    <a href="#book">Book a visit</a>
   </div>
   <script>
     (function () {

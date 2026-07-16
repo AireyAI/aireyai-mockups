@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
-<!-- aireyai beauty-composer v2 · dolled quality bar · exemplar note=Apple -->
+<!-- aireyai beauty-composer v3 · dolled quality bar · premium-dark · photo=prospect_existing · exemplar=Apple -->
 <style>
   :root {
     --base: #fdf8f5;
@@ -317,6 +317,21 @@
   footer strong {
     font-family: var(--display); font-style: italic; color: var(--ink); font-weight: 500;
   }
+
+  /* Mobile sticky book CTA */
+  .sticky-book {
+    position: fixed; inset: auto 0 0 0; z-index: 60;
+    display: none; justify-content: center; align-items: center;
+    padding: 0.85rem 1rem;
+    background: var(--rose); color: #fdf8f5;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    box-shadow: 0 -8px 28px rgba(194,104,142,0.35);
+  }
+  .sticky-book a { color: #fdf8f5 !important; width: 100%; text-align: center; }
+  @media (max-width: 720px) {
+    .sticky-book { display: flex; }
+    body { padding-bottom: 4.25rem; }
+  }
 </style>
 </head>
 <body>
@@ -408,7 +423,7 @@
         <div class="about reveal">
           <p class="kicker">The studio</p>
           <h2>Belle Amour Studio</h2>
-          <p>Belle Amour Studio in Huddersfield offers beauty services. With a 4.7 Google rating from 69 reviews, we&#x27;re a trusted local choice</p>
+          <p>Belle Amour Studio in Huddersfield offers beauty services. With a 4.7 Google rating from 69 reviews, we&#x27;re proud of our reputation</p>
         </div>
         <div>
           <p class="kicker">Questions</p>
@@ -423,7 +438,7 @@
         </details>
         <details class="faq reveal">
           <summary>What can I expect from my visit to Belle Amour Studio?</summary>
-          <p>You can check our Google reviews to see what other customers have to say about their experience at Belle Amour Studio, with an average rating of 4.7 from 69 reviews</p>
+          <p>You can check our Google reviews to get an idea of what to expect from your visit, with an average rating of 4.7 from 69 reviews</p>
         </details>
         </div>
       </div>
@@ -461,6 +476,9 @@
       <div><strong>Belle Amour Studio</strong> · Huddersfield</div>
       <div>AireyAI preview · beauty composer</div>
     </footer>
+  </div>
+  <div class="sticky-book" role="region" aria-label="Book">
+    <a href="#book">Book a visit</a>
   </div>
   <script>
     (function () {

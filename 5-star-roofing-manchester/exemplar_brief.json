@@ -1,0 +1,26 @@
+{
+  "name": "Uber",
+  "line": 16138,
+  "atmosphere": "Uber's design language is a masterclass in confident minimalism -- a black-and-white universe where every pixel serves a purpose and nothing decorates without earning its place. The entire experience is built on a stark duality: jet black (`#000000`) and pure white (`#ffffff`), with virtually no mid-tone grays diluting the message. This isn't the sterile minimalism of a startup that hasn't finished designing -- it's the deliberate restraint of a brand so established it can afford to whisper. The signature typeface, UberMove, is a proprietary geometric sans-serif with a distinctly square, engineered quality. Headlines in UberMove Bold at 52px carry the weight of a billboard -- authoritative, direct, unapologetic. The companion face UberMoveText handles body copy and buttons with a slightly softer, more readable character at medium weight (500). Together, they create a typographic system t",
+  "hexes": [
+    "#000000",
+    "#FFFFFF",
+    "#E2E2E2",
+    "#F3F3F3",
+    "#EFEFEF",
+    "#4B4B4B",
+    "#AFAFAF",
+    "#0000EE"
+  ],
+  "dos": [],
+  "donts": [
+    "introduce color into the UI chrome -- Uber's interface is strictly black, white, and gray",
+    "use rounded corners less than 999px on buttons -- the full-pill shape is a core identity element",
+    "apply heavy shadows or drop shadows with high opacity -- depth is whisper-subtle",
+    "use serif fonts anywhere -- Uber's typography is exclusively geometric sans-serif",
+    "create airy, spacious layouts with excessive whitespace -- Uber's density is intentional",
+    "use gradients or color overlays -- every surface is a flat, solid color"
+  ],
+  "agent_cues": "### Quick Color Reference - Primary Button: \"Uber Black (#000000)\" - Page Background: \"Pure White (#ffffff)\" - Button Text (on black): \"Pure White (#ffffff)\" - Button Text (on white): \"Uber Black (#000000)\" - Secondary Text: \"Body Gray (#4b4b4b)\" - Tertiary Text: \"Muted Gray (#afafaf)\" - Chip Background: \"Chip Gray (#efefef)\" - Hover State: \"Hover Gray (#e2e2e2)\" - Card Shadow: \"rgba(0,0,0,0.12) 0px 4px 16px\" - Footer Background: \"Uber Black (#000000)\" ### Example Component Prompts",
+  "family": "brutalist-trade"
+}

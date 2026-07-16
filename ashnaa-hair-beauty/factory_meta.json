@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-16T15:38:43Z",
+  "ts": "2026-07-16T16:51:58Z",
   "slug": "ashnaa-hair-beauty",
   "name": "Ashnaa Hair & Beauty",
   "town": "Croydon",
@@ -12,6 +12,7 @@
   "with_llm": false,
   "aaa": true,
   "composer": "beauty_aaa",
+  "photo_source": "prospect_existing",
   "facts": {
     "phone": false,
     "email": true,
@@ -27,10 +28,9 @@
   "prospect_index": 513,
   "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/ashnaa-hair-beauty",
   "public_url_guess": "https://aireyai.github.io/aireyai-mockups/ashnaa-hair-beauty/",
-  "quality_score": 84,
+  "quality_score": 92,
   "quality_passed": true,
   "quality_issues": [
-    "thin_hero",
     "no_intel_services"
   ]
 }

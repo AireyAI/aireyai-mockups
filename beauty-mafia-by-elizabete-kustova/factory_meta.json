@@ -1,5 +1,5 @@
 {
-  "ts": "2026-07-16T15:38:51Z",
+  "ts": "2026-07-16T16:52:05Z",
   "slug": "beauty-mafia-by-elizabete-kustova",
   "name": "Beauty Mafia By Elizabete Kustova",
   "town": "Hull",
@@ -12,6 +12,7 @@
   "with_llm": false,
   "aaa": true,
   "composer": "beauty_aaa",
+  "photo_source": "prospect_existing",
   "facts": {
     "phone": false,
     "email": true,
