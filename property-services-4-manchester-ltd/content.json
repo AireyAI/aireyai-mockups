@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Roofing & Joinery in Manchester",
+  "hero_title": "Property Services 4 Manchester Ltd",
+  "hero_sub": "Expert roofing and joinery solutions for Manchester homes",
+  "services": [
+    {
+      "title": "Roofing Services",
+      "body": "Expert roof repairs, replacements, and maintenance for residential and commercial properties in Manchester"
+    },
+    {
+      "title": "Joinery Services",
+      "body": "High-quality joinery work, including bespoke furniture, doors, and windows, crafted with precision and care"
+    },
+    {
+      "title": "Property Maintenance",
+      "body": "Regular property checks and maintenance to prevent damage and ensure your home or business remains safe and secure"
+    }
+  ],
+  "proof_quote": "Sorted the roof and some joinery work quickly. Proper job, no fuss",
+  "proof_label": "Local client",
+  "about": "Property Services 4 Manchester Ltd provides roofing and joinery services across Manchester. Contact them via phone or email for local property maintenance",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "What areas do you cover in Manchester?",
+      "a": "Please call the salon for information on coverage areas"
+    },
+    {
+      "q": "How do I book a service?",
+      "a": "You can contact us via phone at +447482314592 or email at psmanchester4@gmail.com to book a service"
+    },
+    {
+      "q": "What can I expect when you visit my property?",
+      "a": "A member of our team will visit your property to assess and complete the required work, please call the salon for more information"
+    }
+  ],
+  "_aaa_llm_hits": 4
+}
