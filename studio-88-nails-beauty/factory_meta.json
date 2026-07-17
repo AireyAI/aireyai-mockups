@@ -1,0 +1,36 @@
+{
+  "ts": "2026-07-16T19:22:30Z",
+  "slug": "studio-88-nails-beauty",
+  "name": "Studio 88 Nails & Beauty",
+  "town": "Doncaster",
+  "niche": "beauty",
+  "family": "premium-dark",
+  "template": "luxury-premium-dark.html",
+  "exemplar": "Apple",
+  "design_md_line": 359,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": true,
+  "composer": "beauty_aaa",
+  "photo_source": "prospect_existing",
+  "facts": {
+    "phone": false,
+    "email": true,
+    "rating": 4.5,
+    "review_count": 94,
+    "owner": "",
+    "services_from_intel": 0,
+    "has_online_booking": false,
+    "maps_url": true
+  },
+  "exemplar_hexes": [],
+  "hero_image": "hero.jpg",
+  "prospect_index": 638,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/studio-88-nails-beauty",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/studio-88-nails-beauty/",
+  "quality_score": 92,
+  "quality_passed": true,
+  "quality_issues": [
+    "no_intel_services"
+  ]
+}
