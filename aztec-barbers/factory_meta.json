@@ -1,0 +1,36 @@
+{
+  "ts": "2026-07-16T20:01:54Z",
+  "slug": "aztec-barbers",
+  "name": "Aztec Barbers",
+  "town": "Lancaster",
+  "niche": "beauty",
+  "family": "premium-dark",
+  "template": "luxury-premium-dark.html",
+  "exemplar": "Apple",
+  "design_md_line": 359,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": true,
+  "composer": "beauty_aaa",
+  "photo_source": "ref_bank:dolled-og.jpg",
+  "facts": {
+    "phone": false,
+    "email": true,
+    "rating": 4.9,
+    "review_count": 61,
+    "owner": "",
+    "services_from_intel": 0,
+    "has_online_booking": false,
+    "maps_url": true
+  },
+  "exemplar_hexes": [],
+  "hero_image": "hero.jpg",
+  "prospect_index": 885,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/aztec-barbers",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/aztec-barbers/",
+  "quality_score": 92,
+  "quality_passed": true,
+  "quality_issues": [
+    "no_intel_services"
+  ]
+}
