@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Hair & Beauty in Doncaster",
+  "hero_title": "Elysium Hair & Beauty Studio",
+  "hero_sub": "Professional hair and beauty services in Doncaster",
+  "services": [
+    {
+      "title": "Hair Styling & Colour",
+      "body": "Precision cutting and bespoke colour techniques"
+    },
+    {
+      "title": "Facials",
+      "body": "Deep cleansing and hydrating skincare treatments"
+    },
+    {
+      "title": "Gel Manicures",
+      "body": "Luxury manicures and long-lasting gel polish application"
+    }
+  ],
+  "proof_quote": "4.9★ from 84 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Elysium Hair & Beauty Studio delivers expert hair and beauty treatments in Doncaster. We focus on precision and style for every client",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Where is Elysium Hair & Beauty Studio located?",
+      "a": "The studio is based in Doncaster"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "Please email info@elysiumhair.co.uk to arrange your booking"
+    },
+    {
+      "q": "What is the salon's customer rating?",
+      "a": "The business has a Google rating of 4.9 based on 84 reviews"
+    }
+  ],
+  "_aaa_llm_hits": 4
+}
