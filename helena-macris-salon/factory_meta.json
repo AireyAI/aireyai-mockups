@@ -1,0 +1,36 @@
+{
+  "ts": "2026-07-16T19:17:39Z",
+  "slug": "helena-macris-salon",
+  "name": "Helena Macris Salon",
+  "town": "Croydon",
+  "niche": "beauty",
+  "family": "premium-dark",
+  "template": "luxury-premium-dark.html",
+  "exemplar": "Apple",
+  "design_md_line": 359,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": true,
+  "composer": "beauty_aaa",
+  "photo_source": "prospect_existing",
+  "facts": {
+    "phone": false,
+    "email": true,
+    "rating": 3.7,
+    "review_count": 189,
+    "owner": "",
+    "services_from_intel": 0,
+    "has_online_booking": false,
+    "maps_url": true
+  },
+  "exemplar_hexes": [],
+  "hero_image": "hero.jpg",
+  "prospect_index": 526,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/helena-macris-salon",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/helena-macris-salon/",
+  "quality_score": 92,
+  "quality_passed": true,
+  "quality_issues": [
+    "no_intel_services"
+  ]
+}
