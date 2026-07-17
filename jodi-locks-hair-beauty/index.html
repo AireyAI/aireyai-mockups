@@ -1,141 +1,499 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jodi Locks Hair & Beauty | Beauty in Exeter</title>
-<meta name="description" content="Trusted beauty specialists in Exeter. Fast response, clear quotes, work you can rely on." />
-<script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jodi Locks Hair &amp; Beauty — Beauty in Exeter</title>
+<meta name="description" content="Facials, waxing and finishing touches in Exeter — calm studio, clear booking">
+<meta name="theme-color" content="#130a10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<!-- aireyai beauty-composer v3 · dolled quality bar · premium-dark · photo=ref_bank:hair-hero.jpg · exemplar=Apple -->
 <style>
-  :root { --primary:#BE185D; --accent:#831843; --warm:#FCE7F3; --ink:#13131a; }
-  * { -webkit-font-smoothing:antialiased; }
-  body { background:var(--warm); color:var(--ink); font-family:'Plus Jakarta Sans',system-ui,sans-serif; overflow-x:hidden; }
-  .font-display { font-family:'Fraunces',Georgia,serif; letter-spacing:-0.02em; font-weight:600; }
-  .text-ink { color:var(--ink); }
-  /* grain overlay for depth */
-  body::before {
-    content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  :root {
+    --base: #fdf8f5;
+    --surface: #fff8f6;
+    --blush: #fce8f0;
+    --rose: #c2688e;
+    --rose-light: #f0c5d8;
+    --plum: #130a10;
+    --ink: #2d1423;
+    --muted: #8a6272;
+    --gold: #c9956a;
+    --border: rgba(194,104,142,0.16);
+    --spring: cubic-bezier(0.34, 1.3, 0.64, 1);
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --display: "Playfair Display", Georgia, serif;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "DM Sans", sans-serif;
   }
-  .mesh { position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
-  .mesh::before, .mesh::after { content:""; position:absolute; border-radius:9999px; filter:blur(70px); opacity:.5; }
-  .mesh::before { width:46rem; height:46rem; top:-16rem; right:-12rem; background:radial-gradient(circle,var(--primary),transparent 62%); }
-  .mesh::after  { width:38rem; height:38rem; bottom:-18rem; left:-12rem; background:radial-gradient(circle,var(--accent),transparent 62%); opacity:.4; }
-  .btn-primary { background:linear-gradient(135deg,var(--primary),var(--accent)); box-shadow:0 14px 34px -10px color-mix(in srgb,var(--primary) 60%,transparent); position:relative; overflow:hidden; }
-  .btn-primary::after { content:""; position:absolute; top:0; left:-120%; width:60%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent); transition:left .6s; }
-  .btn-primary:hover::after { left:140%; }
-  .shadow-card { box-shadow:0 10px 40px -18px color-mix(in srgb,var(--ink) 30%,transparent); }
-  .hover\:shadow-cardhover:hover { box-shadow:0 26px 60px -22px color-mix(in srgb,var(--primary) 45%,transparent); }
-  [data-reveal] { opacity:0; transform:translateY(26px); }
-  .reveal-on { opacity:1 !important; transform:none !important; transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
-  .stars { color:#f5a623; letter-spacing:2px; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--base);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  /* Kill browser-default blue links (wordmark was rendering as #00e) */
+  a { color: inherit; text-decoration: none; }
+  a:visited { color: inherit; }
+  body::after {
+    content: "";
+    position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+    opacity: 0.018;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollDot {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.55); opacity: 0.35; }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  }
+  .reveal.vis { opacity: 1; transform: none; }
+
+  .wrap { width: min(1080px, calc(100% - 2.75rem)); margin-inline: auto; }
+
+  /* ── Nav on hero ── */
+  .nav {
+    position: absolute; inset: 0 0 auto 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.35rem 0; color: #fce8f0;
+  }
+  .nav-brand {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    color: #fce8f0 !important; text-decoration: none;
+  }
+  .nav-brand:visited { color: #fce8f0 !important; }
+  .nav-mark {
+    width: 2.1rem; height: 2.1rem; border-radius: 50%;
+    border: 1px solid rgba(240,197,216,0.55);
+    display: grid; place-items: center;
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: 0.95rem; color: var(--rose-light); line-height: 1;
+    background: rgba(194,104,142,0.12);
+  }
+  .nav-brand-text {
+    display: flex; flex-direction: column; gap: 0.1rem; line-height: 1.1;
+  }
+  .nav-brand-name {
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: 1.05rem; letter-spacing: 0.01em; color: #fce8f0;
+  }
+  .nav-brand-sub {
+    font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--rose-light); opacity: 0.85;
+  }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+    text-decoration: none; color: rgba(252,232,240,0.7) !important;
+  }
+  .nav-links a:hover { color: #fce8f0 !important; }
+  .nav-cta {
+    display: inline-flex; align-items: center;
+    padding: 0.7rem 1.15rem; border-radius: 3px;
+    background: var(--rose); color: #fdf8f5 !important;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; text-decoration: none;
+    box-shadow: 0 4px 20px rgba(194,104,142,0.35);
+  }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* ── Hero: one composition, brand first ── */
+  .hero {
+    position: relative; min-height: 100svh;
+    display: grid; align-items: end;
+    background-image:linear-gradient(180deg,rgba(19,10,16,.25) 0%,rgba(19,10,16,.55) 40%,rgba(19,10,16,.92) 100%),url('hero.jpg');background-size:cover;background-position:center;
+    color: #fce8f0;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 50% 40% at 85% 15%, rgba(194,104,142,0.28), transparent 60%),
+      radial-gradient(ellipse 40% 35% at 10% 70%, rgba(201,149,106,0.08), transparent 55%);
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    padding: 7.5rem 0 5rem;
+    max-width: 40rem;
+  }
+  .hero-eyebrow {
+    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose-light); opacity: 0.9; margin: 0 0 1.35rem;
+    animation: fadeUp 0.7s var(--spring) 0.25s both;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(3.2rem, 11vw, 6.5rem);
+    line-height: 0.88; letter-spacing: -0.035em;
+    margin: 0;
+    animation: fadeUp 0.75s var(--spring) 0.4s both;
+  }
+  .hero h1 em { font-style: italic; color: var(--rose-light); }
+  .hero-rule {
+    display: flex; align-items: center; gap: 0.9rem; margin: 1.4rem 0 0;
+    animation: fadeUp 0.7s var(--spring) 0.55s both;
+  }
+  .hero-rule span {
+    width: 2.25rem; height: 1px; background: rgba(194,104,142,0.55); flex-shrink: 0;
+  }
+  .hero-sub {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: clamp(1.15rem, 2.2vw, 1.35rem); line-height: 1.45;
+    color: rgba(252,232,240,0.62); margin: 0; max-width: 34ch;
+  }
+  .hero-ctas {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2.25rem 0 1.25rem;
+    animation: fadeUp 0.7s var(--spring) 0.75s both;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+    padding: 0.85rem 1.5rem; border-radius: 3px; border: none;
+    font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    transition: transform 0.25s var(--spring), box-shadow 0.25s var(--ease), background 0.2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-rose {
+    background: var(--rose); color: #fdf8f5 !important;
+    box-shadow: 0 6px 28px rgba(194,104,142,0.45);
+  }
+  .btn-rose:visited { color: #fdf8f5 !important; }
+  .btn-ghost {
+    background: rgba(252,232,240,0.04); color: rgba(252,232,240,0.8) !important;
+    border: 1.5px solid rgba(252,232,240,0.18);
+  }
+  .btn-ghost:hover { border-color: var(--rose); color: #fce8f0 !important; }
+  .hero-meta {
+    display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+    font-size: 0.8rem; color: rgba(252,232,240,0.7);
+    animation: fadeUp 0.7s var(--spring) 0.9s both;
+  }
+  .meta-stars { color: var(--gold); letter-spacing: 0.14em; }
+  .meta-sep { opacity: 0.35; }
+  .hero-scroll {
+    position: absolute; bottom: 1.75rem; left: 50%; transform: translateX(-50%);
+    z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.45rem;
+    animation: fadeUp 0.7s var(--spring) 1.1s both;
+  }
+  .hero-scroll-txt {
+    font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(252,232,240,0.3);
+  }
+  .hero-scroll-line {
+    width: 1px; height: 2.4rem;
+    background: linear-gradient(to bottom, rgba(194,104,142,0.55), transparent);
+    transform-origin: top; animation: scrollDot 2.4s ease-in-out infinite;
+  }
+
+  /* ── Soft land into blush body ── */
+  .bridge {
+    height: 4.5rem;
+    background: linear-gradient(to bottom, #130a10 0%, #1e0d19 35%, var(--base) 100%);
+  }
+
+  .section { padding: clamp(4.5rem, 11vw, 7.5rem) 0; }
+  .kicker {
+    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--rose); margin: 0 0 0.85rem;
+  }
+  .section h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.08;
+    letter-spacing: -0.02em; margin: 0 0 0.85rem; color: var(--ink);
+  }
+  .section h2 em { font-style: italic; color: var(--rose); }
+  .lede {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    color: var(--muted); max-width: 38ch; margin: 0 0 2.75rem;
+    font-size: 1.2rem; line-height: 1.5;
+  }
+
+  /* Treatments — editorial rows, not cards */
+  .svc-list { border-top: 1px solid var(--border); }
+  .svc {
+    display: grid; grid-template-columns: 4.5rem 1fr; gap: 1rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .svc-num {
+    font-family: var(--display); font-style: italic;
+    font-size: 1.35rem; color: var(--rose); line-height: 1.2;
+  }
+  .svc h3 {
+    font-family: var(--display); font-size: 1.55rem; font-weight: 600;
+    margin: 0 0 0.4rem; color: var(--ink);
+  }
+  .svc p { margin: 0; color: var(--muted); font-size: 0.98rem; max-width: 46ch; line-height: 1.6; }
+
+  /* Proof band */
+  .proof {
+    background: var(--blush);
+    border-block: 1px solid var(--border);
+  }
+  .proof-inner {
+    max-width: 38rem; margin-inline: auto; text-align: center;
+    padding: clamp(3.75rem, 9vw, 5.75rem) 1.25rem;
+  }
+  .proof blockquote {
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: clamp(1.55rem, 3.6vw, 2.2rem); line-height: 1.28;
+    margin: 0 0 1.1rem; color: var(--ink);
+  }
+  .proof cite {
+    font-style: normal; font-size: 0.72rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+  }
+
+  .split {
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3.25rem; align-items: start;
+  }
+  @media (max-width: 800px) { .split { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .about p {
+    color: var(--muted); font-size: 1.05rem; max-width: 38ch; line-height: 1.7;
+  }
+  .faq {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+  }
+  .faq summary {
+    cursor: pointer; font-weight: 500; list-style: none;
+    display: flex; justify-content: space-between; gap: 1rem;
+    font-size: 0.98rem;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--rose); font-weight: 400; }
+  .faq[open] summary::after { content: "–"; }
+  .faq p { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+
+  .book {
+    background: var(--plum); color: #fce8f0;
+  }
+  .visit-list {
+    display: grid; gap: 0; border-top: 1px solid var(--border); margin-top: 1.5rem;
+  }
+  .visit-row {
+    display: grid; grid-template-columns: 7rem 1fr; gap: 1rem;
+    padding: 1rem 0; border-bottom: 1px solid var(--border);
+    font-size: 0.98rem;
+  }
+  .visit-k {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--rose); align-self: center;
+  }
+  .visit-row a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .visit-row a:hover { color: var(--rose); }
+  .book-inner {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 1.75rem; padding: clamp(3rem, 7vw, 4.5rem) 0;
+  }
+  .book h2 {
+    font-family: var(--display); font-size: clamp(1.9rem, 4vw, 2.75rem);
+    margin: 0 0 0.4rem; line-height: 1.08; color: #fce8f0;
+  }
+  .book p { margin: 0; color: rgba(252,232,240,0.55); font-family: var(--serif); font-style: italic; }
+  .book .btn-ghost { color: rgba(252,232,240,0.8); }
+
+  footer {
+    padding: 2.25rem 0 3rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem; color: var(--muted);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem;
+  }
+  footer strong {
+    font-family: var(--display); font-style: italic; color: var(--ink); font-weight: 500;
+  }
+
+  /* Mobile sticky book CTA */
+  .sticky-book {
+    position: fixed; inset: auto 0 0 0; z-index: 60;
+    display: none; justify-content: center; align-items: center;
+    padding: 0.85rem 1rem;
+    background: var(--rose); color: #fdf8f5;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    box-shadow: 0 -8px 28px rgba(194,104,142,0.35);
+  }
+  .sticky-book a { color: #fdf8f5 !important; width: 100%; text-align: center; }
+  @media (max-width: 720px) {
+    .sticky-book { display: flex; }
+    body { padding-bottom: 4.25rem; }
+  }
 </style>
 </head>
-<body class="antialiased">
-  <!-- HERO -->
-  <header class="relative">
-    <div class="mesh"></div>
-    <div class="relative z-10 mx-auto max-w-5xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-      <p data-hero class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Beauty in Exeter</p>
-      <h1 data-hero class="font-display mt-5 text-5xl leading-[1.02] text-ink md:text-7xl">Jodi Locks Hair & Beauty</h1>
-      <p data-hero class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/60 md:text-xl">Trusted beauty specialists in Exeter. Fast response, clear quotes, work you can rely on.</p>
-      
-      <div data-hero class="mt-9 flex flex-wrap justify-center gap-4"></div>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="#top">
+          <span class="nav-mark" aria-hidden="true">JL</span>
+          <span class="nav-brand-text">
+            <span class="nav-brand-name">Jodi Locks Hair &amp; Beauty</span>
+            <span class="nav-brand-sub">Beauty · Exeter</span>
+          </span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#about">Studio</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a href="#book">Book</a></li>
+        </ul>
+        <a class="nav-cta" href="#book">Book a visit</a>
+      </nav>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Beauty in Exeter</p>
+        <h1>Jodi Locks Hair &amp; <em>Beauty</em></h1>
+        <div class="hero-rule">
+          <span aria-hidden="true"></span>
+          <p class="hero-sub">Facials, waxing and finishing touches in Exeter — calm studio, clear booking</p>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn btn-rose" href="#book">Book a visit</a>
+          
+        </div>
+        <p class="hero-meta">
+          <span class="meta-stars">★★★★★</span> 4.9 on Google
+          <span class="meta-sep">·</span>
+          <span>Exeter</span>
+        </p>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-txt">Scroll</span>
+      <span class="hero-scroll-line"></span>
     </div>
   </header>
+  <div class="bridge" aria-hidden="true"></div>
 
-  <!-- TRUST STRIP -->
-  <section class="relative z-10 mx-auto -mt-6 max-w-5xl px-6">
-    <div class="grid grid-cols-2 gap-6 rounded-3xl border border-black/5 bg-white/80 px-8 py-9 shadow-card backdrop-blur md:grid-cols-4">
-        <div data-reveal class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-ink">Exeter</div>
-          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">service area</div>
+  <main>
+    <section class="section" id="services">
+      <div class="wrap">
+        <p class="kicker">Treatments</p>
+        <h2>What we do in <em>Exeter</em></h2>
+        <p class="lede">Straightforward beauty work — booked cleanly, finished properly.</p>
+        <div class="svc-list">
+          
+        <article class="svc reveal">
+          <span class="svc-num" aria-hidden="true">01</span>
+          <div class="svc-copy">
+            <h3>Facials</h3>
+            <p>Skin treatments tailored in-studio for clients around Exeter</p>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-num" aria-hidden="true">02</span>
+          <div class="svc-copy">
+            <h3>Waxing</h3>
+            <p>Quick, careful waxing with a clear aftercare chat</p>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-num" aria-hidden="true">03</span>
+          <div class="svc-copy">
+            <h3>Lashes &amp; brows</h3>
+            <p>Lash and brow finishing — tidy work, natural or full</p>
+          </div>
+        </article>
         </div>
-        <div data-reveal class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-ink">Fast</div>
-          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">free quotes</div>
+      </div>
+    </section>
+
+    <section class="proof" aria-label="Client words">
+      <div class="proof-inner reveal">
+        <blockquote>“4.9★ from 31 Google reviews”</blockquote>
+        <cite>Google reviews</cite>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div class="about reveal">
+          <p class="kicker">The studio</p>
+          <h2>Jodi Locks Hair &amp; Beauty</h2>
+          <p>Jodi Locks Hair &amp; Beauty looks after clients across Exeter with straightforward beauty care</p>
         </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="relative z-10 mx-auto max-w-6xl px-6 py-24">
-    <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">What we do</p>
-    <h2 data-reveal class="font-display mt-3 max-w-2xl text-4xl text-ink md:text-5xl">Everything you need, done properly.</h2>
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
-          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3 class="font-display text-xl text-ink">Cut & colour</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional beauty in Exeter — clear quotes, tidy work, and proper communication start to finish.</p>
-        </article>
-        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
-          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3 class="font-display text-xl text-ink">Nails & lashes</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional beauty in Exeter — clear quotes, tidy work, and proper communication start to finish.</p>
-        </article>
-        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
-          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3 class="font-display text-xl text-ink">Bridal & occasion</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional beauty in Exeter — clear quotes, tidy work, and proper communication start to finish.</p>
-        </article>
-    </div>
-  </section>
-
-  <!-- PROOF BAND -->
-  <section class="relative z-10 overflow-hidden">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="relative overflow-hidden rounded-[2rem] px-8 py-16 text-center md:py-20" style="background:linear-gradient(135deg,var(--primary),var(--accent))">
-        <p data-reveal class="font-display mx-auto max-w-3xl text-2xl leading-snug text-white md:text-4xl">"Looked twice as professional overnight — the calls started the same week."</p>
-        <p data-reveal class="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">what a tidy website does for a local business</p>
+        <div>
+          <p class="kicker">Questions</p>
+          
+        <details class="faq reveal">
+          <summary>Do you take clients from Exeter?</summary>
+          <p>Yes — Jodi Locks Hair &amp; Beauty welcomes clients across Exeter and nearby</p>
+        </details>
+        <details class="faq reveal">
+          <summary>Do I need to book?</summary>
+          <p>Appointments are best — message or call and we&#x27;ll find a slot</p>
+        </details>
+        <details class="faq reveal">
+          <summary>What should I bring?</summary>
+          <p>Just yourself — and any reference photos if you have a look in mind</p>
+        </details>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="relative z-10 mx-auto max-w-6xl px-6 py-24">
-    <div class="grid items-center gap-10 md:grid-cols-2">
-      <div>
-        <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Get in touch</p>
-        <h2 data-reveal class="font-display mt-3 text-4xl text-ink md:text-5xl">Ready when you are.</h2>
-        <p data-reveal class="mt-4 max-w-md text-lg leading-relaxed text-ink/60">Tell us what you need and we'll come back fast with availability and a clear, no-obligation quote.</p>
+    <section class="section" id="visit">
+      <div class="wrap">
+        <p class="kicker">Visit</p>
+        <h2>How to <em>reach us</em></h2>
+        <p class="lede">Real contact details for Jodi Locks Hair &amp; Beauty — no placeholder numbers.</p>
+        <div class="visit-list reveal">
+          <div class="visit-row"><span class="visit-k">Email</span><a href="mailto:info@jodilocks.co.uk">info@jodilocks.co.uk</a></div>
+          <div class="visit-row"><span class="visit-k">Area</span><span>Exeter</span></div>
+          <div class="visit-row"><span class="visit-k">Maps</span><a href="https://www.google.com/maps/place/Jodi+Locks+Hair+%26+Beauty/data=!4m7!3m6!1s0x486da43974c25e97:0xd5f8c724ce9981f9!8m2!3d50.7258534!4d-3.5331813!16s%2Fg%2F11gmyw7nlg!19sChIJl17CdDmkbUgR-YGZziTH-NU?authuser=0&amp;hl=en&amp;rclk=1" rel="noopener" target="_blank">Open in Google Maps</a></div>
+        </div>
       </div>
-      <div data-reveal class="rounded-3xl border border-black/5 bg-white/80 p-8 shadow-card backdrop-blur">
-        <div class="space-y-5"><p class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Email</span><a href="mailto:info@jodilocks.co.uk" class="underline underline-offset-4">info@jodilocks.co.uk</a></p><p class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Area</span><span>Exeter &amp; surrounding areas</span></p></div>
-        
+    </section>
+
+    <section class="book" id="book">
+      <div class="wrap book-inner">
+        <div>
+          <h2>Ready when you are</h2>
+          <p>Jodi Locks Hair &amp; Beauty · Exeter</p>
+        </div>
+        <div class="hero-ctas" style="margin:0">
+          <a class="btn btn-rose" href="#book">Book a visit</a>
+          <a class="btn btn-ghost" href="#services">See treatments</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="relative z-10 border-t border-black/5 py-10 text-center text-sm text-ink/40">
-    © 2026 Jodi Locks Hair & Beauty. All rights reserved.
-  </footer>
-
-
-<script>
-  // reveal on scroll
-  const _rev = document.querySelectorAll('[data-reveal]');
-  if (window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.batch('[data-reveal]', { start:'top 88%', onEnter: b => gsap.to(b, {opacity:1, y:0, duration:.8, stagger:.12, ease:'power3.out'}) });
-    // hero entrance
-    gsap.from('[data-hero]', {opacity:0, y:30, duration:1, stagger:.12, ease:'power3.out', delay:.1});
-    // count-up
-    document.querySelectorAll('[data-count]').forEach(el => {
-      const target = parseFloat(el.dataset.count); const dec = (el.dataset.count.indexOf('.')>-1)?1:0;
-      const o = {v:0};
-      ScrollTrigger.create({ trigger:el, start:'top 90%', once:true, onEnter:()=>gsap.to(o,{v:target, duration:1.4, ease:'power2.out', onUpdate:()=>el.textContent=o.v.toFixed(dec)}) });
-    });
-    // magnetic buttons
-    document.querySelectorAll('[data-magnetic]').forEach(el => {
-      el.addEventListener('mousemove', e => { const r=el.getBoundingClientRect(); gsap.to(el,{x:(e.clientX-r.left-r.width/2)*.25, y:(e.clientY-r.top-r.height/2)*.4, duration:.4}); });
-      el.addEventListener('mouseleave', ()=>gsap.to(el,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));
-    });
-  } else { _rev.forEach(e=>e.classList.add('reveal-on')); }
-</script>
+  <div class="wrap">
+    <footer>
+      <div><strong>Jodi Locks Hair &amp; Beauty</strong> · Exeter</div>
+      <div>AireyAI preview · beauty composer</div>
+    </footer>
+  </div>
+  <div class="sticky-book" role="region" aria-label="Book">
+    <a href="#book">Book a visit</a>
+  </div>
+  <script>
+    (function () {
+      var els = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach(function (el) { el.classList.add("vis"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("vis"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
