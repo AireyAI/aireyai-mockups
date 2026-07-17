@@ -1,0 +1,11 @@
+/* design-systems/fonts.css — every Google-Fonts family the six token sets reference.
+   Linked by patterns/ and showroom/ so any tokens.css can be hot-swapped under them.
+   Templates do NOT use this file — they import only their own system's families.
+   One @import per family: if Google retires a name, only that family degrades. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
