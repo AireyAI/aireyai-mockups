@@ -1,0 +1,13 @@
+{
+  "composer": "plaster_aaa",
+  "version": 2,
+  "kind": "plaster",
+  "ref": "ej_roofing",
+  "photo_source": "prospect_existing",
+  "exemplar_note": "Uber (structure only)",
+  "patterns": [
+    "hero-statement",
+    "faq-accordion",
+    "cta-banner"
+  ]
+}

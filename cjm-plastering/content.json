@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Carlisle plastering experts",
+  "hero_title": "Cjm Plastering",
+  "hero_sub": "Reliable plastering for homes and businesses in Carlisle. Call now",
+  "services": [
+    {
+      "title": "Internal Plastering",
+      "body": "Smooth walls and ceilings with high-quality skim or multi-finish plaster"
+    },
+    {
+      "title": "External Rendering",
+      "body": "Durable sand and cement render for brick or blockwork facades"
+    },
+    {
+      "title": "Dry Lining",
+      "body": "Dot and dab plasterboard for faster, cleaner internal walls"
+    }
+  ],
+  "proof_quote": "5.0★ from 1 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Cjm Plastering handles plastering jobs in Carlisle with no-nonsense efficiency. Contact via phone or email for straightforward quotes",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "What area does Cjm Plastering cover?",
+      "a": "Cjm Plastering operates in Carlisle and the surrounding local area"
+    },
+    {
+      "q": "How do I book an appointment?",
+      "a": "You can book by calling 07794 207677 or emailing cjmplastering1@outlook.com"
+    },
+    {
+      "q": "What should I expect during the plastering process?",
+      "a": "The team will prepare the surfaces, apply plaster, and finish to a smooth standard. You’ll need to clear the area beforehand and allow drying time after"
+    }
+  ],
+  "_aaa_llm_hits": 4
+}
