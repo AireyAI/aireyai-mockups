@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Beauty in Durham",
+  "hero_title": "Luxe Studio Beauty Salon & Training Academy",
+  "hero_sub": "Facials, waxing and finishing touches in Durham — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Skin treatments tailored in-studio for clients around Durham"
+    },
+    {
+      "title": "Waxing",
+      "body": "Quick, careful waxing with a clear aftercare chat"
+    },
+    {
+      "title": "Lashes & brows",
+      "body": "Lash and brow finishing — tidy work, natural or full"
+    }
+  ],
+  "proof_quote": "5★ from 35 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Luxe Studio Beauty Salon & Training Academy looks after clients across Durham with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Do you take clients from Durham?",
+      "a": "Yes — Luxe Studio Beauty Salon & Training Academy welcomes clients across Durham and nearby"
+    },
+    {
+      "q": "Do I need to book?",
+      "a": "Appointments are best — message or call and we'll find a slot"
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Just yourself — and any reference photos if you have a look in mind"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}
