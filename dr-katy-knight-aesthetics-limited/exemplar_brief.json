@@ -1,0 +1,30 @@
+{
+  "name": "Apple",
+  "line": 359,
+  "atmosphere": "Apple's website is a masterclass in controlled drama \u2014 vast expanses of pure black and near-white serve as cinematic backdrops for products that are photographed as if they were sculptures in a gallery. The design philosophy is reductive to its core: every pixel exists in service of the product, and the interface itself retreats until it becomes invisible. This is not minimalism as aesthetic preference; it is minimalism as reverence for the object. The typography anchors everything. San Francisco (SF Pro Display for large sizes, SF Pro Text for body) is Apple's proprietary typeface, engineered with optical sizing that automatically adjusts letterforms depending on point size. At display sizes (56px), weight 600 with a tight line-height of 1.07 and subtle negative letter-spacing (-0.28px) creates headlines that feel machined rather than typeset \u2014 precise, confident, and unapologetically d",
+  "hexes": [
+    "#000000",
+    "#F5F5F7",
+    "#1D1D1F",
+    "#0071E3",
+    "#0066CC",
+    "#2997FF",
+    "#FFFFFF",
+    "#272729",
+    "#262628",
+    "#28282A",
+    "#2A2A2D",
+    "#242426"
+  ],
+  "dos": [],
+  "donts": [
+    "introduce additional accent colors \u2014 the entire chromatic budget is spent on blue",
+    "use heavy shadows or multiple shadow layers \u2014 Apple's shadow system is one soft diffused shadow or nothing",
+    "use borders on cards or containers \u2014 Apple almost never uses visible borders (except on specific buttons)",
+    "apply wide letter-spacing to SF Pro \u2014 it is designed to run tight at every size",
+    "use weight 800 or 900 \u2014 the maximum is 700 (bold), and even that is rare",
+    "add textures, patterns, or gradients to backgrounds \u2014 solid colors only"
+  ],
+  "agent_cues": "",
+  "family": "premium-dark"
+}
