@@ -1,0 +1,13 @@
+/* beauty-composer tokens — dolled quality bar (not premium-dark / Superhuman) */
+:root {
+  --color-primary:       #c2688e;
+  --color-primary-dark:  #9a4f6f;
+  --color-primary-light: #f0c5d8;
+  --color-accent:        #c9956a;
+  --color-bg:            #fdf8f5;
+  --color-surface:       #fff8f6;
+  --color-text:          #2d1423;
+  --color-muted:         #8a6272;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body:    "DM Sans", sans-serif;
+}
