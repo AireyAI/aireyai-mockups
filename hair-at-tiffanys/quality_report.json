@@ -1,0 +1,12 @@
+{
+  "slug": "hair-at-tiffanys",
+  "score": 92,
+  "passed": true,
+  "issues": [
+    {
+      "severity": "warn",
+      "code": "no_intel_services",
+      "detail": "No site_intel treatments \u2014 using fallbacks"
+    }
+  ]
+}
