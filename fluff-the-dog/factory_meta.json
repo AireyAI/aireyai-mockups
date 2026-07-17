@@ -1,0 +1,41 @@
+{
+  "ts": "2026-07-16T20:22:37Z",
+  "slug": "fluff-the-dog",
+  "name": "Fluff The Dog",
+  "town": "Huddersfield",
+  "niche": "dog_grooming",
+  "family": "brutalist-trade",
+  "template": "trade-brutalist.html",
+  "exemplar": "Uber (structure only)",
+  "design_md_line": 16138,
+  "design_md": "/Users/kyleairey/design.md",
+  "with_llm": false,
+  "aaa": false,
+  "composer": "template_inject",
+  "photo_source": "none",
+  "facts": {
+    "phone": false,
+    "email": true,
+    "rating": null,
+    "review_count": null,
+    "owner": "",
+    "services_from_intel": 0,
+    "has_online_booking": false,
+    "maps_url": false
+  },
+  "exemplar_hexes": [
+    "#000000",
+    "#FFFFFF",
+    "#E2E2E2",
+    "#F3F3F3",
+    "#EFEFEF",
+    "#4B4B4B"
+  ],
+  "hero_image": null,
+  "prospect_index": 18,
+  "out": "/Users/kyleairey/jarvis/agents/data/preview_sites/fluff-the-dog",
+  "public_url_guess": "https://aireyai.github.io/aireyai-mockups/fluff-the-dog/",
+  "quality_score": 100,
+  "quality_passed": true,
+  "quality_issues": []
+}

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+
+<!--
+  TEMPLATE:  trade-brutalist — local trade business conversion single-pager
+  SYSTEM:    brutalist-trade  (../brutalist-trade/tokens.css)
+  BENCHMARK: No direct design.md exemplar — trades aren't in the bible (see INDEX.md).
+             Structure benchmarked against Uber (design.md line 16138): confident-flat
+             black/white blocks, bold-only headlines at tight leading, zero gradients,
+             hard edges everywhere, one relentless accent doing all the "colour" work.
+             Translated for the trade: hi-vis yellow instead of Uber's restraint,
+             2px structural borders instead of whisper shadows, offset hard shadows
+             (the system's --shadow-* tokens) instead of soft elevation.
+  FORK:      1) copy this file + ../brutalist-trade/tokens.css into the project root
+                and re-point the <link> href to the local tokens.css
+             2) brand-tint --color-accent in tokens.css (hi-vis yellow #FFD400 for
+                electricians/scaffolders, safety orange #FF6B00 for builders/removals)
+                — nothing else moves
+             3) replace the Fluff The Dog copy, phone number (Call Fluff The Dog is the
+                Ofcom fictional-drama range), prices, towns, and reviews with real
+                content per client_intake.md
+             4) lock the direction (lock-design.sh) before building further, run
+                the completeness gate before ship
+  SIGNATURE: the flat hover-inversion language — every interactive surface (service
+             cells, buttons, nav links, coverage chips, footer links) swaps bg↔text
+             INSTANTLY on hover, no fade. Presses translate into their own hard
+             shadow. The whole page speaks one blunt dialect.
+-->
+<html lang="en">
+<head>
+<!-- aireyai-site-factory: family=brutalist-trade exemplar=Uber (structure only) built=2026-07-16T20:22:37Z name=Fluff The Dog -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Fluff The Dog | Dog Grooming in Huddersfield</title>
+<meta content="Fluff the Dog is a professional dog grooming salon in Huddersfield run by Michelle, offering full grooming services with one-to-one attentio" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="tokens.css" rel="stylesheet"/><link href="fonts.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js');</script>
+<style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font: 400 var(--fs-body)/var(--leading-body) var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    img, svg { display: block; }
+    ::selection { background: var(--color-accent); color: var(--color-primary); }
+
+    .tb-wrap { max-width: 1200px; margin-inline: auto; padding-inline: var(--space-5); }
+
+    :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    /* skip link */
+    .tb-skip {
+      position: absolute; left: var(--space-3); top: var(--space-3);
+      z-index: 200; padding: var(--space-2) var(--space-4);
+      background: var(--color-primary); color: var(--color-bg);
+      border: var(--border-thick, 2px solid var(--color-text));
+      font-weight: 700; text-decoration: none;
+      transform: translateY(-300%);
+    }
+    .tb-skip:focus-visible { transform: none; }
+
+    /* ── THE INVERSION LANGUAGE ────────────────────────────────────────────
+       One dialect, page-wide: hover swaps bg↔text with NO transition (flat,
+       instant, honest). Presses translate the element into its own hard
+       shadow. transform is the only property that ever animates. Every
+       interactive rule below (.tb-cell, .tb-btn, .tb-call, .tb-town,
+       .tb-links a, .tb-footer-links a) speaks it.                          */
+
+    /* ── emergency strip ─────────────────────────────────────────────────── */
+    .tb-strip {
+      background: var(--color-primary); color: var(--color-bg);
+      font-size: var(--fs-small); font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      text-align: center; padding: var(--space-2) var(--space-4);
+    }
+    .tb-strip a { color: var(--color-accent); text-decoration: none; }
+    .tb-strip a:hover { background: var(--color-accent); color: var(--color-primary); }
+
+    /* ── nav ─────────────────────────────────────────────────────────────── */
+    .tb-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--color-bg);
+      border-bottom: var(--border-thick, 2px solid var(--color-text));
+    }
+    .tb-nav-row {
+      display: flex; align-items: center; gap: var(--space-5);
+      min-height: 72px;
+    }
+    .tb-logo {
+      display: flex; align-items: center; gap: var(--space-2);
+      font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-h4); letter-spacing: var(--tracking-display);
+      color: var(--color-text); text-decoration: none;
+      text-transform: uppercase; padding: var(--space-2) 0;
+    }
+    .tb-logo:hover .tb-logo-bolt { transform: rotate(12deg) scale(1.1); }
+    .tb-logo-bolt {
+      width: 26px; height: 26px; background: var(--color-accent);
+      border: var(--border-thick, 2px solid var(--color-text));
+      display: grid; place-items: center; flex: none;
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tb-links {
+      display: flex; gap: var(--space-2); margin-left: auto;
+      list-style: none; padding: 0; margin-block: 0;
+    }
+    .tb-links a {
+      display: block; padding: var(--space-2) var(--space-3);
+      color: var(--color-text); text-decoration: none;
+      font-weight: 700; font-size: var(--fs-small);
+      text-transform: uppercase; letter-spacing: 0.04em;
+      min-height: 44px; line-height: 28px;
+    }
+    .tb-links a:hover { background: var(--color-primary); color: var(--color-bg); }
+    .tb-links a:active { transform: translate(2px, 2px); }
+
+    .tb-call {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      background: var(--color-accent); color: var(--color-primary);
+      border: var(--border-thick, 2px solid var(--color-text));
+      box-shadow: var(--shadow-sm);
+      font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-body); text-decoration: none;
+      text-transform: uppercase; letter-spacing: 0.02em;
+      padding: var(--space-2) var(--space-4); min-height: 44px;
+      transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tb-call:hover { background: var(--color-primary); color: var(--color-accent); }
+    .tb-call:active { transform: translate(3px, 3px); box-shadow: none; }
+    .tb-nav .tb-call { margin-left: var(--space-3); }
+
+    .tb-burger {
+      display: none; margin-left: auto;
+      width: 48px; height: 48px; padding: 12px;
+      background: var(--color-surface); border: var(--border-thick, 2px solid var(--color-text));
+      cursor: pointer;
+    }
+    .tb-burger:hover { background: var(--color-primary); }
+    .tb-burger:hover span { background: var(--color-bg); }
+    .tb-burger:active { transform: translate(2px, 2px); }
+    .tb-burger span {
+      display: block; height: 3px; background: var(--color-text);
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tb-burger span + span { margin-top: 5px; }
+    .tb-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .tb-burger[aria-expanded="true"] span:nth-child(2) { transform: scaleX(0); }
+    .tb-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    @media (max-width: 820px) {
+      .tb-burger { display: block; }
+      .tb-nav .tb-call { display: none; }
+      .tb-links {
+        display: none; position: absolute; left: 0; right: 0; top: 100%;
+        flex-direction: column; gap: 0; margin: 0;
+        background: var(--color-bg);
+        border-bottom: var(--border-thick, 2px solid var(--color-text));
+      }
+      .tb-links.tb-open { display: flex; }
+      .tb-links a {
+        padding: var(--space-4) var(--space-5);
+        border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);
+        font-size: var(--fs-body);
+      }
+    }
+
+    /* ── hero ────────────────────────────────────────────────────────────── */
+    .tb-hero { padding-block: var(--space-8) var(--space-9); position: relative; }
+    .tb-hero-grid {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: var(--space-7); align-items: center;
+    }
+    .tb-kicker {
+      display: inline-block; background: var(--color-accent); color: var(--color-primary);
+      border: var(--border-thick, 2px solid var(--color-text));
+      font-weight: 700; font-size: var(--fs-small);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: var(--space-1) var(--space-3); margin-bottom: var(--space-5);
+    }
+    .tb-h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(2.75rem, 8.5vw, 6.75rem);
+      line-height: 0.98; letter-spacing: var(--tracking-display);
+      text-transform: uppercase; margin: 0 0 var(--space-5);
+    }
+    .tb-h1 em {
+      font-style: normal; background: var(--color-primary); color: var(--color-accent);
+      padding: 0 var(--space-2); box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    }
+    .tb-lede {
+      font-size: var(--fs-h5); max-width: 34ch; color: var(--color-muted);
+      margin: 0 0 var(--space-6); line-height: var(--leading-body);
+    }
+    .tb-lede strong { color: var(--color-text); }
+    .tb-hero-ctas { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-7); }
+    .tb-btn {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-h5); text-transform: uppercase; letter-spacing: 0.02em;
+      text-decoration: none; cursor: pointer;
+      padding: var(--space-3) var(--space-5); min-height: 52px;
+      border: var(--border-thick, 2px solid var(--color-text));
+      box-shadow: var(--shadow-md);
+      transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tb-btn:active { transform: translate(4px, 4px); box-shadow: none; }
+    .tb-btn-solid { background: var(--color-accent); color: var(--color-primary); }
+    .tb-btn-solid:hover { background: var(--color-primary); color: var(--color-accent); }
+    .tb-btn-ghost { background: var(--color-surface); color: var(--color-text); }
+    .tb-btn-ghost:hover { background: var(--color-primary); color: var(--color-bg); }
+
+    .tb-chips { display: flex; flex-wrap: wrap; gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
+    .tb-chips li {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      background: var(--color-surface);
+      border: var(--border-thick, 2px solid var(--color-text));
+      font-weight: 700; font-size: var(--fs-small); text-transform: uppercase;
+      letter-spacing: 0.04em; padding: var(--space-2) var(--space-3);
+    }
+    .tb-chips li::before {
+      content: ""; width: 10px; height: 10px; flex: none;
+      background: var(--color-accent);
+      border: 2px solid var(--color-text);
+    }
+
+    /* rate ticket — the asymmetric depth moment: two rotated hard-shadow cards */
+    .tb-ticket-stack { position: relative; max-width: 400px; margin-inline: auto; }
+    .tb-ticket-under {
+      position: absolute; inset: 0;
+      background: var(--color-accent);
+      border: var(--border-thick, 2px solid var(--color-text));
+      transform: rotate(2.5deg) translate(10px, 8px);
+    }
+    .tb-ticket {
+      position: relative;
+      background: var(--color-surface);
+      border: var(--border-thick, 2px solid var(--color-text));
+      box-shadow: var(--shadow-lg);
+      transform: rotate(-1.5deg);
+      padding: var(--space-6) var(--space-5) var(--space-5);
+    }
+    .tb-ticket-tape {
+      position: absolute; top: -14px; left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
+      background: var(--color-accent); border: 2px solid var(--color-text);
+      font-weight: 700; font-size: var(--fs-small); text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 2px var(--space-4);
+    }
+    .tb-ticket h2 {
+      font-family: var(--font-display); font-size: var(--fs-h4);
+      text-transform: uppercase; letter-spacing: var(--tracking-display);
+      margin: 0 0 var(--space-4);
+      border-bottom: var(--border-thick, 2px solid var(--color-text));
+      padding-bottom: var(--space-3);
+    }
+    .tb-ticket dl { margin: 0; }
+    .tb-ticket-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: var(--space-3); padding-block: var(--space-3);
+      border-bottom: 1px dashed color-mix(in srgb, var(--color-text) 35%, transparent);
+    }
+    .tb-ticket-row:last-of-type { border-bottom: 0; }
+    .tb-ticket dt { font-weight: 600; font-size: var(--fs-small); }
+    .tb-ticket dt small { display: block; color: var(--color-muted); font-weight: 400; }
+    .tb-ticket dd {
+      margin: 0; font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-h4); white-space: nowrap;
+    }
+    .tb-ticket-foot {
+      margin-top: var(--space-4); background: var(--color-primary); color: var(--color-bg);
+      font-size: var(--fs-small); font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; text-align: center; padding: var(--space-2) var(--space-3);
+    }
+
+    @media (max-width: 900px) {
+      .tb-hero-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+      .tb-ticket-stack { margin-inline: 0; }
+    }
+
+    /* ── section scaffolding ─────────────────────────────────────────────── */
+    .tb-section { padding-block: var(--space-9); }
+    .tb-section-dark { background: var(--color-primary); color: var(--color-bg); }
+    .tb-head { display: flex; align-items: baseline; gap: var(--space-5); flex-wrap: wrap; margin-bottom: var(--space-7); }
+    .tb-head-num {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1;
+      color: transparent; -webkit-text-stroke: 2px var(--color-text);
+    }
+    .tb-section-dark .tb-head-num { -webkit-text-stroke: 2px var(--color-accent); }
+    .tb-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-h2); line-height: var(--leading-display);
+      letter-spacing: var(--tracking-display); text-transform: uppercase;
+      margin: 0;
+    }
+    .tb-head p { flex-basis: 100%; margin: var(--space-2) 0 0; color: var(--color-muted); max-width: 52ch; }
+    .tb-section-dark .tb-head p { color: color-mix(in srgb, var(--color-bg) 70%, var(--color-primary)); }
+
+    /* ── services grid — inversion cells ─────────────────────────────────── */
+    .tb-services {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      background: var(--color-text);
+      border: var(--border-thick, 2px solid var(--color-text));
+    }
+    .tb-cell {
+      display: flex; flex-direction: column; gap: var(--space-3);
+      background: var(--color-surface); color: var(--color-text);
+      text-decoration: none; padding: var(--space-6) var(--space-5);
+      min-height: 240px;
+    }
+    .tb-cell:hover, .tb-cell:focus-visible { background: var(--color-primary); color: var(--color-bg); }
+    .tb-cell:active .tb-cell-arrow { transform: translate(6px, 0); }
+    .tb-cell-kicker {
+      font-size: var(--fs-small); font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--color-muted);
+    }
+    .tb-cell:hover .tb-cell-kicker, .tb-cell:focus-visible .tb-cell-kicker { color: var(--color-accent); }
+    .tb-cell h3 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: var(--fs-h3); line-height: var(--leading-display);
+      letter-spacing: var(--tracking-display); text-transform: uppercase; margin: 0;
+    }
+    .tb-cell p { margin: 0; font-size: var(--fs-small); line-height: var(--leading-body); color: var(--color-muted); }
+    .tb-cell:hover p, .tb-cell:focus-visible p { color: color-mix(in srgb, var(--color-bg) 75%, var(--color-primary)); }
+    .tb-cell-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+    .tb-price {
+      display: inline-block; background: var(--color-accent); color: var(--color-primary);
+      border: 2px solid var(--color-text);
+      font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h5);
+      padding: 2px var(--space-3);
+    }
+    .tb-cell:hover .tb-price, .tb-cell:focus-visible .tb-price { border-color: var(--color-accent); }
+    .tb-cell-arrow {
+      font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h4);
+      transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tb-cell:hover .tb-cell-arrow { transform: translate(4px, 0); }
+    @media (max-width: 900px) { .tb-services { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .tb-services { grid-template-columns: 1fr; } .tb-cell { min-height: 0; } }
+
+    /* ── how it works ────────────────────────────────────────────────────── */
+    .tb-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); list-style: none; padding: 0; margin: 0; counter-reset: step; }
+    .tb-step {
+      counter-increment: step; position: relative;
+      background: color-mix(in srgb, var(--color-bg) 8%, var(--color-primary));
+      border: 2px solid color-mix(in srgb, var(--color-bg) 30%, var(--color-primary));
+      padding: var(--space-6) var(--space-5) var(--space-5);
+    }
+    .tb-step:nth-child(2) { transform: translateY(var(--space-5)); }
+    .tb-step::before {
+      content: "0" counter(step);
+      display: block;
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(3.5rem, 6vw, 5rem); line-height: 1;
+      color: transparent; -webkit-text-stroke: 2px var(--color-accent);
+      margin-bottom: var(--space-4);
+    }
+    .tb-step h3 {
+      font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h4);
+      text-transform: uppercase; letter-spacing: var(--tracking-display);
+      margin: 0 0 var(--space-3);
+    }
+    .tb-step p { margin: 0; font-size: var(--fs-small); line-height: var(--leading-body); color: color-mix(in srgb, var(--color-bg) 70%, var(--color-primary)); }
+    .tb-step strong { color: var(--color-accent); }
+    @media (max-width: 820px) {
+      .tb-steps { grid-template-columns: 1fr; }
+      .tb-step:nth-child(2) { transform: none; }
+    }
+
+    /* ── review marquee ──────────────────────────────────────────────────── */
+    .tb-reviews {
+      border-block: var(--border-thick, 2px solid var(--color-text));
+      background: var(--color-accent); color: var(--color-primary);
+      overflow: hidden; padding-block: var(--space-4);
+    }
+    .tb-marquee { display: flex; width: max-content; animation: tb-scroll 42s linear infinite; }
+    .tb-reviews:hover .tb-marquee { animation-play-state: paused; }
+    .tb-marquee-track { display: flex; align-items: center; gap: var(--space-7); padding-right: var(--space-7); }
+    .tb-review { display: flex; align-items: center; gap: var(--space-3); white-space: nowrap; font-weight: 600; }
+    .tb-review .tb-stars { font-family: var(--font-display); letter-spacing: 0.1em; }
+    .tb-review cite { font-style: normal; font-weight: 700; text-transform: uppercase; font-size: var(--fs-small); letter-spacing: 0.04em; }
+    .tb-review::after { content: ""; width: 12px; height: 12px; background: var(--color-primary); flex: none; }
+    @keyframes tb-scroll { to { transform: translateX(-50%); } }
+
+    /* ── coverage ────────────────────────────────────────────────────────── */
+    .tb-coverage-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-7); align-items: start; }
+    .tb-towns { display: flex; flex-wrap: wrap; gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
+    .tb-town {
+      display: inline-block; background: var(--color-surface); color: var(--color-text);
+      border: var(--border-thick, 2px solid var(--color-text));
+      font-weight: 700; font-size: var(--fs-small); text-transform: uppercase;
+      letter-spacing: 0.04em; text-decoration: none;
+      padding: var(--space-2) var(--space-4); min-height: 44px; line-height: 28px;
+      transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tb-town:hover { background: var(--color-primary); color: var(--color-bg); }
+    .tb-town:active { transform: translate(2px, 2px); }
+    .tb-coverage-note {
+      margin-top: var(--space-5); border-left: 6px solid var(--color-accent);
+      padding-left: var(--space-4); color: var(--color-muted); max-width: 44ch;
+    }
+    @media (max-width: 820px) { .tb-coverage-grid { grid-template-columns: 1fr; } }
+
+    /* ── quote form ──────────────────────────────────────────────────────── */
+    .tb-quote-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-8); align-items: center; }
+    .tb-quote-copy .tb-h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+    .tb-or-call { margin-top: var(--space-6); }
+    .tb-or-call p { margin: 0 0 var(--space-3); font-weight: 700; text-transform: uppercase; font-size: var(--fs-small); letter-spacing: 0.06em; color: var(--color-muted); }
+    .tb-form {
+      background: var(--color-surface);
+      border: var(--border-thick, 2px solid var(--color-text));
+      box-shadow: var(--shadow-lg);
+      padding: var(--space-6) var(--space-5);
+      display: grid; gap: var(--space-5);
+    }
+    .tb-field { display: grid; gap: var(--space-2); }
+    .tb-field label {
+      font-weight: 700; font-size: var(--fs-small);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .tb-field input, .tb-field select {
+      font: 400 var(--fs-body)/1.4 var(--font-body);
+      color: var(--color-text); background: var(--color-bg);
+      border: var(--border-thick, 2px solid var(--color-text));
+      border-radius: var(--radius-sm);
+      padding: var(--space-3) var(--space-4); min-height: 52px; width: 100%;
+    }
+    .tb-field input::placeholder { color: var(--color-muted); }
+    .tb-select { position: relative; }
+    .tb-select select { appearance: none; -webkit-appearance: none; padding-right: var(--space-8); cursor: pointer; }
+    .tb-select::after {
+      content: ""; position: absolute; right: var(--space-4); top: 50%;
+      width: 10px; height: 10px;
+      border-right: 3px solid currentColor; border-bottom: 3px solid currentColor;
+      transform: translateY(-70%) rotate(45deg); pointer-events: none;
+    }
+    .tb-form .tb-btn { justify-content: center; width: 100%; }
+    .tb-form-note { margin: 0; font-size: var(--fs-small); color: var(--color-muted); text-align: center; }
+    .tb-form-done {
+      display: none; background: var(--color-primary); color: var(--color-bg);
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+      text-align: center; padding: var(--space-4);
+    }
+    .tb-form-done strong { color: var(--color-accent); }
+    .tb-form.tb-sent .tb-form-done { display: block; }
+    .tb-form.tb-sent .tb-btn, .tb-form.tb-sent .tb-form-note { display: none; }
+    @media (max-width: 900px) { .tb-quote-grid { grid-template-columns: 1fr; gap: var(--space-7); } }
+
+    /* ── footer ──────────────────────────────────────────────────────────── */
+    .tb-footer {
+      background: var(--color-primary); color: var(--color-bg);
+      border-top: 6px solid var(--color-accent);
+      padding-block: var(--space-8) var(--space-7);
+    }
+    .tb-footer-grid { display: flex; flex-wrap: wrap; gap: var(--space-7); justify-content: space-between; align-items: flex-start; }
+    .tb-footer .tb-logo { color: var(--color-bg); }
+    .tb-footer-links { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; margin: 0; }
+    .tb-footer-links a {
+      display: block; padding: var(--space-2) var(--space-3);
+      color: var(--color-bg); text-decoration: none;
+      font-weight: 700; font-size: var(--fs-small); text-transform: uppercase;
+      letter-spacing: 0.04em; min-height: 44px; line-height: 28px;
+    }
+    .tb-footer-links a:hover { background: var(--color-accent); color: var(--color-primary); }
+    .tb-footer-links a:active { transform: translate(2px, 2px); }
+    .tb-fine {
+      margin-top: var(--space-7); padding-top: var(--space-5);
+      border-top: 1px solid color-mix(in srgb, var(--color-bg) 25%, transparent);
+      font-size: var(--fs-small);
+      color: color-mix(in srgb, var(--color-bg) 60%, var(--color-primary));
+    }
+
+    /* ── sticky mobile call bar ──────────────────────────────────────────── */
+    .tb-sticky-call {
+      display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+      background: var(--color-accent); color: var(--color-primary);
+      border-top: var(--border-thick, 2px solid var(--color-text));
+      font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h5);
+      text-transform: uppercase; letter-spacing: 0.02em; text-decoration: none;
+      align-items: center; justify-content: center; gap: var(--space-3);
+      min-height: 60px; padding: var(--space-3) var(--space-4);
+      padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+    }
+    .tb-sticky-call:active { background: var(--color-primary); color: var(--color-accent); }
+    @media (max-width: 820px) {
+      .tb-sticky-call { display: flex; }
+      body { padding-bottom: 72px; }
+    }
+
+    /* ── scroll reveals (self-contained, transform/opacity only) ─────────── */
+    .js [data-tb-reveal] {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .js [data-tb-reveal].tb-in { opacity: 1; transform: none; }
+    .js [data-tb-reveal="2"] { transition-delay: 0.1s; }
+    .js [data-tb-reveal="3"] { transition-delay: 0.2s; }
+
+    /* ── reduced motion: kill everything ─────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js [data-tb-reveal] { opacity: 1; transform: none; transition: none; }
+      .tb-marquee { animation: none; flex-wrap: wrap; width: auto; }
+      .tb-marquee-track[aria-hidden="true"] { display: none; }
+      .tb-marquee-track { flex-wrap: wrap; row-gap: var(--space-3); }
+      .tb-btn, .tb-call, .tb-town, .tb-logo-bolt,
+      .tb-burger span, .tb-cell-arrow { transition: none; }
+      .tb-step:nth-child(2) { transform: translateY(var(--space-5)); }
+    }
+  </style>
+</head>
+<body>
+<a class="tb-skip" href="#main">Skip to content</a>
+<p class="tb-strip">24/7 emergency line — <a href="#quote">Call Fluff The Dog</a> · out within the hour, Huddersfield</p>
+<header class="tb-nav">
+<div class="tb-wrap tb-nav-row">
+<a aria-label="Fluff The Dog — home" class="tb-logo" href="#top">
+<span aria-hidden="true" class="tb-logo-bolt">
+<svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path></svg>
+</span>Fluff The Dog</a>
+<button aria-controls="tb-menu" aria-expanded="false" aria-label="Menu" class="tb-burger" type="button">
+<span></span><span></span><span></span>
+</button>
+<ul class="tb-links" id="tb-menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#how">How it works</a></li>
+<li><a href="#coverage">Coverage</a></li>
+<li><a href="#quote">Get a quote</a></li>
+</ul>
+<a class="tb-call" href="#quote">
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"></path></svg>
+        Call Fluff The Dog
+      </a>
+</div>
+</header>
+<main id="main">
+<!-- ── HERO ─────────────────────────────────────────────────────────── -->
+<section class="tb-hero" id="top">
+<div class="tb-wrap tb-hero-grid">
+<div>
+<p class="tb-kicker" data-tb-reveal="">Dog Grooming in Huddersfield</p>
+<h1 class="tb-h1" data-sf-injected="1" data-tb-reveal="">Dog Grooming done properly in <em>Huddersfield.</em></h1>
+<p class="tb-lede" data-sf-injected="1" data-tb-reveal="2"><strong>Fluff the Dog is a professional dog grooming salon in Huddersfield run by Michelle, offering full grooming services with one-to-one attentio.</strong> </p>
+<div class="tb-hero-ctas" data-tb-reveal="2">
+<a class="tb-btn tb-btn-solid" href="#quote">Get a free quote</a>
+<a class="tb-btn tb-btn-ghost" href="#quote">Get a free quote</a>
+</div>
+<ul aria-label="Trust credentials" class="tb-chips" data-tb-reveal="3"><li>Clear fixed quotes</li><li>Local to Huddersfield</li><li>Tidy workmanship</li></ul></div>
+<div class="tb-services" data-tb-reveal="">
+<a class="tb-cell" href="#quote">
+<span class="tb-cell-kicker">Dog Grooming</span>
+<h3>Dog Grooming done properly</h3>
+<p>Reliable dog grooming across Huddersfield — fixed-scope quotes before we start</p>
+<span class="tb-cell-foot"><span class="tb-price">Free quote</span><span aria-hidden="true" class="tb-cell-arrow">→</span></span>
+</a>
+<a class="tb-cell" href="#quote">
+<span class="tb-cell-kicker">Dog Grooming</span>
+<h3>Clear quotes</h3>
+<p>No waffle. You know the price and the plan before any work begins</p>
+<span class="tb-cell-foot"><span class="tb-price">Free quote</span><span aria-hidden="true" class="tb-cell-arrow">→</span></span>
+</a>
+<a class="tb-cell" href="#quote">
+<span class="tb-cell-kicker">Dog Grooming</span>
+<h3>Local &amp; accountable</h3>
+<p>Based around Huddersfield. Easy to reach, easy to trust</p>
+<span class="tb-cell-foot"><span class="tb-price">Free quote</span><span aria-hidden="true" class="tb-cell-arrow">→</span></span>
+</a>
+<a class="tb-cell" href="#quote">
+<span class="tb-cell-kicker">Landlords &amp; sellers</span>
+<h3>EICR safety reports</h3>
+<p>Full electrical inspection with a plain-English report — what passed, what didn't, what it costs to fix.</p>
+<span class="tb-cell-foot"><span class="tb-price">from £129</span><span aria-hidden="true" class="tb-cell-arrow">→</span></span>
+</a>
+<a class="tb-cell" href="#quote">
+<span class="tb-cell-kicker">24/7</span>
+<h3>Emergency call-outs</h3>
+<p>Tripping boards, burning smells, dead circuits. A qualified spark on site within the hour, day or night.</p>
+<span class="tb-cell-foot"><span class="tb-price">from £85</span><span aria-hidden="true" class="tb-cell-arrow">→</span></span>
+</a>
+<a class="tb-cell" href="#quote">
+<span class="tb-cell-kicker">Small jobs welcome</span>
+<h3>Lighting &amp; sockets</h3>
+<p>Extra sockets, outdoor lights, downlights, smart switches. No job too small — we price it straight.</p>
+<span class="tb-cell-foot"><span class="tb-price">from £65</span><span aria-hidden="true" class="tb-cell-arrow">→</span></span>
+</a>
+</div>
+</div>
+</section>
+<!-- ── HOW IT WORKS ─────────────────────────────────────────────────── -->
+<section class="tb-section tb-section-dark" id="how">
+<div class="tb-wrap">
+<div class="tb-head" data-tb-reveal="">
+<span aria-hidden="true" class="tb-head-num">02</span>
+<h2 class="tb-h2">Three steps, no surprises</h2>
+</div>
+<ol class="tb-steps">
+<li class="tb-step" data-tb-reveal="">
+<h3>You call, we answer</h3>
+<p>Phone or form — either way a <strong>real electrician</strong> picks up, not a call centre. Tell us the job in your own words.</p>
+</li>
+<li class="tb-step" data-tb-reveal="2">
+<h3>Fixed quote up front</h3>
+<p>We survey, then quote in writing <strong>before any work starts</strong>. No day rates, no "it grew", no surprise extras on the invoice.</p>
+</li>
+<li class="tb-step" data-tb-reveal="3">
+<h3>Done, tested, certified</h3>
+<p>Job finished, circuits tested, mess gone. <strong>Certificates emailed same day</strong> — and a 12-month guarantee on the workmanship.</p>
+</li>
+</ol>
+</div>
+</section>
+<!-- ── REVIEW STRIP ─────────────────────────────────────────────────── -->
+<section aria-label="Customer reviews" class="tb-reviews">
+<div class="tb-marquee">
+<div class="tb-marquee-track">
+<p class="tb-review"><span aria-hidden="true" class="tb-stars">★★★★★</span><span class="tb-sr">5 stars.</span> “Fuse board swapped in a morning, spotless when they left.” <cite>— Dawn H, Stockport</cite></p>
+<p class="tb-review"><span aria-hidden="true" class="tb-stars">★★★★★</span><span class="tb-sr">5 stars.</span> “Quoted £780, charged £780. Rare these days.” <cite>— Imran K, Sale</cite></p>
+<p class="tb-review"><span aria-hidden="true" class="tb-stars">★★★★★</span><span class="tb-sr">5 stars.</span> “Board tripping at 11pm — sorted by midnight.” <cite>— Gemma R, Didsbury</cite></p>
+<p class="tb-review"><span aria-hidden="true" class="tb-stars">★★★★★</span><span class="tb-sr">5 stars.</span> “EICR for my rental done in 48 hours, report made sense.” <cite>— Paul W, Bury</cite></p>
+</div>
+<div aria-hidden="true" class="tb-marquee-track">
+<p class="tb-review"><span class="tb-stars">★★★★★</span> “Fuse board swapped in a morning, spotless when they left.” <cite>— Dawn H, Stockport</cite></p>
+<p class="tb-review"><span class="tb-stars">★★★★★</span> “Quoted £780, charged £780. Rare these days.” <cite>— Imran K, Sale</cite></p>
+<p class="tb-review"><span class="tb-stars">★★★★★</span> “Board tripping at 11pm — sorted by midnight.” <cite>— Gemma R, Didsbury</cite></p>
+<p class="tb-review"><span class="tb-stars">★★★★★</span> “EICR for my rental done in 48 hours, report made sense.” <cite>— Paul W, Bury</cite></p>
+</div>
+</div>
+</section>
+<!-- ── COVERAGE ─────────────────────────────────────────────────────── -->
+<section class="tb-section" id="coverage">
+<div class="tb-wrap tb-coverage-grid">
+<div class="tb-head" data-tb-reveal="" style="margin-bottom: 0;">
+<span aria-hidden="true" class="tb-head-num">03</span>
+<h2 class="tb-h2">The patch we cover</h2>
+<p>Fluff The Dog serves customers across Huddersfield with straightforward dog grooming service</p>
+</div>
+<div data-tb-reveal="2">
+<ul class="tb-towns">
+<li><a class="tb-town" href="#quote">Huddersfield</a></li>
+<li><a class="tb-town" href="#quote">Stockport</a></li>
+<li><a class="tb-town" href="#quote">Sale</a></li>
+<li><a class="tb-town" href="#quote">Altrincham</a></li>
+<li><a class="tb-town" href="#quote">Didsbury</a></li>
+<li><a class="tb-town" href="#quote">Salford</a></li>
+<li><a class="tb-town" href="#quote">Bury</a></li>
+<li><a class="tb-town" href="#quote">Bolton</a></li>
+<li><a class="tb-town" href="#quote">Rochdale</a></li>
+<li><a class="tb-town" href="#quote">Oldham</a></li>
+<li><a class="tb-town" href="#quote">Ashton-under-Lyne</a></li>
+<li><a class="tb-town" href="#quote">Wilmslow</a></li>
+</ul>
+<p class="tb-coverage-note">M or SK postcode and your town's not listed? Ring anyway — if we can get to you inside the hour, we'll take the job.</p>
+</div>
+</div>
+</section>
+<!-- ── QUOTE FORM ───────────────────────────────────────────────────── -->
+<section class="tb-section" id="quote" style="padding-top: 0;">
+<div class="tb-wrap tb-quote-grid">
+<div class="tb-quote-copy" data-tb-reveal="">
+<h2 class="tb-h2">Tell us the job. Get a price today.</h2>
+<p style="color: var(--color-muted); max-width: 44ch;">Three fields, ten seconds. We ring you back within one working hour with a straight answer — a price, or the questions we need to give you one.</p>
+<div class="tb-or-call">
+<p>Rather just talk to someone?</p>
+<a class="tb-call" href="#quote">
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"></path></svg>
+              Call Fluff The Dog
+            </a>
+</div>
+</div>
+<form class="tb-form" data-tb-reveal="2" novalidate="">
+<div class="tb-field">
+<label for="tb-name">Your name</label>
+<input autocomplete="name" id="tb-name" name="name" placeholder="e.g. Steve Hargreaves" required="" type="text"/>
+</div>
+<div class="tb-field">
+<label for="tb-postcode">Postcode</label>
+<input autocomplete="postal-code" id="tb-postcode" name="postcode" placeholder="e.g. M19 2WD" required="" type="text"/>
+</div>
+<div class="tb-field">
+<label for="tb-job">The job</label>
+<div class="tb-select">
+<select id="tb-job" name="job" required="">
+<option selected="" value="">Pick the closest…</option>
+<option>Fuse board upgrade</option>
+<option>Full or partial rewire</option>
+<option>EV charger install</option>
+<option>EICR safety report</option>
+<option>Emergency — something's wrong now</option>
+<option>Lighting, sockets or something else</option>
+</select>
+</div>
+</div>
+<button class="tb-btn tb-btn-solid" type="submit">Request my quote</button>
+<p class="tb-form-done" role="status">Got it. <strong>We'll ring you within one working hour.</strong></p>
+<p class="tb-form-note">No spam, no mailing list. We call once, about this job.</p>
+</form>
+</div>
+</section>
+</main>
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer class="tb-footer">
+<div class="tb-wrap">
+<div class="tb-footer-grid">
+<a aria-label="Fluff The Dog — home" class="tb-logo" href="#top">
+<span aria-hidden="true" class="tb-logo-bolt">
+<svg aria-hidden="true" fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"></path></svg>
+</span>Fluff The Dog</a>
+<ul class="tb-footer-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#how">How it works</a></li>
+<li><a href="#coverage">Coverage</a></li>
+<li><a href="#quote">Get a quote</a></li>
+<li><a href="#quote">Call Fluff The Dog</a></li>
+</ul>
+</div>
+<p class="tb-fine">Fluff The Dog · Huddersfield · Clear quotes · Local &amp; accountable</p>
+</div>
+</footer>
+<!-- ── STICKY MOBILE CALL ─────────────────────────────────────────────── -->
+<a class="tb-sticky-call" href="#quote">
+<svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"></path></svg>
+    Call now — Call Fluff The Dog
+  </a>
+<style>
+    /* visually-hidden helper for screen-reader star ratings */
+    .tb-sr {
+      position: absolute; width: 1px; height: 1px;
+      margin: -1px; padding: 0; border: 0;
+      clip: rect(0 0 0 0); overflow: hidden; white-space: nowrap;
+    }
+  </style>
+<script>
+    (function () {
+      'use strict';
+
+      /* mobile nav toggle */
+      var burger = document.querySelector('.tb-burger');
+      var menu = document.getElementById('tb-menu');
+      if (burger && menu) {
+        burger.addEventListener('click', function () {
+          var open = burger.getAttribute('aria-expanded') === 'true';
+          burger.setAttribute('aria-expanded', String(!open));
+          menu.classList.toggle('tb-open', !open);
+        });
+        menu.addEventListener('click', function (e) {
+          if (e.target.closest('a')) {
+            burger.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('tb-open');
+          }
+        });
+      }
+
+      /* scroll reveals — self-contained IntersectionObserver */
+      var targets = document.querySelectorAll('[data-tb-reveal]');
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!('IntersectionObserver' in window) || reduced) {
+        targets.forEach(function (el) { el.classList.add('tb-in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('tb-in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+        targets.forEach(function (el) { io.observe(el); });
+      }
+
+      /* quote form — front-end only; FORKER: wire action to real handler */
+      var form = document.querySelector('.tb-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var fields = form.querySelectorAll('input, select');
+          var ok = true;
+          fields.forEach(function (f) {
+            if (!f.value.trim()) { ok = false; f.focus(); }
+          });
+          if (ok) { form.classList.add('tb-sent'); }
+        });
+      }
+    })();
+  </script>
+<script id="sf-content" type="application/json">{"hero_eyebrow": "Dog Grooming in Huddersfield", "hero_title": "Fluff The Dog", "hero_sub": "Fluff the Dog is a professional dog grooming salon in Huddersfield run by Michelle, offering full grooming services with one-to-one attentio", "services": [{"title": "Dog Grooming done properly", "body": "Reliable dog grooming across Huddersfield — fixed-scope quotes before we start"}, {"title": "Clear quotes", "body": "No waffle. You know the price and the plan before any work begins"}, {"title": "Local & accountable", "body": "Based around Huddersfield. Easy to reach, easy to trust"}], "proof_quote": "Straightforward dog grooming for people around Huddersfield", "proof_label": "local work, clear quotes", "about": "Fluff The Dog serves customers across Huddersfield with straightforward dog grooming service", "cta": "Get a free quote", "faq": [{"q": "Do you cover Huddersfield?", "a": "Yes — Fluff The Dog works across Huddersfield and nearby areas"}, {"q": "How do quotes work?", "a": "Tell us what you need. We come back with a clear fixed quote before any work starts"}, {"q": "How fast can you start?", "a": "Most jobs are booked within a few days. Emergencies — call and we'll say straight"}]}</script>
+<script>
+(function(){
+  try {
+    var c = JSON.parse(document.getElementById('sf-content').textContent);
+    document.querySelectorAll('[data-sf]').forEach(function(el){
+      var key = el.getAttribute('data-sf');
+      if (!key) return;
+      var parts = key.split('.');
+      var v = c;
+      for (var i=0;i<parts.length;i++){ v = v && v[parts[i]]; }
+      if (typeof v === 'string') el.textContent = v;
+    });
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

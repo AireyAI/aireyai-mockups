@@ -1,0 +1,37 @@
+{
+  "hero_eyebrow": "Dog Grooming in Huddersfield",
+  "hero_title": "Fluff The Dog",
+  "hero_sub": "Fluff the Dog is a professional dog grooming salon in Huddersfield run by Michelle, offering full grooming services with one-to-one attentio",
+  "services": [
+    {
+      "title": "Dog Grooming done properly",
+      "body": "Reliable dog grooming across Huddersfield — fixed-scope quotes before we start"
+    },
+    {
+      "title": "Clear quotes",
+      "body": "No waffle. You know the price and the plan before any work begins"
+    },
+    {
+      "title": "Local & accountable",
+      "body": "Based around Huddersfield. Easy to reach, easy to trust"
+    }
+  ],
+  "proof_quote": "Straightforward dog grooming for people around Huddersfield",
+  "proof_label": "local work, clear quotes",
+  "about": "Fluff The Dog serves customers across Huddersfield with straightforward dog grooming service",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "Do you cover Huddersfield?",
+      "a": "Yes — Fluff The Dog works across Huddersfield and nearby areas"
+    },
+    {
+      "q": "How do quotes work?",
+      "a": "Tell us what you need. We come back with a clear fixed quote before any work starts"
+    },
+    {
+      "q": "How fast can you start?",
+      "a": "Most jobs are booked within a few days. Emergencies — call and we'll say straight"
+    }
+  ]
+}
