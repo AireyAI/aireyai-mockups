@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Derby Hairdresser & Extensionist",
+  "hero_title": "BY LIBBY HAIR | UK HAIRDRESSER & EXTENSIONIST",
+  "hero_sub": "Precision cuts and seamless extensions in Derby",
+  "services": [
+    {
+      "title": "Hair Extensions",
+      "body": "Seamless hair extensions for added length and natural volume"
+    },
+    {
+      "title": "Balayage & Colour",
+      "body": "Bespoke colour blending and hand-painted balayage for a natural finish"
+    },
+    {
+      "title": "Precision Cutting",
+      "body": "Tailored cutting and restyling to suit your face shape"
+    }
+  ],
+  "proof_quote": "5★ from 17 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "BY LIBBY HAIR | UK HAIRDRESSER & EXTENSIONIST specialises in precision hair extensions and cuts. Reviews highlight consistent quality and a no-nonsense approach",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Where is BY LIBBY HAIR | UK HAIRDRESSER & EXTENSIONIST based?",
+      "a": "BY LIBBY HAIR is a hairdresser and extensionist based in Derby. Contact via email: libbyhairstylist@gmail.com"
+    },
+    {
+      "q": "How do I book an appointment?",
+      "a": "Book by emailing libbyhairstylist@gmail.com. Include your preferred date, time, and service details"
+    },
+    {
+      "q": "What should I expect during my appointment?",
+      "a": "Expect a consultation to discuss your hair goals, followed by the agreed service. Bring reference photos if needed"
+    }
+  ],
+  "_aaa_llm_hits": 4
+}
