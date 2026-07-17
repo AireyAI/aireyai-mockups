@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Salon in Stockport",
+  "hero_title": "LUNA Beauty Lounge",
+  "hero_sub": "Luna Beauty Lounge is a beauty and wellness salon in Stockport offering facials, body treatments, massage, waxing, and holistic therapies wi",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Facials available in-studio — ask what’s right for you"
+    },
+    {
+      "title": "Waxing",
+      "body": "Waxing available in-studio — ask what’s right for you"
+    },
+    {
+      "title": "Massage",
+      "body": "Massage available in-studio — ask what’s right for you"
+    }
+  ],
+  "proof_quote": "A calm, local salon studio for people around Stockport",
+  "proof_label": "local salon",
+  "about": "LUNA Beauty Lounge looks after clients across Stockport with straightforward salon care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Do you take clients from Stockport?",
+      "a": "Yes — LUNA Beauty Lounge welcomes clients across Stockport and nearby"
+    },
+    {
+      "q": "Do I need to book?",
+      "a": "Appointments are best — message or call and we'll find a slot"
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Just yourself — and any reference photos if you have a look in mind"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}
