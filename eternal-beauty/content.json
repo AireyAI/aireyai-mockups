@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Beauty in Derby",
+  "hero_title": "Eternal Beauty",
+  "hero_sub": "Facials, waxing and finishing touches in Derby — calm studio, clear booking",
+  "services": [
+    {
+      "title": "Facials",
+      "body": "Skin treatments tailored in-studio for clients around Derby"
+    },
+    {
+      "title": "Waxing",
+      "body": "Quick, careful waxing with a clear aftercare chat"
+    },
+    {
+      "title": "Lashes & brows",
+      "body": "Lash and brow finishing — tidy work, natural or full"
+    }
+  ],
+  "proof_quote": "4.8★ from 75 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Eternal Beauty looks after clients across Derby with straightforward beauty care",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Do you take clients from Derby?",
+      "a": "Yes — Eternal Beauty welcomes clients across Derby and nearby"
+    },
+    {
+      "q": "Do I need to book?",
+      "a": "Appointments are best — message or call and we'll find a slot"
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Just yourself — and any reference photos if you have a look in mind"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}
