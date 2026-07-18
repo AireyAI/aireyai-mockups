@@ -1,153 +1,306 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ashley Skelton Construction | Plastering in Penrith</title>
-<meta name="description" content="No website is recorded from the public listing evidence." />
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashley Skelton Construction — Plastering in Penrith</title>
+<meta name="description" content="Clear quotes and tidy plastering across Penrith. You know the plan before any work starts">
+<meta name="theme-color" content="#0E0D0B">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<!-- aireyai trade-composer v2 · plaster_aaa · ref=ej_roofing/how-high · photo=niche_hero · exemplar=Uber (structure only) -->
 <style>
-  :root { --primary:#B5532E; --accent:#7C341B; --warm:#F7E4D6; --ink:#13131a; }
-  * { -webkit-font-smoothing:antialiased; }
-  body { background:var(--warm); color:var(--ink); font-family:'Plus Jakarta Sans',system-ui,sans-serif; overflow-x:hidden; }
-  .font-display { font-family:'Fraunces',Georgia,serif; letter-spacing:-0.02em; font-weight:600; }
-  .text-ink { color:var(--ink); }
-  /* grain overlay for depth */
-  body::before {
-    content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.035;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  :root {
+    --hi: #FF8A3D;
+    --ink: var(--color-text, #EFE9DC);
+    --muted: var(--color-muted, #8A8275);
+    --bg: var(--color-bg, #0E0D0B);
+    --surface: var(--color-surface, #1C1A16);
+    --display: var(--font-display, "Space Grotesk", system-ui, sans-serif);
+    --sans: var(--font-body, "DM Sans", system-ui, sans-serif);
   }
-  .mesh { position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
-  .mesh::before, .mesh::after { content:""; position:absolute; border-radius:9999px; filter:blur(70px); opacity:.5; }
-  .mesh::before { width:46rem; height:46rem; top:-16rem; right:-12rem; background:radial-gradient(circle,var(--primary),transparent 62%); }
-  .mesh::after  { width:38rem; height:38rem; bottom:-18rem; left:-12rem; background:radial-gradient(circle,var(--accent),transparent 62%); opacity:.4; }
-  .btn-primary { background:linear-gradient(135deg,var(--primary),var(--accent)); box-shadow:0 14px 34px -10px color-mix(in srgb,var(--primary) 60%,transparent); position:relative; overflow:hidden; }
-  .btn-primary::after { content:""; position:absolute; top:0; left:-120%; width:60%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent); transition:left .6s; }
-  .btn-primary:hover::after { left:140%; }
-  .shadow-card { box-shadow:0 10px 40px -18px color-mix(in srgb,var(--ink) 30%,transparent); }
-  .hover\:shadow-cardhover:hover { box-shadow:0 26px 60px -22px color-mix(in srgb,var(--primary) 45%,transparent); }
-  [data-reveal] { opacity:0; transform:translateY(26px); }
-  .reveal-on { opacity:1 !important; transform:none !important; transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
-  .stars { color:#f5a623; letter-spacing:2px; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg); color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 4.5rem;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:visited { color: inherit; }
+  .wrap { width: min(1100px, calc(100% - 2.5rem)); margin-inline: auto; }
+
+  .nav {
+    position: absolute; inset: 0 0 auto 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 0; color: #fff;
+  }
+  .nav-brand {
+    font-family: var(--display); font-weight: 700; font-size: 1.05rem;
+    letter-spacing: -0.02em; text-transform: uppercase; color: #fff !important;
+  }
+  .nav-cta {
+    display: inline-flex; padding: 0.65rem 1rem; background: var(--hi); color: #111 !important;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+  .nav-links { display: flex; gap: 1.25rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7) !important;
+  }
+
+  .hero {
+    position: relative; min-height: 100svh; display: grid; align-items: end;
+    background-image:linear-gradient(180deg,rgba(10,10,8,.45) 0%,rgba(10,10,8,.75) 55%,rgba(10,10,8,.94) 100%),url('hero.jpg');background-size:cover;background-position:center; color: #fff;
+  }
+  .hero-inner { position: relative; z-index: 2; padding: 7rem 0 4.5rem; max-width: 40rem; }
+  .hero-eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--hi); margin: 0 0 1rem; font-weight: 700;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 4.75rem); line-height: 0.95;
+    letter-spacing: -0.03em; margin: 0 0 1.1rem; text-transform: uppercase;
+  }
+  .hero-sub {
+    font-size: 1.1rem; line-height: 1.5; color: rgba(255,255,255,0.82);
+    max-width: 36ch; margin: 0 0 1.75rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.9rem 1.35rem; font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid transparent;
+  }
+  .btn-hi { background: var(--hi); color: #111 !important; }
+  .btn-ghost { background: transparent; color: #fff !important; border-color: rgba(255,255,255,0.35); }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.25); padding: 0.35rem 0.65rem; color: rgba(255,255,255,0.8);
+  }
+
+  .section { padding: clamp(3.5rem, 9vw, 6rem) 0; }
+  .kicker {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--hi); font-weight: 700; margin: 0 0 0.75rem;
+  }
+  .section h2 {
+    font-family: var(--display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-transform: uppercase; letter-spacing: -0.02em; margin: 0 0 1.5rem; line-height: 1.05;
+  }
+  .svc {
+    display: grid; grid-template-columns: 4rem 1fr; gap: 1rem;
+    padding: 1.4rem 0; border-top: 1px solid rgba(239,233,220,0.12);
+  }
+  .svc:last-child { border-bottom: 1px solid rgba(239,233,220,0.12); }
+  .svc-num { font-family: var(--display); font-size: 1.2rem; color: var(--hi); font-weight: 700; }
+  .svc h3 { font-family: var(--display); font-size: 1.35rem; margin: 0 0 0.35rem; text-transform: uppercase; }
+  .svc p { margin: 0; color: var(--muted); max-width: 48ch; }
+
+  .proof { background: var(--surface); border-block: 1px solid rgba(239,233,220,0.1); }
+  .proof-inner { max-width: 38rem; margin: auto; text-align: center; padding: clamp(3rem, 8vw, 5rem) 1.25rem; }
+  .proof blockquote {
+    font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.25; margin: 0 0 1rem; text-transform: uppercase;
+  }
+  .proof cite { font-style: normal; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+
+  .split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2.75rem; }
+  @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+  .about p { color: var(--muted); line-height: 1.7; max-width: 40ch; }
+  .faq { border-bottom: 1px solid rgba(239,233,220,0.12); padding: 0.95rem 0; }
+  .faq summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--hi); }
+  .faq[open] summary::after { content: "–"; }
+  .faq p { margin: 0.65rem 0 0; color: var(--muted); }
+
+  .visit-list { border-top: 1px solid rgba(239,233,220,0.12); margin-top: 1rem; }
+  .visit-row {
+    display: grid; grid-template-columns: 7rem 1fr; gap: 1rem;
+    padding: 0.9rem 0; border-bottom: 1px solid rgba(239,233,220,0.12);
+  }
+  .visit-k { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--hi); align-self: center; }
+  .visit-row a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .quote {
+    background: var(--hi); color: #111; padding: clamp(2.5rem, 6vw, 4rem) 0;
+  }
+  .quote-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+  .quote h2 { font-family: var(--display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); text-transform: uppercase; margin: 0 0 0.35rem; }
+  .quote p { margin: 0; opacity: 0.75; }
+  .quote .btn-hi { background: #111; color: var(--hi) !important; }
+  .quote .btn-ghost { border-color: #111; color: #111 !important; }
+
+  footer {
+    padding: 2rem 0 5.5rem; font-size: 0.82rem; color: var(--muted);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem;
+    border-top: 1px solid rgba(239,233,220,0.1);
+  }
+  footer strong { color: var(--ink); font-family: var(--display); text-transform: uppercase; }
+
+  .sticky-call {
+    position: fixed; inset: auto 0 0 0; z-index: 50;
+    background: var(--hi); color: #111;
+    display: none; justify-content: center; padding: 0.9rem 1rem;
+    font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.35);
+  }
+  .sticky-call a { color: #111 !important; width: 100%; text-align: center; }
+  @media (max-width: 720px) { .sticky-call { display: flex; } }
+
+  /* factory motion — scroll reveal (from Fable motion kit cues) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.vis { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
 </style>
 </head>
-<body class="antialiased">
-  <!-- HERO -->
-  <header class="relative">
-    <div class="mesh"></div>
-    <div class="relative z-10 mx-auto max-w-5xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-      <p data-hero class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Plastering in Penrith</p>
-      <h1 data-hero class="font-display mt-5 text-5xl leading-[1.02] text-ink md:text-7xl">Ashley Skelton Construction</h1>
-      <p data-hero class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/60 md:text-xl">No website is recorded from the public listing evidence.</p>
-      <p data-hero class="mt-5 text-sm font-semibold"><span class="stars">★★★★★</span> <span class="text-ink/70">5.0 from 2 Google reviews</span></p>
-      <div data-hero class="mt-9 flex flex-wrap justify-center gap-4"><a href="tel:07500146805" data-magnetic class="btn-primary inline-flex items-center justify-center rounded-full px-7 py-4 font-semibold text-white">Call 07500 146805</a><a href="#contact" class="inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/60 px-7 py-4 font-semibold text-ink backdrop-blur-sm transition hover:border-ink/35">Get a free quote</a></div>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="#top">Ashley Skelton Construction</a>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#visit">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="tel:07500146805">Call</a>
+      </nav>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Plastering in Penrith</p>
+        <h1>Plastering finished clean in Penrith</h1>
+        <p class="hero-sub">Clear quotes and tidy plastering across Penrith. You know the plan before any work starts</p>
+        <div class="hero-ctas">
+          <a class="btn btn-hi" href="tel:07500146805">Call 07500 146805</a>
+          <a class="btn btn-ghost" href="#quote">Get a free quote</a>
+        </div>
+        <div class="chips"><span class="chip">5.0★ Google</span><span class="chip">Penrith</span><span class="chip">Clear quotes</span><span class="chip">Tidy finish</span></div>
+      </div>
     </div>
   </header>
 
-  <!-- TRUST STRIP -->
-  <section class="relative z-10 mx-auto -mt-6 max-w-5xl px-6">
-    <div class="grid grid-cols-2 gap-6 rounded-3xl border border-black/5 bg-white/80 px-8 py-9 shadow-card backdrop-blur md:grid-cols-4">
-        <div data-reveal class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-ink"><span data-count="5.0">5.0</span>★</div>
-          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">Google rating</div>
-        </div>
-        <div data-reveal class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-ink"><span data-count="2">2</span></div>
-          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">happy customers</div>
-        </div>
-        <div data-reveal class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-ink">Penrith</div>
-          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">service area</div>
-        </div>
-        <div data-reveal class="text-center">
-          <div class="font-display text-4xl md:text-5xl text-ink">Fast</div>
-          <div class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/45">free quotes</div>
-        </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="relative z-10 mx-auto max-w-6xl px-6 py-24">
-    <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">What we do</p>
-    <h2 data-reveal class="font-display mt-3 max-w-2xl text-4xl text-ink md:text-5xl">Everything you need, done properly.</h2>
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
-        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
-          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3 class="font-display text-xl text-ink">Skimming & re-skimming</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional plastering in Penrith — clear quotes, tidy work, and proper communication start to finish.</p>
+  <main>
+    <section class="section" id="services">
+      <div class="wrap">
+        <p class="kicker">What we do</p>
+        <h2>Plastering in Penrith</h2>
+        
+        <article class="svc reveal">
+          <span class="svc-num">01</span>
+          <div>
+            <h3>Plastering done properly</h3>
+            <p>Reliable plastering across Penrith — fixed-scope quotes before we start</p>
+          </div>
         </article>
-        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
-          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3 class="font-display text-xl text-ink">Rendering</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional plastering in Penrith — clear quotes, tidy work, and proper communication start to finish.</p>
+        <article class="svc reveal">
+          <span class="svc-num">02</span>
+          <div>
+            <h3>Clear quotes</h3>
+            <p>No waffle. You know the price and the plan before any work begins</p>
+          </div>
         </article>
-        <article data-reveal class="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 p-7 shadow-card backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-cardhover">
-          <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg" style="background:linear-gradient(135deg,var(--primary),var(--accent))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3 class="font-display text-xl text-ink">Ceiling repairs</h3>
-          <p class="mt-2 text-sm leading-relaxed text-ink/55">Professional plastering in Penrith — clear quotes, tidy work, and proper communication start to finish.</p>
+        <article class="svc reveal">
+          <span class="svc-num">03</span>
+          <div>
+            <h3>Local &amp; accountable</h3>
+            <p>Based around Penrith. Easy to reach, easy to trust</p>
+          </div>
         </article>
-    </div>
-  </section>
-
-  <!-- PROOF BAND -->
-  <section class="relative z-10 overflow-hidden">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="relative overflow-hidden rounded-[2rem] px-8 py-16 text-center md:py-20" style="background:linear-gradient(135deg,var(--primary),var(--accent))">
-        <p data-reveal class="font-display mx-auto max-w-3xl text-2xl leading-snug text-white md:text-4xl">"Looked twice as professional overnight — the calls started the same week."</p>
-        <p data-reveal class="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">what a tidy website does for a local business</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="relative z-10 mx-auto max-w-6xl px-6 py-24">
-    <div class="grid items-center gap-10 md:grid-cols-2">
-      <div>
-        <p data-reveal class="text-[12px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">Get in touch</p>
-        <h2 data-reveal class="font-display mt-3 text-4xl text-ink md:text-5xl">Ready when you are.</h2>
-        <p data-reveal class="mt-4 max-w-md text-lg leading-relaxed text-ink/60">Tell us what you need and we'll come back fast with availability and a clear, no-obligation quote.</p>
+    <section class="proof" aria-label="Proof">
+      <div class="proof-inner reveal">
+        <blockquote>“5.0★ from 2 Google reviews”</blockquote>
+        <cite>Google reviews</cite>
       </div>
-      <div data-reveal class="rounded-3xl border border-black/5 bg-white/80 p-8 shadow-card backdrop-blur">
-        <div class="space-y-5"><a href="tel:07500146805" class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Phone</span><span class="font-display text-2xl text-[var(--primary)]">07500 146805</span></a><p class="flex items-center gap-3 text-lg text-ink"><span class="text-ink/40">Area</span><span>Penrith &amp; surrounding areas</span></p></div>
-        <a href="tel:07500146805" data-magnetic class="btn-primary mt-8 inline-flex w-full items-center justify-center rounded-full px-7 py-4 font-semibold text-white">Call 07500 146805</a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div class="about reveal">
+          <p class="kicker">The company</p>
+          <h2>Ashley Skelton Construction</h2>
+          <p>Ashley Skelton Construction serves customers across Penrith with straightforward plastering service</p>
+        </div>
+        <div>
+          <p class="kicker">Questions</p>
+          
+        <details class="faq reveal">
+          <summary>Do you cover Penrith?</summary>
+          <p>Yes — Ashley Skelton Construction works across Penrith and nearby areas</p>
+        </details>
+        <details class="faq reveal">
+          <summary>How do quotes work?</summary>
+          <p>Tell us what you need. We come back with a clear fixed quote before any work starts</p>
+        </details>
+        <details class="faq reveal">
+          <summary>How fast can you start?</summary>
+          <p>Most jobs are booked within a few days. Emergencies — call and we&#x27;ll say straight</p>
+        </details>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="relative z-10 border-t border-black/5 py-10 text-center text-sm text-ink/40">
-    © 2026 Ashley Skelton Construction. All rights reserved.
-  </footer>
+    <section class="section" id="visit">
+      <div class="wrap">
+        <p class="kicker">Contact</p>
+        <h2>Get hold of us</h2>
+        <div class="visit-list reveal">
+          <div class="visit-row"><span class="visit-k">Phone</span><a href="tel:07500146805">07500 146805</a></div><div class="visit-row"><span class="visit-k">Email</span><a href="mailto:superioconstruction@hotmail.co.uk">superioconstruction@hotmail.co.uk</a></div><div class="visit-row"><span class="visit-k">Area</span><span>Penrith</span></div><div class="visit-row"><span class="visit-k">Maps</span><a href="https://www.google.com/maps/place/Ashley+Skelton+Construction/data=!4m7!3m6!1s0x487d21783c6beb61:0x77d713f6d6ce6268!8m2!3d54.7988738!4d-3.0863504!16s%2Fg%2F11y6t10k2p!19sChIJYetrPHghfUgRaGLO1vYT13c?authuser=0&amp;hl=en&amp;rclk=1" rel="noopener" target="_blank">Open in Google Maps</a></div>
+        </div>
+      </div>
+    </section>
 
-    <a href="https://wa.me/447500146805" target="_blank" rel="noopener"
-       class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg hover:scale-105 transition">
-      WhatsApp
-    </a>
+    <section class="quote" id="quote">
+      <div class="wrap quote-inner">
+        <div>
+          <h2>Ready for a clear quote?</h2>
+          <p>Ashley Skelton Construction · Penrith</p>
+        </div>
+        <div class="hero-ctas" style="margin:0">
+          <a class="btn btn-hi" href="tel:07500146805">Call 07500 146805</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<script>
-  // reveal on scroll
-  const _rev = document.querySelectorAll('[data-reveal]');
-  if (window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.batch('[data-reveal]', { start:'top 88%', onEnter: b => gsap.to(b, {opacity:1, y:0, duration:.8, stagger:.12, ease:'power3.out'}) });
-    // hero entrance
-    gsap.from('[data-hero]', {opacity:0, y:30, duration:1, stagger:.12, ease:'power3.out', delay:.1});
-    // count-up
-    document.querySelectorAll('[data-count]').forEach(el => {
-      const target = parseFloat(el.dataset.count); const dec = (el.dataset.count.indexOf('.')>-1)?1:0;
-      const o = {v:0};
-      ScrollTrigger.create({ trigger:el, start:'top 90%', once:true, onEnter:()=>gsap.to(o,{v:target, duration:1.4, ease:'power2.out', onUpdate:()=>el.textContent=o.v.toFixed(dec)}) });
+  <div class="wrap">
+    <footer>
+      <div><strong>Ashley Skelton Construction</strong> · Penrith</div>
+      <div>AireyAI preview · trade composer</div>
+    </footer>
+  </div>
+  
+  <div class="sticky-call" role="region" aria-label="Call now">
+    <a href="tel:07500146805">Call 07500 146805</a>
+  </div>
+  <script>(function () {
+  var els = document.querySelectorAll(".reveal");
+  if (!els.length) return;
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    els.forEach(function (el) { el.classList.add("vis"); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("vis"); io.unobserve(e.target); }
     });
-    // magnetic buttons
-    document.querySelectorAll('[data-magnetic]').forEach(el => {
-      el.addEventListener('mousemove', e => { const r=el.getBoundingClientRect(); gsap.to(el,{x:(e.clientX-r.left-r.width/2)*.25, y:(e.clientY-r.top-r.height/2)*.4, duration:.4}); });
-      el.addEventListener('mouseleave', ()=>gsap.to(el,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));
-    });
-  } else { _rev.forEach(e=>e.classList.add('reveal-on')); }
-</script>
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function (el) { io.observe(el); });
+})();</script>
 </body>
 </html>
