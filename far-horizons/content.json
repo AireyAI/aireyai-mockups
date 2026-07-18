@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Plastering in Penrith",
+  "hero_title": "Far Horizons",
+  "hero_sub": "Clear quotes and tidy plastering across Penrith. You know the plan before any work starts",
+  "services": [
+    {
+      "title": "Plastering done properly",
+      "body": "Reliable plastering across Penrith — fixed-scope quotes before we start"
+    },
+    {
+      "title": "Clear quotes",
+      "body": "No waffle. You know the price and the plan before any work begins"
+    },
+    {
+      "title": "Local & accountable",
+      "body": "Based around Penrith. Easy to reach, easy to trust"
+    }
+  ],
+  "proof_quote": "5.0★ from 1 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Far Horizons serves customers across Penrith with straightforward plastering service",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "Do you cover Penrith?",
+      "a": "Yes — Far Horizons works across Penrith and nearby areas"
+    },
+    {
+      "q": "How do quotes work?",
+      "a": "Tell us what you need. We come back with a clear fixed quote before any work starts"
+    },
+    {
+      "q": "How fast can you start?",
+      "a": "Most jobs are booked within a few days. Emergencies — call and we'll say straight"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}

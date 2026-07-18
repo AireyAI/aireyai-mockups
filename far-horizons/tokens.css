@@ -1,0 +1,13 @@
+/* trade-composer tokens — brutalist-trade + hi-vis (plaster) */
+:root {
+  --color-primary:       #FF8A3D;
+  --color-primary-dark:  #c4d63a;
+  --color-primary-light: #f3ff9a;
+  --color-accent:        #FF8A3D;
+  --color-bg:            #0E0D0B;
+  --color-surface:       #1C1A16;
+  --color-text:          #EFE9DC;
+  --color-muted:         #8A8275;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body:    "DM Sans", system-ui, sans-serif;
+}
