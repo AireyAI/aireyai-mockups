@@ -1,0 +1,44 @@
+{
+  "hero_eyebrow": "Lancaster beauty studio",
+  "hero_title": "Lily's studio Women’s Health Management",
+  "hero_sub": "Personalised skin consultations, facial treatments, and wellness advice",
+  "services": [
+    {
+      "title": "Hormonal Health Consultation",
+      "body": "One‑on‑one assessment of hormone levels, lifestyle advice, and personalised plan to support balance and wellbeing"
+    },
+    {
+      "title": "Advanced Skin Rejuvenation Facial",
+      "body": "Deep cleanse, exfoliation, and targeted serum infusion to improve texture, tone, and radiance without harsh chemicals"
+    },
+    {
+      "title": "Pelvic Floor Strengthening Session",
+      "body": "Guided exercises and biofeedback to restore muscle function, alleviate discomfort, and enhance core stability"
+    }
+  ],
+  "proof_quote": "5★ from 58 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Lily's studio Women’s Health Management provides women’s health and beauty services in Lancaster. Clients appreciate the personalised approach and can reach the studio at lilystudiohealth@gmail.com",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Lily's studio serve?",
+      "a": "Lily's studio Women’s Health Management beauty is based in Lancaster and accepts clients from Lancaster and the surrounding Lancashire area"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "Send your booking request to lilystudiohealth@gmail.com with your preferred date and treatment; we will reply to confirm"
+    },
+    {
+      "q": "What should I expect during a visit?",
+      "a": "Your visit begins with a brief health and beauty consultation, followed by the agreed treatment performed in a private treatment room"
+    }
+  ],
+  "_aaa_llm_hits": 4,
+  "_glm": {
+    "provider": "cerebras",
+    "model": "zai-glm-4.7",
+    "ms": 7350,
+    "raw_chars": 11845
+  }
+}
