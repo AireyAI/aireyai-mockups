@@ -1,70 +1,420 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Beauty Lounge Tettenhall | Beauty in Wolverhampton</title>
-<meta name="description" content="Appointment-led businesses can lose evening/weekend enquiries if booking/contact is weak." />
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  :root { --primary:#BE185D; --accent:#831843; --warm:#FCE7F3; }
-  body { background: var(--warm); color: #0f172a; font-family: Inter, system-ui, sans-serif; }
-  h1,h2 { letter-spacing: -0.02em; }
-  .hero-gradient {
-    background: linear-gradient(135deg, var(--warm) 0%, #fff 40%, color-mix(in srgb, var(--primary) 18%, white) 100%);
-  }
-  .shadow-soft { box-shadow: 0 8px 30px -12px color-mix(in srgb, var(--accent) 35%, transparent); }
-  .btn-primary {
-    background: var(--primary); color: white;
-  }
-  .btn-primary:hover { filter: brightness(1.05); }
-</style>
+<!-- aireyai beauty-glm · zai-glm-4.7 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beauty Lounge Tettenhall | Wolverhampton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --base: #fdf8f5;
+            --surface: #fff8f6;
+            --blush: #fce8f0;
+            --rose: #c2688e;
+            --rose-light: #f0c5d8;
+            --plum: #130a10;
+            --ink: #2d1423;
+            --muted: #8a6272;
+            --gold: #c9956a;
+            --font-display: 'Playfair Display', serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--base);
+            color: var(--ink);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 80px; /* Space for mobile sticky CTA */
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--plum);
+            line-height: 1.2;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(253, 248, 245, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--rose-light);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--plum);
+        }
+
+        .nav-cta {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--rose);
+            border: 1px solid var(--rose);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--rose);
+            color: var(--surface);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            min-height: 600px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            background-color: rgba(255, 248, 246, 0.85);
+            padding: var(--spacing-lg) var(--spacing-md);
+            max-width: 800px;
+            margin: 0 var(--spacing-sm);
+            border: 1px solid var(--blush);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 i {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+            color: var(--rose);
+        }
+
+        .hero-sub {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--muted);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--plum);
+            color: var(--surface);
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+            border-radius: 2px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--rose);
+        }
+
+        /* Services */
+        .services {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--surface);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--muted);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--base);
+            padding: 2.5rem;
+            border: 1px solid var(--blush);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--rose-light);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--rose);
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* About */
+        .about {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--base);
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about p {
+            font-size: 1.125rem;
+            color: var(--ink);
+            line-height: 1.8;
+        }
+
+        /* Visit */
+        .visit {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--plum);
+            color: var(--surface);
+            text-align: center;
+        }
+
+        .visit h2 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .visit-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+        }
+
+        .visit-details a {
+            border-bottom: 1px solid var(--rose-light);
+            padding-bottom: 2px;
+        }
+
+        .visit-details a:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* Footer */
+        .footer {
+            padding: var(--spacing-md) 0;
+            background-color: var(--ink);
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--surface);
+            padding: 1rem;
+            border-top: 1px solid var(--rose-light);
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+        }
+
+        .mobile-sticky-cta .btn {
+            width: 100%;
+            text-align: center;
+            padding: 0.875rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-sticky-cta {
+                display: none;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            a, .btn, .nav-cta, .service-card {
+                transition: none;
+            }
+            .service-card:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
-<body class="antialiased">
-  <header class="hero-gradient border-b border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
-      <span class="inline-block rounded-full bg-white/80 px-4 py-1 text-sm font-medium text-slate-600">Beauty in Wolverhampton</span>
-      <h1 class="mt-3 text-4xl md:text-5xl font-bold text-slate-900 text-center max-w-3xl mx-auto">The Beauty Lounge Tettenhall</h1>
-      <p class="mt-5 max-w-2xl mx-auto text-lg text-slate-700 leading-relaxed text-center">Appointment-led businesses can lose evening/weekend enquiries if booking/contact is weak.</p>
-      
-      
-    </div>
-  </header>
+<body>
 
-  <section class="mx-auto max-w-6xl px-6 py-16">
-    <h2 class="text-3xl font-bold text-slate-900">Services</h2>
-    <p class="mt-2 max-w-2xl text-slate-600">Everything you need from a local beauty team — straightforward pricing and reliable turnaround.</p>
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Cut & colour</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional beauty — free quotes, tidy work, and clear communication from start to finish.</p>
-        </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Nails & lashes</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional beauty — free quotes, tidy work, and clear communication from start to finish.</p>
-        </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Bridal & occasion</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional beauty — free quotes, tidy work, and clear communication from start to finish.</p>
-        </article>
-    </div>
-  </section>
+    <header class="nav">
+        <div class="container nav-inner">
+            <span class="brand">The Beauty Lounge Tettenhall</span>
+            <a href="mailto:info@thebeautyloungetettenhall.co.uk" class="nav-cta">Book</a>
+        </div>
+    </header>
 
-  <section id="contact" class="bg-white border-y border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">Contact</h2>
-      <p class="mt-2 text-slate-600">Request a quote — we'll come back quickly with availability and next steps.</p>
-      <ul class="mt-8 space-y-3 text-lg text-slate-800">
-        
-        <li><strong>Email:</strong> <a href="mailto:info@thebeautyloungetettenhall.co.uk" class="underline underline-offset-4">info@thebeautyloungetettenhall.co.uk</a></li>
-        <li><strong>Area:</strong> Wolverhampton and surrounding areas</li>
-      </ul>
-    </div>
-  </section>
+    <section class="hero">
+        <img src="hero.jpg" alt="Beauty Salon Interior" class="hero-bg">
+        <div class="hero-content">
+            <h1>The Beauty Lounge <i>Tettenhall</i></h1>
+            <p class="hero-sub">Haircuts, colour, facials, waxing and nail treatments</p>
+            <a href="mailto:info@thebeautyloungetettenhall.co.uk" class="btn">Book a visit</a>
+        </div>
+    </section>
 
-  <footer class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-500">
-    © 2026 The Beauty Lounge Tettenhall. All rights reserved.
-  </footer>
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Curated treatments for your wellbeing</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3>Classic Facial</h3>
+                    <p>Deep cleanse, exfoliate, tone, and hydrate skin with a tailored mask and massage.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Manicure & Pedicure</h3>
+                    <p>Trim, shape, and polish nails; cuticle care; hand and foot massage included.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Eyelash Extension</h3>
+                    <p>Apply individual synthetic lashes to each natural lash for length, curl, and volume.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container about-content">
+            <h2>About The Salon</h2>
+            <p>The Beauty Lounge Tettenhall is a beauty salon located in Wolverhampton. Clients can book appointments via email at info@thebeautyloungetettenhall.co.uk.</p>
+        </div>
+    </section>
+
+    <section id="visit" class="visit">
+        <div class="container">
+            <h2>Visit Us</h2>
+            <div class="visit-details">
+                <span>Wolverhampton</span>
+                <a href="mailto:info@thebeautyloungetettenhall.co.uk">info@thebeautyloungetettenhall.co.uk</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; The Beauty Lounge Tettenhall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="mobile-sticky-cta">
+        <a href="mailto:info@thebeautyloungetettenhall.co.uk" class="btn">Book a visit</a>
+    </div>
 
 </body>
 </html>

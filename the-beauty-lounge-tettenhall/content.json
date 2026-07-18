@@ -1,0 +1,44 @@
+{
+  "hero_eyebrow": "Wolverhampton beauty salon",
+  "hero_title": "The Beauty Lounge Tettenhall",
+  "hero_sub": "Haircuts, colour, facials, waxing and nail treatments",
+  "services": [
+    {
+      "title": "Classic Facial",
+      "body": "Deep cleanse, exfoliate, tone, and hydrate skin with a tailored mask and massage"
+    },
+    {
+      "title": "Manicure & Pedicure",
+      "body": "Trim, shape, and polish nails; cuticle care; hand and foot massage included"
+    },
+    {
+      "title": "Eyelash Extension",
+      "body": "Apply individual synthetic lashes to each natural lash for length, curl, and volume"
+    }
+  ],
+  "proof_quote": "Always feel welcomed and leave feeling refreshed after each appointment",
+  "proof_label": "local client",
+  "about": "The Beauty Lounge Tettenhall is a beauty salon located in Wolverhampton. Clients can book appointments via email at info@thebeautyloungetettenhall.co.uk",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does The Beauty Lounge Tettenhall serve?",
+      "a": "The salon serves clients in Tettenhall and the wider Wolverhampton area"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "Send your booking request to info@thebeautyloungetettenhall.co.uk"
+    },
+    {
+      "q": "What should I expect during my visit?",
+      "a": "You will have a consultation to discuss your beauty needs, followed by the agreed treatment"
+    }
+  ],
+  "_aaa_llm_hits": 4,
+  "_glm": {
+    "provider": "cerebras",
+    "model": "zai-glm-4.7",
+    "ms": 7914,
+    "raw_chars": 11661
+  }
+}
