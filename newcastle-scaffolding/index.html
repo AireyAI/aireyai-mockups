@@ -1,77 +1,306 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Newcastle Scaffolding | Scaffolding in Newcastle upon Tyne</title>
-<meta name="description" content="No website is recorded from the public listing evidence." />
-<script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newcastle Scaffolding — Scaffolding in Newcastle upon Tyne</title>
+<meta name="description" content="Clear quotes and tidy scaffolding across Newcastle upon Tyne. You know the plan before any work starts">
+<meta name="theme-color" content="#0E0D0B">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<!-- aireyai trade-composer v2 · scaffold_aaa · ref=ej_roofing/how-high · photo=ref_bank:team-photo.jpg · exemplar=Uber (structure only) -->
 <style>
-  :root { --primary:#475569; --accent:#1E293B; --warm:#F1F5F9; }
-  body { background: var(--warm); color: #0f172a; font-family: Inter, system-ui, sans-serif; }
-  h1,h2 { letter-spacing: -0.02em; }
-  .hero-gradient {
-    background: linear-gradient(135deg, var(--warm) 0%, #fff 40%, color-mix(in srgb, var(--primary) 18%, white) 100%);
+  :root {
+    --hi: #E8FF47;
+    --ink: var(--color-text, #EFE9DC);
+    --muted: var(--color-muted, #8A8275);
+    --bg: var(--color-bg, #0E0D0B);
+    --surface: var(--color-surface, #1C1A16);
+    --display: var(--font-display, "Space Grotesk", system-ui, sans-serif);
+    --sans: var(--font-body, "DM Sans", system-ui, sans-serif);
   }
-  .shadow-soft { box-shadow: 0 8px 30px -12px color-mix(in srgb, var(--accent) 35%, transparent); }
-  .btn-primary {
-    background: var(--primary); color: white;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg); color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 4.5rem;
   }
-  .btn-primary:hover { filter: brightness(1.05); }
+  a { color: inherit; text-decoration: none; }
+  a:visited { color: inherit; }
+  .wrap { width: min(1100px, calc(100% - 2.5rem)); margin-inline: auto; }
+
+  .nav {
+    position: absolute; inset: 0 0 auto 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 0; color: #fff;
+  }
+  .nav-brand {
+    font-family: var(--display); font-weight: 700; font-size: 1.05rem;
+    letter-spacing: -0.02em; text-transform: uppercase; color: #fff !important;
+  }
+  .nav-cta {
+    display: inline-flex; padding: 0.65rem 1rem; background: var(--hi); color: #111 !important;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+  .nav-links { display: flex; gap: 1.25rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7) !important;
+  }
+
+  .hero {
+    position: relative; min-height: 100svh; display: grid; align-items: end;
+    background-image:linear-gradient(180deg,rgba(10,10,8,.45) 0%,rgba(10,10,8,.75) 55%,rgba(10,10,8,.94) 100%),url('hero.jpg');background-size:cover;background-position:center; color: #fff;
+  }
+  .hero-inner { position: relative; z-index: 2; padding: 7rem 0 4.5rem; max-width: 40rem; }
+  .hero-eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--hi); margin: 0 0 1rem; font-weight: 700;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 4.75rem); line-height: 0.95;
+    letter-spacing: -0.03em; margin: 0 0 1.1rem; text-transform: uppercase;
+  }
+  .hero-sub {
+    font-size: 1.1rem; line-height: 1.5; color: rgba(255,255,255,0.82);
+    max-width: 36ch; margin: 0 0 1.75rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.9rem 1.35rem; font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid transparent;
+  }
+  .btn-hi { background: var(--hi); color: #111 !important; }
+  .btn-ghost { background: transparent; color: #fff !important; border-color: rgba(255,255,255,0.35); }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip {
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.25); padding: 0.35rem 0.65rem; color: rgba(255,255,255,0.8);
+  }
+
+  .section { padding: clamp(3.5rem, 9vw, 6rem) 0; }
+  .kicker {
+    font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--hi); font-weight: 700; margin: 0 0 0.75rem;
+  }
+  .section h2 {
+    font-family: var(--display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-transform: uppercase; letter-spacing: -0.02em; margin: 0 0 1.5rem; line-height: 1.05;
+  }
+  .svc {
+    display: grid; grid-template-columns: 4rem 1fr; gap: 1rem;
+    padding: 1.4rem 0; border-top: 1px solid rgba(239,233,220,0.12);
+  }
+  .svc:last-child { border-bottom: 1px solid rgba(239,233,220,0.12); }
+  .svc-num { font-family: var(--display); font-size: 1.2rem; color: var(--hi); font-weight: 700; }
+  .svc h3 { font-family: var(--display); font-size: 1.35rem; margin: 0 0 0.35rem; text-transform: uppercase; }
+  .svc p { margin: 0; color: var(--muted); max-width: 48ch; }
+
+  .proof { background: var(--surface); border-block: 1px solid rgba(239,233,220,0.1); }
+  .proof-inner { max-width: 38rem; margin: auto; text-align: center; padding: clamp(3rem, 8vw, 5rem) 1.25rem; }
+  .proof blockquote {
+    font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.25; margin: 0 0 1rem; text-transform: uppercase;
+  }
+  .proof cite { font-style: normal; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+
+  .split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2.75rem; }
+  @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+  .about p { color: var(--muted); line-height: 1.7; max-width: 40ch; }
+  .faq { border-bottom: 1px solid rgba(239,233,220,0.12); padding: 0.95rem 0; }
+  .faq summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--hi); }
+  .faq[open] summary::after { content: "–"; }
+  .faq p { margin: 0.65rem 0 0; color: var(--muted); }
+
+  .visit-list { border-top: 1px solid rgba(239,233,220,0.12); margin-top: 1rem; }
+  .visit-row {
+    display: grid; grid-template-columns: 7rem 1fr; gap: 1rem;
+    padding: 0.9rem 0; border-bottom: 1px solid rgba(239,233,220,0.12);
+  }
+  .visit-k { font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--hi); align-self: center; }
+  .visit-row a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .quote {
+    background: var(--hi); color: #111; padding: clamp(2.5rem, 6vw, 4rem) 0;
+  }
+  .quote-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+  .quote h2 { font-family: var(--display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); text-transform: uppercase; margin: 0 0 0.35rem; }
+  .quote p { margin: 0; opacity: 0.75; }
+  .quote .btn-hi { background: #111; color: var(--hi) !important; }
+  .quote .btn-ghost { border-color: #111; color: #111 !important; }
+
+  footer {
+    padding: 2rem 0 5.5rem; font-size: 0.82rem; color: var(--muted);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem;
+    border-top: 1px solid rgba(239,233,220,0.1);
+  }
+  footer strong { color: var(--ink); font-family: var(--display); text-transform: uppercase; }
+
+  .sticky-call {
+    position: fixed; inset: auto 0 0 0; z-index: 50;
+    background: var(--hi); color: #111;
+    display: none; justify-content: center; padding: 0.9rem 1rem;
+    font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.35);
+  }
+  .sticky-call a { color: #111 !important; width: 100%; text-align: center; }
+  @media (max-width: 720px) { .sticky-call { display: flex; } }
+
+  /* factory motion — scroll reveal (from Fable motion kit cues) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.vis { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
 </style>
 </head>
-<body class="antialiased">
-  <header class="hero-gradient border-b border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24 ">
-      <span class="inline-block border-2 border-slate-800 px-3 py-1 text-xs font-bold uppercase tracking-widest">Scaffolding</span>
-      <h1 class="mt-3 text-4xl md:text-6xl font-black uppercase tracking-tight text-slate-900 max-w-4xl">Newcastle Scaffolding</h1>
-      <p class="mt-5 max-w-2xl text-lg text-slate-700 leading-relaxed">No website is recorded from the public listing evidence.</p>
-      
-      <div class="mt-8 flex flex-wrap gap-4 ">
-        <a href="tel:07733111566" class="btn-primary inline-flex rounded-full px-6 py-3 font-semibold shadow-soft">Call 07733 111566</a>
-        <a href="#contact" class="inline-flex rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 shadow-sm">Get a quote</a>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="#top">Newcastle Scaffolding</a>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#visit">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="tel:07733111566">Call</a>
+      </nav>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Scaffolding in Newcastle upon Tyne</p>
+        <h1>Scaffolding done properly in Newcastle upon Tyne</h1>
+        <p class="hero-sub">Clear quotes and tidy scaffolding across Newcastle upon Tyne. You know the plan before any work starts</p>
+        <div class="hero-ctas">
+          <a class="btn btn-hi" href="tel:07733111566">Call 07733 111566</a>
+          <a class="btn btn-ghost" href="#quote">Get a free quote</a>
+        </div>
+        <div class="chips"><span class="chip">Newcastle upon Tyne</span><span class="chip">Clear quotes</span><span class="chip">Safe access</span></div>
       </div>
     </div>
   </header>
 
-  <section class="mx-auto max-w-6xl px-6 py-16">
-    <h2 class="text-3xl font-bold text-slate-900">Services</h2>
-    <p class="mt-2 max-w-2xl text-slate-600">Everything you need from a local scaffolding team — straightforward pricing and reliable turnaround.</p>
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Domestic scaffold</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional scaffolding — free quotes, tidy work, and clear communication from start to finish.</p>
+  <main>
+    <section class="section" id="services">
+      <div class="wrap">
+        <p class="kicker">What we do</p>
+        <h2>Scaffolding in Newcastle upon Tyne</h2>
+        
+        <article class="svc reveal">
+          <span class="svc-num">01</span>
+          <div>
+            <h3>Scaffolding done properly</h3>
+            <p>Reliable scaffolding across Newcastle upon Tyne — fixed-scope quotes before we start</p>
+          </div>
         </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Commercial access</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional scaffolding — free quotes, tidy work, and clear communication from start to finish.</p>
+        <article class="svc reveal">
+          <span class="svc-num">02</span>
+          <div>
+            <h3>Clear quotes</h3>
+            <p>No waffle. You know the price and the plan before any work begins</p>
+          </div>
         </article>
-        <article class="rounded-2xl bg-white p-6 shadow-soft border border-black/5">
-          <h3 class="text-lg font-semibold text-slate-900">Temporary roofing</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Professional scaffolding — free quotes, tidy work, and clear communication from start to finish.</p>
+        <article class="svc reveal">
+          <span class="svc-num">03</span>
+          <div>
+            <h3>Local &amp; accountable</h3>
+            <p>Based around Newcastle upon Tyne. Easy to reach, easy to trust</p>
+          </div>
         </article>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="contact" class="bg-white border-y border-black/5">
-    <div class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">Contact</h2>
-      <p class="mt-2 text-slate-600">Request a quote — we'll come back quickly with availability and next steps.</p>
-      <ul class="mt-8 space-y-3 text-lg text-slate-800">
-        <li><strong>Phone:</strong> <a href='tel:07733111566' class='text-[var(--primary)] font-semibold'>07733 111566</a></li>
-        <li><strong>Email:</strong> <a href="mailto:newcastletynescaffolding@gmail.com" class="underline underline-offset-4">newcastletynescaffolding@gmail.com</a></li>
-        <li><strong>Area:</strong> Newcastle upon Tyne and surrounding areas</li>
-      </ul>
-    </div>
-  </section>
+    <section class="proof" aria-label="Proof">
+      <div class="proof-inner reveal">
+        <blockquote>“Straightforward scaffolding for people around Newcastle upon Tyne”</blockquote>
+        <cite>local work, clear quotes</cite>
+      </div>
+    </section>
 
-  <footer class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-500">
-    © 2026 Newcastle Scaffolding. All rights reserved.
-  </footer>
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div class="about reveal">
+          <p class="kicker">The company</p>
+          <h2>Newcastle Scaffolding</h2>
+          <p>Newcastle Scaffolding serves customers across Newcastle upon Tyne with straightforward scaffolding service</p>
+        </div>
+        <div>
+          <p class="kicker">Questions</p>
+          
+        <details class="faq reveal">
+          <summary>Do you cover Newcastle upon Tyne?</summary>
+          <p>Yes — Newcastle Scaffolding works across Newcastle upon Tyne and nearby areas</p>
+        </details>
+        <details class="faq reveal">
+          <summary>How do quotes work?</summary>
+          <p>Tell us what you need. We come back with a clear fixed quote before any work starts</p>
+        </details>
+        <details class="faq reveal">
+          <summary>How fast can you start?</summary>
+          <p>Most jobs are booked within a few days. Emergencies — call and we&#x27;ll say straight</p>
+        </details>
+        </div>
+      </div>
+    </section>
 
-    <a href="https://wa.me/447733111566" target="_blank" rel="noopener"
-       class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg hover:scale-105 transition">
-      WhatsApp
-    </a>
+    <section class="section" id="visit">
+      <div class="wrap">
+        <p class="kicker">Contact</p>
+        <h2>Get hold of us</h2>
+        <div class="visit-list reveal">
+          <div class="visit-row"><span class="visit-k">Phone</span><a href="tel:07733111566">07733 111566</a></div><div class="visit-row"><span class="visit-k">Email</span><a href="mailto:newcastletynescaffolding@gmail.com">newcastletynescaffolding@gmail.com</a></div><div class="visit-row"><span class="visit-k">Area</span><span>Newcastle upon Tyne</span></div><div class="visit-row"><span class="visit-k">Maps</span><a href="https://www.google.com/maps/place/Newcastle+Scaffolding/data=!4m7!3m6!1s0x487e6fd18aed0a45:0x4a57bd27022e79ac!8m2!3d54.9902534!4d-1.4983079!16s%2Fg%2F1td5fp9g!19sChIJRQrtitFvfkgRrHkuAie9V0o?authuser=0&amp;hl=en&amp;rclk=1" rel="noopener" target="_blank">Open in Google Maps</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" id="quote">
+      <div class="wrap quote-inner">
+        <div>
+          <h2>Ready for a clear quote?</h2>
+          <p>Newcastle Scaffolding · Newcastle upon Tyne</p>
+        </div>
+        <div class="hero-ctas" style="margin:0">
+          <a class="btn btn-hi" href="tel:07733111566">Call 07733 111566</a>
+          <a class="btn btn-ghost" href="#services">See services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="wrap">
+    <footer>
+      <div><strong>Newcastle Scaffolding</strong> · Newcastle upon Tyne</div>
+      <div>AireyAI preview · trade composer</div>
+    </footer>
+  </div>
+  
+  <div class="sticky-call" role="region" aria-label="Call now">
+    <a href="tel:07733111566">Call 07733 111566</a>
+  </div>
+  <script>(function () {
+  var els = document.querySelectorAll(".reveal");
+  if (!els.length) return;
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    els.forEach(function (el) { el.classList.add("vis"); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("vis"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function (el) { io.observe(el); });
+})();</script>
 </body>
 </html>

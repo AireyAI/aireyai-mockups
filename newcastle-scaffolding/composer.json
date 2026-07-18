@@ -1,0 +1,13 @@
+{
+  "composer": "scaffold_aaa",
+  "version": 2,
+  "kind": "scaffold",
+  "ref": "how-high-scaffolding",
+  "photo_source": "ref_bank:team-photo.jpg",
+  "exemplar_note": "Uber (structure only)",
+  "patterns": [
+    "hero-statement",
+    "faq-accordion",
+    "cta-banner"
+  ]
+}
