@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Decorating in Whitehaven",
+  "hero_title": "Michael Fulton Professional Painter & Decorator",
+  "hero_sub": "Clear quotes and tidy decorating across Whitehaven. You know the plan before any work starts",
+  "services": [
+    {
+      "title": "Decorating done properly",
+      "body": "Reliable decorating across Whitehaven — fixed-scope quotes before we start"
+    },
+    {
+      "title": "Clear quotes",
+      "body": "No waffle. You know the price and the plan before any work begins"
+    },
+    {
+      "title": "Local & accountable",
+      "body": "Based around Whitehaven. Easy to reach, easy to trust"
+    }
+  ],
+  "proof_quote": "5.0★ from 15 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Michael Fulton Professional Painter & Decorator serves customers across Whitehaven with straightforward decorating service",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "Do you cover Whitehaven?",
+      "a": "Yes — Michael Fulton Professional Painter & Decorator works across Whitehaven and nearby areas"
+    },
+    {
+      "q": "How do quotes work?",
+      "a": "Tell us what you need. We come back with a clear fixed quote before any work starts"
+    },
+    {
+      "q": "How fast can you start?",
+      "a": "Most jobs are booked within a few days. Emergencies — call and we'll say straight"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}
