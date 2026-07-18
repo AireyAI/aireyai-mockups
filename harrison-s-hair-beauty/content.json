@@ -1,0 +1,44 @@
+{
+  "hero_eyebrow": "Durham's premier hair & beauty",
+  "hero_title": "Harrison's Hair & Beauty",
+  "hero_sub": "Expert cuts, colour, extensions, makeup and skin treatments tailored for Durham locals",
+  "services": [
+    {
+      "title": "Women's Haircut",
+      "body": "Consultation, cut, and finish to suit your style and hair texture"
+    },
+    {
+      "title": "Balayage Colour",
+      "body": "Hand-painted highlights blended for natural, sun-kissed dimension without harsh lines"
+    },
+    {
+      "title": "Classic Manicure",
+      "body": "Nail shaping, cuticle care, polish application, and hand massage for smooth finish"
+    }
+  ],
+  "proof_quote": "4.9★ from 66 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Harrison's Hair & Beauty offers haircuts, colouring and beauty treatments in Durham. Clients rate the salon 4.9 stars on Google based on 66 reviews",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Harrison's Hair & Beauty serve?",
+      "a": "We are based in Durham and welcome clients from the surrounding local area"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "Book by emailing 83emmaharrison@gmail.com; we will confirm your slot"
+    },
+    {
+      "q": "What can I expect during my visit?",
+      "a": "You will receive a personal consultation, a haircut or styling, and a finishing touch; the stylist will explain each step"
+    }
+  ],
+  "_aaa_llm_hits": 4,
+  "_glm": {
+    "provider": "cerebras",
+    "model": "zai-glm-4.7",
+    "ms": 6261,
+    "raw_chars": 12409
+  }
+}
