@@ -1,0 +1,9 @@
+{
+  "composer": "beauty_glm",
+  "version": 1,
+  "provider": "cerebras",
+  "model": "zai-glm-4.7",
+  "ref": "dolled_brief_compact",
+  "photo_source": "prospect_existing",
+  "ms": 7140
+}

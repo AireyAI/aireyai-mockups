@@ -1,0 +1,44 @@
+{
+  "hero_eyebrow": "Lancaster women-only beauty lounge",
+  "hero_title": "Iram's Beauty Lounge ( Women Only)",
+  "hero_sub": "Professional hair, nail and skin treatments for women in Lancaster",
+  "services": [
+    {
+      "title": "Deep cleanse facial",
+      "body": "Exfoliation followed by hydration to refresh skin"
+    },
+    {
+      "title": "Eyebrow shaping and tint",
+      "body": "Shape brows, apply tint, and finish with a lash lift"
+    },
+    {
+      "title": "Classic manicure",
+      "body": "Cuticle care, nail shaping, and gel polish application"
+    }
+  ],
+  "proof_quote": "5★ from 46 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Iram's Beauty Lounge ( Women Only) is a women-only beauty lounge in Lancaster with a 5.0 Google rating from 46 reviews. Clients book by email at irambeautylounge@gmail.com for beauty treatments in a private setting",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "What area does Iram's Beauty Lounge serve?",
+      "a": "We provide beauty treatments for clients in Lancaster and the surrounding neighbourhoods"
+    },
+    {
+      "q": "How can I book an appointment at Iram's Beauty Lounge?",
+      "a": "Send your booking request to irambeautylounge@gmail.com; we will reply to confirm your slot"
+    },
+    {
+      "q": "What should I expect during my visit to Iram's Beauty Lounge?",
+      "a": "You will receive a private, women‑only beauty session where our therapist discusses your needs, performs the agreed treatment, and advises on aftercare"
+    }
+  ],
+  "_aaa_llm_hits": 4,
+  "_glm": {
+    "provider": "cerebras",
+    "model": "zai-glm-4.7",
+    "ms": 7140,
+    "raw_chars": 8013
+  }
+}
