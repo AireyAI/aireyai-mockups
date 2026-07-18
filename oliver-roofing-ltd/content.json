@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Roofing in Newcastle upon Tyne",
+  "hero_title": "Oliver Roofing Ltd",
+  "hero_sub": "Clear quotes and tidy roofing across Newcastle upon Tyne. You know the plan before any work starts",
+  "services": [
+    {
+      "title": "Roofing done properly",
+      "body": "Reliable roofing across Newcastle upon Tyne — fixed-scope quotes before we start"
+    },
+    {
+      "title": "Clear quotes",
+      "body": "No waffle. You know the price and the plan before any work begins"
+    },
+    {
+      "title": "Local & accountable",
+      "body": "Based around Newcastle upon Tyne. Easy to reach, easy to trust"
+    }
+  ],
+  "proof_quote": "4.9★ from 24 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Oliver Roofing Ltd serves customers across Newcastle upon Tyne with straightforward roofing service",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "Do you cover Newcastle upon Tyne?",
+      "a": "Yes — Oliver Roofing Ltd works across Newcastle upon Tyne and nearby areas"
+    },
+    {
+      "q": "How do quotes work?",
+      "a": "Tell us what you need. We come back with a clear fixed quote before any work starts"
+    },
+    {
+      "q": "How fast can you start?",
+      "a": "Most jobs are booked within a few days. Emergencies — call and we'll say straight"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}
