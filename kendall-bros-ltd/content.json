@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Roofing in Barrow-in-Furness",
+  "hero_title": "Kendall Bros Ltd",
+  "hero_sub": "Clear quotes and tidy roofing across Barrow-in-Furness. You know the plan before any work starts",
+  "services": [
+    {
+      "title": "Roofing done properly",
+      "body": "Reliable roofing across Barrow-in-Furness — fixed-scope quotes before we start"
+    },
+    {
+      "title": "Clear quotes",
+      "body": "No waffle. You know the price and the plan before any work begins"
+    },
+    {
+      "title": "Local & accountable",
+      "body": "Based around Barrow-in-Furness. Easy to reach, easy to trust"
+    }
+  ],
+  "proof_quote": "4.0★ from 4 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Kendall Bros Ltd serves customers across Barrow-in-Furness with straightforward roofing service",
+  "cta": "Get a free quote",
+  "faq": [
+    {
+      "q": "Do you cover Barrow-in-Furness?",
+      "a": "Yes — Kendall Bros Ltd works across Barrow-in-Furness and nearby areas"
+    },
+    {
+      "q": "How do quotes work?",
+      "a": "Tell us what you need. We come back with a clear fixed quote before any work starts"
+    },
+    {
+      "q": "How fast can you start?",
+      "a": "Most jobs are booked within a few days. Emergencies — call and we'll say straight"
+    }
+  ],
+  "_aaa_llm_hits": 0
+}

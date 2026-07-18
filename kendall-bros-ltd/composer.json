@@ -1,0 +1,13 @@
+{
+  "composer": "roofing_aaa",
+  "version": 2,
+  "kind": "roof",
+  "ref": "ej_roofing",
+  "photo_source": "ref_bank:photo_27.jpg",
+  "exemplar_note": "Uber (structure only)",
+  "patterns": [
+    "hero-statement",
+    "faq-accordion",
+    "cta-banner"
+  ]
+}
