@@ -1,0 +1,13 @@
+{
+  "composer": "decorate_aaa",
+  "version": 2,
+  "kind": "decorate",
+  "ref": "ej_roofing",
+  "photo_source": "ref_bank:seed-from-roofing.jpg",
+  "exemplar_note": "Uber (structure only)",
+  "patterns": [
+    "hero-statement",
+    "faq-accordion",
+    "cta-banner"
+  ]
+}
