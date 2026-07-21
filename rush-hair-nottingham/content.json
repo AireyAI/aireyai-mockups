@@ -1,0 +1,38 @@
+{
+  "hero_eyebrow": "Derby hair and beauty",
+  "hero_title": "Rush Hair Nottingham",
+  "hero_sub": "Professional haircuts, colouring and styling for men and women",
+  "services": [
+    {
+      "title": "Precision Haircut",
+      "body": "Our stylists shape hair to your face using scissor and clipper techniques for a clean, tailored finish"
+    },
+    {
+      "title": "Custom Colour Service",
+      "body": "We mix shades to match your skin tone, applying foil or balayage for lasting, natural-looking colour"
+    },
+    {
+      "title": "Bridal Hair Styling",
+      "body": "On your wedding day we create secure updos or loose waves that look elegant from ceremony to reception"
+    }
+  ],
+  "proof_quote": "4.4★ from 548 Google reviews",
+  "proof_label": "Google reviews",
+  "about": "Rush Hair Nottingham is a beauty salon based in Derby. It holds a 4.4-star rating from 548 Google reviews",
+  "cta": "Book a visit",
+  "faq": [
+    {
+      "q": "Do you serve clients outside Derby?",
+      "a": "We accept bookings from anyone who can contact us via email at irune.itoiz@rush.co.uk"
+    },
+    {
+      "q": "How can I book an appointment?",
+      "a": "Email irune.itoiz@rush.co.uk to schedule your visit"
+    },
+    {
+      "q": "What should I expect during my appointment?",
+      "a": "You will have a brief consultation followed by the requested hair or beauty service"
+    }
+  ],
+  "_aaa_llm_hits": 4
+}
